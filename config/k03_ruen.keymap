@@ -69,10 +69,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LS(LC(N2))>,
-                <&macro_press>,
+                <&macro_press &kp LS(LC(N2))>,
                 <&macro_wait_time 25>,
-                <&macro_release>;
+                <&macro_release &kp LS(LC(N2))>;
 
             label = "TO_RU";
             wait-ms = <0>;
@@ -83,10 +82,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LS(LC(N1))>,
-                <&macro_press>,
+                <&macro_press &kp LS(LC(N1))>,
                 <&macro_wait_time 25>,
-                <&macro_release>;
+                <&macro_release &kp LS(LC(N1))>;
 
             label = "TO_EN";
             wait-ms = <0>;
