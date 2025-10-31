@@ -184,7 +184,7 @@
 &kp TAB    &kp Q   &kp W         &kp E           &kp R      &kp T                                            &kp Y           &kp U      &kp I           &kp O      &kp P     &kp BSLH
 &en_capsw  &kp A   &kp S         &lhrm LSHIFT D  &kp F      &kp G                                            &kp H           &kp J      &rhrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
 &kp LGUI   &kp Z   &kp X         &kp C           &kp V      &kp B           &to_en                &layer_ru  &kp N           &kp M      &kp COMMA       &kp DOT    &kp FSLH  &kp DEL
-                   &kp LEFT_ALT  &kp LBKT        &kp LCTRL  &l_tkl 4 SPACE  &l_tkl 6 BACKSPACE    &kp ENTER  &r_tkl 3 SPACE  &kp RCTRL  &kp RBKT        &kp GRAVE
+                   &kp LEFT_ALT  &kp LBKT        &kp LCTRL  &l_tkl 4 SPACE  &l_tkl 7 BACKSPACE    &kp ENTER  &r_tkl 3 SPACE  &kp RCTRL  &kp RBKT        &kp GRAVE
             >;
 
             display-name = "Base";
@@ -204,7 +204,7 @@
 &kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U            &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA          &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
 &ru_capsw  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &lhrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                   &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &rhrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI   &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES           &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en             &to_ru     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE           &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp DEL
-                                    &kp LALT              &kp RU_CYRILLIC_HA           &kp LCTRL           &l_tkl 5 SPACE      &l_tkl 6 BACKSPACE    &kp ENTER  &r_tkl 3 SPACE      &kp LS(RCTRL)              &kp RU_CYRILLIC_HARD_SIGN    &kp RU_CYRILLIC_IO
+                                    &kp LALT              &kp RU_CYRILLIC_HA           &kp LCTRL           &l_tkl 5 SPACE      &l_tkl 7 BACKSPACE    &kp ENTER  &r_tkl 3 SPACE      &kp LS(RCTRL)              &kp RU_CYRILLIC_HARD_SIGN    &kp RU_CYRILLIC_IO
             >;
 
             sensor-bindings =
