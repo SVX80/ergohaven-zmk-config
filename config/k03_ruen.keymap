@@ -140,19 +140,27 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &to_en>;
+            bindings = 
+                <&to 0>,
+                <&macro_press &kp LS(LCTRL)>,
+                <&macro_tap &kp N1>,
+                <&macro_release &kp LS(LCTRL)>;
             label = "LAYER_EN";
-            wait-ms = <1>;
-            tap-ms = <100>;
+            wait-ms = <25>;
+            tap-ms = <50>;
         };
 
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &to_ru>;
+            bindings = 
+                <&to 1>,
+                <&macro_press &kp LS(LCTRL)>,
+                <&macro_tap &kp N2>,
+                <&macro_release &kp LS(LCTRL)>;
             label = "LAYER_RU";
-            tap-ms = <100>;
-            wait-ms = <1>;
+            wait-ms = <25>;
+            tap-ms = <50>;
         };
 
         en: en {
