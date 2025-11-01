@@ -13,7 +13,7 @@
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
 
-        lhrm: left-home-row-mod {
+        l_hrm: left-home-row-mod {
             compatible = "zmk,behavior-hold-tap";
             label = "Left key with modifier";
             bindings = <&kp>, <&kp>;
@@ -25,7 +25,7 @@
             flavor = "balanced";
         };
 
-        rhrm: right-home-row-mod {
+        r_hrm: right-home-row-mod {
             compatible = "zmk,behavior-hold-tap";
             label = "Right key with modifier";
             bindings = <&kp>, <&kp>;
@@ -47,7 +47,6 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 55 56 57 58 59>;
             flavor = "balanced";
-            retro-tap;
         };
 
         r_tkl: right-thumb-key-layer {
@@ -60,7 +59,6 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
             flavor = "balanced";
-            retro-tap;
         };
 
         en_capsw: en_capsw {
@@ -75,6 +73,32 @@
             label = "RU_CAPSW";
             #binding-cells = <0>;
             continue-list = <UNDERSCORE BACKSPACE DOT COMMA SEMICOLON SINGLE_QUOTE GRAVE LEFT_BRACKET RIGHT_BRACKET>;
+        };
+
+        l_tlkr: l_tlkr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "L_TLKR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 55 56 57 58 59>;
+            flavor = "balanced";
+            retro-tap;
+        };
+
+        r_tlkr: r_tlkr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "R_TLKR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
+            flavor = "balanced";
+            retro-tap;
         };
     };
 
@@ -118,8 +142,8 @@
             #binding-cells = <0>;
             bindings = <&to 0 &to_en>;
             label = "LAYER_EN";
-            wait-ms = <0>;
-            tap-ms = <75>;
+            wait-ms = <1>;
+            tap-ms = <100>;
         };
 
         layer_ru: layer_ru {
@@ -127,8 +151,8 @@
             #binding-cells = <0>;
             bindings = <&to 1 &to_ru>;
             label = "LAYER_RU";
-            tap-ms = <75>;
-            wait-ms = <0>;
+            tap-ms = <100>;
+            wait-ms = <1>;
         };
 
         en: en {
@@ -180,11 +204,11 @@
 
         en {
             bindings = <
-&kp ESC    &kp F1  &kp F2        &kp F3          &kp F4     &kp F5                                             &kp F6              &kp F7         &kp F8          &kp F9     &kp F10   &kp F11
-&kp TAB    &kp Q   &kp W         &kp E           &kp R      &kp T                                              &kp Y               &kp U          &kp I           &kp O      &kp P     &kp BSLH
-&en_capsw  &kp A   &kp S         &lhrm LSHIFT D  &kp F      &kp G                                              &kp H               &kp J          &rhrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
-&kp LGUI   &kp Z   &kp X         &kp C           &kp V      &kp B            &to_en            &layer_ru       &kp N               &kp M          &kp COMMA       &kp DOT    &kp FSLH  &kp K_APP
-                   &kp LEFT_ALT  &kp LBKT        &kp LCTRL  &l_tkl 7 DELETE  &l_tkl 4 SPACE    &r_tkl 4 SPACE  &r_tkl 3 BACKSPACE  &kp LS(RCTRL)  &kp RBKT        &kp GRAVE
+&kp ESC    &kp F1  &kp F2        &kp F3           &kp F4     &kp F5                                               &kp F6              &kp F7         &kp F8           &kp F9     &kp F10   &kp F11
+&kp TAB    &kp Q   &kp W         &kp E            &kp R      &kp T                                                &kp Y               &kp U          &kp I            &kp O      &kp P     &kp BSLH
+&en_capsw  &kp A   &kp S         &l_hrm LSHIFT D  &kp F      &kp G                                                &kp H               &kp J          &r_hrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
+&kp LGUI   &kp Z   &kp X         &kp C            &kp V      &kp B            &to_en             &layer_ru        &kp N               &kp M          &kp COMMA        &kp DOT    &kp FSLH  &kp K_APP
+                   &kp LEFT_ALT  &kp LBKT         &kp LCTRL  &l_tkl 7 DELETE  &l_tlkr 4 SPACE    &r_tlkr 4 SPACE  &r_tkl 3 BACKSPACE  &kp LS(RCTRL)  &kp RBKT         &kp GRAVE
             >;
 
             display-name = "Base";
@@ -200,11 +224,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp F1                   &kp F2                &kp F3                       &kp F4              &kp F5                                                &kp F6              &kp F7                     &kp F8                       &kp F9                 &kp F10              &kp F11
-&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U            &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA          &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
-&ru_capsw  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &lhrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &rhrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI   &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES           &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en         &to_ru          &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE           &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp K_APP
-                                    &kp LALT              &kp RU_CYRILLIC_HA           &kp LCTRL           &l_tkl 7 DELETE     &l_tkl 5 SPACE    &r_tkl 5 SPACE  &r_tkl 3 BSPC       &kp LS(RCTRL)              &kp RU_CYRILLIC_HARD_SIGN    &kp RU_CYRILLIC_IO
+&kp ESC    &kp F1                   &kp F2                &kp F3                        &kp F4              &kp F5                                                  &kp F6              &kp F7                     &kp F8                        &kp F9                 &kp F10              &kp F11
+&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                      &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA           &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
+&ru_capsw  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &l_hrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                      &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &r_hrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LGUI   &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en          &to_ru           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE            &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp K_APP
+                                    &kp LALT              &kp RU_CYRILLIC_HA            &kp LCTRL           &l_tkl 7 DELETE     &l_tlkr 5 SPACE    &r_tlkr 5 SPACE  &r_tkl 3 BSPC       &kp LS(RCTRL)              &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
             >;
 
             sensor-bindings =
@@ -231,11 +255,11 @@
 
         nav_m {
             bindings = <
-&trans  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7        &kp N8    &kp N9         &kp N0        &trans
-&trans  &kp LC(Y)  &sel_word  &none      &none      &none                                &kp PG_UP  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LC(HOME)  &none
-&tog 2  &kp LC(A)  &kp LC(S)  &kp LSHFT  &none      &none                                &none      &kp LEFT      &kp DOWN  &kp RIGHT      &none         &none
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none            &none        &none  &kp PG_DN  &kp HOME      &none     &kp END        &kp LC(END)   &trans
-                   &none      &none      &none      &l_tkl 9 DELETE  &kp SPACE    &none  &none      &none         &none     &none
+&trans  &none      &none      &none      &none      &none                                    &kp N6     &kp N7        &kp N8    &kp N9         &kp N0        &trans
+&trans  &kp LC(Y)  &sel_word  &none      &none      &none                                    &kp PG_UP  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LC(HOME)  &none
+&tog 2  &kp LC(A)  &kp LC(S)  &kp LSHFT  &none      &none                                    &none      &kp LEFT      &kp DOWN  &kp RIGHT      &none         &none
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none            &none        &none      &kp PG_DN  &kp HOME      &none     &kp END        &kp LC(END)   &trans
+                   &none      &none      &none      &l_tkl 9 DELETE  &kp SPACE    &kp ENTER  &none      &none         &none     &none
             >;
 
             display-name = "Navigation";
@@ -282,11 +306,11 @@
             label = "Number (momentary)";
             display-name = "Navigation";
             bindings = <
-&none   &none  &none  &none  &none  &none                          &none          &none   &none   &none   &none            &none
-&none   &none  &none  &none  &none  &none                          &kp KP_MINUS   &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
-&tog 6  &none  &none  &none  &none  &none                          &kp KP_PLUS    &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
-&none   &none  &none  &none  &none  &none  &none    &none          &kp LPAR       &kp N1  &kp N2  &kp N3  &kp RPAR         &none
-               &none  &none  &none  &none  &none    &kp LS(ENTER)  &r_tkl 9 BSPC  &none   &kp N0  &none
+&none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                          &none          &none   &none   &none   &none            &none
+&none   &none   &none   &none   &none   &none                           &kp KP_MINUS   &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
+&tog 6  &none   &none   &none   &none   &none                           &kp KP_PLUS    &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&none   &none   &none   &none   &none   &none   &none    &none          &kp LPAR       &kp N1  &kp N2  &kp N3  &kp RPAR         &none
+                &none   &none   &none   &none   &none    &kp LS(ENTER)  &r_tkl 9 BSPC  &none   &kp N0  &none
             >;
         };
 
