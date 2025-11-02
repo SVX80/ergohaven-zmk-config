@@ -150,7 +150,7 @@
         toggle-simple {
             bindings = <&tog 3>;
             key-positions = <13 37>;
-            layers = <0 1 3 2 10 4>;
+            layers = <0 1 3 2 4 9>;
         };
     };
 
