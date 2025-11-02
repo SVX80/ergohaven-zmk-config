@@ -225,13 +225,6 @@
             tap-ms = <30>;
         };
 
-        sel_word: sel_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LEFT) &kp LS(LC(RIGHT))>;
-            label = "SEL_WORD";
-        };
-
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -250,6 +243,27 @@
             tap-ms = <30>;
         };
 
+        sel_word: sel_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT) &kp LS(LC(RIGHT))>;
+            label = "SEL_WORD";
+        };
+
+        ew_enter: ew_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 2 &to_en>;
+            label = "EW_ENTER";
+        };
+
+        ewc_enter: ewc_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 2 &to_en &en_capsw>;
+            label = "EWC_ENTER";
+        };
+        
         kp_ew_exit: kp_ew_exit {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -264,7 +278,7 @@
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "&kp and toggle layer (RU)";
+            label = "toggle layer (RU) and &kp";
             wait-ms = <5>;
             tap-ms = <30>;
         };
@@ -283,16 +297,9 @@
                 <&macro_release>,
                 <&kp LS(LCTRL)>;
 
-            label = "KP_EW_QUIT";
+            label = "&kp and toggle layer (RU)";
             wait-ms = <5>;
             tap-ms = <30>;
-        };
-
-        ew_enter: ew_enter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 2 &to_en>;
-            label = "EW_ENTER";
         };
 
         kpe_ew_exit: kpe_ew_exit {
@@ -315,13 +322,6 @@
             label = "&kp and toggle layer (RU)";
             wait-ms = <5>;
             tap-ms = <30>;
-        };
-
-        ewc_enter: ewc_enter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 2 &to_en &en_capsw>;
-            label = "EWC_ENTER";
         };
     };
 
