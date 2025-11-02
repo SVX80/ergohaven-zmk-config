@@ -345,7 +345,7 @@
             bindings = <
 &kp_ew_exit ESC    &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                                      &kp_ew_exit F6  &kp_ew_exit F7      &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F11
 &kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
-&layer_ru          &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
+&en_capsw          &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
 &kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en          &layer_ru        &trans          &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
                                    &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 10 DEL   &ew_tkl 8 SPACE    &ew_tkl 8 SPACE  &trans          &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
             >;
