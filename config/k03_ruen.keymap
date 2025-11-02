@@ -252,13 +252,6 @@
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &to_en>;
             label = "TOG_TO_EN";
         };
-
-        tog_to_ru: tog_to_ru {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &to_ru>;
-            label = "TOG_TO_RU";
-        };
     };
 
     keymap {
@@ -366,11 +359,11 @@
         en_word {
             display-name = "Symbols";
             bindings = <
-&tog_ru_kp 7 ESC   &tog_ru_kp 7 F1  &tog_ru_kp 7 F2    &tog_ru_kp 7 F3    &tog_ru_kp 7 F4     &tog_ru_kp 7 F5                                &tog_ru_kp 7 F6  &tog_ru_kp 7 F7         &tog_ru_kp 7 F8     &tog_ru_kp 7 F9     &tog_ru_kp 7 F10   &tog_ru_kp 7 F11
-&tog_ru_kp 7 TAB   &trans           &trans             &trans             &trans              &trans                                         &trans           &trans                  &trans              &trans              &trans             &tog_ru_kp 7 BSLH
-&tog_to_ru 7       &trans           &trans             &trans             &trans              &trans                                         &trans           &trans                  &trans              &trans              &tog_ru_kp 7 SEMI  &tog_ru_kp 7 SQT
-&tog_ru_kp 7 LGUI  &trans           &trans             &trans             &trans              &trans           &tog_to_ru 7    &tog_to_ru 7  &trans           &trans                  &tog_ru_kp 7 COMMA  &tog_ru_kp 7 DOT    &tog_ru_kp 7 FSLH  &tog_ru_kp 7 K_APP
-                                    &tog_ru_kp 7 LALT  &tog_ru_kp 7 LBKT  &tog_ru_kp 7 LCTRL  &trans           &trans          &trans        &trans           &tog_ru_kp 7 LS(RCTRL)  &tog_ru_kp 7 RBKT   &tog_ru_kp 7 GRAVE
+&tog_ru_kp 7 ESC   &tog_ru_kp 7 F1  &tog_ru_kp 7 F2    &tog_ru_kp 7 F3    &tog_ru_kp 7 F4     &tog_ru_kp 7 F5                          &tog_ru_kp 7 F6  &tog_ru_kp 7 F7         &tog_ru_kp 7 F8     &tog_ru_kp 7 F9     &tog_ru_kp 7 F10   &tog_ru_kp 7 F11
+&tog_ru_kp 7 TAB   &trans           &trans             &trans             &trans              &trans                                   &trans           &trans                  &trans              &trans              &trans             &tog_ru_kp 7 BSLH
+&layer_ru          &trans           &trans             &trans             &trans              &trans                                   &trans           &trans                  &trans              &trans              &tog_ru_kp 7 SEMI  &tog_ru_kp 7 SQT
+&tog_ru_kp 7 LGUI  &trans           &trans             &trans             &trans              &trans           &layer_en    &layer_ru  &trans           &trans                  &tog_ru_kp 7 COMMA  &tog_ru_kp 7 DOT    &tog_ru_kp 7 FSLH  &tog_ru_kp 7 K_APP
+                                    &tog_ru_kp 7 LALT  &tog_ru_kp 7 LBKT  &tog_ru_kp 7 LCTRL  &trans           &trans       &trans     &trans           &tog_ru_kp 7 LS(RCTRL)  &tog_ru_kp 7 RBKT   &tog_ru_kp 7 GRAVE
             >;
 
             label = "EN word mode";
