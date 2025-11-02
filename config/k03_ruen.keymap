@@ -231,7 +231,7 @@
             tap-ms = <30>;
         };
 
-        tog_ru_kp: tog_ru_kp {
+        kp_ew_exit: kp_ew_exit {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -245,19 +245,19 @@
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "Toggle layer (RU) and press key";
+            label = "&kp and toggle layer (RU)";
             wait-ms = <5>;
             tap-ms = <30>;
         };
 
-        tog_to_en: tog_to_en {
+        ew_enter: ew_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&tog 2 &to_en>;
-            label = "TOG_TO_EN";
+            label = "EW_ENTER";
         };
 
-        tg_ru_kp_e: tg_ru_kp_e {
+        kpe_ew_exit: kpe_ew_exit {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -274,7 +274,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "Toggle layer (RU) and hold key";
+            label = "&kp and toggle layer (RU)";
             wait-ms = <5>;
             tap-ms = <30>;
         };
@@ -321,17 +321,17 @@
                 <&enc_vol>;
         };
 
-        en_word {
+        ew {
             display-name = "Symbols";
             bindings = <
-&tog_ru_kp ESC    &tog_ru_kp F1  &tog_ru_kp F2     &tog_ru_kp F3    &tog_ru_kp F4      &tog_ru_kp F5                          &tog_ru_kp F6  &tog_ru_kp F7      &tog_ru_kp F8     &tog_ru_kp F9     &tog_ru_kp F10   &tog_ru_kp F11
-&tog_ru_kp TAB    &trans         &trans            &trans           &trans             &trans                                 &trans         &trans             &trans            &trans            &trans           &tog_ru_kp BSLH
-&layer_ru         &trans         &trans            &trans           &trans             &trans                                 &trans         &trans             &trans            &trans            &tog_ru_kp SEMI  &tog_ru_kp SQT
-&tg_ru_kp_e LGUI  &trans         &trans            &trans           &trans             &trans         &layer_en    &layer_ru  &trans         &trans             &tog_ru_kp COMMA  &tog_ru_kp DOT    &tog_ru_kp FSLH  &tog_ru_kp ENTER
-                                 &tg_ru_kp_e LALT  &tog_ru_kp LBKT  &tg_ru_kp_e LCTRL  &trans         &trans       &trans     &trans         &tg_ru_kp_e RCTRL  &tog_ru_kp RBKT   &tog_ru_kp GRAVE
+&kp_ew_exit ESC    &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                          &kp_ew_exit F6  &kp_ew_exit F7      &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F11
+&kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                  &trans          &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
+&layer_ru          &trans          &trans             &trans            &trans              &trans                                  &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
+&kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en    &layer_ru  &trans          &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
+                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 9 DEL    &trans       &trans     &trans          &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
             >;
 
-            label = "EN word mode";
+            label = "EN word";
         };
 
         sim {
@@ -387,11 +387,11 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&none         &none      &none        &none      &none     &none                              &none          &none        &none         &none       &none         &none
-&none         &en TILDE  &en LT       &kp PLUS   &en GT    &en CARET                          &kp EXCL       &en LBRC     &kp EQUAL     &en RBRC    &kp RU_COLON  &en PIPE
-&tog_to_en 2  &en GRAVE  &en LBKT     &kp MINUS  &en RBKT  &kp ASTRK                          &kp RU_QMARK   &kp LPAR     &kp UNDER     &kp RPAR    &kp RU_SEMI   &kp RU_DOUBLE_QUOTES
-&none         &en HASH   &kp PERCENT  &en AT     &en AMPS  &en DLLR   &none        &none      &kp RU_NUMERO  &kp RU_BSLH  &kp RU_COMMA  &kp RU_DOT  &kp RU_SLASH  &kp LS(ENTER)
-                         &none        &none      &none     &kp DEL    &kp SPACE    &kp SPACE  &kp BSPC       &none        &none         &none
+&none        &none      &none        &none      &none     &none                              &none          &none        &none         &none       &none         &none
+&none        &en TILDE  &en LT       &kp PLUS   &en GT    &en CARET                          &kp EXCL       &en LBRC     &kp EQUAL     &en RBRC    &kp RU_COLON  &en PIPE
+&ew_enter 2  &en GRAVE  &en LBKT     &kp MINUS  &en RBKT  &kp ASTRK                          &kp RU_QMARK   &kp LPAR     &kp UNDER     &kp RPAR    &kp RU_SEMI   &kp RU_DOUBLE_QUOTES
+&none        &en HASH   &kp PERCENT  &en AT     &en AMPS  &en DLLR   &none        &none      &kp RU_NUMERO  &kp RU_BSLH  &kp RU_COMMA  &kp RU_DOT  &kp RU_SLASH  &kp LS(ENTER)
+                        &none        &none      &none     &kp DEL    &kp SPACE    &kp SPACE  &kp BSPC       &none        &none         &none
             >;
         };
 
