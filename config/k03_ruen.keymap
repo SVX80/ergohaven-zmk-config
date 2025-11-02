@@ -130,6 +130,18 @@
             #binding-cells = <1>;
             toggle-mode = "off";
         };
+
+        ew_nav: ew_nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EW_NAV";
+            bindings = <&mo_ew_exit>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            hold-trigger-on-release;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59>;
+        };
     };
 
     combos {
@@ -263,7 +275,7 @@
             bindings = <&tog 2 &to_en &en_capsw>;
             label = "EWC_ENTER";
         };
-        
+
         kp_ew_exit: kp_ew_exit {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -323,6 +335,23 @@
             wait-ms = <5>;
             tap-ms = <30>;
         };
+
+        mo_ew_exit: mo_ew_exit {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&off 2>,
+                <&macro_press>,
+                <&kp LS(LCTRL)>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LS(LCTRL) &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+
+            label = "MO_EW_EXIT";
+            wait-ms = <5>;
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -373,7 +402,7 @@
 &kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
 &en_capsw          &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
 &kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en          &layer_ru        &trans          &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
-                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 10 DEL   &ew_tkl 8 SPACE    &ew_tkl 8 SPACE  &trans          &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
+                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 10 DEL   &ew_tkl 8 SPACE    &ew_tkl 8 SPACE  &ew_nav 5 BSPC  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
             >;
         };
 
