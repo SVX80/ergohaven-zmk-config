@@ -316,6 +316,13 @@
             wait-ms = <5>;
             tap-ms = <30>;
         };
+
+        ewc_enter: ewc_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 2 &to_en &en_capsw>;
+            label = "EWC_ENTER";
+        };
     };
 
     keymap {
@@ -417,11 +424,11 @@
         sym_ru {
             display-name = "Symbols (RU)";
             bindings = <
-&none      &none      &none        &none      &none     &none                              &none          &none        &none         &none       &none         &none
-&none      &en TILDE  &en LT       &kp PLUS   &en GT    &en CARET                          &kp EXCL       &en LBRC     &kp EQUAL     &en RBRC    &kp RU_COLON  &en PIPE
-&ew_enter  &en GRAVE  &en LBKT     &kp MINUS  &en RBKT  &kp ASTRK                          &kp RU_QMARK   &kp LPAR     &kp UNDER     &kp RPAR    &kp RU_SEMI   &kp RU_DOUBLE_QUOTES
-&none      &en HASH   &kp PERCENT  &en AT     &en AMPS  &en DLLR   &none        &none      &kp RU_NUMERO  &kp RU_BSLH  &kp RU_COMMA  &kp RU_DOT  &kp RU_SLASH  &kp LS(ENTER)
-                      &none        &none      &none     &kp DEL    &kp SPACE    &kp SPACE  &kp BSPC       &none        &none         &none
+&none       &none      &none        &none      &none     &none                              &none          &none        &none         &none       &none         &none
+&ewc_enter  &en TILDE  &en LT       &kp PLUS   &en GT    &en CARET                          &kp EXCL       &en LBRC     &kp EQUAL     &en RBRC    &kp RU_COLON  &en PIPE
+&ew_enter   &en GRAVE  &en LBKT     &kp MINUS  &en RBKT  &kp ASTRK                          &kp RU_QMARK   &kp LPAR     &kp UNDER     &kp RPAR    &kp RU_SEMI   &kp RU_DOUBLE_QUOTES
+&none       &en HASH   &kp PERCENT  &en AT     &en AMPS  &en DLLR   &none        &none      &kp RU_NUMERO  &kp RU_BSLH  &kp RU_COMMA  &kp RU_DOT  &kp RU_SLASH  &kp LS(ENTER)
+                       &none        &none      &none     &kp DEL    &kp SPACE    &kp SPACE  &kp BSPC       &none        &none         &none
             >;
         };
 
