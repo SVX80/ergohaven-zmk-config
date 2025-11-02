@@ -331,6 +331,8 @@
                 <&enc_vol>,
                 <&enc_vol>,
                 <&enc_vol>;
+
+            label = "Ru";
         };
 
         ew {
@@ -394,6 +396,7 @@
             >;
 
             display-name = "Symbols";
+            label = "Symbols (EN)";
         };
 
         sym_ru {
@@ -405,6 +408,8 @@
 &none        &en HASH   &kp PERCENT  &en AT     &en AMPS  &en DLLR   &none        &none      &kp RU_NUMERO  &kp RU_BSLH  &kp RU_COMMA  &kp RU_DOT  &kp RU_SLASH  &kp LS(ENTER)
                         &none        &none      &none     &kp DEL    &kp SPACE    &kp SPACE  &kp BSPC       &none        &none         &none
             >;
+
+            label = "Symbols (RU)";
         };
 
         num {
