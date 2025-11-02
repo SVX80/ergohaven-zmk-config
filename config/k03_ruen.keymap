@@ -269,6 +269,25 @@
             tap-ms = <30>;
         };
 
+        kp_ew_quit: kp_ew_quit {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&off 2>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp LS(LCTRL)>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LS(LCTRL)>;
+
+            label = "KP_EW_QUIT";
+            wait-ms = <5>;
+            tap-ms = <30>;
+        };
+
         ew_enter: ew_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -410,9 +429,9 @@
             display-name = "Symbols (EnWord)";
             bindings = <
 &none  &none              &none                     &none              &none             &none                                                      &none                  &none             &none              &none             &none              &none
-&none  &kp_ew_exit TILDE  &kp_ew_exit LT            &kp_ew_exit PLUS   &kp_ew_exit GT    &kp_ew_exit CARET                                          &kp_ew_exit EXCL       &kp_ew_exit LBRC  &kp_ew_exit EQUAL  &kp_ew_exit RBRC  &kp_ew_exit COLON  &kp_ew_exit PIPE
-&none  &kp_ew_exit GRAVE  &kp_ew_exit LEFT_BRACKET  &kp_ew_exit MINUS  &kp_ew_exit RBKT  &kp_ew_exit ASTRK                                          &kp_ew_exit QUESTION   &kp_ew_exit LPAR  &kp UNDERSCORE     &kp_ew_exit RPAR  &kp_ew_exit SEMI   &kp_ew_exit DOUBLE_QUOTES
-&none  &kp_ew_exit HASH   &kp_ew_exit PERCENT       &kp_ew_exit AT     &kp_ew_exit AMPS  &kp_ew_exit DLLR   &none                &none              &kp_ew_exit RU_NUMERO  &kp_ew_exit BSLH  &kp_ew_exit COMMA  &kp_ew_exit DOT   &kp_ew_exit SLASH  &kp_ew_exit LS(ENTER)
+&none  &kp_ew_quit TILDE  &kp_ew_quit LT            &kp_ew_quit PLUS   &kp_ew_quit GT    &kp_ew_quit CARET                                          &kp_ew_quit EXCL       &kp_ew_quit LBRC  &kp_ew_quit EQUAL  &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit PIPE
+&none  &kp_ew_quit GRAVE  &kp_ew_quit LEFT_BRACKET  &kp_ew_quit MINUS  &kp_ew_quit RBKT  &kp_ew_quit ASTRK                                          &kp_ew_quit QUESTION   &kp_ew_quit LPAR  &kp UNDERSCORE     &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_quit DOUBLE_QUOTES
+&none  &kp_ew_quit HASH   &kp_ew_quit PERCENT       &kp_ew_quit AT     &kp_ew_quit AMPS  &kp_ew_quit DLLR   &none                &none              &kp_ew_exit RU_NUMERO  &kp_ew_quit BSLH  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &kp_ew_exit LS(ENTER)
                           &none                     &none              &none             &kp DEL            &kp_ew_exit SPACE    &kp_ew_exit SPACE  &kp BSPC               &none             &none              &none
             >;
         };
