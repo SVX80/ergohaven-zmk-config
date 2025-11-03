@@ -164,9 +164,9 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59>;
         };
 
-        rcw_nav: rcw_nav {
+        rcw_mod: rcw_mod {
             compatible = "zmk,behavior-hold-tap";
-            label = "RCW_NAV";
+            label = "RCW_MOD";
             bindings = <&mo_rcw_exit>, <&kp>;
 
             #binding-cells = <2>;
@@ -480,11 +480,11 @@
         ru_cw {
             display-name = "Ru CapsWord";
             bindings = <
-&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                         &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp_rcw_exit F11
-&kp_rcw_exit TAB   &trans           &trans             &trans           &trans              &trans                                                  &trans           &trans              &trans           &trans           &trans               &kp_rcw_exit BSLH
-&rcw_toggle        &trans           &trans             &trans           &trans              &trans                                                  &trans           &trans              &trans           &trans           &trans               &trans
-&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans              &trans            &layer_en           &layer_ru         &trans           &trans              &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
-                                    &kp_rcw_exit LALT  &trans           &kp_rcw_exit LCTRL  &l_tkl 11 DELETE  &rcw_tkl 8 SPACE    &rcw_tkl 8 SPACE  &rcw_nav 6 BSPC  &kp_rcw_exit RCTRL  &trans           &trans
+&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                           &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp_rcw_exit F11
+&kp_rcw_exit TAB   &trans           &trans             &trans           &trans              &trans                                                    &trans           &trans              &trans           &trans           &trans               &kp_rcw_exit BSLH
+&rcw_toggle        &trans           &trans             &trans           &trans              &trans                                                    &trans           &trans              &trans           &trans           &trans               &trans
+&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans              &trans              &layer_en           &layer_ru         &trans           &trans              &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
+                                    &kp_rcw_exit LALT  &trans           &kp_rcw_exit LCTRL  &rcw_mod 11 DELETE  &rcw_tkl 8 SPACE    &rcw_tkl 8 SPACE  &rcw_mod 6 BSPC  &kp_rcw_exit RCTRL  &trans           &trans
             >;
         };
 
