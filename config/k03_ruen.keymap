@@ -151,6 +151,18 @@
             #binding-cells = <1>;
             toggle-mode = "on";
         };
+
+        rcw_tkl: rcw_tkl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RCW_TKL";
+            bindings = <&mo>, <&kp_rcw_exit>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            hold-trigger-on-release;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59>;
+        };
     };
 
     combos {
@@ -353,15 +365,19 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
+                <&macro_tap>,
                 <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
                 <&kp N2>,
                 <&macro_release>,
-                <&kp LS(LCTRL) &macro_param_1to1 &on MACRO_PLACEHOLDER>,
+                <&kp LS(LCTRL)>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "MO_EW_EXIT";
             wait-ms = <5>;
@@ -373,6 +389,8 @@
             #binding-cells = <1>;
             bindings =
                 <&off 2>,
+                <&macro_tap>,
+                <&kp CAPSLOCK>,
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
@@ -434,22 +452,22 @@
         ru_cw {
             display-name = "Ru CapsWord";
             bindings = <
-&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4  &kp_rcw_exit F5                                       &kp_rcw_exit F6  &kp_rcw_exit F7  &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp_rcw_exit F11
-&kp_rcw_exit TAB   &trans           &trans             &trans           &trans           &trans                                                &trans           &trans           &trans           &trans           &trans               &kp_rcw_exit BSLH
-&rcw_toggle        &trans           &trans             &trans           &trans           &trans                                                &trans           &trans           &trans           &trans           &trans               &trans
-&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans           &trans            &layer_en          &layer_ru        &trans           &trans           &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
-                                    &kp_rcw_exit LALT  &trans           &kp LCTRL        &l_tkl 11 DELETE  &l_tlkr 8 SPACE    &r_tlkr 8 SPACE  &r_tkl 6 BSPC    &kp RCTRL        &trans           &trans
+&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                       &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp_rcw_exit F11
+&kp_rcw_exit TAB   &trans           &trans             &trans           &trans              &trans                                                &trans           &trans              &trans           &trans           &trans               &kp_rcw_exit BSLH
+&rcw_toggle        &trans           &trans             &trans           &trans              &trans                                                &trans           &trans              &trans           &trans           &trans               &trans
+&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans              &trans            &layer_en          &layer_ru        &trans           &trans              &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
+                                    &kp_rcw_exit LALT  &trans           &kp_rcw_exit LCTRL  &l_tkl 11 DELETE  &l_tlkr 8 SPACE    &r_tlkr 8 SPACE  &r_tkl 6 BSPC    &kp_rcw_exit RCTRL  &trans           &trans
             >;
         };
 
         ew {
             display-name = "EN word";
             bindings = <
-&kp_ew_exit ESC    &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                                      &kp_ew_exit F6  &kp_ew_exit F7      &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F11
-&kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
-&en_capsw          &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
-&kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en          &layer_ru        &trans          &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
-                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 11 DEL   &ew_tkl 9 SPACE    &ew_tkl 9 SPACE  &ew_nav 5 BSPC  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
+&kp_ew_exit ESC    &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                                        &kp_ew_exit F6  &kp_ew_exit F7      &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F11
+&kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                                &trans          &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
+&en_capsw          &trans          &trans             &trans            &trans              &trans                                                &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
+&kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en           &layer_ru         &trans          &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
+                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 11 DEL   &rcw_tkl 9 SPACE    &rcw_tkl 9 SPACE  &ew_nav 5 BSPC  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
             >;
         };
 
