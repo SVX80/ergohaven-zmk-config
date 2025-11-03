@@ -169,7 +169,7 @@
         };
 
         to-simple-layer {
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             key-positions = <1 37>;
         };
 
@@ -278,14 +278,14 @@
         ew_enter: ew_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &to_en>;
+            bindings = <&tog 3 &to_en>;
             label = "EW_ENTER";
         };
 
         ewc_enter: ewc_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &to_en &en_capsw>;
+            bindings = <&tog 3 &to_en &en_capsw>;
             label = "EWC_ENTER";
         };
 
@@ -293,7 +293,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&off 2>,
+                <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
@@ -312,7 +312,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&off 2>,
+                <&off 3>,
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
@@ -331,7 +331,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&off 2>,
+                <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
@@ -353,7 +353,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&off 2>,
+                <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
@@ -367,6 +367,27 @@
             wait-ms = <5>;
             tap-ms = <30>;
         };
+
+        kp_rcw_exit: kp_rcw_exit {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&off 2>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KP_RCW_EXIT";
+            wait-ms = <5>;
+            tap-ms = <30>;
+        };
+
+        rcw_toggle: rcw_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 2>, <&macro_tap>, <&kp CAPSLOCK>;
+
+            label = "RCW_ENTER";
+        };
     };
 
     keymap {
@@ -379,7 +400,7 @@
 &kp TAB    &kp Q   &kp W         &kp E            &kp R      &kp T                                                 &kp Y               &kp U      &kp I            &kp O      &kp P     &kp BSLH
 &en_capsw  &kp A   &kp S         &l_hrm LSHIFT D  &kp F      &kp G                                                 &kp H               &kp J      &r_hrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
 &kp LGUI   &kp Z   &kp X         &kp C            &kp V      &kp B             &to_en             &layer_ru        &kp N               &kp M      &kp COMMA        &kp DOT    &kp FSLH  &kp ENTER
-                   &kp LEFT_ALT  &kp LBKT         &kp LCTRL  &l_tkl 10 DELETE  &l_tlkr 6 SPACE    &r_tlkr 6 SPACE  &r_tkl 5 BACKSPACE  &kp RCTRL  &kp RBKT         &kp GRAVE
+                   &kp LEFT_ALT  &kp LBKT         &kp LCTRL  &l_tkl 11 DELETE  &l_tlkr 7 SPACE    &r_tlkr 7 SPACE  &r_tkl 6 BACKSPACE  &kp RCTRL  &kp RBKT         &kp GRAVE
             >;
 
             sensor-bindings =
@@ -394,11 +415,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp F1                   &kp F2                &kp F3                        &kp F4              &kp F5                                                  &kp F6              &kp F7                     &kp F8                        &kp F9                 &kp F10              &kp F11
-&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                      &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA           &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
-&ru_capsw  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &l_hrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                      &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &r_hrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI   &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en          &to_ru           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE            &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
-                                    &kp LALT              &kp RU_CYRILLIC_HA            &kp LCTRL           &l_tkl 10 DELETE    &l_tlkr 7 SPACE    &r_tlkr 7 SPACE  &r_tkl 5 BSPC       &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
+&kp ESC      &kp F1                   &kp F2                &kp F3                        &kp F4              &kp F5                                                  &kp F6              &kp F7                     &kp F8                        &kp F9                 &kp F10              &kp F11
+&kp TAB      &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                      &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA           &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
+&rcw_toggle  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &l_hrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                      &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &r_hrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LGUI     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en          &to_ru           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE            &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
+                                      &kp LALT              &kp RU_CYRILLIC_HA            &kp LCTRL           &l_tkl 11 DELETE    &l_tlkr 8 SPACE    &r_tlkr 8 SPACE  &r_tkl 6 BSPC       &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
             >;
 
             sensor-bindings =
@@ -410,6 +431,17 @@
                 <&enc_vol>;
         };
 
+        ru_cw {
+            display-name = "Ru CapsWord";
+            bindings = <
+&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4  &kp_rcw_exit F5                                       &kp_rcw_exit F6  &kp_rcw_exit F7  &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp_rcw_exit F11
+&kp_rcw_exit TAB   &trans           &trans             &trans           &trans           &trans                                                &trans           &trans           &trans           &trans           &trans               &kp_rcw_exit BSLH
+&rcw_toggle        &trans           &trans             &trans           &trans           &trans                                                &trans           &trans           &trans           &trans           &trans               &trans
+&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans           &trans            &layer_en          &layer_ru        &trans           &trans           &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
+                                    &kp_rcw_exit LALT  &trans           &kp LCTRL        &l_tkl 11 DELETE  &l_tlkr 8 SPACE    &r_tlkr 8 SPACE  &r_tkl 6 BSPC    &kp RCTRL        &trans           &trans
+            >;
+        };
+
         ew {
             display-name = "EN word";
             bindings = <
@@ -417,7 +449,7 @@
 &kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
 &en_capsw          &trans          &trans             &trans            &trans              &trans                                              &trans          &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
 &kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en          &layer_ru        &trans          &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
-                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 10 DEL   &ew_tkl 8 SPACE    &ew_tkl 8 SPACE  &ew_nav 5 BSPC  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
+                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &l_tkl 11 DEL   &ew_tkl 9 SPACE    &ew_tkl 9 SPACE  &ew_nav 5 BSPC  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
             >;
         };
 
@@ -428,7 +460,7 @@
 &kp TAB   &kp Q   &kp W         &kp E     &kp R      &kp T                                                            &kp Y           &kp U      &kp I      &kp O      &kp P     &kp BSLH
 &kp CAPS  &kp A   &kp S         &kp D     &kp F      &kp G                                                            &kp H           &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
 &kp LGUI  &kp Z   &kp X         &kp C     &kp V      &kp B          &kp MINUS                 &kp EQUAL               &kp N           &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
-                  &kp LEFT_ALT  &kp LBKT  &kp LCTRL  &l_tkl 11 DEL  &simple_sp LSHFT SPACE    &simple_sp RSHFT SPACE  &r_tkl 11 BSPC  &kp RCTRL  &kp RBKT   &kp GRAVE
+                  &kp LEFT_ALT  &kp LBKT  &kp LCTRL  &l_tkl 12 DEL  &simple_sp LSHFT SPACE    &simple_sp RSHFT SPACE  &r_tkl 12 BSPC  &kp RCTRL  &kp RBKT   &kp GRAVE
             >;
 
             sensor-bindings =
@@ -447,7 +479,7 @@
 &kp TAB  &kp LC(Y)  &sel_word  &none      &none      &none                                     &kp PG_UP       &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LC(HOME)  &none
 &none    &kp LC(A)  &kp LC(S)  &kp LSHFT  &none      &none                                     &none           &kp LEFT      &kp DOWN  &kp RIGHT      &none         &none
 &none    &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none             &none        &none      &kp PG_DN       &kp HOME      &none     &kp END        &kp LC(END)   &kp ENTER
-                    &none      &none      &tog 4     &l_tkl 11 DELETE  &kp SPACE    &kp SPACE  &r_tkl 11 BSPC  &tog 4        &none     &none
+                    &none      &none      &tog 5     &l_tkl 12 DELETE  &kp SPACE    &kp SPACE  &r_tkl 12 BSPC  &tog 5        &none     &none
             >;
         };
 
@@ -458,7 +490,7 @@
 &none  &kp LC(Y)  &sel_word  &none      &none      &none                                 &kp PG_UP  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LC(HOME)  &none
 &none  &kp LC(A)  &kp LC(S)  &kp LSHFT  &none      &none                                 &none      &kp LEFT      &kp DOWN  &kp RIGHT      &none         &none
 &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none             &none        &none  &kp PG_DN  &kp HOME      &none     &kp END        &kp LC(END)   &kp ENTER
-                  &none      &none      &tog 4     &l_tkl 12 DELETE  &kp SPACE    &none  &none      &tog 4        &none     &none
+                  &none      &none      &tog 5     &l_tkl 13 DELETE  &kp SPACE    &none  &none      &tog 5        &none     &none
             >;
         };
 
@@ -498,22 +530,22 @@
         num {
             display-name = "Number";
             bindings = <
-&none  &none  &none  &none      &none   &none                                  &none           &none   &none   &none   &none            &none
-&none  &none  &none  &none      &none   &none                                  &kp KP_MINUS    &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
-&none  &none  &none  &kp LSHFT  &none   &none                                  &kp KP_PLUS     &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
-&none  &none  &none  &none      &none   &none          &none        &none      &kp LPAR        &kp N1  &kp N2  &kp N3  &kp RPAR         &kp ENTER
-              &none  &none      &tog 9  &l_tkl 11 DEL  &kp SPACE    &kp SPACE  &r_tkl 11 BSPC  &tog 9  &kp N0  &none
+&none  &none  &none  &none      &none    &none                                  &none           &none    &none   &none   &none            &none
+&none  &none  &none  &none      &none    &none                                  &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
+&none  &none  &none  &kp LSHFT  &none    &none                                  &kp KP_PLUS     &kp N4   &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&none  &none  &none  &none      &none    &none          &none        &none      &kp LPAR        &kp N1   &kp N2  &kp N3  &kp RPAR         &kp ENTER
+              &none  &none      &tog 10  &l_tkl 12 DEL  &kp SPACE    &kp SPACE  &r_tkl 12 BSPC  &tog 10  &kp N0  &none
             >;
         };
 
         num_m {
             display-name = "Number (momentary)";
             bindings = <
-&none  &none  &none  &none       &none   &none                      &none           &none   &none   &none   &none            &none
-&none  &none  &none  &none       &none   &none                      &kp KP_MINUS    &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
-&none  &none  &none  &kp LSHIFT  &none   &none                      &kp KP_PLUS     &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
-&none  &none  &none  &none       &none   &none  &none    &none      &kp LPAR        &kp N1  &kp N2  &kp N3  &kp RPAR         &kp LS(ENTER)
-              &none  &none       &tog 9  &none  &none    &kp SPACE  &r_tkl 12 BSPC  &tog 9  &kp N0  &none
+&none         &none  &none  &none       &none    &none                      &none           &none    &none   &none   &none            &none
+&none         &none  &none  &none       &none    &none                      &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
+&kp CAPSLOCK  &none  &none  &kp LSHIFT  &none    &none                      &kp KP_PLUS     &kp N4   &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&none         &none  &none  &none       &none    &none  &none    &none      &kp LPAR        &kp N1   &kp N2  &kp N3  &kp RPAR         &kp LS(ENTER)
+                     &none  &none       &tog 10  &none  &none    &kp SPACE  &r_tkl 13 BSPC  &tog 10  &kp N0  &none
             >;
         };
 
@@ -524,7 +556,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &mo 12  &trans    &trans  &mo 12  &trans  &trans  &trans
+                &trans  &trans  &trans  &mo 13  &trans    &trans  &mo 13  &trans  &trans  &trans
             >;
         };
 
