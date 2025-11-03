@@ -305,7 +305,7 @@
         ew_enter: ew_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 3 &to_en>;
+            bindings = <&tog 3>, <&macro_tap>, <&to_en>;
 
             label = "EW_ENTER";
         };
@@ -313,7 +313,7 @@
         ewc_enter: ewc_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 3 &to_en &en_capsw>;
+            bindings = <&tog 3>, <&macro_tap>, <&to_en &en_capsw>;
 
             label = "EWC_ENTER";
         };
@@ -322,10 +322,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
+                <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
-                <&kp N2 &off 3>,
+                <&kp N2>,
                 <&macro_release>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
@@ -340,7 +341,6 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap>,
                 <&off 3 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
@@ -358,7 +358,6 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap>,
                 <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
@@ -381,10 +380,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
+                <&off 3>,
                 <&macro_press>,
                 <&kp LS(LCTRL)>,
                 <&macro_tap>,
-                <&kp N2 &off 3>,
+                <&kp N2>,
                 <&macro_release>,
                 <&kp LS(LCTRL)>,
                 <&macro_press>,
@@ -402,8 +402,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
+                <&off 2>,
                 <&macro_tap>,
-                <&off 2 &kp CAPSLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+                <&kp CAPSLOCK>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KP_RCW_EXIT";
             wait-ms = <5>;
