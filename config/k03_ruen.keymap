@@ -426,7 +426,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&kp CAPS &off 3>,
+                <&kp CAPS &off 2>,
                 <&macro_press>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
