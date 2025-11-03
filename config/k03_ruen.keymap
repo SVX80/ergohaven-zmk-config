@@ -155,7 +155,7 @@
         rcw_tkl: rcw_tkl {
             compatible = "zmk,behavior-hold-tap";
             label = "RCW_TKL";
-            bindings = <&mo>, <&kp_rcw_exit>;
+            bindings = <&mo_ew_exit>, <&kp_rcw_exit>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -567,7 +567,7 @@
         };
 
         sym_enword {
-            display-name = ".enw-symbols.";
+            display-name = ".enw-syms.";
             bindings = <
 &none  &none              &none                     &none              &none             &none                                                      &none                  &none             &none              &none             &none              &none
 &none  &kp_ew_quit TILDE  &kp_ew_quit LT            &kp_ew_quit PLUS   &kp_ew_quit GT    &kp_ew_quit CARET                                          &kp_ew_quit EXCL       &kp_ew_quit LBRC  &kp_ew_quit EQUAL  &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit PIPE
