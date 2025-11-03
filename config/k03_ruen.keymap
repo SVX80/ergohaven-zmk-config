@@ -426,10 +426,10 @@
             #binding-cells = <1>;
             bindings =
                 <&off 2>,
-                <&macro_tap>,
-                <&kp CAPS>,
                 <&macro_press>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp CAPS>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
