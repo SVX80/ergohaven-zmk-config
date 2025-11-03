@@ -498,22 +498,22 @@
         num {
             display-name = "Number";
             bindings = <
-&none  &none  &none  &none      &none    &none                                  &none           &none    &none   &none   &none            &none
-&none  &none  &none  &none      &none    &none                                  &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
-&none  &none  &none  &kp LSHFT  &none    &none                                  &kp KP_PLUS     &kp N4   &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
-&none  &none  &none  &none      &none    &none          &none        &none      &kp LPAR        &kp N1   &kp N2  &kp N3  &kp RPAR         &kp ENTER
-              &none  &none      &tog 10  &l_tkl 11 DEL  &kp SPACE    &kp SPACE  &r_tkl 11 BSPC  &tog 10  &kp N0  &none
+&none  &none  &none  &none      &none   &none                                  &none           &none   &none   &none   &none            &none
+&none  &none  &none  &none      &none   &none                                  &kp KP_MINUS    &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
+&none  &none  &none  &kp LSHFT  &none   &none                                  &kp KP_PLUS     &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&none  &none  &none  &none      &none   &none          &none        &none      &kp LPAR        &kp N1  &kp N2  &kp N3  &kp RPAR         &kp ENTER
+              &none  &none      &tog 9  &l_tkl 11 DEL  &kp SPACE    &kp SPACE  &r_tkl 11 BSPC  &tog 9  &kp N0  &none
             >;
         };
 
         num_m {
             display-name = "Number (momentary)";
             bindings = <
-&none  &none  &none  &none       &none    &none                      &none           &none    &none   &none   &none            &none
-&none  &none  &none  &none       &none    &none                      &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
-&none  &none  &none  &kp LSHIFT  &none    &none                      &kp KP_PLUS     &kp N4   &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
-&none  &none  &none  &none       &none    &none  &none    &none      &kp LPAR        &kp N1   &kp N2  &kp N3  &kp RPAR         &kp LS(ENTER)
-              &none  &none       &tog 10  &none  &none    &kp SPACE  &r_tkl 12 BSPC  &tog 10  &kp N0  &none
+&none  &none  &none  &none       &none   &none                      &none           &none   &none   &none   &none            &none
+&none  &none  &none  &none       &none   &none                      &kp KP_MINUS    &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp KP_CLEAR
+&none  &none  &none  &kp LSHIFT  &none   &none                      &kp KP_PLUS     &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&none  &none  &none  &none       &none   &none  &none    &none      &kp LPAR        &kp N1  &kp N2  &kp N3  &kp RPAR         &kp LS(ENTER)
+              &none  &none       &tog 9  &none  &none    &kp SPACE  &r_tkl 12 BSPC  &tog 9  &kp N0  &none
             >;
         };
 
