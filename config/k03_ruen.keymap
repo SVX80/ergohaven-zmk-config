@@ -168,10 +168,14 @@
             layers = <0>;
         };
 
-        toggle-simple {
-            bindings = <&tog 3>;
-            key-positions = <13 37>;
-            layers = <0 1 3 2 4 9>;
+        to-simple-layer {
+            bindings = <&to 3>;
+            key-positions = <1 37>;
+        };
+
+        to-base-layer {
+            bindings = <&to 0>;
+            key-positions = <2 38>;
         };
     };
 
@@ -426,6 +430,14 @@
 &kp LGUI  &kp Z   &kp X         &kp C     &kp V      &kp B          &kp MINUS                 &kp EQUAL               &kp N           &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
                   &kp LEFT_ALT  &kp LBKT  &kp LCTRL  &l_tkl 11 DEL  &simple_sp LSHFT SPACE    &simple_sp RSHFT SPACE  &r_tkl 11 BSPC  &kp RCTRL  &kp RBKT   &kp GRAVE
             >;
+
+            sensor-bindings =
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>;
         };
 
         nav {
