@@ -286,7 +286,7 @@
         ew_enter: ew_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 3>, <&macro_tap>, <&to_en>;
+            bindings = <&tog 3>, <&macro_tap>, <&kp LS(LC(N1))>;
 
             label = "EW_ENTER";
         };
@@ -294,7 +294,7 @@
         ewc_enter: ewc_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 3>, <&macro_tap>, <&to_en &en_capsw>;
+            bindings = <&tog 3>, <&macro_tap>, <&kp LS(LA(N1)) &en_capsw>;
 
             label = "EWC_ENTER";
         };
@@ -427,11 +427,11 @@
         en {
             display-name = "Base EN";
             bindings = <
-&kp ESC    &kp F1  &kp F2        &kp F3           &kp F4     &kp F5                                                    &kp F6      &kp F7     &kp F8           &kp F9     &kp F10   &kp BACKSPACE
-&kp TAB    &kp Q   &kp W         &kp E            &kp R      &kp T                                                     &kp Y       &kp U      &kp I            &kp O      &kp P     &kp BSLH
-&en_capsw  &kp A   &kp S         &l_hrm LSHIFT D  &kp F      &kp G                                                     &kp H       &kp J      &r_hrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
-&kp LGUI   &kp Z   &kp X         &kp C            &kp V      &kp B                   &to_en            &layer_ru       &kp N       &kp M      &kp COMMA        &kp DOT    &kp FSLH  &kp ENTER
-                   &kp LEFT_ALT  &kp LBKT         &kp LCTRL  &mo_kp_tk 11 BACKSPACE  &l_tkr 7 SPACE    &r_tkl 7 SPACE  &r_tkm 6 5  &kp RCTRL  &kp RBKT         &kp GRAVE
+&kp ESC    &kp F1  &kp F2        &kp F3           &kp F4     &kp F5                                                    &kp F6  &kp F7     &kp F8           &kp F9     &kp F10   &kp BACKSPACE
+&kp TAB    &kp Q   &kp W         &kp E            &kp R      &kp T                                                     &kp Y   &kp U      &kp I            &kp O      &kp P     &kp BSLH
+&en_capsw  &kp A   &kp S         &l_hrm LSHIFT D  &kp F      &kp G                                                     &kp H   &kp J      &r_hrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
+&kp LGUI   &kp Z   &kp X         &kp C            &kp V      &kp B                   &to_en            &layer_ru       &kp N   &kp M      &kp COMMA        &kp DOT    &kp FSLH  &kp ENTER
+                   &kp LEFT_ALT  &kp LBKT         &kp LCTRL  &mo_kp_tk 11 BACKSPACE  &l_tkr 7 SPACE    &r_tkl 7 SPACE  &mo 6   &kp RCTRL  &kp RBKT         &kp GRAVE
             >;
 
             sensor-bindings =
@@ -450,7 +450,7 @@
 &kp TAB      &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA           &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
 &rcw_toggle  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &l_hrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &r_hrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I       &layer_en         &to_ru          &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE            &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
-                                      &kp LALT              &kp RU_CYRILLIC_HA            &kp LCTRL           &mo_kp_tk 11 BACKSPACE  &l_tkr 8 SPACE    &r_tkl 8 SPACE  &r_tkm 6 5          &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
+                                      &kp LALT              &kp RU_CYRILLIC_HA            &kp LCTRL           &mo_kp_tk 11 BACKSPACE  &l_tkr 8 SPACE    &r_tkl 8 SPACE  &mo 6               &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
             >;
 
             sensor-bindings =
