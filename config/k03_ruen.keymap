@@ -186,6 +186,7 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <54 55>;
+            timeout-ms = <55>;
         };
     };
 
@@ -566,22 +567,22 @@
         num {
             display-name = "Number";
             bindings = <
-&none    &none  &none  &none  &none    &none                                     &none            &none    &none     &none     &none         &kp BACKSPACE
-&kp TAB  &none  &none  &none  &none    &none                                     &kp KP_DIVIDE    &kp N7   &kp N8    &kp N9    &kp MINUS     &none
-&none    &none  &none  &none  &none    &none                                     &kp KP_MULTIPLY  &kp N4   &kp N5    &kp N6    &kp PLUS      &kp KP_EQUAL
-&none    &none  &none  &none  &none    &none         &none        &none          &kp N0           &kp N1   &kp N2    &kp N3    &kp KP_CLEAR  &kp ENTER
-                &none  &none  &tog 10  &r_tkm 11 10  &kp SPACE    &kp BACKSPACE  &mo 12           &tog 10  &kp LPAR  &kp RPAR
+&none    &none  &none  &none  &none    &none                                     &none            &none    &none   &none         &none      &kp BACKSPACE
+&kp TAB  &none  &none  &none  &none    &none                                     &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
+&none    &none  &none  &none  &none    &none                                     &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
+&none    &none  &none  &none  &none    &none         &none        &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
+                &none  &none  &tog 10  &r_tkm 11 10  &kp SPACE    &kp BACKSPACE  &mo 12           &tog 10  &kp N0  &kp KP_CLEAR
             >;
         };
 
         num_m {
             display-name = ".number.";
             bindings = <
-&none         &none    &none                 &none       &none                  &none                          &none            &none    &none     &none     &none         &none
-&none         &none    &kp LS(LC(LEFT))      &sel_word   &kp LS(LC(RIGHT))      &none                          &kp KP_DIVIDE    &kp N7   &kp N8    &kp N9    &kp MINUS     &none
-&kp CAPSLOCK  &kp ESC  &kp LS(LEFT)          &kp LSHIFT  &kp LS(RIGHT)          &none                          &kp KP_MULTIPLY  &kp N4   &kp N5    &kp N6    &kp PLUS      &kp KP_EQUAL
-&none         &none    &kp LS(LC(LA(LEFT)))  &none       &kp LS(LA(LC(RIGHT)))  &none  &none    &none          &kp N0           &kp N1   &kp N2    &kp N3    &kp KP_CLEAR  &kp ENTER
-                       &none                 &none       &none                  &none  &none    &kp BACKSPACE  &mo 13           &tog 10  &kp LPAR  &kp RPAR
+&none         &none    &none                 &none       &none                  &none                          &none            &none    &none   &none         &none      &none
+&none         &none    &kp LS(LC(LEFT))      &sel_word   &kp LS(LC(RIGHT))      &none                          &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
+&kp CAPSLOCK  &kp ESC  &kp LS(LEFT)          &kp LSHIFT  &kp LS(RIGHT)          &none                          &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
+&none         &none    &kp LS(LC(LA(LEFT)))  &none       &kp LS(LA(LC(RIGHT)))  &none  &none    &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
+                       &none                 &none       &none                  &none  &none    &kp BACKSPACE  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
             >;
         };
 
