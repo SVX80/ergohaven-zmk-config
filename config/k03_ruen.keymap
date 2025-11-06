@@ -297,7 +297,7 @@
         ewc_enter: ewc_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 3>, <&macro_tap>, <&kp LS(LA(N1)) &en_capsw>;
+            bindings = <&tog 3>, <&macro_tap>, <&kp LS(LC(N1)) &en_capsw>;
 
             label = "EWC_ENTER";
         };
