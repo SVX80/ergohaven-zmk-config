@@ -531,33 +531,33 @@
         sym_en {
             display-name = ".en-symbols.";
             bindings = <
-&none  &none      &none             &none      &none     &none                      &none          &none     &none           &none     &none      &none
-&none  &kp TILDE  &kp LT            &kp PLUS   &kp GT    &kp CARET                  &kp EXCL       &kp LBRC  &kp EQUAL       &kp RBRC  &kp COLON  &kp PIPE
-&none  &kp GRAVE  &kp LEFT_BRACKET  &kp MINUS  &kp RBKT  &kp ASTRK                  &kp QUESTION   &kp LPAR  &kp UNDERSCORE  &kp RPAR  &kp SEMI   &kp DOUBLE_QUOTES
-&none  &kp HASH   &kp PERCENT       &kp AT     &kp AMPS  &kp DLLR   &none    &none  &ru RU_NUMERO  &kp BSLH  &kp COMMA       &kp DOT   &kp SLASH  &none
-                  &none             &none      &none     &none      &none    &none  &none          &none     &none           &none
+&none  &none      &none             &none          &none       &none                        &none           &none              &none           &none     &none      &none
+&none  &kp TILDE  &kp LT            &kp EQUAL      &kp GT      &kp CARET                    &kp EXCL        &kp LBRC           &kp MINUS       &kp RBRC  &kp COLON  &kp BACKSLASH
+&none  &kp GRAVE  &kp LEFT_BRACKET  &kp PLUS       &kp RBKT    &kp ASTRK                    &kp QUESTION    &kp LPAR           &kp UNDERSCORE  &kp RPAR  &kp SEMI   &kp PIPE
+&none  &kp HASH   &kp AT            &kp AMPERSAND  &kp DOLLAR  &kp PERCENT  &none    &none  &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp COMMA       &kp DOT   &kp SLASH  &none
+                  &none             &none          &none       &none        &none    &none  &none           &none              &ru RU_NUMERO   &none
             >;
         };
 
         sym_ru {
             display-name = ".ru-symbols.";
             bindings = <
-&none       &none      &none        &none      &none     &none                      &none          &none        &none         &none       &none         &none
-&ewc_enter  &en TILDE  &en LT       &kp PLUS   &en GT    &en CARET                  &kp EXCL       &en LBRC     &kp EQUAL     &en RBRC    &kp RU_COLON  &en PIPE
-&ew_enter   &en GRAVE  &en LBKT     &kp MINUS  &en RBKT  &kp ASTRK                  &kp RU_QMARK   &kp LPAR     &kp UNDER     &kp RPAR    &kp RU_SEMI   &kp RU_DOUBLE_QUOTES
-&none       &en HASH   &kp PERCENT  &en AT     &en AMPS  &en DLLR   &none    &none  &kp RU_NUMERO  &kp RU_BSLH  &kp RU_COMMA  &kp RU_DOT  &kp RU_SLASH  &none
-                       &none        &none      &none     &none      &none    &none  &none          &none        &none         &none
+&none       &none      &none     &none          &none       &none                        &none           &none              &none          &none       &none         &none
+&ewc_enter  &en TILDE  &en LT    &kp EQUAL      &en GT      &en CARET                    &kp EXCL        &en LBRC           &kp MINUS      &en RBRC    &kp RU_COLON  &kp RU_BACKSLASH
+&ew_enter   &en GRAVE  &en LBKT  &kp PLUS       &en RBKT    &kp ASTRK                    &kp RU_QMARK    &kp LPAR           &kp UNDER      &kp RPAR    &kp RU_SEMI   &en PIPE
+&none       &en HASH   &en AT    &en AMPERSAND  &en DOLLAR  &kp PERCENT  &none    &none  &en APOSTROPHE  &en DOUBLE_QUOTES  &kp RU_COMMA   &kp RU_DOT  &kp RU_SLASH  &none
+                       &none     &none          &none       &none        &none    &none  &none           &none              &kp RU_NUMERO  &none
             >;
         };
 
         sym_enword {
             display-name = ".enw-syms.";
             bindings = <
-&none  &none              &none                     &none              &none             &none                              &none                  &none             &none              &none             &none              &none
-&none  &kp_ew_quit TILDE  &kp_ew_quit LT            &kp_ew_quit PLUS   &kp_ew_quit GT    &kp_ew_quit CARET                  &kp_ew_quit EXCL       &kp_ew_quit LBRC  &kp_ew_quit EQUAL  &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit PIPE
-&none  &kp_ew_quit GRAVE  &kp_ew_quit LEFT_BRACKET  &kp_ew_quit MINUS  &kp_ew_quit RBKT  &kp_ew_quit ASTRK                  &kp_ew_quit QUESTION   &kp_ew_quit LPAR  &kp UNDERSCORE     &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_quit DOUBLE_QUOTES
-&none  &kp_ew_quit HASH   &kp_ew_quit PERCENT       &kp_ew_quit AT     &kp_ew_quit AMPS  &kp_ew_quit DLLR   &none    &none  &kp_ew_exit RU_NUMERO  &kp_ew_quit BSLH  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
-                          &none                     &none              &none             &none              &none    &none  &none                  &none             &none              &none
+&none  &none              &none                     &none                  &none               &none                                &none                   &none                      &none                  &none             &none              &none
+&none  &kp_ew_quit TILDE  &kp_ew_quit LT            &kp_ew_quit EQUAL      &kp_ew_quit GT      &kp_ew_quit CARET                    &kp_ew_quit EXCL        &kp_ew_quit LBRC           &kp_ew_quit MINUS      &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit BACKSLASH
+&none  &kp_ew_quit GRAVE  &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS       &kp_ew_quit RBKT    &kp_ew_quit ASTRK                    &kp_ew_quit QUESTION    &kp_ew_quit LPAR           &kp UNDERSCORE         &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_quit PIPE
+&none  &kp_ew_quit HASH   &kp_ew_quit AT            &kp_ew_quit AMPERSAND  &kp_ew_quit DOLLAR  &kp_ew_quit PERCENT  &none    &none  &kp_ew_quit APOSTROPHE  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA      &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
+                          &none                     &none                  &none               &none                &none    &none  &none                   &none                      &kp_ew_exit RU_NUMERO  &none
             >;
         };
 
