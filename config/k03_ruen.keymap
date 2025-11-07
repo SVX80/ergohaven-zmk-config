@@ -239,9 +239,9 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 50>,
+                <&macro_tap_time 30>,
                 <&macro_tap>,
-                <&kp LC(N2)>;
+                <&kp LC(LS(N2))>;
 
             label = "EN";
             wait-ms = <5>;
@@ -259,7 +259,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 50>,
+                <&macro_tap_time 30>,
                 <&macro_tap>,
                 <&kp LS(LC(N1))>;
 
@@ -381,6 +381,7 @@
             bindings = <&macro_tap>, <&tog 2>, <&macro_tap>, <&kp CAPSLOCK>;
 
             label = "RCW_ENTER";
+            tap-ms = <30>;
         };
 
         mo_rcw_exit: mo_rcw_exit {
