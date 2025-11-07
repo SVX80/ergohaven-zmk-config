@@ -170,20 +170,20 @@
             layers = <0>;
         };
 
-        to-simple-layer {
-            bindings = <&to 4>;
-            key-positions = <1 37>;
-        };
-
-        to-base-layer {
-            bindings = <&to 0>;
-            key-positions = <2 38>;
-        };
-
-        enter {
+        cmenter {
             bindings = <&kp ENTER>;
             key-positions = <54 55>;
-            timeout-ms = <58>;
+            timeout-ms = <50>;
+        };
+
+        cmbsimple {
+            bindings = <&to 4>;
+            key-positions = <0 54>;
+        };
+
+        cmbase {
+            bindings = <&to 4>;
+            key-positions = <0 55>;
         };
     };
 
