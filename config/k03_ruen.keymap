@@ -241,7 +241,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 50>,
                 <&macro_tap>,
-                <&kp LS(LC(N1))>;
+                <&kp LC(N2)>;
 
             label = "EN";
             wait-ms = <5>;
@@ -261,7 +261,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 50>,
                 <&macro_tap>,
-                <&kp LS(LC(N2))>;
+                <&kp LS(LC(N1))>;
 
             label = "RU";
             wait-ms = <5>;
