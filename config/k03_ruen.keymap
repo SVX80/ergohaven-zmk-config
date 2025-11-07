@@ -182,7 +182,7 @@
         };
 
         cmbase {
-            bindings = <&to 4>;
+            bindings = <&to 0>;
             key-positions = <0 55>;
         };
     };
