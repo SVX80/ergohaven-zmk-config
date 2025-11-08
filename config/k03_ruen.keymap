@@ -512,22 +512,22 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp ESC  &kp F1     &kp F2     &kp F3     &kp F4         &kp F5                          &kp F6      &kp F7              &kp F8    &kp F9         &kp F10        &kp BACKSPACE
-&kp TAB  &kp LC(Y)  &none      &none      &kp PG_UP      &none                           &none       &kp HOME            &kp UP    &kp END        &kp LC(HOME)   &none
-&none    &kp LC(A)  &kp LC(S)  &kp LSHFT  &kp PAGE_DOWN  &none                           &none       &kp LEFT            &kp DOWN  &kp RIGHT      &kp LS(ENTER)  &none
-&none    &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)      &none   &none        &none      &none       &kp LC(LEFT_ARROW)  &none     &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
-                    &none      &none      &tog 5         &mo 11  &kp SPACE    &kp SPACE  &r_tkm 6 5  &tog 5              &none     &none
+&kp ESC  &kp F1     &kp F2        &kp F3        &kp F4         &kp F5                                &kp F6        &kp F7              &kp F8        &kp F9         &kp F10        &kp BACKSPACE
+&kp TAB  &kp LC(Y)  &cmd F15 F13  &cmd F15 F14  &kp PG_UP      &cmd F15 F15                          &cmd F15 F16  &kp HOME            &kp UP        &kp END        &kp LC(HOME)   &none
+&none    &kp LC(A)  &kp LC(S)     &kp LSHFT     &kp PAGE_DOWN  &cmd F15 F17                          &cmd F15 F18  &kp LEFT            &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
+&none    &kp LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)      &cmd F15 F19  &none        &none      &cmd F15 F20  &kp LC(LEFT_ARROW)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
+                    &none         &none         &tog 5         &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5    &tog 5              &none         &none
             >;
         };
 
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&none  &kp F1     &kp F2     &kp F3     &kp F4         &kp F5                       &kp F6  &kp F7        &kp F8    &kp F9         &kp F10        &none
-&none  &kp LC(Y)  &sel_word  &none      &kp PG_UP      &none                        &none   &kp HOME      &kp UP    &kp END        &kp LC(HOME)   &none
-&none  &kp LC(A)  &kp LC(S)  &kp LSHFT  &kp PAGE_DOWN  &none                        &none   &kp LEFT      &kp DOWN  &kp RIGHT      &kp LS(ENTER)  &none
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)      &none   &none         &none  &none   &kp LC(LEFT)  &none     &kp LC(RIGHT)  &kp LC(END)    &none
-                  &none      &none      &tog 5         &mo 13  &kp DELETE    &none  &none   &tog 5        &none     &none
+&none  &kp F1     &kp F2        &kp F3        &kp F4         &kp F5                             &kp F6        &kp F7        &kp F8        &kp F9         &kp F10        &none
+&none  &kp LC(Y)  &cmd F15 F13  &cmd F15 F14  &kp PG_UP      &cmd F15 F15                       &cmd F15 F16  &kp HOME      &kp UP        &kp END        &kp LC(HOME)   &none
+&none  &kp LC(A)  &kp LC(S)     &kp LSHFT     &kp PAGE_DOWN  &cmd F15 F17                       &cmd F15 F18  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
+&none  &kp LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)      &cmd F15 F19  &none         &none  &cmd F15 F20  &kp LC(LEFT)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &none
+                  &none         &none         &tog 5         &mo 13        &kp DELETE    &none  &none         &tog 5        &none         &none
             >;
         };
 
