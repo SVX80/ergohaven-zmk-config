@@ -159,6 +159,15 @@
 
             tapping-term-ms = <250>;
         };
+
+        mt_cmd_f15: mt_cmd_f15 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_CMD_F15";
+            bindings = <&kp>, <&cmd_f15>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <225>;
+        };
     };
 
     combos {
@@ -425,6 +434,23 @@
             label = "CMD";
             tap-ms = <30>;
         };
+
+        cmd_f15: cmd_f15 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp F15>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CMD_F15";
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -512,22 +538,22 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp ESC  &kp F1      &kp F2        &kp F3        &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8        &kp F9         &kp F10        &kp BACKSPACE
-&kp TAB  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP        &kp END        &kp LC(HOME)   &none
-&none    &cmd F15 A  &cmd F15 S    &kp LSHFT     &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
-&none    &cmd F15 Z  &kp LC(X)     &kp LC(C)     &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
-                     &none         &none         &tog 5        &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5     &tog 5              &none         &none
+&kp ESC  &kp F1      &kp F2        &kp F3                 &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8        &kp F9         &kp F10        &kp BACKSPACE
+&kp TAB  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14           &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP        &kp END        &kp LC(HOME)   &none
+&none    &cmd F15 A  &cmd F15 S    &mt_cmd_f15 LSHFT F17  &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
+&none    &cmd F15 Z  &kp LC(X)     &kp LC(C)              &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
+                     &none         &none                  &tog 5        &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5     &tog 5              &none         &none
             >;
         };
 
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&none  &kp F1      &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8        &kp F9         &kp F10        &none
-&none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP        &kp END        &kp LC(HOME)   &none
-&none  &cmd F15 A  &cmd F15 S    &kp LSHFT     &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
-&none  &cmd F15 Z  &kp LC(X)     &kp LC(C)     &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &none
-                   &none         &none         &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none         &none
+&none  &kp F1      &kp F2        &kp F3                 &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8        &kp F9         &kp F10        &none
+&none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14           &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP        &kp END        &kp LC(HOME)   &none
+&none  &cmd F15 A  &cmd F15 S    &mt_cmd_f15 LSHFT F17  &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
+&none  &cmd F15 Z  &kp LC(X)     &kp LC(C)              &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &none
+                   &none         &none                  &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none         &none
             >;
         };
 
