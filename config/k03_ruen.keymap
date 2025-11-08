@@ -148,7 +148,7 @@
             #binding-cells = <0>;
             bindings = <&mo 6>, <&tog 5>;
 
-            tapping-term-ms = <190>;
+            tapping-term-ms = <250>;
         };
 
         num: num {
@@ -157,7 +157,7 @@
             #binding-cells = <0>;
             bindings = <&mo 11>, <&tog 10>;
 
-            tapping-term-ms = <190>;
+            tapping-term-ms = <250>;
         };
     };
 
