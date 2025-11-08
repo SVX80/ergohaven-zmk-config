@@ -171,7 +171,7 @@
         cmenter {
             bindings = <&kp ENTER>;
             key-positions = <54 55>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         cmbsimple {
