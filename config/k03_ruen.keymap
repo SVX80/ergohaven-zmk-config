@@ -141,6 +141,24 @@
             tapping-term-ms = <250>;
             flavor = "hold-preferred";
         };
+
+        nav: nav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NAV";
+            #binding-cells = <0>;
+            bindings = <&mo 6>, <&tog 5>;
+
+            tapping-term-ms = <190>;
+        };
+
+        num: num {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM";
+            #binding-cells = <0>;
+            bindings = <&mo 11>, <&tog 10>;
+
+            tapping-term-ms = <190>;
+        };
     };
 
     combos {
@@ -390,6 +408,23 @@
             wait-ms = <5>;
             tap-ms = <30>;
         };
+
+        cmd: cmd {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CMD";
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -402,7 +437,7 @@
 &kp TAB    &kp Q   &kp W         &kp E            &kp R          &kp T                                &kp Y   &kp U      &kp I            &kp O      &kp P     &kp BSLH
 &en_capsw  &kp A   &kp S         &l_hrm LSHIFT D  &kp F          &kp G                                &kp H   &kp J      &r_hrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
 &kp LGUI   &kp Z   &kp X         &kp C            &kp V          &kp B   &to_en            &layer_ru  &kp N   &kp M      &kp COMMA        &kp DOT    &kp FSLH  &kp ENTER
-                   &kp LEFT_ALT  &kp LBKT         &kp LS(LCTRL)  &mo 11  &l_tkr 7 SPACE    &kp SPACE  &mo 6   &kp RCTRL  &kp RBKT         &kp GRAVE
+                   &kp LEFT_ALT  &kp LBKT         &kp LS(LCTRL)  &num    &l_tkr 7 SPACE    &kp SPACE  &nav    &kp RCTRL  &kp RBKT         &kp GRAVE
             >;
 
             sensor-bindings =
@@ -421,7 +456,7 @@
 &kp TAB      &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA           &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
 &rcw_toggle  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &l_hrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &r_hrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en         &to_ru     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE            &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
-                                      &kp LALT              &kp RU_CYRILLIC_HA            &kp LS(LCTRL)       &mo 11              &l_tkr 8 SPACE    &kp SPACE  &mo 6               &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
+                                      &kp LALT              &kp RU_CYRILLIC_HA            &kp LS(LCTRL)       &num                &l_tkr 8 SPACE    &kp SPACE  &nav                &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
             >;
 
             sensor-bindings =
