@@ -13,7 +13,7 @@
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
 
-        l_hrm: left-home-row-mod {
+        l_mod: left-mod {
             compatible = "zmk,behavior-hold-tap";
             label = "Left key with modifier";
             bindings = <&kp>, <&kp>;
@@ -25,7 +25,7 @@
             flavor = "balanced";
         };
 
-        r_hrm: right-home-row-mod {
+        r_mod: right-mod {
             compatible = "zmk,behavior-hold-tap";
             label = "Right key with modifier";
             bindings = <&kp>, <&kp>;
@@ -167,6 +167,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <225>;
+        };
+
+        win_alt: win_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_ALT";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LALT>;
+
+            tapping-term-ms = <250>;
         };
     };
 
@@ -462,7 +471,7 @@
 &kp ESC    &kp F1  &kp F2        &kp F3          &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8                    &kp F9     &kp F10   &kp BACKSPACE
 &kp TAB    &kp Q   &kp W         &kp E           &kp R      &kp T                                &kp Y   &kp U      &kp I                     &kp O      &kp P     &kp BSLH
 &en_capsw  &kp A   &kp S         &kp D           &kp F      &kp G                                &kp H   &kp J      &kp K                     &kp L      &kp SEMI  &kp SQT
-&kp LGUI   &kp Z   &kp X         &l_hrm LSHFT C  &kp V      &kp B   &to_en            &layer_ru  &kp N   &kp M      &r_hrm RIGHT_SHIFT COMMA  &kp DOT    &kp FSLH  &kp ENTER
+&kp LGUI   &kp Z   &kp X         &l_mod LSHFT C  &kp V      &kp B   &to_en            &layer_ru  &kp N   &kp M      &r_mod RIGHT_SHIFT COMMA  &kp DOT    &kp FSLH  &kp ENTER
                    &kp LEFT_ALT  &kp LBKT        &kp LCTRL  &num    &l_tkr 7 SPACE    &kp SPACE  &nav    &kp RCTRL  &kp RBKT                  &kp GRAVE
             >;
 
@@ -478,11 +487,11 @@
         ru {
             display-name = "Base RU";
             bindings = <
-&kp ESC      &kp F1                   &kp F2                &kp F3                        &kp F4              &kp F5                                           &kp F6              &kp F7                     &kp F8                        &kp F9                 &kp F10              &kp BACKSPACE
-&kp TAB      &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA           &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
-&rcw_toggle  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &l_hrm LSHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &r_hrm RSHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en         &to_ru     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE            &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
-                                      &kp LALT              &kp RU_CYRILLIC_HA            &kp LCTRL           &num                &l_tkr 8 SPACE    &kp SPACE  &nav                &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN     &kp RU_CYRILLIC_IO
+&kp ESC      &kp F1                   &kp F2                &kp F3                       &kp F4              &kp F5                                           &kp F6              &kp F7                     &kp F8                       &kp F9                 &kp F10              &kp BACKSPACE
+&kp TAB      &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U            &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA          &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
+&rcw_toggle  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE           &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL           &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LGUI     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &l_mod LSHFT RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en         &to_ru     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &r_mod RSHFT RU_CYRILLIC_BE  &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
+                                      &kp LALT              &kp RU_CYRILLIC_HA           &kp LCTRL           &num                &l_tkr 8 SPACE    &kp SPACE  &nav                &kp RCTRL                  &kp RU_CYRILLIC_HARD_SIGN    &kp RU_CYRILLIC_IO
             >;
 
             sensor-bindings =
@@ -519,11 +528,11 @@
         sim {
             label = "Simple";
             bindings = <
-&kp ESC              &kp N1  &kp N2        &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7     &kp N8     &kp N9     &kp N0    &kp BSPC
-&kp TAB              &kp Q   &kp W         &kp E     &kp R      &kp T                           &kp Y   &kp U      &kp I      &kp O      &kp P     &kp BSLH
-&kp CAPS             &kp A   &kp S         &kp D     &kp F      &kp G                           &kp H   &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
-&mt LEFT_SHIFT LGUI  &kp Z   &kp X         &kp C     &kp V      &kp B   &kp MINUS    &kp EQUAL  &kp N   &kp M      &kp COMMA  &kp DOT    &kp FSLH  &mt RSHIFT ENTER
-                             &kp LEFT_ALT  &kp LBKT  &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &mo 6   &kp RCTRL  &kp RBKT   &kp GRAVE
+&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7     &kp N8     &kp N9     &kp N0    &kp BSPC
+&kp TAB         &kp Q   &kp W     &kp E     &kp R      &kp T                           &kp Y   &kp U      &kp I      &kp O      &kp P     &kp BSLH
+&kp CAPS        &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H   &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp MINUS    &kp EQUAL  &kp N   &kp M      &kp COMMA  &kp DOT    &kp FSLH  &mt RSHIFT ENTER
+                        &win_alt  &kp LBKT  &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &mo 6   &kp RCTRL  &kp RBKT   &kp GRAVE
             >;
 
             sensor-bindings =
