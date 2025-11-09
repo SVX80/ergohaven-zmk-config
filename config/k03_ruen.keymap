@@ -160,11 +160,11 @@
             tapping-term-ms = <225>;
         };
 
-        win_alt: win_alt {
+        shift_win: shift_win {
             compatible = "zmk,behavior-tap-dance";
-            label = "WIN_ALT";
+            label = "SHIFT_WIN";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LALT>;
+            bindings = <&kp LSHFT>, <&kp LGUI>;
 
             tapping-term-ms = <250>;
         };
@@ -512,7 +512,7 @@
         en {
             display-name = "Base EN";
             bindings = <
-&kp F11    &kp F1  &kp F2                       &kp F3          &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8                    &kp F9     &kp F10   &kp BACKSPACE
+&kp F11    &kp F1  &kp F2                       &kp F3          &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8                    &kp F9     &kp F10   &kp F12
 &kp ESC    &kp Q   &kp W                        &kp E           &kp R      &kp T                                &kp Y   &kp U      &kp I                     &kp O      &kp P     &kp BSLH
 &en_capsw  &kp A   &kp S                        &kp D           &kp F      &kp G                                &kp H   &kp J      &kp K                     &kp L      &kp SEMI  &kp SQT
 &kp LGUI   &kp Z   &kp X                        &l_mod LSHFT C  &kp V      &kp B   &to_en            &layer_ru  &kp N   &kp M      &r_mod RIGHT_SHIFT COMMA  &kp DOT    &kp FSLH  &kp ENTER
@@ -531,7 +531,7 @@
         ru {
             display-name = "Base RU";
             bindings = <
-&kp F11      &kp F1                   &kp F2                   &kp F3                       &kp F4              &kp F5                                           &kp F6              &kp F7                     &kp F8                       &kp F9                 &kp F10              &kp BACKSPACE
+&kp F11      &kp F1                   &kp F2                   &kp F3                       &kp F4              &kp F5                                           &kp F6              &kp F7                     &kp F8                       &kp F9                 &kp F10              &kp F12
 &kp ESC      &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_U            &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA          &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
 &rcw_toggle  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU     &kp RU_CYRILLIC_VE           &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL           &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE      &l_mod LSHFT RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en         &to_ru     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &r_mod RSHFT RU_CYRILLIC_BE  &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp ENTER
@@ -550,7 +550,7 @@
         ru_cw {
             display-name = "RU CapsW";
             bindings = <
-&kp_rcw_exit F11   &kp_rcw_exit F1  &kp_rcw_exit F2              &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                          &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp BACKSPACE
+&kp_rcw_exit F11   &kp_rcw_exit F1  &kp_rcw_exit F2              &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                          &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp F12
 &kp_rcw_exit ESC   &trans           &trans                       &trans           &trans              &trans                                                   &trans           &trans              &trans           &trans           &trans               &kp_rcw_exit BSLH
 &rcw_toggle        &trans           &trans                       &trans           &trans              &trans                                                   &trans           &trans              &trans           &trans           &trans               &trans
 &kp_rcw_exit LGUI  &trans           &trans                       &trans           &trans              &trans           &layer_en           &layer_ru           &trans           &trans              &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
@@ -561,7 +561,7 @@
         ew {
             display-name = "EN Word";
             bindings = <
-&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2              &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                        &kp_ew_exit F6      &kp_ew_exit F7     &kp_ew_exit F8         &kp_ew_exit F9     &kp_ew_exit F10   &kp BACKSPACE
+&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2              &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                        &kp_ew_exit F6      &kp_ew_exit F7     &kp_ew_exit F8         &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F12
 &kp_ew_exit ESC   &trans          &trans                      &trans            &trans             &trans                                                &trans              &trans             &trans                 &trans             &trans            &kp_ew_exit BSLH
 &en_capsw         &trans          &trans                      &trans            &trans             &trans                                                &trans              &trans             &trans                 &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
 &kp_ew_exit LGUI  &trans          &trans                      &trans            &trans             &trans          &layer_en          &layer_ru          &trans              &trans             &r_mod_ew RSHFT COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
@@ -572,11 +572,11 @@
         sim {
             label = "Simple";
             bindings = <
-&kp CAPSLOCK    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7     &kp N8     &kp N9     &kp N0    &kp BSPC
-&kp ESC         &kp Q   &kp W     &kp E     &kp R      &kp T                           &kp Y   &kp U      &kp I      &kp O      &kp P     &kp BSLH
-&kp TAB         &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H   &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
-&kp LEFT_SHIFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp MINUS    &kp EQUAL  &kp N   &kp M      &kp COMMA  &kp DOT    &kp FSLH  &mt RSHIFT ENTER
-                        &win_alt  &kp LBKT  &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &mo 6   &kp RCTRL  &kp RBKT   &kp GRAVE
+&kp CAPSLOCK  &kp N1  &kp N2                       &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7     &kp N8     &kp N9     &kp N0    &kp DELETE
+&kp ESC       &kp Q   &kp W                        &kp E     &kp R      &kp T                           &kp Y   &kp U      &kp I      &kp O      &kp P     &kp BSLH
+&kp TAB       &kp A   &kp S                        &kp D     &kp F      &kp G                           &kp H   &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
+&shift_win    &kp Z   &kp X                        &kp C     &kp V      &kp B   &kp MINUS    &kp EQUAL  &kp N   &kp M      &kp COMMA  &kp DOT    &kp FSLH  &mt RSHIFT ENTER
+                      &mt_qtap LEFT_ALT BACKSPACE  &kp LBKT  &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &mo 6   &kp RCTRL  &kp RBKT   &kp GRAVE
             >;
 
             sensor-bindings =
@@ -591,7 +591,7 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&none    &kp F1      &kp F2         &kp F3            &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8                &kp F9         &kp F10       &kp BACKSPACE
+&kp F11  &kp F1      &kp F2         &kp F3            &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8                &kp F9         &kp F10       &kp F12
 &kp ESC  &cmd F15 Y  &cmd F15 F13   &cmd F15 F14      &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP                &kp END        &kp LC(HOME)  &none
 &kp TAB  &cmd F15 A  &cmd F15 S     &cmd F15 F17      &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN              &kp RIGHT      &kp ENTER     &none
 &none    &cmd F15 Z  &kp LC(X)      &mt LSHIFT LC(C)  &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)   &kp ENTER
@@ -610,7 +610,7 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&none    &kp F1      &kp F2             &kp F3           &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10       &none
+&kp F11  &kp F1      &kp F2             &kp F3           &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10       &kp F12
 &kp ESC  &cmd F15 Y  &cmd F15 F13       &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP                &kp END        &kp LC(HOME)  &none
 &kp TAB  &cmd F15 A  &cmd F15 S         &cmd F15 F17     &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN              &kp RIGHT      &kp ENTER     &none
 &none    &cmd F15 Z  &kp LC(X)          &mt LSHFT LC(C)  &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)   &none
@@ -673,8 +673,8 @@
         num_m {
             display-name = ".number.";
             bindings = <
-&kp CAPSLOCK  &none         &none                 &none             &none                  &none                                 &none            &none    &none   &none         &none      &none
-&none         &cmd F16 F13  &kp LS(LC(LA(LEFT)))  &sel_word         &kp LS(LC(LA(RIGHT)))  &cmd F16 F14                          &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
+&none         &none         &none                 &none             &none                  &none                                 &none            &none    &none   &none         &none      &none
+&kp CAPSLOCK  &cmd F16 F13  &kp LS(LC(LA(LEFT)))  &sel_word         &kp LS(LC(LA(RIGHT)))  &cmd F16 F14                          &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
 &kp LS(TAB)   &cmd F16 F15  &kp LS(LEFT)          &kp BACKSPACE     &kp LS(RIGHT)          &cmd F16 F16                          &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
 &none         &cmd F16 F17  &kp LS(LC(LEFT))      &mt LSHFT DELETE  &kp LS(LC(RIGHT))      &cmd F16 F18  &none    &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
                             &none                 &none             &tog 10                &none         &none    &kp BACKSPACE  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
