@@ -532,11 +532,11 @@
         ru_cw {
             display-name = "RU CapsW";
             bindings = <
-&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                 &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp BACKSPACE
-&kp_rcw_exit TAB   &trans           &trans             &trans           &trans              &trans                                          &trans           &trans              &trans           &trans           &trans               &kp_rcw_exit BSLH
-&rcw_toggle        &trans           &trans             &trans           &trans              &trans                                          &trans           &trans              &trans           &trans           &trans               &trans
-&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans              &trans           &layer_en           &layer_ru  &trans           &trans              &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
-                                    &kp_rcw_exit LALT  &trans           &kp_rcw_exit LCTRL  &mo 11           &rcw_tkl 8 SPACE    &kp SPACE  &mo_rcw_exit 6   &kp_rcw_exit RCTRL  &trans           &trans
+&kp_rcw_exit ESC   &kp_rcw_exit F1  &kp_rcw_exit F2    &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                          &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8  &kp_rcw_exit F9  &kp_rcw_exit F10     &kp BACKSPACE
+&kp_rcw_exit TAB   &trans           &trans             &trans           &trans              &trans                                                   &trans           &trans              &trans           &trans           &trans               &kp_rcw_exit BSLH
+&rcw_toggle        &trans           &trans             &trans           &trans              &trans                                                   &trans           &trans              &trans           &trans           &trans               &trans
+&kp_rcw_exit LGUI  &trans           &trans             &trans           &trans              &trans           &layer_en           &layer_ru           &trans           &trans              &trans           &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
+                                    &kp_rcw_exit LALT  &trans           &kp_rcw_exit LCTRL  &mo 11           &rcw_tkl 8 SPACE    &kp_rcw_exit SPACE  &mo_rcw_exit 6   &kp_rcw_exit RCTRL  &trans           &trans
             >;
         };
 
