@@ -177,6 +177,30 @@
 
             tapping-term-ms = <250>;
         };
+
+        r_mod_ew_e: r_mod_ew_e {
+            compatible = "zmk,behavior-hold-tap";
+            label = "R_MOD_EW_E";
+            bindings = <&kp>, <&kp_ew_exit>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
+            flavor = "balanced";
+        };
+
+        r_mod_f15: r_mod_f15 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "R_MOD_F15";
+            bindings = <&kp>, <&cmd_f15>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -517,11 +541,11 @@
         ew {
             display-name = "EN Word";
             bindings = <
-&kp_ew_exit ESC    &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                                        &kp_ew_exit F6      &kp_ew_exit F7      &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10   &kp BACKSPACE
-&kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                                &trans              &trans              &trans             &trans             &trans            &kp_ew_exit BSLH
-&en_capsw          &trans          &trans             &trans            &trans              &trans                                                &trans              &trans              &trans             &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
-&kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en          &layer_ru          &trans              &trans              &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
-                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &mo 11          &ew_tkl 9 SPACE    &kp_ew_exit SPACE  &kp_ew_exit LSHIFT  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
+&kp_ew_exit ESC    &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                                        &kp_ew_exit F6      &kp_ew_exit F7      &kp_ew_exit F8           &kp_ew_exit F9     &kp_ew_exit F10   &kp BACKSPACE
+&kp_ew_exit TAB    &trans          &trans             &trans            &trans              &trans                                                &trans              &trans              &trans                   &trans             &trans            &kp_ew_exit BSLH
+&en_capsw          &trans          &trans             &trans            &trans              &trans                                                &trans              &trans              &trans                   &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
+&kpe_ew_exit LGUI  &trans          &trans             &trans            &trans              &trans          &layer_en          &layer_ru          &trans              &trans              &r_mod_ew_e RSHFT COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
+                                   &kpe_ew_exit LALT  &kp_ew_exit LBKT  &kpe_ew_exit LCTRL  &mo 11          &ew_tkl 9 SPACE    &kp_ew_exit SPACE  &kp_ew_exit LSHIFT  &kpe_ew_exit RCTRL  &kp_ew_exit RBKT         &kp_ew_exit GRAVE
             >;
         };
 
@@ -547,22 +571,22 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp ESC  &kp F1      &kp F2        &kp F3                 &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8        &kp F9         &kp F10        &kp BACKSPACE
-&kp TAB  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14           &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP        &kp END        &kp LC(HOME)   &none
-&none    &cmd F15 A  &cmd F15 S    &mt_cmd_f15 LSHFT F17  &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
-&none    &cmd F15 Z  &kp LC(X)     &kp LC(C)              &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
-                     &none         &none                  &tog 5        &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5     &tog 5              &none         &none
+&kp ESC  &kp F1      &kp F2        &kp F3               &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8                &kp F9         &kp F10        &kp BACKSPACE
+&kp TAB  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14         &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP                &kp END        &kp LC(HOME)   &none
+&none    &cmd F15 A  &cmd F15 S    &cmd F15 F17         &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN              &kp RIGHT      &kp LS(ENTER)  &none
+&none    &cmd F15 Z  &kp LC(X)     &l_mod LSHIFT LC(C)  &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
+                     &none         &none                &tog 5        &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5     &tog 5              &none                 &none
             >;
         };
 
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&none  &kp F1      &kp F2        &kp F3                 &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8        &kp F9         &kp F10        &none
-&none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14           &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP        &kp END        &kp LC(HOME)   &none
-&none  &cmd F15 A  &cmd F15 S    &mt_cmd_f15 LSHFT F17  &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN      &kp RIGHT      &kp LS(ENTER)  &none
-&none  &cmd F15 Z  &kp LC(X)     &kp LC(C)              &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)    &none
-                   &none         &none                  &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none         &none
+&none  &kp F1      &kp F2        &kp F3              &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10        &none
+&none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14        &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP                &kp END        &kp LC(HOME)   &none
+&none  &cmd F15 A  &cmd F15 S    &cmd F15 F17        &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN              &kp RIGHT      &kp LS(ENTER)  &none
+&none  &cmd F15 Z  &kp LC(X)     &l_mod LSHFT LC(C)  &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)    &none
+                   &none         &none               &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none                 &none
             >;
         };
 
