@@ -23,6 +23,7 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 55 56 57 58 59>;
             flavor = "balanced";
+            retro-tap;
         };
 
         r_mod: right-mod {
@@ -35,6 +36,7 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
             flavor = "balanced";
+            retro-tap;
         };
 
         r_tkm: right-thumb-key-layer {
@@ -571,22 +573,22 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp ESC  &kp F1      &kp F2        &kp F3               &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8                &kp F9         &kp F10        &kp BACKSPACE
-&kp TAB  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14         &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP                &kp END        &kp LC(HOME)   &none
-&none    &cmd F15 A  &cmd F15 S    &cmd F15 F17         &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN              &kp RIGHT      &kp LS(ENTER)  &none
-&none    &cmd F15 Z  &kp LC(X)     &l_mod LSHIFT LC(C)  &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
-                     &none         &none                &tog 5        &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5     &tog 5              &none                 &none
+&kp ESC  &kp F1      &kp F2        &kp F3            &kp F4        &kp F5                                &kp F6         &kp F7              &kp F8                &kp F9         &kp F10        &kp BACKSPACE
+&kp TAB  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14      &cmd F15 F15  &cmd F15 F16                          &kp PG_UP      &kp HOME            &kp UP                &kp END        &kp LC(HOME)   &none
+&none    &cmd F15 A  &cmd F15 S    &cmd F15 F17      &cmd F15 F    &cmd F15 F18                          &cmd F15 F19   &kp LEFT            &kp DOWN              &kp RIGHT      &kp LS(ENTER)  &none
+&none    &cmd F15 Z  &kp LC(X)     &mt LSHIFT LC(C)  &kp LC(V)     &cmd F15 F20  &none        &none      &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)    &kp ENTER
+                     &none         &none             &tog 5        &mo 11        &kp SPACE    &kp SPACE  &r_tkm 6 5     &tog 5              &none                 &none
             >;
         };
 
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&none  &kp F1      &kp F2        &kp F3              &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10        &none
-&none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14        &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP                &kp END        &kp LC(HOME)   &none
-&none  &cmd F15 A  &cmd F15 S    &cmd F15 F17        &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN              &kp RIGHT      &kp LS(ENTER)  &none
-&none  &cmd F15 Z  &kp LC(X)     &l_mod LSHFT LC(C)  &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)    &none
-                   &none         &none               &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none                 &none
+&none  &kp F1      &kp F2        &kp F3           &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10        &none
+&none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP                &kp END        &kp LC(HOME)   &none
+&none  &cmd F15 A  &cmd F15 S    &cmd F15 F17     &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN              &kp RIGHT      &kp LS(ENTER)  &none
+&none  &cmd F15 Z  &kp LC(X)     &mt LSHFT LC(C)  &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)    &none
+                   &none         &none            &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none                 &none
             >;
         };
 
@@ -637,11 +639,11 @@
         num_m {
             display-name = ".number.";
             bindings = <
-&none         &none         &none                 &none          &none                  &none                                 &none            &none    &none   &none         &none      &none
-&none         &cmd F16 F13  &kp LS(LC(LA(LEFT)))  &kp DELETE     &kp LS(LC(LA(RIGHT)))  &cmd F16 F14                          &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
-&kp CAPSLOCK  &kp ESC       &kp LS(LEFT)          &kp BACKSPACE  &kp LS(RIGHT)          &cmd F16 F15                          &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
-&none         &cmd F16 F16  &kp LS(LC(LEFT))      &sel_word      &kp LS(LC(RIGHT))      &cmd F16 F17  &none    &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
-                            &none                 &none          &tog 10                &none         &none    &kp BACKSPACE  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
+&none         &none         &none                 &none             &none                  &none                                 &none            &none    &none   &none         &none      &none
+&none         &cmd F16 F13  &kp LS(LC(LA(LEFT)))  &sel_word         &kp LS(LC(LA(RIGHT)))  &cmd F16 F14                          &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
+&kp CAPSLOCK  &kp ESC       &kp LS(LEFT)          &kp BACKSPACE     &kp LS(RIGHT)          &cmd F16 F15                          &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
+&none         &cmd F16 F16  &kp LS(LC(LEFT))      &mt LSHFT DELETE  &kp LS(LC(RIGHT))      &cmd F16 F17  &none    &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
+                            &none                 &none             &tog 10                &none         &none    &kp BACKSPACE  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
             >;
         };
 
