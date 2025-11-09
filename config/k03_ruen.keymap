@@ -17,6 +17,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "Left key with modifier";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             hold-trigger-on-release;
@@ -29,6 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "Right key with modifier";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             hold-trigger-on-release;
@@ -41,6 +43,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "Right thumb key layer";
             bindings = <&mo>, <&tog>;
+
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "hold-preferred";
@@ -196,8 +199,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <190>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <230>;
         };
 
         mt_qtap_rcw: mt_qtap_rcw {
@@ -206,8 +209,8 @@
             bindings = <&kp_rcw_exit>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <190>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <230>;
         };
 
         mt_qtap_ew: mt_qtap_ew {
@@ -216,8 +219,8 @@
             bindings = <&kp_ew_exit>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <190>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <230>;
         };
 
         simple_sp: simple_sp {
@@ -269,6 +272,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LS(LC(N2))>;
+
             label = "TO_RU";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -278,6 +282,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LS(LC(N1))>;
+
             label = "TO_EN";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -287,6 +292,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0>, <&macro_tap>, <&kp LS(LC(N1))>;
+
             label = "LAYER_EN";
             wait-ms = <0>;
             tap-ms = <70>;
@@ -296,6 +302,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 1>, <&macro_tap>, <&kp LS(LC(N2))>;
+
             label = "LAYER_RU";
             wait-ms = <0>;
             tap-ms = <70>;
@@ -345,6 +352,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LC(LEFT) &kp LS(LC(RIGHT))>;
+
             label = "SEL_WORD";
         };
 
@@ -352,6 +360,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&tog 3>, <&macro_tap>, <&kp LS(LC(N1))>;
+
             label = "EW_ENTER";
             tap-ms = <50>;
         };
@@ -360,6 +369,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&tog 3>, <&macro_tap>, <&kp LS(LC(N1)) &en_capsw>;
+
             label = "EWC_ENTER";
             tap-ms = <50>;
         };
@@ -551,11 +561,11 @@
         ew {
             display-name = "EN Word";
             bindings = <
-&kp_ew_exit F11    &kp_ew_exit F1  &kp_ew_exit F2              &kp_ew_exit F3    &kp_ew_exit F4      &kp_ew_exit F5                                        &kp_ew_exit F6      &kp_ew_exit F7      &kp_ew_exit F8         &kp_ew_exit F9     &kp_ew_exit F10   &kp BACKSPACE
-&kp_ew_exit ESC    &trans          &trans                      &trans            &trans              &trans                                                &trans              &trans              &trans                 &trans             &trans            &kp_ew_exit BSLH
-&en_capsw          &trans          &trans                      &trans            &trans              &trans                                                &trans              &trans              &trans                 &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
-&kp_ew_exit LGUI  &trans          &trans                      &trans            &trans              &trans          &layer_en          &layer_ru          &trans              &trans              &r_mod_ew RSHFT COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
-                                   &mt_qtap_ew LALT BACKSPACE  &kp_ew_exit LBKT  &kp_ew_exit LCTRL  &mo 11          &ew_tkl 9 SPACE    &kp_ew_exit SPACE  &kp_ew_exit LSHIFT  &kp_ew_exit RCTRL  &kp_ew_exit RBKT       &kp_ew_exit GRAVE
+&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2              &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                        &kp_ew_exit F6      &kp_ew_exit F7     &kp_ew_exit F8         &kp_ew_exit F9     &kp_ew_exit F10   &kp BACKSPACE
+&kp_ew_exit ESC   &trans          &trans                      &trans            &trans             &trans                                                &trans              &trans             &trans                 &trans             &trans            &kp_ew_exit BSLH
+&en_capsw         &trans          &trans                      &trans            &trans             &trans                                                &trans              &trans             &trans                 &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
+&kp_ew_exit LGUI  &trans          &trans                      &trans            &trans             &trans          &layer_en          &layer_ru          &trans              &trans             &r_mod_ew RSHFT COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
+                                  &mt_qtap_ew LALT BACKSPACE  &kp_ew_exit LBKT  &kp_ew_exit LCTRL  &mo 11          &ew_tkl 9 SPACE    &kp_ew_exit SPACE  &kp_ew_exit LSHIFT  &kp_ew_exit RCTRL  &kp_ew_exit RBKT       &kp_ew_exit GRAVE
             >;
         };
 
@@ -600,11 +610,11 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&none    &kp F1      &kp F2         &kp F3           &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10       &none
-&kp ESC  &cmd F15 Y  &cmd F15 F13   &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP                &kp END        &kp LC(HOME)  &none
-&kp TAB  &cmd F15 A  &cmd F15 S     &cmd F15 F17     &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN              &kp RIGHT      &kp ENTER     &none
-&none    &cmd F15 Z  &kp LC(X)      &mt LSHFT LC(C)  &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)   &none
-                     &kp BACKSPACE  &none            &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none                 &none
+&none    &kp F1      &kp F2             &kp F3           &kp F4        &kp F5                             &kp F6         &kp F7        &kp F8                &kp F9         &kp F10       &none
+&kp ESC  &cmd F15 Y  &cmd F15 F13       &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                       &kp PAGE_UP    &kp HOME      &kp UP                &kp END        &kp LC(HOME)  &none
+&kp TAB  &cmd F15 A  &cmd F15 S         &cmd F15 F17     &cmd F15 F    &cmd F15 F18                       &cmd F15 F19   &kp LEFT      &kp DOWN              &kp RIGHT      &kp ENTER     &none
+&none    &cmd F15 Z  &kp LC(X)          &mt LSHFT LC(C)  &kp LC(V)     &cmd F15 F20  &none         &none  &kp PAGE_DOWN  &kp LC(LEFT)  &r_mod_f15 RSHFT F21  &kp LC(RIGHT)  &kp LC(END)   &none
+                     &kp LC(BACKSPACE)  &none            &tog 5        &mo 13        &kp DELETE    &none  &none          &tog 5        &none                 &none
             >;
         };
 
@@ -633,10 +643,10 @@
         sym_enword {
             display-name = ".enw-syms.";
             bindings = <
-&none  &none              &none                     &none                  &none               &none                                    &none                    &none                      &none                  &none             &none              &none
-&none  &kp_ew_quit TILDE  &kp_ew_quit LT            &kp_ew_quit EQUAL      &kp_ew_quit GT      &kp_ew_quit CARET                        &kp_ew_quit EXCL         &kp_ew_quit LBRC           &kp_ew_quit MINUS      &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit BACKSLASH
-&none  &kp_ew_quit GRAVE  &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS       &kp_ew_quit RBKT    &kp_ew_quit ASTRK                        &kp_ew_quit QUESTION     &kp_ew_quit LPAR           &kp UNDERSCORE         &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_quit PIPE
-&none  &kp_ew_quit HASH   &kp_ew_quit AT            &kp_ew_quit AMPERSAND  &kp_ew_quit DOLLAR  &kp_ew_quit PERCENT  &none    &none      &kp_ew_quit APOSTROPHE   &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA      &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
+&none  &none              &none                     &none                  &none               &none                                    &none                   &none                      &none                  &none             &none              &none
+&none  &kp_ew_quit TILDE  &kp_ew_quit LT            &kp_ew_quit EQUAL      &kp_ew_quit GT      &kp_ew_quit CARET                        &kp_ew_quit EXCL        &kp_ew_quit LBRC           &kp_ew_quit MINUS      &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit BACKSLASH
+&none  &kp_ew_quit GRAVE  &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS       &kp_ew_quit RBKT    &kp_ew_quit ASTRK                        &kp_ew_quit QUESTION    &kp_ew_quit LPAR           &kp UNDERSCORE         &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_quit PIPE
+&none  &kp_ew_quit HASH   &kp_ew_quit AT            &kp_ew_quit AMPERSAND  &kp_ew_quit DOLLAR  &kp_ew_quit PERCENT  &none    &none      &kp_ew_quit APOSTROPHE  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA      &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
                           &none                     &none                  &none               &none                &none    &kp ENTER  &kp_ew_exit LEFT_SHIFT  &none                      &kp_ew_exit RU_NUMERO  &none
             >;
         };
@@ -645,7 +655,7 @@
             display-name = "Number";
             bindings = <
 &none    &none  &none          &none  &none    &none                                     &none            &none    &none   &none         &none      &none
-&none    &none  &none          &none  &none    &none                                     &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
+&kp ESC  &none  &none          &none  &none    &none                                     &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
 &kp TAB  &none  &none          &none  &none    &none                                     &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
 &none    &none  &none          &none  &none    &none         &none        &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
                 &kp BACKSPACE  &none  &tog 10  &r_tkm 11 10  &kp SPACE    &kp BACKSPACE  &mo 12           &tog 10  &kp N0  &kp KP_CLEAR
