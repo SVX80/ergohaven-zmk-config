@@ -459,11 +459,11 @@
         en {
             display-name = "Base EN";
             bindings = <
-&kp ESC    &kp F1  &kp F2        &kp F3           &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8           &kp F9     &kp F10   &kp BACKSPACE
-&kp TAB    &kp Q   &kp W         &kp E            &kp R      &kp T                                &kp Y   &kp U      &kp I            &kp O      &kp P     &kp BSLH
-&en_capsw  &kp A   &kp S         &l_hrm LSHIFT D  &kp F      &kp G                                &kp H   &kp J      &r_hrm RSHIFT K  &kp L      &kp SEMI  &kp SQT
-&kp LGUI   &kp Z   &kp X         &kp C            &kp V      &kp B   &to_en            &layer_ru  &kp N   &kp M      &kp COMMA        &kp DOT    &kp FSLH  &kp ENTER
-                   &kp LEFT_ALT  &kp LBKT         &kp LCTRL  &num    &l_tkr 7 SPACE    &kp SPACE  &nav    &kp RCTRL  &kp RBKT         &kp GRAVE
+&kp ESC    &kp F1  &kp F2        &kp F3          &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8                    &kp F9     &kp F10   &kp BACKSPACE
+&kp TAB    &kp Q   &kp W         &kp E           &kp R      &kp T                                &kp Y   &kp U      &kp I                     &kp O      &kp P     &kp BSLH
+&en_capsw  &kp A   &kp S         &kp D           &kp F      &kp G                                &kp H   &kp J      &kp K                     &kp L      &kp SEMI  &kp SQT
+&kp LGUI   &kp Z   &kp X         &l_hrm LSHFT C  &kp V      &kp B   &to_en            &layer_ru  &kp N   &kp M      &r_hrm RIGHT_SHIFT COMMA  &kp DOT    &kp FSLH  &kp ENTER
+                   &kp LEFT_ALT  &kp LBKT        &kp LCTRL  &num    &l_tkr 7 SPACE    &kp SPACE  &nav    &kp RCTRL  &kp RBKT                  &kp GRAVE
             >;
 
             sensor-bindings =
