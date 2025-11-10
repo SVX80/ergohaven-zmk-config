@@ -265,7 +265,7 @@
         mo_tog_ew_exit: mo_tog_ew_exit {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TOG_EW_EXIT";
-            bindings = <&mo_rcw_exit>, <&tog_rcw_exit>;
+            bindings = <&mo_ew_exit>, <&tog_ew_exit>;
 
             #binding-cells = <2>;
             tapping-term-ms = <230>;
@@ -551,9 +551,26 @@
                 <&macro_tap>,
                 <&kp CAPS>,
                 <&macro_tap>,
-                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>;
 
             label = "TOG_RCW_EXIT";
+            wait-ms = <5>;
+            tap-ms = <30>;
+        };
+
+        tog_ew_exit: tog_ew_exit {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&off 3>,
+                <&macro_tap>,
+                <&kp LS(LC(N2))>,
+                <&macro_press>,
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>;
+
+            label = "TOG_EW_EXIT";
             wait-ms = <5>;
             tap-ms = <30>;
         };
@@ -614,11 +631,11 @@
         ew {
             display-name = "EN Word";
             bindings = <
-&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2  &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                               &kp_ew_exit F6         &kp_ew_exit F7     &kp_ew_exit F8         &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F12
-&kp_ew_exit ESC   &trans          &trans          &trans            &trans             &trans                                                       &trans                 &trans             &trans                 &trans             &trans            &kp_ew_exit BSLH
-&en_capsw         &trans          &trans          &trans            &trans             &trans                                                       &trans                 &trans             &trans                 &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
-&kp_ew_exit LGUI  &trans          &trans          &trans            &trans             &trans                 &layer_en          &layer_ru          &trans                 &trans             &r_mod_ew RSHFT COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
-                                  &kp LALT        &kp_ew_exit LBKT  &kp_ew_exit LCTRL  &mo_qtap 11 BACKSPACE  &ew_tkl 7 SPACE    &kp_ew_exit SPACE  &mo_tog_ew_exit 10 11  &kp_ew_exit RCTRL  &kp_ew_exit RBKT       &kp_ew_exit GRAVE
+&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2  &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                               &kp_ew_exit F6       &kp_ew_exit F7     &kp_ew_exit F8         &kp_ew_exit F9     &kp_ew_exit F10   &kp_ew_exit F12
+&kp_ew_exit ESC   &trans          &trans          &trans            &trans             &trans                                                       &trans               &trans             &trans                 &trans             &trans            &kp_ew_exit BSLH
+&en_capsw         &trans          &trans          &trans            &trans             &trans                                                       &trans               &trans             &trans                 &trans             &kp_ew_exit SEMI  &kp_ew_exit SQT
+&kp_ew_exit LGUI  &trans          &trans          &trans            &trans             &trans                 &layer_en          &layer_ru          &trans               &trans             &r_mod_ew RSHFT COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH  &kp_ew_exit ENTER
+                                  &kp LALT        &kp_ew_exit LBKT  &kp_ew_exit LCTRL  &mo_qtap 11 BACKSPACE  &ew_tkl 7 SPACE    &kp_ew_exit SPACE  &mo_tog_ew_exit 9 8  &kp_ew_exit RCTRL  &kp_ew_exit RBKT       &kp_ew_exit GRAVE
             >;
         };
 
