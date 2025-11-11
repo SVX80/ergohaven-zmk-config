@@ -648,11 +648,11 @@
         ew {
             display-name = "EN Word";
             bindings = <
-&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2  &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                               &kp_ew_exit F6  &kp_ew_exit F7     &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10       &kp_ew_exit F12
-&kp_ew_exit ESC   &trans          &trans          &trans            &trans             &trans                                                       &trans          &trans             &trans             &trans             &trans                &kp_ew_exit BSLH
-&en_capsw         &trans          &trans          &trans            &trans             &trans                                                       &trans          &trans             &trans             &trans             &r_mod_ew RSHFT SEMI  &kp_ew_exit SQT
-&kp_ew_exit LGUI  &trans          &trans          &trans            &trans             &trans                 &layer_en          &layer_ru          &trans          &trans             &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH      &kp_ew_exit ENTER
-                                  &kp LALT        &kp_ew_exit LBKT  &kp_ew_exit LCTRL  &mo_qtap 11 BACKSPACE  &ew_tkl 7 SPACE    &kp_ew_exit SPACE  &mo_ew_exit 9   &kp_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
+&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2    &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                               &kp_ew_exit F6  &kp_ew_exit F7     &kp_ew_exit F8     &kp_ew_exit F9     &kp_ew_exit F10       &kp_ew_exit F12
+&kp_ew_exit ESC   &trans          &trans            &trans            &trans             &trans                                                       &trans          &trans             &trans             &trans             &trans                &kp_ew_exit BSLH
+&en_capsw         &trans          &trans            &trans            &trans             &trans                                                       &trans          &trans             &trans             &trans             &r_mod_ew RSHFT SEMI  &kp_ew_exit SQT
+&kp_ew_exit LGUI  &trans          &trans            &trans            &trans             &trans                 &layer_en          &layer_ru          &trans          &trans             &kp_ew_exit COMMA  &kp_ew_exit DOT    &kp_ew_exit FSLH      &kp_ew_exit ENTER
+                                  &kp_ew_exit LALT  &kp_ew_exit LBKT  &kp_ew_exit LCTRL  &mo_qtap 11 BACKSPACE  &ew_tkl 7 SPACE    &kp_ew_exit SPACE  &mo_ew_exit 9   &kp_ew_exit RCTRL  &kp_ew_exit RBKT   &kp_ew_exit GRAVE
             >;
         };
 
@@ -711,11 +711,11 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp F11  &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                                     &kp F6         &kp F7              &kp F8        &kp F9         &kp F10       &kp F12
-&kp ESC  &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F15     &cmd F15 F16                                               &kp PG_UP      &kp HOME            &kp UP        &kp END        &kp LC(HOME)  &none
-&kp TAB  &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F18                                               &kp ENTER      &kp LEFT            &kp DOWN      &kp RIGHT      &kp RSHFT     &none
-&none    &cmd F15 Z           &kp LC(X)     &kp LC(C)      &kp LC(V)        &cmd F15 F20           &none              &none            &kp PAGE_DOWN  &kp LC(LEFT_ARROW)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)   &kp ENTER
-                              &none         &none          &kp_off 8 LCTRL  &mo_qtap 11 BACKSPACE  &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8    &kp_off 8 RCTRL     &none         &none
+&kp F11  &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                                     &kp F6        &kp F7              &kp F8        &kp F9         &kp F10                &kp F12
+&kp ESC  &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F14     &cmd F15 F15                                               &kp LC(HOME)  &kp HOME            &kp UP        &kp END        &cmd F15 F16           &none
+&kp TAB  &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F17                                               &kp ENTER     &kp LEFT            &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &none
+&none    &cmd F15 Z           &cmd F15 X    &cmd F15 C     &cmd F15 V       &cmd F15 F19           &none              &none            &kp LC(END)   &kp LC(LEFT_ARROW)  &cmd F15 F20  &kp LC(RIGHT)  &cmd F15 F21           &kp ENTER
+                              &none         &none          &kp_off 8 LCTRL  &mo_qtap 11 BACKSPACE  &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8   &kp_off 8 RCTRL     &none         &none
             >;
 
             sensor-bindings =
@@ -730,11 +730,11 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&kp F11  &kp F1               &kp F2        &kp F3     &kp F4        &kp F5                              &kp F6         &kp F7        &kp F8        &kp F9         &kp F10       &kp F12
-&kp ESC  &cmd F15 Y           &cmd F15 F13  &kp PG_UP  &cmd F15 F15  &cmd F15 F16                        &kp PAGE_UP    &kp HOME      &kp UP        &kp END        &kp LC(HOME)  &none
-&kp TAB  &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN  &cmd F15 F    &cmd F15 F18                        &kp ENTER      &kp LEFT      &kp DOWN      &kp RIGHT      &kp RSHFT     &none
-&none    &cmd F15 Z           &kp LC(X)     &kp LS(C)  &kp LC(V)     &cmd F15 F20        &none    &none  &kp PAGE_DOWN  &kp LC(LEFT)  &cmd F15 F21  &kp LC(RIGHT)  &kp LC(END)   &none
-                              &none         &none      &none         &mo_qtap 13 DELETE  &on 8    &none  &none          &none         &none         &none
+&kp F11  &kp F1               &kp F2        &kp F3      &kp F4        &kp F5                              &kp F6        &kp F7        &kp F8        &kp F9         &kp F10                &kp F12
+&kp ESC  &cmd F15 Y           &cmd F15 F13  &kp PG_UP   &cmd F15 F14  &cmd F15 F15                        &kp LC(HOME)  &kp HOME      &kp UP        &kp END        &cmd F15 F16           &none
+&kp TAB  &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN   &cmd F15 F    &cmd F15 F17                        &kp ENTER     &kp LEFT      &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &none
+&none    &cmd F15 Z           &cmd F15 X    &cmd F15 C  &cmd F15 V    &cmd F15 F19        &none    &none  &kp LC(END)   &kp LC(LEFT)  &cmd F15 F20  &kp LC(RIGHT)  &cmd F15 F21           &none
+                              &none         &none       &none         &mo_qtap 13 DELETE  &on 8    &none  &none         &none         &none         &none
             >;
         };
 
