@@ -741,11 +741,11 @@
         num {
             display-name = "Number";
             bindings = <
-&none    &none  &none  &none  &none                    &none                                              &none            &none                     &none   &none         &none      &none
-&kp ESC  &none  &none  &none  &none                    &none                                              &kp KP_DIVIDE    &kp N7                    &kp N8  &kp N9        &kp MINUS  &none
-&kp TAB  &none  &none  &none  &none                    &none                                              &kp KP_MULTIPLY  &kp N4                    &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
-&none    &none  &none  &none  &none                    &none                  &none        &none          &kp LPAR         &kp N1                    &kp N2  &kp N3        &kp RPAR   &kp ENTER
-                &none  &none  &kp_off 10 LEFT_CONTROL  &mo_qtap 11 BACKSPACE  &kp SPACE    &kp BACKSPACE  &mo 12           &kp_off 10 RIGHT_CONTROL  &kp N0  &kp KP_CLEAR
+&none    &none  &none  &none  &none                    &none                                          &none            &none                     &none   &none         &none      &none
+&kp ESC  &none  &none  &none  &none                    &none                                          &kp KP_DIVIDE    &kp N7                    &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
+&kp TAB  &none  &none  &none  &none                    &none                                          &kp KP_MULTIPLY  &kp N4                    &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
+&none    &none  &none  &none  &none                    &none                  &none        &none      &kp LPAR         &kp N1                    &kp N2  &kp N3        &kp RPAR   &kp ENTER
+                &none  &none  &kp_off 10 LEFT_CONTROL  &mo_qtap 11 BACKSPACE  &kp SPACE    &kp SPACE  &mo 12           &kp_off 10 RIGHT_CONTROL  &kp N0  &kp KP_CLEAR
             >;
 
             sensor-bindings =
@@ -760,11 +760,11 @@
         num_m {
             display-name = ".number.";
             bindings = <
-&none         &none         &none                 &none          &none                  &none                                 &none            &none    &none   &none         &none      &none
-&kp CAPSLOCK  &cmd F16 F13  &kp LS(LC(LA(LEFT)))  &sel_word      &kp LS(LC(LA(RIGHT)))  &cmd F16 F14                          &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS  &none
-&kp LS(TAB)   &kp LSHFT     &kp LS(LEFT)          &kp BACKSPACE  &kp LS(RIGHT)          &cmd F16 F16                          &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
-&none         &cmd F16 F17  &kp LS(LC(LEFT))      &kp DELETE     &kp LS(LC(RIGHT))      &cmd F16 F18  &none    &none          &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR   &kp ENTER
-                            &none                 &none          &tog 10                &none         &none    &kp BACKSPACE  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
+&none         &none         &none    &none    &none    &none                  &none            &none    &none   &none         &none           &none
+&kp CAPSLOCK  &kp F9        &kp F10  &kp F11  &kp F12  &none                  &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS       &kp BACKSPACE
+&kp LS(TAB)   &mt LSHFT F5  &kp F6   &kp F7   &kp F8   &none                  &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &mt RSHFT PLUS  &kp KP_EQUAL
+&none         &kp F1        &kp F2   &kp F3   &kp F4   &none  &none    &none  &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR        &kp ENTER
+                            &none    &none    &tog 10  &none  &none    &none  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
             >;
         };
 
