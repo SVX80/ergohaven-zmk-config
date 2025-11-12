@@ -270,6 +270,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <230>;
         };
+
+        sh_bksp: sh_bksp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SH_BKSP";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -742,7 +751,7 @@
             display-name = "Number";
             bindings = <
 &none    &none  &none  &none  &none                    &none                                          &none            &none                     &none   &none         &none      &none
-&kp TAB  &none  &none  &none  &none                    &none                                          &kp KP_DIVIDE    &kp N7                    &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
+&kp TAB  &none  &none  &none  &none                    &none                                          &kp KP_DIVIDE    &kp N7                    &kp N8  &kp N9        &kp MINUS  &sh_bksp
 &kp ESC  &none  &none  &none  &none                    &none                                          &kp KP_MULTIPLY  &kp N4                    &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
 &none    &none  &none  &none  &none                    &none                  &none        &none      &kp LPAR         &kp N1                    &kp N2  &kp N3        &kp RPAR   &kp ENTER
                 &none  &none  &kp_off 10 LEFT_CONTROL  &mo_qtap 11 BACKSPACE  &kp SPACE    &kp SPACE  &mo 12           &kp_off 10 RIGHT_CONTROL  &kp N0  &kp KP_CLEAR
@@ -761,7 +770,7 @@
             display-name = ".number.";
             bindings = <
 &none     &none          &none   &none    &none    &none                    &none            &none    &none   &none         &none           &none
-&none     &none          &kp F9  &kp F10  &kp F11  &kp F12                  &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS       &kp BACKSPACE
+&none     &none          &kp F9  &kp F10  &kp F11  &kp F12                  &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS       &sh_bksp
 &kp CAPS  &mt LSHFT ESC  &kp F5  &kp F6   &kp F7   &kp F8                   &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &mt RSHFT PLUS  &kp KP_EQUAL
 &none     &none          &kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR        &kp ENTER
                          &none   &none    &tog 10  &none    &none    &none  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
