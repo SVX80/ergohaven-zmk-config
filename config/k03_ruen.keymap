@@ -699,7 +699,7 @@
 &none       &kp ASTERISK  &en LT         &kp EQUAL    &en GT     &en CARET                   &kp EXCL          &en LBRC              &kp UNDERSCORE  &en RBRC       &kp RU_COLON  &en APOSTROPHE
 &ewc_enter  &ew_enter     &en LBKT       &kp PLUS     &en RBKT   &en AT                      &kp RU_QUESTION   &kp LPAR              &kp MINUS       &kp RPAR       &kp RU_SEMI   &kp LS(ENTER)
 &none       &en HASH      &en TILDE      &kp PERCENT  &en GRAVE  &en DOLLAR  &none    &none  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES  &kp RU_COMMA    &kp RU_DOT     &kp RU_SLASH  &none
-                          &kp RU_NUMERO  &none        &none      &none       &none    &none  &trans            &none                 &kp PIPE        &en AMPERSAND
+                          &kp RU_NUMERO  &none        &none      &none       &none    &none  &trans            &none                 &en PIPE        &en AMPERSAND
             >;
         };
 
