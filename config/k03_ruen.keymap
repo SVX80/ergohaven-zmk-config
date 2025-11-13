@@ -706,11 +706,11 @@
         sym_enword {
             display-name = ".enw-syms.";
             bindings = <
-&none  &none                 &none                     &none                &none              &none                               &none                  &none                      &none                   &none             &none              &none
-&none  &kp_ew_quit ASTERISK  &kp_ew_quit LT            &kp_ew_quit EQUAL    &kp_ew_quit GT     &kp_ew_quit CARET                   &kp_ew_quit EXCL       &kp_ew_quit LBRC           &kp_ew_quit UNDERSCORE  &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit APOSTROPHE
-&none  &none                 &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS     &kp_ew_quit RBKT   &kp_ew_quit AT                      &kp_ew_quit QUESTION   &kp_ew_quit LPAR           &kp MINUS               &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_exit LS(ENTER)
-&none  &kp_ew_quit HASH      &kp_ew_quit TILDE         &kp_ew_quit PERCENT  &kp_ew_quit GRAVE  &kp_ew_quit DOLLAR  &none    &none  &kp_ew_quit BACKSLASH  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA       &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
-                             &kp_ew_exit RU_NUMERO     &none                &none              &none               &none    &none  &mo_ew_exit 9          &none                      &kp PIPE                &kp AMPERSAND
+&none  &none                 &none                     &none                &none              &none                               &none                  &none                      &none              &none             &none              &none
+&none  &kp_ew_quit ASTERISK  &kp_ew_quit LT            &kp_ew_quit EQUAL    &kp_ew_quit GT     &kp_ew_quit CARET                   &kp_ew_quit EXCL       &kp_ew_quit LBRC           &kp UNDERSCORE     &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit APOSTROPHE
+&none  &none                 &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS     &kp_ew_quit RBKT   &kp_ew_quit AT                      &kp_ew_quit QUESTION   &kp_ew_quit LPAR           &kp_ew_quit MINUS  &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_exit LS(ENTER)
+&none  &kp_ew_quit HASH      &kp_ew_quit TILDE         &kp_ew_quit PERCENT  &kp_ew_quit GRAVE  &kp_ew_quit DOLLAR  &none    &none  &kp_ew_quit BACKSLASH  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
+                             &kp_ew_exit RU_NUMERO     &none                &none              &none               &none    &none  &mo_ew_exit 9          &none                      &kp PIPE           &kp AMPERSAND
             >;
         };
 
