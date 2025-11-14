@@ -16,7 +16,7 @@
         l_mod: left-mod {
             compatible = "zmk,behavior-hold-tap";
             label = "Left key with modifier";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -29,7 +29,7 @@
         r_mod: right-mod {
             compatible = "zmk,behavior-hold-tap";
             label = "Right key with modifier";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -52,7 +52,7 @@
         l_tkr: left-thumb-key-layer-retro {
             compatible = "zmk,behavior-hold-tap";
             label = "Left thumb key layer (retro)";
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -595,6 +595,16 @@
 
             label = "KP_OFF";
             wait-ms = <5>;
+            tap-ms = <30>;
+        };
+
+        key: key {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_tap>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KEY";
+            wait-ms = <0>;
             tap-ms = <30>;
         };
     };
