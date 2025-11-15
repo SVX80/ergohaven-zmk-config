@@ -612,7 +612,7 @@
 &kp F11    &kp F1          &kp F2     &kp F3    &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8        &kp F9    &kp F10            &kp F12
 &kp TAB    &kp Q           &kp W      &kp E     &kp R      &kp T                                &kp Y   &kp U      &kp I         &kp O     &kp P              &kp LBKT
 &en_capsw  &l_mod LSHFT A  &kp S      &kp D     &kp F      &kp G                                &kp H   &kp J      &kp K         &kp L     &r_mod RSHFT SEMI  &kp SQT
-&kp ESC    &kp Z           &kp X      &kp C     &kp V      &kp B   &none             &none      &kp N   &kp M      &kp COMMA     &kp DOT   &kp FSLH           &kp BACKSPACE
+&kp ESC    &kp Z           &kp X      &kp C     &kp V      &kp B   &none             &none      &kp N   &kp M      &kp COMMA     &kp DOT   &kp FSLH           &sh_bksp
                            &kp GRAVE  &kp LGUI  &kp LCTRL  &mo 11  &l_tkr 5 SPACE    &kp SPACE  &mo 9   &kp ENTER  &kp LEFT_ALT  &kp RBKT
             >;
 
@@ -631,7 +631,7 @@
 &kp F11      &kp F1                        &kp F2                &kp F3              &kp F4              &kp F5                                           &kp F6              &kp F7                     &kp F8               &kp F9                     &kp F10                       &kp F12
 &kp TAB      &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE            &kp RU_CYRILLIC_HA
 &rcw_toggle  &l_mod LSHIFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &r_mod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp ESC      &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &none             &none      &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                    &kp BACKSPACE
+&kp ESC      &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &none             &none      &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                    &sh_bksp
                                            &kp RU_CYRILLIC_IO    &kp LGUI            &kp LCTRL           &mo 11              &l_tkr 6 SPACE    &kp SPACE  &mo 9               &kp ENTER                  &kp LEFT_ALT         &kp RU_CYRILLIC_HARD_SIGN
             >;
 
@@ -688,33 +688,33 @@
         sym_en {
             display-name = ".en-symbols.";
             bindings = <
-&none  &none         &none             &none        &none      &none                       &none          &none              &none           &none          &none      &none
-&none  &kp ASTERISK  &kp LT            &kp EQUAL    &kp GT     &kp CARET                   &kp EXCL       &kp LBRC           &kp UNDERSCORE  &kp RBRC       &kp COLON  &kp DOUBLE_QUOTES
-&none  &none         &kp LEFT_BRACKET  &kp PLUS     &kp RBKT   &kp AT                      &kp QUESTION   &kp LPAR           &kp MINUS       &kp RPAR       &kp SEMI   &kp APOSTROPHE
-&none  &kp HASH      &kp TILDE         &kp PERCENT  &kp GRAVE  &kp DOLLAR  &none    &none  &kp BACKSLASH  &kp DOUBLE_QUOTES  &kp COMMA       &kp DOT        &kp SLASH  &none
-                     &ru RU_NUMERO     &none        &none      &none       &none    &none  &trans         &none              &kp PIPE        &kp AMPERSAND
+&none  &none         &none             &none      &none       &none                          &none          &none           &none      &none          &none      &none
+&none  &kp ASTERISK  &kp LT            &kp GT     &kp EQUAL   &kp CARET                      &kp EXCL       &kp UNDERSCORE  &kp LBRC   &kp RBRC       &kp COLON  &kp DOUBLE_QUOTES
+&none  &none         &kp LEFT_BRACKET  &kp RBKT   &kp PLUS    &kp PERCENT                    &kp QUESTION   &kp MINUS       &kp LPAR   &kp RPAR       &kp SEMI   &kp APOSTROPHE
+&none  &kp HASH      &kp AT            &kp TILDE  &kp DOLLAR  &ru RU_NUMERO  &none    &none  &kp BACKSLASH  &kp GRAVE       &kp COMMA  &kp DOT        &kp SLASH  &none
+                     &none             &none      &none       &none          &none    &none  &trans         &none           &kp PIPE   &kp AMPERSAND
             >;
         };
 
         sym_ru {
             display-name = ".ru-symbols.";
             bindings = <
-&none       &none         &none      &none        &none      &none                       &none             &none                 &none           &none          &none         &none
-&none       &kp ASTERISK  &en LT     &kp EQUAL    &en GT     &en CARET                   &kp EXCL          &en LBRC              &kp UNDERSCORE  &en RBRC       &kp RU_COLON  &kp RU_DOUBLE_QUOTES
-&ewc_enter  &ew_enter     &en LBKT   &kp PLUS     &en RBKT   &en AT                      &kp RU_QUESTION   &kp LPAR              &kp MINUS       &kp RPAR       &kp RU_SEMI   &en APOSTROPHE
-&none       &en HASH      &en TILDE  &kp PERCENT  &en GRAVE  &en DOLLAR  &none    &none  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES  &kp RU_COMMA    &kp RU_DOT     &kp RU_SLASH  &kp RU_NUMERO
-                          &none      &none        &none      &none       &none    &none  &trans            &none                 &en PIPE        &en AMPERSAND
+&none       &none         &none     &none      &none       &none                          &none             &none           &none         &none          &none         &none
+&none       &kp ASTERISK  &en LT    &en GT     &kp EQUAL   &en CARET                      &kp EXCL          &kp UNDERSCORE  &en LBRC      &en RBRC       &kp RU_COLON  &kp RU_DOUBLE_QUOTES
+&ewc_enter  &ew_enter     &en LBKT  &en RBKT   &kp PLUS    &en PERCENT                    &kp RU_QUESTION   &kp MINUS       &kp LPAR      &kp RPAR       &kp RU_SEMI   &en APOSTROPHE
+&none       &en HASH      &en AT    &en TILDE  &en DOLLAR  &kp RU_NUMERO  &none    &none  &kp RU_BACKSLASH  &en GRAVE       &kp RU_COMMA  &kp RU_DOT     &kp RU_SLASH  &none
+                          &none     &none      &none       &none          &none    &none  &trans            &none           &en PIPE      &en AMPERSAND
             >;
         };
 
         sym_enword {
             display-name = ".enw-syms.";
             bindings = <
-&none  &none                 &none                     &none                &none              &none                               &none                  &none                      &none              &none             &none              &none
-&none  &kp_ew_quit ASTERISK  &kp_ew_quit LT            &kp_ew_quit EQUAL    &kp_ew_quit GT     &kp_ew_quit CARET                   &kp_ew_quit EXCL       &kp_ew_quit LBRC           &kp UNDERSCORE     &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit APOSTROPHE
-&none  &none                 &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS     &kp_ew_quit RBKT   &kp_ew_quit AT                      &kp_ew_quit QUESTION   &kp_ew_quit LPAR           &kp_ew_quit MINUS  &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_exit DOUBLE_QUOTES
-&none  &kp_ew_quit HASH      &kp_ew_quit TILDE         &kp_ew_quit PERCENT  &kp_ew_quit GRAVE  &kp_ew_quit DOLLAR  &none    &none  &kp_ew_quit BACKSLASH  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &kp_ew_exit RU_NUMERO
-                             &none                     &none                &none              &none               &none    &none  &mo_ew_exit 9          &none                      &kp PIPE           &kp AMPERSAND
+&none  &none                 &none                     &none              &none               &none                                  &none                  &none                   &none              &none             &none              &none
+&none  &kp_ew_quit ASTERISK  &kp_ew_quit LT            &kp_ew_quit GT     &kp_ew_quit EQUAL   &kp_ew_quit CARET                      &kp_ew_quit EXCL       &kp_ew_quit UNDERSCORE  &kp LBRC           &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit APOSTROPHE
+&none  &none                 &kp_ew_quit LEFT_BRACKET  &kp_ew_quit RBKT   &kp_ew_quit PLUS    &kp_ew_quit PERCENT                    &kp_ew_quit QUESTION   &kp_ew_quit MINUS       &kp_ew_quit LPAR   &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_exit DOUBLE_QUOTES
+&none  &kp_ew_quit HASH      &kp_ew_quit AT            &kp_ew_quit TILDE  &kp_ew_quit DOLLAR  &kp_ew_exit RU_NUMERO  &none    &none  &kp_ew_quit BACKSLASH  &kp_ew_quit APOSTROPHE  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
+                             &none                     &none              &none               &none                  &none    &none  &mo_ew_exit 9          &none                   &kp PIPE           &kp AMPERSAND
             >;
         };
 
