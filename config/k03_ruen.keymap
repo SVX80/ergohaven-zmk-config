@@ -286,20 +286,14 @@
 
         cmben {
             bindings = <&layer_en>;
-            key-positions = <15 16>;
+            key-positions = <54 55>;
             layers = <1 2 3>;
         };
 
         cmbru {
             bindings = <&layer_ru>;
-            key-positions = <15 16>;
-            layers = <0>;
-        };
-
-        cmenter {
-            bindings = <&kp ENTER>;
             key-positions = <54 55>;
-            timeout-ms = <70>;
+            layers = <0>;
         };
 
         cmbsimple {
@@ -615,11 +609,11 @@
         en {
             display-name = "Base EN";
             bindings = <
-&kp F11    &kp F1          &kp F2     &kp F3    &kp F4     &kp F5                                              &kp F6  &kp F7     &kp F8         &kp F9    &kp F10            &kp F12
-&kp TAB    &kp Q           &kp W      &kp E     &kp R      &kp T                                               &kp Y   &kp U      &kp I          &kp O     &kp P              &kp LBKT
-&en_capsw  &l_mod LSHFT A  &kp S      &kp D     &kp F      &kp G                                               &kp H   &kp J      &kp K          &kp L     &r_mod RSHFT SEMI  &kp SQT
-&kp LGUI   &kp Z           &kp X      &kp C     &kp V      &kp B                  &none             &none      &kp N   &kp M      &kp COMMA      &kp DOT   &kp FSLH           &kp ENTER
-                           &kp GRAVE  &kp LALT  &kp LCTRL  &mo_qtap 11 BACKSPACE  &l_tkr 5 SPACE    &kp SPACE  &mo 9   &kp RCTRL  &kp BACKSLASH  &kp RBKT
+&kp F11    &kp F1          &kp F2     &kp F3    &kp F4     &kp F5                               &kp F6  &kp F7     &kp F8        &kp F9    &kp F10            &kp F12
+&kp TAB    &kp Q           &kp W      &kp E     &kp R      &kp T                                &kp Y   &kp U      &kp I         &kp O     &kp P              &kp LBKT
+&en_capsw  &l_mod LSHFT A  &kp S      &kp D     &kp F      &kp G                                &kp H   &kp J      &kp K         &kp L     &r_mod RSHFT SEMI  &kp SQT
+&kp ESC    &kp Z           &kp X      &kp C     &kp V      &kp B   &none             &none      &kp N   &kp M      &kp COMMA     &kp DOT   &kp FSLH           &kp BACKSPACE
+                           &kp GRAVE  &kp LGUI  &kp LCTRL  &mo 11  &l_tkr 5 SPACE    &kp SPACE  &mo 9   &kp ENTER  &kp LEFT_ALT  &kp RBKT
             >;
 
             sensor-bindings =
@@ -634,11 +628,11 @@
         ru {
             display-name = "Base RU";
             bindings = <
-&kp F11      &kp F1                        &kp F2                &kp F3              &kp F4              &kp F5                                              &kp F6              &kp F7                     &kp F8               &kp F9                     &kp F10                       &kp F12
-&kp TAB      &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE            &kp RU_CYRILLIC_HA
-&rcw_toggle  &l_mod LSHIFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &r_mod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI     &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I      &none             &none      &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                    &kp ENTER
-                                           &kp RU_CYRILLIC_IO    &kp LALT            &kp LCTRL           &mo_qtap 11 BACKSPACE  &l_tkr 6 SPACE    &kp SPACE  &mo 9               &kp RCTRL                  &kp BACKSLASH        &kp RU_CYRILLIC_HARD_SIGN
+&kp F11      &kp F1                        &kp F2                &kp F3              &kp F4              &kp F5                                           &kp F6              &kp F7                     &kp F8               &kp F9                     &kp F10                       &kp F12
+&kp TAB      &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE            &kp RU_CYRILLIC_HA
+&rcw_toggle  &l_mod LSHIFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &r_mod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp ESC      &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &none             &none      &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                    &kp BACKSPACE
+                                           &kp RU_CYRILLIC_IO    &kp LGUI            &kp LCTRL           &mo 11              &l_tkr 6 SPACE    &kp SPACE  &mo 9               &kp RCTRL                  &kp LEFT_ALT         &kp RU_CYRILLIC_HARD_SIGN
             >;
 
             sensor-bindings =
@@ -653,33 +647,33 @@
         ru_cw {
             display-name = "RU CapsW";
             bindings = <
-&kp_rcw_exit F11   &kp_rcw_exit F1  &kp_rcw_exit F2  &kp_rcw_exit F3  &kp_rcw_exit F4     &kp_rcw_exit F5                                                &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8         &kp_rcw_exit F9  &kp_rcw_exit F10     &kp F12
-&kp_rcw_exit TAB   &trans           &trans           &trans           &trans              &trans                                                         &trans           &trans              &trans                  &trans           &trans               &trans
-&rcw_toggle        &trans           &trans           &trans           &trans              &trans                                                         &trans           &trans              &trans                  &trans           &trans               &trans
-&kp_rcw_exit LGUI  &trans           &trans           &trans           &trans              &trans                 &none               &none               &trans           &trans              &trans                  &trans           &kp_rcw_exit RU_DOT  &kp_rcw_exit ENTER
-                                    &trans           &kp LALT         &kp_rcw_exit LCTRL  &mo_qtap 11 BACKSPACE  &rcw_tkl 6 SPACE    &kp_rcw_exit SPACE  &mo_rcw_exit 9   &kp_rcw_exit RCTRL  &kp_rcw_exit BACKSLASH  &trans
+&kp_rcw_exit F11     &kp_rcw_exit F1  &kp_rcw_exit F2  &kp_rcw_exit F3    &kp_rcw_exit F4     &kp_rcw_exit F5                                          &kp_rcw_exit F6  &kp_rcw_exit F7     &kp_rcw_exit F8        &kp_rcw_exit F9  &kp_rcw_exit F10     &kp F12
+&kp_rcw_exit TAB     &trans           &trans           &trans             &trans              &trans                                                   &trans           &trans              &trans                 &trans           &trans               &trans
+&rcw_toggle          &trans           &trans           &trans             &trans              &trans                                                   &trans           &trans              &trans                 &trans           &trans               &trans
+&kp_rcw_exit ESCAPE  &trans           &trans           &trans             &trans              &trans           &none               &none               &trans           &trans              &trans                 &trans           &kp_rcw_exit RU_DOT  &trans
+                                      &trans           &kp_rcw_exit LGUI  &kp_rcw_exit LCTRL  &mo_rcw_exit 11  &rcw_tkl 6 SPACE    &kp_rcw_exit SPACE  &mo_rcw_exit 9   &kp_rcw_exit ENTER  &kp_rcw_exit LEFT_ALT  &trans
             >;
         };
 
         ew {
             display-name = "EN Word";
             bindings = <
-&kp_ew_exit F11   &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                               &kp_ew_exit F6  &kp_ew_exit F7     &kp_ew_exit F8         &kp_ew_exit F9    &kp_ew_exit F10       &kp_ew_exit F12
-&kp_ew_exit TAB   &trans          &trans             &trans            &trans             &trans                                                       &trans          &trans             &trans                 &trans            &trans                &kp_ew_exit LBKT
-&en_capsw         &trans          &trans             &trans            &trans             &trans                                                       &trans          &trans             &trans                 &trans            &r_mod_ew RSHFT SEMI  &kp_ew_exit SQT
-&kp_ew_exit LGUI  &trans          &trans             &trans            &trans             &trans                 &none              &none              &trans          &trans             &kp_ew_exit COMMA      &kp_ew_exit DOT   &kp_ew_exit FSLH      &kp_ew_exit ENTER
-                                  &kp_ew_exit GRAVE  &kp_ew_exit LALT  &kp_ew_exit LCTRL  &mo_qtap 11 BACKSPACE  &ew_tkl 7 SPACE    &kp_ew_exit SPACE  &mo_ew_exit 9   &kp_ew_exit RCTRL  &kp_ew_exit BACKSLASH  &kp_ew_exit RBKT
+&kp_ew_exit F11     &kp_ew_exit F1  &kp_ew_exit F2     &kp_ew_exit F3    &kp_ew_exit F4     &kp_ew_exit F5                                        &kp_ew_exit F6  &kp_ew_exit F7     &kp_ew_exit F8        &kp_ew_exit F9    &kp_ew_exit F10       &kp_ew_exit F12
+&kp_ew_exit TAB     &trans          &trans             &trans            &trans             &trans                                                &trans          &trans             &trans                &trans            &trans                &kp_ew_exit LBKT
+&en_capsw           &trans          &trans             &trans            &trans             &trans                                                &trans          &trans             &trans                &trans            &r_mod_ew RSHFT SEMI  &kp_ew_exit SQT
+&kp_ew_exit ESCAPE  &trans          &trans             &trans            &trans             &trans          &none              &none              &trans          &trans             &kp_ew_exit COMMA     &kp_ew_exit DOT   &kp_ew_exit FSLH      &trans
+                                    &kp_ew_exit GRAVE  &kp_ew_exit LGUI  &kp_ew_exit LCTRL  &mo 11          &ew_tkl 7 SPACE    &kp_ew_exit SPACE  &mo_ew_exit 9   &kp_ew_exit ENTER  &kp_ew_exit LEFT_ALT  &kp_ew_exit RBKT
             >;
         };
 
         sim {
             label = "Simple";
             bindings = <
-&kp ESC     &kp N1  &kp N2     &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7     &kp N8         &kp N9    &kp N0    &kp BACKSPACE
-&kp TAB     &kp Q   &kp W      &kp E     &kp R      &kp T                           &kp Y   &kp U      &kp I          &kp O     &kp P     &kp LBKT
-&kp CAPS    &kp A   &kp S      &kp D     &kp F      &kp G                           &kp H   &kp J      &kp K          &kp L     &kp SEMI  &kp APOS
-&shift_win  &kp Z   &kp X      &kp C     &kp V      &kp B   &kp MINUS    &kp EQUAL  &kp N   &kp M      &kp COMMA      &kp DOT   &kp FSLH  &mt RSHIFT ENTER
-                    &kp GRAVE  &kp LALT  &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &mo 9   &kp RCTRL  &kp BACKSLASH  &kp RBKT
+&kp ESC     &kp N1  &kp N2     &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7           &kp N8         &kp N9    &kp N0    &kp BACKSPACE
+&kp TAB     &kp Q   &kp W      &kp E     &kp R      &kp T                           &kp Y   &kp U            &kp I          &kp O     &kp P     &kp LBKT
+&kp CAPS    &kp A   &kp S      &kp D     &kp F      &kp G                           &kp H   &kp J            &kp K          &kp L     &kp SEMI  &kp APOS
+&shift_win  &kp Z   &kp X      &kp C     &kp V      &kp B   &kp MINUS    &kp EQUAL  &kp N   &kp M            &kp COMMA      &kp DOT   &kp FSLH  &kp RSHIFT
+                    &kp GRAVE  &kp LALT  &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &mo 9   &mt RCTRL ENTER  &kp BACKSLASH  &kp RBKT
             >;
 
             sensor-bindings =
@@ -695,8 +689,8 @@
             display-name = ".en-symbols.";
             bindings = <
 &none  &none         &none             &none        &none      &none                       &none          &none              &none           &none          &none      &none
-&none  &kp ASTERISK  &kp LT            &kp EQUAL    &kp GT     &kp CARET                   &kp EXCL       &kp LBRC           &kp UNDERSCORE  &kp RBRC       &kp COLON  &kp APOSTROPHE
-&none  &none         &kp LEFT_BRACKET  &kp PLUS     &kp RBKT   &kp AT                      &kp QUESTION   &kp LPAR           &kp MINUS       &kp RPAR       &kp SEMI   &kp LS(ENTER)
+&none  &kp ASTERISK  &kp LT            &kp EQUAL    &kp GT     &kp CARET                   &kp EXCL       &kp LBRC           &kp UNDERSCORE  &kp RBRC       &kp COLON  &kp DOUBLE_QUOTES
+&none  &none         &kp LEFT_BRACKET  &kp PLUS     &kp RBKT   &kp AT                      &kp QUESTION   &kp LPAR           &kp MINUS       &kp RPAR       &kp SEMI   &kp APOSTROPHE
 &none  &kp HASH      &kp TILDE         &kp PERCENT  &kp GRAVE  &kp DOLLAR  &none    &none  &kp BACKSLASH  &kp DOUBLE_QUOTES  &kp COMMA       &kp DOT        &kp SLASH  &none
                      &ru RU_NUMERO     &none        &none      &none       &none    &none  &trans         &none              &kp PIPE        &kp AMPERSAND
             >;
@@ -705,11 +699,11 @@
         sym_ru {
             display-name = ".ru-symbols.";
             bindings = <
-&none       &none         &none          &none        &none      &none                       &none             &none                 &none           &none          &none         &none
-&none       &kp ASTERISK  &en LT         &kp EQUAL    &en GT     &en CARET                   &kp EXCL          &en LBRC              &kp UNDERSCORE  &en RBRC       &kp RU_COLON  &en APOSTROPHE
-&ewc_enter  &ew_enter     &en LBKT       &kp PLUS     &en RBKT   &en AT                      &kp RU_QUESTION   &kp LPAR              &kp MINUS       &kp RPAR       &kp RU_SEMI   &kp LS(ENTER)
-&none       &en HASH      &en TILDE      &kp PERCENT  &en GRAVE  &en DOLLAR  &none    &none  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES  &kp RU_COMMA    &kp RU_DOT     &kp RU_SLASH  &none
-                          &kp RU_NUMERO  &none        &none      &none       &none    &none  &trans            &none                 &en PIPE        &en AMPERSAND
+&none       &none         &none      &none        &none      &none                       &none             &none                 &none           &none          &none         &none
+&none       &kp ASTERISK  &en LT     &kp EQUAL    &en GT     &en CARET                   &kp EXCL          &en LBRC              &kp UNDERSCORE  &en RBRC       &kp RU_COLON  &kp RU_DOUBLE_QUOTES
+&ewc_enter  &ew_enter     &en LBKT   &kp PLUS     &en RBKT   &en AT                      &kp RU_QUESTION   &kp LPAR              &kp MINUS       &kp RPAR       &kp RU_SEMI   &en APOSTROPHE
+&none       &en HASH      &en TILDE  &kp PERCENT  &en GRAVE  &en DOLLAR  &none    &none  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES  &kp RU_COMMA    &kp RU_DOT     &kp RU_SLASH  &kp RU_NUMERO
+                          &none      &none        &none      &none       &none    &none  &trans            &none                 &en PIPE        &en AMPERSAND
             >;
         };
 
@@ -718,20 +712,20 @@
             bindings = <
 &none  &none                 &none                     &none                &none              &none                               &none                  &none                      &none              &none             &none              &none
 &none  &kp_ew_quit ASTERISK  &kp_ew_quit LT            &kp_ew_quit EQUAL    &kp_ew_quit GT     &kp_ew_quit CARET                   &kp_ew_quit EXCL       &kp_ew_quit LBRC           &kp UNDERSCORE     &kp_ew_quit RBRC  &kp_ew_quit COLON  &kp_ew_quit APOSTROPHE
-&none  &none                 &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS     &kp_ew_quit RBKT   &kp_ew_quit AT                      &kp_ew_quit QUESTION   &kp_ew_quit LPAR           &kp_ew_quit MINUS  &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_exit LS(ENTER)
-&none  &kp_ew_quit HASH      &kp_ew_quit TILDE         &kp_ew_quit PERCENT  &kp_ew_quit GRAVE  &kp_ew_quit DOLLAR  &none    &none  &kp_ew_quit BACKSLASH  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &none
-                             &kp_ew_exit RU_NUMERO     &none                &none              &none               &none    &none  &mo_ew_exit 9          &none                      &kp PIPE           &kp AMPERSAND
+&none  &none                 &kp_ew_quit LEFT_BRACKET  &kp_ew_quit PLUS     &kp_ew_quit RBKT   &kp_ew_quit AT                      &kp_ew_quit QUESTION   &kp_ew_quit LPAR           &kp_ew_quit MINUS  &kp_ew_quit RPAR  &kp_ew_quit SEMI   &kp_ew_exit DOUBLE_QUOTES
+&none  &kp_ew_quit HASH      &kp_ew_quit TILDE         &kp_ew_quit PERCENT  &kp_ew_quit GRAVE  &kp_ew_quit DOLLAR  &none    &none  &kp_ew_quit BACKSLASH  &kp_ew_quit DOUBLE_QUOTES  &kp_ew_quit COMMA  &kp_ew_quit DOT   &kp_ew_quit SLASH  &kp_ew_exit RU_NUMERO
+                             &none                     &none                &none              &none               &none    &none  &mo_ew_exit 9          &none                      &kp PIPE           &kp AMPERSAND
             >;
         };
 
         nav {
             display-name = "Navigation";
             bindings = <
-&kp F11  &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                                     &kp F6        &kp F7              &kp F8        &kp F9         &kp F10                &kp F12
-&kp TAB  &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F14     &cmd F15 F15                                               &kp LC(HOME)  &kp HOME            &kp UP        &kp END        &cmd F15 F16           &none
-&kp ESC  &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F17                                               &kp ENTER     &kp LEFT            &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &kp ENTER
-&none    &cmd F15 Z           &cmd F15 X    &cmd F15 C     &cmd F15 V       &cmd F15 F19           &none              &none            &kp LC(END)   &kp LC(LEFT_ARROW)  &cmd F15 F17  &kp LC(RIGHT)  &cmd F15 F21           &none
-                              &none         &none          &kp_off 8 LCTRL  &mo_qtap 11 BACKSPACE  &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8   &kp_off 8 RCTRL     &none         &none
+&kp F11     &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                            &kp F6        &kp F7              &kp F8        &kp F9         &kp F10                &kp F12
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F14     &cmd F15 F15                                      &kp LC(HOME)  &kp HOME            &kp UP        &kp END        &cmd F15 F16           &none
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F17                                      &none         &kp LEFT            &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &none
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C     &cmd F15 V       &cmd F15 F19  &none              &none            &kp LC(END)   &kp LC(LEFT_ARROW)  &cmd F15 F17  &kp LC(RIGHT)  &cmd F15 F21           &sh_bksp
+                                 &none         &none          &kp_off 8 LCTRL  &mo 11        &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8   &kp_off 8 ENTER     &none         &none
             >;
 
             sensor-bindings =
@@ -746,22 +740,22 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&kp F11  &kp F1               &kp F2        &kp F3      &kp F4        &kp F5                              &kp F6        &kp F7        &kp F8        &kp F9         &kp F10                &kp F12
-&kp TAB  &cmd F15 Y           &cmd F15 F13  &kp PG_UP   &cmd F15 F14  &cmd F15 F15                        &kp LC(HOME)  &kp HOME      &kp UP        &kp END        &cmd F15 F16           &none
-&kp ESC  &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN   &cmd F15 F    &cmd F15 F17                        &kp ENTER     &kp LEFT      &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &kp ENTER
-&none    &cmd F15 Z           &cmd F15 X    &cmd F15 C  &cmd F15 V    &cmd F15 F19        &none    &none  &kp LC(END)   &kp LC(LEFT)  &cmd F15 F17  &kp LC(RIGHT)  &cmd F15 F21           &none
-                              &none         &none       &none         &mo_qtap 13 DELETE  &on 8    &none  &none         &none         &none         &none
+&kp F11     &kp F1               &kp F2        &kp F3      &kp F4        &kp F5                        &kp F6        &kp F7        &kp F8        &kp F9         &kp F10                &kp F12
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP   &cmd F15 F14  &cmd F15 F15                  &kp LC(HOME)  &kp HOME      &kp UP        &kp END        &cmd F15 F16           &none
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN   &cmd F15 F    &cmd F15 F17                  &none         &kp LEFT      &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &none
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C  &cmd F15 V    &cmd F15 F19  &none    &none  &kp LC(END)   &kp LC(LEFT)  &cmd F15 F17  &kp LC(RIGHT)  &cmd F15 F21           &none
+                                 &none         &none       &none         &mo 13        &on 8    &none  &none         &none         &none         &none
             >;
         };
 
         num {
             display-name = "Number";
             bindings = <
-&none    &none  &none  &none  &none                    &none                                          &none            &none                     &none   &none         &none      &none
-&kp TAB  &none  &none  &none  &none                    &none                                          &kp KP_DIVIDE    &kp N7                    &kp N8  &kp N9        &kp MINUS  &sh_bksp
-&kp ESC  &none  &none  &none  &none                    &none                                          &kp KP_MULTIPLY  &kp N4                    &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
-&none    &none  &none  &none  &none                    &none                  &none        &none      &kp LPAR         &kp N1                    &kp N2  &kp N3        &kp RPAR   &kp ENTER
-                &none  &none  &kp_off 10 LEFT_CONTROL  &mo_qtap 11 BACKSPACE  &kp SPACE    &kp SPACE  &mo 12           &kp_off 10 RIGHT_CONTROL  &kp N0  &kp KP_CLEAR
+&none    &none  &none  &none  &none                    &none                           &none            &none             &none   &none         &none      &none
+&kp TAB  &none  &none  &none  &none                    &none                           &kp KP_DIVIDE    &kp N7            &kp N8  &kp N9        &kp MINUS  &none
+&kp ESC  &none  &none  &none  &none                    &none                           &kp KP_MULTIPLY  &kp N4            &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
+&none    &none  &none  &none  &none                    &none   &none        &none      &kp LPAR         &kp N1            &kp N2  &kp N3        &kp RPAR   &sh_bksp
+                &none  &none  &kp_off 10 LEFT_CONTROL  &mo 11  &kp SPACE    &kp SPACE  &mo 12           &kp_off 10 ENTER  &kp N0  &kp KP_CLEAR
             >;
 
             sensor-bindings =
@@ -776,11 +770,11 @@
         num_m {
             display-name = ".number.";
             bindings = <
-&none        &none      &none   &none    &none    &none                    &none            &none    &none   &none         &none           &none
-&kp LS(TAB)  &kp CAPS   &kp F9  &kp F10  &kp F11  &kp F12                  &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS       &sh_bksp
-&kp ESC      &kp LSHFT  &kp F5  &kp F6   &kp F7   &kp F8                   &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &mt RSHFT PLUS  &kp ENTER
-&none        &none      &kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR        &none
-                        &none   &none    &tog 10  &none    &none    &none  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
+&none         &none      &none   &none    &none    &none                    &none            &none    &none   &none         &none           &none
+&none         &none      &kp F9  &kp F10  &kp F11  &kp F12                  &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS       &none
+&kp CAPSLOCK  &kp LSHFT  &kp F5  &kp F6   &kp F7   &kp F8                   &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &mt RSHFT PLUS  &none
+&none         &none      &kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR        &sh_bksp
+                         &none   &none    &tog 10  &none    &none    &none  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
             >;
         };
 
