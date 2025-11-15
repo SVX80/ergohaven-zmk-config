@@ -721,11 +721,11 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp F11     &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                            &kp F6        &kp F7              &kp F8        &kp F9         &kp F10                &kp F12
-&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F14     &cmd F15 F15                                      &kp LC(HOME)  &kp HOME            &kp UP        &kp END        &cmd F15 F16           &none
-&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F17                                      &none         &kp LEFT            &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &none
-&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C     &cmd F15 V       &cmd F15 F19  &none              &none            &kp LC(END)   &kp LC(LEFT_ARROW)  &cmd F15 F17  &kp LC(RIGHT)  &cmd F15 F21           &sh_bksp
-                                 &none         &none          &kp_off 8 LCTRL  &mo 11        &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8   &kp_off 8 ENTER     &none         &none
+&kp F11     &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                            &kp F6        &kp F7           &kp F8        &kp F9     &kp F10               &kp F12
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F14     &cmd F15 F15                                      &kp LC(HOME)  &kp LC(LEFT)     &kp PG_DN     &kp PG_UP  &kp LC(RIGHT)         &kp LC(END)
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F17                                      &kp HOME      &kp LEFT         &kp DOWN      &kp UP     &mt_qtap RSHFT RIGHT  &kp END
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C     &cmd F15 V       &cmd F15 F19  &none              &none            &none         &none            &cmd F15 F17  &none      &cmd F15 F21          &sh_bksp
+                                 &none         &none          &kp_off 8 LCTRL  &mo 11        &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8   &kp_off 8 ENTER  &none         &none
             >;
 
             sensor-bindings =
@@ -740,11 +740,11 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&kp F11     &kp F1               &kp F2        &kp F3      &kp F4        &kp F5                        &kp F6        &kp F7        &kp F8        &kp F9         &kp F10                &kp F12
-&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP   &cmd F15 F14  &cmd F15 F15                  &kp LC(HOME)  &kp HOME      &kp UP        &kp END        &cmd F15 F16           &none
-&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN   &cmd F15 F    &cmd F15 F17                  &none         &kp LEFT      &kp DOWN      &kp RIGHT      &mt_cmd_f15 RSHFT F18  &none
-&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C  &cmd F15 V    &cmd F15 F19  &none    &none  &kp LC(END)   &kp LC(LEFT)  &cmd F15 F17  &kp LC(RIGHT)  &cmd F15 F21           &none
-                                 &none         &none       &none         &mo 13        &on 8    &none  &none         &none         &none         &none
+&kp F11     &kp F1               &kp F2        &kp F3      &kp F4        &kp F5                         &kp F6        &kp F7        &kp F8        &kp F9     &kp F10               &kp F12
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP   &cmd F15 F14  &cmd F15 F15                   &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN     &kp PG_UP  &kp LC(RIGHT)         &kp LC(END)
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN   &cmd F15 F    &cmd F15 F17                   &kp HOME      &kp LEFT      &kp DOWN      &kp UP     &mt_qtap RSHFT RIGHT  &kp END
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C  &cmd F15 V    &cmd F15 F19  &none     &none  &none         &none         &cmd F15 F17  &none      &cmd F15 F21          &trans
+                                 &none         &none       &none         &mo 13        &tog 8    &none  &none         &none         &none         &none
             >;
         };
 
@@ -792,11 +792,11 @@
         adj_m {
             display-name = ".adjust.";
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&trans       &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans            &trans        &trans        &studio_unlock
-&trans       &trans  &trans  &trans  &trans  &trans                    &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &trans        &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_USB  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &trans        &trans
-                     &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&trans       &trans  &trans  &trans  &trans  &trans                    &trans        &trans            &trans        &trans        &trans        &studio_unlock
+&trans       &trans  &trans  &trans  &trans  &trans                    &out OUT_BLE  &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &trans        &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_USB  &kp K_PLAY_PAUSE  &kp K_PREV    &kp K_NEXT    &trans        &trans
+                     &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans            &trans        &trans
             >;
         };
     };
