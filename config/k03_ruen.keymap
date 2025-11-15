@@ -721,11 +721,11 @@
         nav {
             display-name = "Navigation";
             bindings = <
-&kp F11     &kp F1               &kp F2        &kp F3         &kp F4           &kp F5                                            &kp F6        &kp F7           &kp F8        &kp F9     &kp F10               &kp F12
-&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP      &cmd F15 F14     &cmd F15 F15                                      &kp LC(HOME)  &kp LC(LEFT)     &kp PG_DN     &kp PG_UP  &kp LC(RIGHT)         &kp LC(END)
-&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PAGE_DOWN  &cmd F15 F       &cmd F15 F17                                      &kp HOME      &kp LEFT         &kp DOWN      &kp UP     &mt_qtap RSHFT RIGHT  &kp END
-&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C     &cmd F15 V       &cmd F15 F19  &none              &none            &none         &none            &cmd F15 F17  &none      &cmd F15 F21          &sh_bksp
-                                 &none         &none          &kp_off 8 LCTRL  &mo 11        &kp_off 8 SPACE    &kp_off 8 SPACE  &mo_tog 9 8   &kp_off 8 ENTER  &none         &none
+&kp F11     &kp F1               &kp F2        &kp F3           &kp F4        &kp F5                                &kp F6        &kp F7        &kp F8        &kp F9     &kp F10               &kp F12
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &none            &cmd F15 F14  &cmd F15 F15                          &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN     &kp PG_UP  &kp LC(RIGHT)         &kp LC(END)
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                          &kp HOME      &kp LEFT      &kp DOWN      &kp UP     &mt_qtap RSHFT RIGHT  &kp END
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F19  &none        &none      &none         &none         &cmd F15 F17  &none      &cmd F15 F21          &sh_bksp
+                                 &none         &none            &none         &mo 11        &kp SPACE    &kp SPACE  &mo_tog 9 8   &kp ENTER     &none         &none
             >;
 
             sensor-bindings =
@@ -740,22 +740,22 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&kp F11     &kp F1               &kp F2        &kp F3      &kp F4        &kp F5                         &kp F6        &kp F7        &kp F8        &kp F9     &kp F10               &kp F12
-&kp TAB     &cmd F15 Y           &cmd F15 F13  &kp PG_UP   &cmd F15 F14  &cmd F15 F15                   &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN     &kp PG_UP  &kp LC(RIGHT)         &kp LC(END)
-&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &kp PG_DN   &cmd F15 F    &cmd F15 F17                   &kp HOME      &kp LEFT      &kp DOWN      &kp UP     &mt_qtap RSHFT RIGHT  &kp END
-&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C  &cmd F15 V    &cmd F15 F19  &none     &none  &none         &none         &cmd F15 F17  &none      &cmd F15 F21          &trans
-                                 &none         &none       &none         &mo 13        &tog 8    &none  &none         &none         &none         &none
+&kp F11     &kp F1               &kp F2        &kp F3           &kp F4        &kp F5                            &kp F6        &kp F7        &kp F8        &kp F9     &kp F10               &kp F12
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &none            &cmd F15 F14  &cmd F15 F15                      &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN     &kp PG_UP  &kp LC(RIGHT)         &kp LC(END)
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                      &kp HOME      &kp LEFT      &kp DOWN      &kp UP     &mt_qtap RSHFT RIGHT  &kp END
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F19  &none        &none  &none         &none         &cmd F15 F17  &none      &cmd F15 F21          &trans
+                                 &none         &none            &none         &mo 13        &kp SPACE    &none  &none         &none         &none         &none
             >;
         };
 
         num {
             display-name = "Number";
             bindings = <
-&none    &none  &none  &none  &none                    &none                           &none            &none             &none   &none         &none      &none
-&kp TAB  &none  &none  &none  &none                    &none                           &kp KP_DIVIDE    &kp N7            &kp N8  &kp N9        &kp MINUS  &none
-&kp ESC  &none  &none  &none  &none                    &none                           &kp KP_MULTIPLY  &kp N4            &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
-&none    &none  &none  &none  &none                    &none   &none        &none      &kp LPAR         &kp N1            &kp N2  &kp N3        &kp RPAR   &sh_bksp
-                &none  &none  &kp_off 10 LEFT_CONTROL  &mo 11  &kp SPACE    &kp SPACE  &mo 12           &kp_off 10 ENTER  &kp N0  &kp KP_CLEAR
+&none       &none  &none  &none  &none             &none                                  &none            &none      &none   &none         &none      &none
+&kp TAB     &none  &none  &none  &none             &none                                  &kp KP_DIVIDE    &kp N7     &kp N8  &kp N9        &kp MINUS  &none
+&none       &none  &none  &none  &none             &none                                  &kp KP_MULTIPLY  &kp N4     &kp N5  &kp N6        &kp PLUS   &kp KP_EQUAL
+&kp ESCAPE  &none  &none  &none  &none             &none          &none        &none      &kp LPAR         &kp N1     &kp N2  &kp N3        &kp RPAR   &sh_bksp
+                   &none  &none  &kp LEFT_CONTROL  &mo_tog 11 10  &kp SPACE    &kp SPACE  &mo 12           &kp ENTER  &kp N0  &kp KP_CLEAR
             >;
 
             sensor-bindings =
@@ -770,11 +770,11 @@
         num_m {
             display-name = ".number.";
             bindings = <
-&none         &none      &none   &none    &none    &none                    &none            &none    &none   &none         &none           &none
-&none         &none      &kp F9  &kp F10  &kp F11  &kp F12                  &kp KP_DIVIDE    &kp N7   &kp N8  &kp N9        &kp MINUS       &none
-&kp CAPSLOCK  &kp LSHFT  &kp F5  &kp F6   &kp F7   &kp F8                   &kp KP_MULTIPLY  &kp N4   &kp N5  &kp N6        &mt RSHFT PLUS  &none
-&none         &none      &kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp LPAR         &kp N1   &kp N2  &kp N3        &kp RPAR        &sh_bksp
-                         &none   &none    &tog 10  &none    &none    &none  &mo 13           &tog 10  &kp N0  &kp KP_CLEAR
+&none         &none      &none   &none    &none    &none                    &none            &none      &none   &none         &none           &none
+&none         &none      &kp F9  &kp F10  &kp F11  &kp F12                  &kp KP_DIVIDE    &kp N7     &kp N8  &kp N9        &kp MINUS       &none
+&kp CAPSLOCK  &kp LSHFT  &kp F5  &kp F6   &kp F7   &kp F8                   &kp KP_MULTIPLY  &kp N4     &kp N5  &kp N6        &mt RSHFT PLUS  &kp KP_EQUAL
+&none         &none      &kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp LPAR         &kp N1     &kp N2  &kp N3        &kp RPAR        &sh_bksp
+                         &none   &none    &tog 10  &none    &none    &none  &mo 13           &kp ENTER  &kp N0  &kp KP_CLEAR
             >;
         };
 
