@@ -279,6 +279,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt_qtap_nav: mt_qtap_nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_QTAP_NAV";
+            bindings = <&kp>, <&kp_nav>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <230>;
+        };
     };
 
     combos {
@@ -601,6 +611,20 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        kp_nav: kp_nav {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&on 8 &off 9>;
+
+            label = "KP_NAV";
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -740,11 +764,11 @@
         nav_m {
             display-name = ".navigation.";
             bindings = <
-&trans      &trans               &trans        &trans           &trans        &trans                            &trans        &trans        &trans        &trans        &trans                &trans
-&kp TAB     &cmd F15 Y           &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                      &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN     &kp PG_UP     &kp LC(RIGHT)         &kp LC(END)
-&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                      &kp HOME      &kp LEFT      &kp DOWN      &kp UP        &mt_qtap RSHFT RIGHT  &kp END
-&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18  &none        &none  &cmd F15 F19  &cmd F15 F20  &cmd F15 F21  &cmd F15 F22  &cmd F15 F23          &trans
-                                 &none         &none            &none         &mo 13        &kp SPACE    &none  &none         &none         &none         &none
+&trans      &trans               &trans        &trans           &trans        &trans                            &trans            &trans            &trans         &trans         &trans                    &trans
+&kp TAB     &cmd F15 Y           &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                      &kp_nav LC(HOME)  &kp_nav LC(LEFT)  &kp_nav PG_DN  &kp_nav PG_UP  &kp_nav LC(RIGHT)         &kp_nav LC(END)
+&none       &mt_cmd_f15 LSHFT A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                      &kp_nav HOME      &kp_nav LEFT      &kp_nav DOWN   &kp_nav UP     &mt_qtap_nav RSHFT RIGHT  &kp_nav END
+&kp ESCAPE  &cmd F15 Z           &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18  &none        &none  &cmd F15 F19      &cmd F15 F20      &cmd F15 F21   &cmd F15 F22   &cmd F15 F23              &trans
+                                 &none         &none            &none         &mo 13        &kp SPACE    &none  &none             &none             &none          &none
             >;
         };
 
