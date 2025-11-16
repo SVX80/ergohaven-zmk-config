@@ -196,7 +196,7 @@
 &trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)      &kp LC(END)
 &trans  &cmd F15 A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME      &kp LEFT      &kp DOWN   &kp UP     &mtqt RSHFT RIGHT  &kp END
 &trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                    &none         &none         &none      &none      &none              &trans
-                    &trans        &trans           &trans        &trans        &trans    &trans  &mo 6         &trans        &trans     &trans
+                    &trans        &trans           &trans        &mo 6         &trans    &trans  &trans        &trans        &trans     &trans
             >;
 
             display-name = "nav";
@@ -208,7 +208,7 @@
 &trans        &kp ASTERISK  &kp LT            &kp GT             &kp EQUAL   &kp CARET                      &kp EXCL       &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON      &kp DOUBLE_QUOTES
 &kp CAPSLOCK  &none         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PLUS    &kp PERCENT                    &kp QUESTION   &kp MINUS       &kp LPAR        &kp RPAR         &kp SEMICOLON  &kp APOSTROPHE
 &trans        &kp HASH      &kp AT            &kp TILDE          &kp DOLLAR  &none                          &kp BACKSLASH  &kp GRAVE       &kp COMMA       &kp DOT          &kp SLASH      &trans
-                            &trans            &trans             &trans      &mo 6        &trans    &trans  &trans         &trans          &kp PIPE        &kp AMPERSAND
+                            &trans            &trans             &trans      &trans       &trans    &trans  &mo 6          &trans          &kp PIPE        &kp AMPERSAND
             >;
 
             display-name = "Sym En";
@@ -220,7 +220,7 @@
 &trans        &kp ASTERISK  &en LT            &kp GT             &kp EQUAL   &en CARET                        &kp RU_EXCLAMATION  &kp RU_UNDERSCORE  &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_COLON      &kp RU_DOUBLE_QUOTES
 &kp CAPSLOCK  &none         &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp PLUS    &en PERCENT                      &kp RU_QUESTION     &kp MINUS          &kp LPAR        &kp RPAR         &kp RU_SEMICOLON  &en APOSTROPHE
 &trans        &kp HASH      &en AT            &en TILDE          &en DOLLAR  &kp RU_NUMERO                    &kp RU_BACKSLASH    &en GRAVE          &kp RU_COMMA    &kp RU_DOT       &kp RU_SLASH      &trans
-                            &trans            &trans             &trans      &mo 6          &trans    &trans  &trans              &trans             &en PIPE        &en AMPERSAND
+                            &trans            &trans             &trans      &trans         &trans    &trans  &mo 6               &trans             &en PIPE        &en AMPERSAND
             >;
         };
 
