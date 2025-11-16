@@ -8,15 +8,15 @@
     combos {
         compatible = "zmk,combos";
 
-        cmben {
+        cmb_en {
             bindings = <&layer_en>;
-            key-positions = <3 4>;
+            key-positions = <40 41>;
             layers = <1>;
         };
 
-        cmbru {
+        cmb_ru {
             bindings = <&layer_ru>;
-            key-positions = <3 4>;
+            key-positions = <41 40>;
             layers = <0>;
         };
     };
@@ -43,7 +43,8 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &to_en>;
+            bindings = <&to 0>, <&macro_tap>, <&to_en>;
+
             label = "LAYER_EN";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -52,7 +53,8 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &to_ru>;
+            bindings = <&to 1>, <&macro_tap>, <&to_ru>;
+
             label = "LAYER_RU";
             tap-ms = <30>;
             wait-ms = <0>;
@@ -62,6 +64,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
+                <&macro_tap>,
                 <&to_en>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
@@ -75,6 +78,51 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        key: key {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_tap>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KEY";
+        };
+    };
+
+    behaviors {
+        lmod: lmod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LMOD";
+            bindings = <&kp>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45>;
+            hold-trigger-on-release;
+            retro-tap;
+        };
+
+        rmod: rmod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RMOD";
+            bindings = <&kp>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            retro-tap;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
+        };
+
+        bksp: bksp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKSP";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -82,10 +130,10 @@
 
         en {
             bindings = <
-&kp ESC    &kp Q  &kp W      &kp E     &kp R      &kp T                        &kp Y  &kp U     &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S      &kp D     &kp F      &kp G                        &kp H  &kp J     &kp K      &kp L     &kp SEMI  &kp BSLH
-&kp LSHFT  &kp Z  &kp X      &kp C     &kp V      &kp B                        &kp N  &kp M     &kp COMMA  &kp DOT   &kp SQT   &kp RSHFT
-                  &kp GRAVE  &kp LGUI  &kp LCTRL  &mo 2  &kp SPACE    &kp RET  &mo 3  &kp LALT  &kp LBKT   &kp RBKT
+&kp TAB       &kp Q          &kp W      &kp E    &kp R      &kp T                          &kp Y  &kp U      &kp I      &kp O     &kp P             &kp LEFT_BRACKET
+&kp CAPSLOCK  &lmod LSHFT A  &kp S      &kp D    &kp F      &kp G                          &kp H  &kp J      &kp K      &kp L     &rmod RSHFT SEMI  &kp SINGLE_QUOTE
+&kp LGUI      &kp Z          &kp X      &kp C    &kp V      &kp B                          &kp N  &kp M      &kp COMMA  &kp DOT   &kp FSLH          &kp LALT
+                             &kp GRAVE  &kp ESC  &kp LCTRL  &mo 2  &kp SPACE    &kp SPACE  &mo 3  &kp ENTER  &bksp      &kp RBKT
             >;
 
             display-name = "Base";
@@ -94,10 +142,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BSPC
-&kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp BSLH
-&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &kp RSHFT
-                                    &kp RU_CYRILLIC_IO    &kp LGUI            &kp LCTRL           &mo 2               &kp SPACE    &kp RET  &mo 4               &kp LALT                   &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+&kp TAB       &kp RU_CYRILLIC_SHORT_I     &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE           &kp RU_CYRILLIC_HA
+&kp CAPSLOCK  &lmod LSHFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &rmod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LGUI      &kp RU_CYRILLIC_YA          &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                   &kp LALT
+                                          &kp RU_CYRILLIC_IO    &kp ESC             &kp LCTRL           &mo 2               &kp SPACE    &kp SPACE  &mo 4               &kp ENTER                  &bksp                &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
