@@ -78,6 +78,23 @@
 
             label = "KEY";
         };
+
+        cmd: cmd {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CMD";
+            tap-ms = <30>;
+        };
     };
 
     behaviors {
@@ -128,6 +145,16 @@
             #binding-cells = <1>;
             toggle-mode = "off";
         };
+
+        mtqt: mtqt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MTQT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <230>;
+        };
     };
 
     keymap {
@@ -166,10 +193,10 @@
 
         nav {
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3   &kp N4   &kp N5                     &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &trans
-&trans  &trans  &trans    &trans   &trans   &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&trans  &trans  &kp HOME  &kp INS  &kp END  &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                &trans    &trans   &trans   &trans   &trans    &trans  &mo 6     &trans        &trans         &trans
+&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)      &kp LC(END)
+&trans  &cmd F15 A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME      &kp LEFT      &kp DOWN   &kp UP     &mtqt RSHFT RIGHT  &kp END
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                    &none         &none         &none      &none      &none              &trans
+                    &trans        &trans           &trans        &trans        &trans    &trans  &mo 6         &trans        &trans     &trans
             >;
 
             display-name = "nav";
@@ -178,10 +205,10 @@
 
         sym_en {
             bindings = <
-&trans  &kp ASTERISK  &kp LT            &kp GT             &kp EQUAL   &kp CARET                      &kp EXCL       &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON      &kp DOUBLE_QUOTES
-&trans  &none         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PLUS    &kp PERCENT                    &kp QUESTION   &kp MINUS       &kp LPAR        &kp RPAR         &kp SEMICOLON  &kp APOSTROPHE
-&trans  &kp HASH      &kp AT            &kp TILDE          &kp DOLLAR  &none                          &kp BACKSLASH  &kp GRAVE       &kp COMMA       &kp DOT          &kp SLASH      &trans
-                      &trans            &trans             &trans      &mo 6        &trans    &trans  &trans         &trans          &kp PIPE        &kp AMPERSAND
+&trans        &kp ASTERISK  &kp LT            &kp GT             &kp EQUAL   &kp CARET                      &kp EXCL       &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON      &kp DOUBLE_QUOTES
+&kp CAPSLOCK  &none         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PLUS    &kp PERCENT                    &kp QUESTION   &kp MINUS       &kp LPAR        &kp RPAR         &kp SEMICOLON  &kp APOSTROPHE
+&trans        &kp HASH      &kp AT            &kp TILDE          &kp DOLLAR  &none                          &kp BACKSLASH  &kp GRAVE       &kp COMMA       &kp DOT          &kp SLASH      &trans
+                            &trans            &trans             &trans      &mo 6        &trans    &trans  &trans         &trans          &kp PIPE        &kp AMPERSAND
             >;
 
             display-name = "Sym En";
@@ -190,10 +217,10 @@
         sym_ru {
             display-name = "Sym Ru";
             bindings = <
-&trans  &kp ASTERISK  &en LT            &kp GT             &kp EQUAL   &en CARET                        &kp RU_EXCLAMATION  &kp RU_UNDERSCORE  &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_COLON      &kp RU_DOUBLE_QUOTES
-&trans  &none         &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp PLUS    &en PERCENT                      &kp RU_QUESTION     &kp MINUS          &kp LPAR        &kp RPAR         &kp RU_SEMICOLON  &en APOSTROPHE
-&trans  &kp HASH      &en AT            &en TILDE          &en DOLLAR  &kp RU_NUMERO                    &kp RU_BACKSLASH    &en GRAVE          &kp RU_COMMA    &kp RU_DOT       &kp RU_SLASH      &trans
-                      &trans            &trans             &trans      &mo 6          &trans    &trans  &trans              &trans             &en PIPE        &en AMPERSAND
+&trans        &kp ASTERISK  &en LT            &kp GT             &kp EQUAL   &en CARET                        &kp RU_EXCLAMATION  &kp RU_UNDERSCORE  &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_COLON      &kp RU_DOUBLE_QUOTES
+&kp CAPSLOCK  &none         &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp PLUS    &en PERCENT                      &kp RU_QUESTION     &kp MINUS          &kp LPAR        &kp RPAR         &kp RU_SEMICOLON  &en APOSTROPHE
+&trans        &kp HASH      &en AT            &en TILDE          &en DOLLAR  &kp RU_NUMERO                    &kp RU_BACKSLASH    &en GRAVE          &kp RU_COMMA    &kp RU_DOT       &kp RU_SLASH      &trans
+                            &trans            &trans             &trans      &mo 6          &trans    &trans  &trans              &trans             &en PIPE        &en AMPERSAND
             >;
         };
 
