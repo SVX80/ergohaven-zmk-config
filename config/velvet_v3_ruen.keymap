@@ -19,6 +19,16 @@
             key-positions = <41 40>;
             layers = <0>;
         };
+
+        cmb_base {
+            bindings = <&off 2>;
+            key-positions = <40 38>;
+        };
+
+        cmb_simple {
+            bindings = <&off 2>;
+            key-positions = <41 38>;
+        };
     };
 
     macros {
@@ -105,6 +115,19 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        on: on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "ON";
+            #binding-cells = <1>;
+        };
+
+        off: off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
     };
 
     keymap {
@@ -115,7 +138,7 @@
 &kp TAB       &kp Q          &kp W      &kp E    &kp R      &kp T                          &kp Y  &kp U      &kp I      &kp O     &kp P             &kp LEFT_BRACKET
 &kp CAPSLOCK  &lmod LSHFT A  &kp S      &kp D    &kp F      &kp G                          &kp H  &kp J      &kp K      &kp L     &rmod RSHFT SEMI  &kp SINGLE_QUOTE
 &kp LGUI      &kp Z          &kp X      &kp C    &kp V      &kp B                          &kp N  &kp M      &kp COMMA  &kp DOT   &kp FSLH          &kp LALT
-                             &kp GRAVE  &kp ESC  &kp LCTRL  &mo 2  &kp SPACE    &kp SPACE  &mo 3  &kp ENTER  &bksp      &kp RBKT
+                             &kp GRAVE  &kp ESC  &kp LCTRL  &mo 3  &kp SPACE    &kp SPACE  &mo 4  &kp ENTER  &bksp      &kp RBKT
             >;
 
             display-name = "En";
@@ -127,7 +150,17 @@
 &kp TAB       &kp RU_CYRILLIC_SHORT_I     &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE           &kp RU_CYRILLIC_HA
 &kp CAPSLOCK  &lmod LSHFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &rmod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI      &kp RU_CYRILLIC_YA          &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                   &kp LALT
-                                          &kp RU_CYRILLIC_IO    &kp ESC             &kp LCTRL           &mo 2               &kp SPACE    &kp SPACE  &mo 4               &kp ENTER                  &bksp                &kp RU_CYRILLIC_HARD_SIGN
+                                          &kp RU_CYRILLIC_IO    &kp ESC             &kp LCTRL           &mo 3               &kp SPACE    &kp SPACE  &mo 5               &kp ENTER                  &bksp                &kp RU_CYRILLIC_HARD_SIGN
+            >;
+        };
+
+        sim {
+            display-name = "Simple";
+            bindings = <
+&kp TAB       &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&kp CAPSLOCK  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LSHFT     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp RSHFT
+                                       &kp RU_CYRILLIC_IO    &kp ESC             &kp LCTRL           &mo 3               &kp SPACE    &kp SPACE  &mo 5               &kp ENTER                  &bksp                &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -136,7 +169,7 @@
 &trans  &kp N1  &kp N2    &kp N3   &kp N4   &kp N5                     &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &trans
 &trans  &trans  &trans    &trans   &trans   &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
 &trans  &trans  &kp HOME  &kp INS  &kp END  &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                &trans    &trans   &trans   &trans   &trans    &trans  &mo 5     &trans        &trans         &trans
+                &trans    &trans   &trans   &trans   &trans    &trans  &mo 6     &trans        &trans         &trans
             >;
 
             display-name = "nav";
@@ -148,7 +181,7 @@
 &trans  &kp HASH   &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET  &kp DQT   &kp UNDER  &kp SQT   &trans    &trans
 &trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
 &trans  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &kp DLLR                     &kp AT     &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &trans
-                   &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &kp LBKT   &kp RBKT
+                   &trans    &trans     &trans    &mo 6      &trans    &trans  &trans     &trans    &kp LBKT   &kp RBKT
             >;
 
             display-name = "Symbols";
@@ -160,7 +193,7 @@
 &trans         &en HASH          &en LT    &kp EQUAL     &en GT       &en GRAVE                    &en CARET  &kp RU_DQT  &kp UNDER    &en SQT   &trans      &trans
 &kp RU_NUMERO  &kp RU_BACKSLASH  &kp LPAR  &kp MINUS     &kp RPAR     &kp PLUS                     &kp PRCNT  &en LBRC    &kp RU_SEMI  &kp RBRC  &kp EXCL    &kp RU_QMARK
 &trans         &kp RU_COMMA      &kp STAR  &kp RU_COLON  &kp RU_FSLH  &en DLLR                     &en AT     &en PIPE    &en TILDE    &en AMPS  &kp RU_DOT  &trans
-                                 &trans    &trans        &trans       &mo 5      &trans    &trans  &trans     &trans      &en LBKT     &en RBKT
+                                 &trans    &trans        &trans       &mo 6      &trans    &trans  &trans     &trans      &en LBKT     &en RBKT
             >;
         };
 
