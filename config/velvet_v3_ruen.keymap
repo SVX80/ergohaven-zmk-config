@@ -77,6 +77,8 @@
             bindings = <&macro_tap>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KEY";
+            wait-ms = <0>;
+            tap-ms = <30>;
         };
 
         cmd: cmd {
@@ -154,6 +156,7 @@
             compatible = "zmk,behavior-toggle-layer";
             label = "ON";
             #binding-cells = <1>;
+            toggle-mode = "on";
         };
 
         off: off {
@@ -170,7 +173,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick-tap-ms = <230>;
+            quick-tap-ms = <235>;
         };
 
         ltqt: ltqt {
