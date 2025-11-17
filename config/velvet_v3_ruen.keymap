@@ -199,13 +199,11 @@
                     &trans        &trans           &trans        &mo 8         &tog 3    &trans  &trans        &trans        &trans     &trans
             >;
 
-            display-name = "aaa";
-            label = "Navigation";
+            display-name = "navigation";
         };
 
         nav_m {
-            label = "Navigation";
-            display-name = "nav";
+            display-name = ".nav.";
             bindings = <
 &trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &kp LC(HOME)  &kp LC(LEFT)  &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)      &kp LC(END)
 &trans  &cmd F15 A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME      &kp LEFT      &kp DOWN   &kp UP     &mtqt RSHFT RIGHT  &kp END
