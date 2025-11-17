@@ -22,12 +22,12 @@
 
         cmb_base {
             bindings = <&off 2>;
-            key-positions = <38 3>;
+            key-positions = <38 4>;
         };
 
         cmb_simple {
             bindings = <&on 2>;
-            key-positions = <38 4>;
+            key-positions = <38 3>;
         };
     };
 
@@ -193,7 +193,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45>;
             hold-trigger-on-release;
-            retro-tap;
         };
 
         mton: mton {
@@ -266,7 +265,7 @@
 &trans  &cmd F15 Y           &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &none      &kp HOME  &kp PG_DN     &kp PG_UP      &kp END            &trans
 &trans  &lmod_cmd15 LSHFT A  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &none      &kp LEFT  &kp DOWN      &kp UP         &mtqt RSHFT RIGHT  &none
 &trans  &cmd F15 Z           &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                    &none      &none     &kp LC(LEFT)  &kp LC(RIGHT)  &none              &trans
-                             &trans        &trans           &trans        &trans        &trans    &trans  &mton 8 3  &trans    &trans        &trans
+                             &trans        &trans           &trans        &trans        &trans    &trans  &mton 9 3  &trans    &trans        &trans
             >;
         };
 
@@ -286,7 +285,7 @@
 &trans  &kp GRAVE     &kp LT            &kp GT             &kp EQUAL   &kp CARET                      &kp EXCL        &kp UNDERSCORE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON      &trans
 &trans  &kp ASTERISK  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PLUS    &kp PERCENT                    &kp QUESTION    &kp MINUS          &kp LPAR        &kp RPAR         &kp SEMICOLON  &kp BACKSLASH
 &trans  &kp HASH      &kp AT            &kp TILDE          &kp DOLLAR  &none                          &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp COMMA       &kp DOT          &kp SLASH      &trans
-                      &trans            &trans             &trans      &mo 8        &trans    &trans  &trans          &trans             &kp AMPERSAND   &kp PIPE
+                      &trans            &trans             &trans      &mo 9        &trans    &trans  &trans          &trans             &kp AMPERSAND   &kp PIPE
             >;
 
             display-name = "Sym En";
@@ -298,8 +297,19 @@
 &trans  &en GRAVE     &en LT            &en GT             &kp EQUAL   &en CARET                        &kp RU_EXCLAMATION  &kp RU_UNDERSCORE     &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_COLON      &trans
 &trans  &kp ASTERISK  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp PLUS    &en PERCENT                      &kp RU_QUESTION     &kp MINUS             &kp LPAR        &kp RPAR         &kp RU_SEMICOLON  &en RU_BACKSLASH
 &trans  &kp HASH      &en AT            &en TILDE          &en DOLLAR  &kp RU_NUMERO                    &en APOSTROPHE      &kp RU_DOUBLE_QUOTES  &kp RU_COMMA    &kp RU_DOT       &kp RU_SLASH      &trans
-                      &trans            &trans             &trans      &mo 8          &trans    &trans  &trans              &trans                &en AMPERSAND   &en PIPE
+                      &trans            &trans             &trans      &mo 9          &trans    &trans  &trans              &trans                &en AMPERSAND   &en PIPE
             >;
+        };
+
+        adj-m {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &mo 9   &trans    &trans  &mo 9   &trans  &trans  &trans
+            >;
+
+            label = ".adjust.";
         };
 
         adj {
