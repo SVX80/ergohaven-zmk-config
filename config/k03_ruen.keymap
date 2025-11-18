@@ -90,7 +90,7 @@
             wait-ms = <5>;
             tap-ms = <30>;
         };
-
+    };
 
     keymap {
         compatible = "zmk,keymap";
