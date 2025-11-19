@@ -216,6 +216,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
+
+        mten: mten {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MTEN";
+            bindings = <&kp>, <&en>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <215>;
+        };
     };
 
     keymap {
@@ -286,10 +295,10 @@
 
         sym_en {
             bindings = <
-&trans  &kp GRAVE     &kp LT            &kp GT             &kp EQUAL   &kp CARET                      &kp EXCL        &kp UNDERSCORE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON      &trans
-&trans  &kp ASTERISK  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PLUS    &kp PERCENT                    &kp QUESTION    &kp MINUS          &kp LPAR        &kp RPAR         &kp SEMICOLON  &kp BACKSLASH
-&trans  &kp HASH      &kp AT            &kp TILDE          &kp DOLLAR  &none                          &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp COMMA       &kp DOT          &kp SLASH      &trans
-                      &trans            &trans             &trans      &mo 9        &trans    &trans  &trans          &trans             &kp AMPERSAND   &kp PIPE
+&trans     &kp N1          &kp N2         &kp N3        &kp N4       &kp N5                           &kp N6           &kp N7          &kp N8            &kp N9             &kp N0         &trans
+&kp GRAVE  &mt LSHFT PIPE  &kp AMPERSAND  &kp ASTERISK  &kp PLUS     &kp CARET                        &kp EQUAL        &kp MINUS       &kp LPAR          &kp RPAR           &kp SEMICOLON  &kp APOSTROPHE
+&trans     &kp HASH        &kp AT         &kp TILDE     &kp PERCENT  &kp BACKSLASH                    &kp EXCLAMATION  &kp UNDERSCORE  &kp COMMA         &kp DOT            &kp SLASH      &trans
+                           &kp DOLLAR     &trans        &trans       &mo 9          &trans    &trans  &trans           &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             display-name = "Sym En";
@@ -298,10 +307,10 @@
         sym_ru {
             display-name = "Sym Ru";
             bindings = <
-&trans  &en GRAVE     &en LT            &en GT             &kp EQUAL   &en CARET                        &kp RU_EXCLAMATION  &kp RU_UNDERSCORE     &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_COLON      &trans
-&trans  &kp ASTERISK  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp PLUS    &en PERCENT                      &kp RU_QUESTION     &kp MINUS             &kp LPAR        &kp RPAR         &kp RU_SEMICOLON  &en RU_BACKSLASH
-&trans  &kp HASH      &en AT            &en TILDE          &en DOLLAR  &kp RU_NUMERO                    &en APOSTROPHE      &kp RU_DOUBLE_QUOTES  &kp RU_COMMA    &kp RU_DOT       &kp RU_SLASH      &trans
-                      &trans            &trans             &trans      &mo 9          &trans    &trans  &trans              &trans                &en AMPERSAND   &en PIPE
+&trans     &kp N1            &kp N2         &kp N3        &kp N4       &kp N5                              &kp N6              &kp N7          &kp N8            &kp N9             &kp N0         &trans
+&en GRAVE  &mten LSHFT PIPE  &en AMPERSAND  &kp ASTERISK  &kp PLUS     &en CARET                           &kp EQUAL           &kp MINUS       &kp LPAR          &kp RPAR           &en SEMICOLON  &en APOSTROPHE
+&trans     &en HASH          &en AT         &en TILDE     &kp PERCENT  &kp RU_BACKSLASH                    &kp RU_EXCLAMATION  &kp UNDERSCORE  &en COMMA         &en DOT            &en SLASH      &trans
+                             &en DOLLAR     &trans        &trans       &mo 9             &trans    &trans  &trans              &trans          &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
