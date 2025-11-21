@@ -293,10 +293,10 @@
 
         edit {
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP    &none      &trans
-&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT      &kp RSHFT  &kp END
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                     &none     &kp LC(LEFT)   &none     &kp LC(RIGHT)  &none      &trans
-                    &trans        &trans           &trans        &trans  &trans    &trans  &trans    &trans         &trans    &trans
+&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &cmd F15 F16  &kp PAGE_DOWN  &kp UP        &kp PAGE_UP    &cmd F15 F17  &trans
+&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &kp HOME      &kp LEFT       &kp DOWN      &kp RIGHT      &kp RSHFT     &kp END
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                     &cmd F15 F18  &kp LC(LEFT)   &cmd F15 F19  &kp LC(RIGHT)  &cmd F15 F20  &trans
+                    &trans        &trans           &trans        &trans  &trans    &trans  &trans        &trans         &trans        &trans
             >;
 
             display-name = "_Edit_";
@@ -326,9 +326,9 @@
 
         left {
             bindings = <
-&trans  &cmd F15 Y         &kp F4      &kp F5      &kp F6      &none                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mtsk LSHFT LSHFT  &cmd F15 S  &cmd F15 D  &cmd F15 F  &none                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F15 Z         &kp F1      &kp F2      &kp F3      &none                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Y         &kp F4      &kp F5      &kp F6      &none                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mtsk LSHFT LSHFT  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Z         &kp F1      &kp F2      &kp F3      &none                     &trans  &trans  &trans  &trans  &trans  &trans
                            &trans      &trans      &trans      &trans  &trans    &trans  &mo 10  &trans  &trans  &trans
             >;
 
@@ -337,9 +337,9 @@
 
         right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F10       &kp F11          &kp F12        &none              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F10       &kp F11          &kp F12        &cmd F17 F15       &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &mtsk RSHFT RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F7        &kp F8           &kp F9         &none              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16       &trans
                 &trans  &trans  &trans  &mo 10  &trans    &trans  &trans  &trans        &trans           &trans
             >;
 
