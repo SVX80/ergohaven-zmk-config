@@ -350,7 +350,7 @@
         compatible = "zmk,conditional-layers";
 
         lsymen {
-            if-layers = <8>;
+            if-layers = <7>;
             then-layer = <3>;
         };
 
@@ -360,7 +360,7 @@
         };
 
         lsymru {
-            if-layers = <1 8>;
+            if-layers = <1 7>;
             then-layer = <4>;
         };
 
