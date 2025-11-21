@@ -293,10 +293,10 @@
 
         nav {
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                         &cmd F15 Y     &kp PAGE_DOWN  &kp UP      &kp PAGE_UP    &cmd F15 Z  &trans
-&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                         &kp HOME       &kp LEFT       &kp DOWN    &kp RIGHT      &kp RSHFT   &kp END
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                         &cmd F15 V     &kp LC(LEFT)   &cmd F15 C  &kp LC(RIGHT)  &cmd F15 X  &trans
-                    &trans        &trans           &trans        &ltqt 7 SPACE  &mtoff 6 5    &trans  &ltqt 8 SPACE  &trans         &trans      &trans
+&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                         &cmd F15 Y     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP    &cmd F15 Z  &trans
+&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                         &kp HOME       &kp LEFT       &kp DOWN  &kp RIGHT      &kp RSHFT   &kp END
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                         &none          &kp LC(LEFT)   &none     &kp LC(RIGHT)  &none       &trans
+                    &trans        &trans           &trans        &ltqt 7 SPACE  &mtoff 6 5    &trans  &ltqt 8 SPACE  &trans         &trans    &trans
             >;
 
             display-name = "Nav";
@@ -305,18 +305,18 @@
         nav_m {
             display-name = "nav";
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &cmd F15 Y  &kp PAGE_DOWN  &kp UP      &kp PG_UP      &cmd F15 Z  &trans
-&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME    &kp LEFT       &kp DOWN    &kp RIGHT      &kp RSHFT   &kp END
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                    &cmd F15 V  &kp LC(LEFT)   &cmd F15 C  &kp LC(RIGHT)  &cmd F15 X  &trans
-                    &trans        &trans           &trans        &trans        &trans    &trans  &mton 9 5   &trans         &trans      &trans
+&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &cmd F15 Y  &kp PAGE_DOWN  &kp UP    &kp PG_UP      &cmd F15 Z  &trans
+&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME    &kp LEFT       &kp DOWN  &kp RIGHT      &kp RSHFT   &kp END
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                    &none       &kp LC(LEFT)   &none     &kp LC(RIGHT)  &none       &trans
+                    &trans        &trans           &trans        &trans        &trans    &trans  &mton 9 5   &trans         &trans    &trans
             >;
         };
 
         left {
             bindings = <
 &trans  &trans             &kp F4      &kp F5      &kp F6      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mtsk LSHFT LSHFT  &kp F1      &kp F2      &kp F3      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sk LEFT_ALT       &cmd F15 X  &cmd F15 C  &cmd F15 V  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mtsk LSHFT LSHFT  &cmd F15 S  &cmd F15 D  &cmd F15 F  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &sk LEFT_ALT       &kp F1      &kp F2      &kp F3      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans      &trans      &trans      &trans  &trans    &trans  &mo 9   &trans  &trans  &trans
             >;
 
@@ -326,8 +326,8 @@
         right {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F10       &kp F11          &kp F12        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7        &kp F8           &kp F9         &mtsk RSHFT RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &sk LEFT_ALT       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &mtsk RSHFT RSHFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7        &kp F8           &kp F9         &sk LEFT_ALT       &trans
                 &trans  &trans  &trans  &mo 9   &trans    &trans  &trans  &trans        &trans           &trans
             >;
 
