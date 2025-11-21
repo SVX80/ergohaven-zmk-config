@@ -244,7 +244,7 @@
 &kp ESC   &kp Q          &kp W      &kp E         &kp R      &kp T                                      &kp Y          &kp U              &kp I      &kp O     &kp P             &bksp
 &kp TAB   &lmod LSHFT A  &kp S      &kp D         &kp F      &kp G                                      &kp H          &kp J              &kp K      &kp L     &rmod RSHFT SEMI  &kp APOSTROPHE
 &kp LGUI  &kp Z          &kp X      &kp C         &kp V      &kp B                                      &kp N          &kp M              &kp COMMA  &kp DOT   &kp FSLH          &kp LALT
-                         &kp GRAVE  &kp CAPSLOCK  &kp LCTRL  &ltqt 7 SPACE  &ltqt 6 SPACE    &kp ENTER  &ltqt 8 SPACE  &kp RIGHT_CONTROL  &kp LBKT   &kp RBKT
+                         &kp GRAVE  &kp CAPSLOCK  &kp LCTRL  &ltqt 8 SPACE  &ltqt 7 SPACE    &kp ENTER  &ltqt 9 SPACE  &kp RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
 
             display-name = "En";
@@ -256,7 +256,7 @@
 &kp ESC   &kp RU_CYRILLIC_SHORT_I     &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                              &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE           &bksp
 &kp TAB   &lmod LSHFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                              &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &rmod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI  &kp RU_CYRILLIC_YA          &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                               &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                   &kp LALT
-                                      &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &kp LCTRL           &ltqt 7 SPACE       &ltqt 6 SPACE    &kp ENTER  &ltqt 8 SPACE       &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                      &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &kp LCTRL           &ltqt 8 SPACE       &ltqt 7 SPACE    &kp ENTER  &ltqt 9 SPACE       &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -266,7 +266,7 @@
 &kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                              &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &bksp
 &kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                              &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                               &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp RSHFT
-                                    &kp RU_CYRILLIC_IO    &kp CAPS            &kp LCTRL           &ltqt 7 SPACE       &ltqt 6 SPACE    &kp ENTER  &ltqt 8 SPACE       &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                    &kp RU_CYRILLIC_IO    &kp CAPS            &kp LCTRL           &ltqt 8 SPACE       &ltqt 7 SPACE    &kp ENTER  &ltqt 9 SPACE       &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -278,11 +278,11 @@
                      &kp DOLLAR     &trans        &trans       &trans         &trans    &trans  &trans           &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            display-name = "Sym En";
+            display-name = "_Sym_En_";
         };
 
         sym_ru {
-            display-name = "Sym Ru";
+            display-name = "_Sym_Ru_";
             bindings = <
 &trans     &kp N1    &kp N2         &kp N3        &kp N4       &kp N5                              &kp N6              &kp N7          &kp N8            &kp N9             &kp N0         &trans
 &en GRAVE  &en PIPE  &en AMPERSAND  &kp ASTERISK  &kp PLUS     &en CARET                           &kp EQUAL           &kp MINUS       &kp LPAR          &kp RPAR           &en SEMICOLON  &en APOSTROPHE
@@ -291,33 +291,45 @@
             >;
         };
 
-        nav {
+        edit {
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                         &cmd F15 Y     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP    &cmd F15 Z  &trans
-&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                         &kp HOME       &kp LEFT       &kp DOWN  &kp RIGHT      &kp RSHFT   &kp END
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                         &none          &kp LC(LEFT)   &none     &kp LC(RIGHT)  &none       &trans
-                    &trans        &trans           &trans        &ltqt 7 SPACE  &mtoff 6 5    &trans  &ltqt 8 SPACE  &trans         &trans    &trans
+&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP    &none      &trans
+&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT      &kp RSHFT  &kp END
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                     &none     &kp LC(LEFT)   &none     &kp LC(RIGHT)  &none      &trans
+                    &trans        &trans           &trans        &trans  &trans    &trans  &trans    &trans         &trans    &trans
             >;
 
-            display-name = "Nav";
+            display-name = "_Edit_";
+            label = "_Edit_";
+        };
+
+        nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                               &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &trans         &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ltqt 8 SPACE  &mtoff 7 6    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
+            >;
+
+            label = "Nav";
         };
 
         nav_m {
             display-name = "nav";
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &cmd F15 Y  &kp PAGE_DOWN  &kp UP    &kp PG_UP      &cmd F15 Z  &trans
-&trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME    &kp LEFT       &kp DOWN  &kp RIGHT      &kp RSHFT   &kp END
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &cmd F15 F18                    &none       &kp LC(LEFT)   &none     &kp LC(RIGHT)  &none       &trans
-                    &trans        &trans           &trans        &trans        &trans    &trans  &mton 9 5   &trans         &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &mton 10 6  &trans  &trans  &trans
             >;
         };
 
         left {
             bindings = <
-&trans  &trans             &kp F4      &kp F5      &kp F6      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mtsk LSHFT LSHFT  &cmd F15 S  &cmd F15 D  &cmd F15 F  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sk LEFT_ALT       &kp F1      &kp F2      &kp F3      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans      &trans      &trans      &trans  &trans    &trans  &mo 9   &trans  &trans  &trans
+&trans  &cmd F15 Y         &kp F4      &kp F5      &kp F6      &none                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mtsk LSHFT LSHFT  &cmd F15 S  &cmd F15 D  &cmd F15 F  &none                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F15 Z         &kp F1      &kp F2      &kp F3      &none                     &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans      &trans      &trans      &trans  &trans    &trans  &mo 10  &trans  &trans  &trans
             >;
 
             label = "left";
@@ -325,10 +337,10 @@
 
         right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F10       &kp F11          &kp F12        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &mtsk RSHFT RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7        &kp F8           &kp F9         &sk LEFT_ALT       &trans
-                &trans  &trans  &trans  &mo 9   &trans    &trans  &trans  &trans        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F10       &kp F11          &kp F12        &none              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &mtsk RSHFT RSHFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F7        &kp F8           &kp F9         &none              &trans
+                &trans  &trans  &trans  &mo 10  &trans    &trans  &trans  &trans        &trans           &trans
             >;
 
             label = "right";
@@ -350,23 +362,33 @@
         compatible = "zmk,conditional-layers";
 
         lsymen {
-            if-layers = <7>;
-            then-layer = <3>;
-        };
-
-        rsymen {
             if-layers = <8>;
             then-layer = <3>;
         };
 
+        rsymen {
+            if-layers = <9>;
+            then-layer = <3>;
+        };
+
         lsymru {
-            if-layers = <1 7>;
+            if-layers = <1 8>;
             then-layer = <4>;
         };
 
         rsymru {
-            if-layers = <1 8>;
+            if-layers = <1 9>;
             then-layer = <4>;
+        };
+
+        lnav {
+            if-layers = <6>;
+            then-layer = <5>;
+        };
+
+        lnavm {
+            if-layers = <7>;
+            then-layer = <5>;
         };
     };
 };
