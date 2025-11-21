@@ -303,7 +303,7 @@
         };
 
         nav_m {
-            display-name = ".nav.";
+            display-name = "nav";
             bindings = <
 &trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &cmd F15 F16                    &cmd F15 Y  &kp PAGE_DOWN  &kp UP      &kp PG_UP      &cmd F15 Z  &trans
 &trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &cmd F15 F17                    &kp HOME    &kp LEFT       &kp DOWN    &kp RIGHT      &kp RSHFT   &kp END
@@ -320,18 +320,18 @@
                            &trans      &trans      &trans      &trans  &trans    &trans  &mo 9   &trans  &trans  &trans
             >;
 
-            label = "Left";
+            label = "left";
         };
 
         right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F10       &kp F11              &kp F12        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7        &kp F8               &kp F9         &mtsk RSHFT RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LS(LEFT)  &cmd LS(F15) DELETE  &kp LS(RIGHT)  &sk LEFT_ALT       &trans
-                &trans  &trans  &trans  &mo 9   &trans    &trans  &trans  &trans        &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F10       &kp F11          &kp F12        &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7        &kp F8           &kp F9         &mtsk RSHFT RSHFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &sk LEFT_ALT       &trans
+                &trans  &trans  &trans  &mo 9   &trans    &trans  &trans  &trans        &trans           &trans
             >;
 
-            label = "Right";
+            label = "right";
         };
 
         adj {
@@ -342,7 +342,7 @@
                      &bt BT_SEL 0  &bt BT_SEL 1  &none  &none  &none    &none  &none  &none         &bt BT_SEL 2      &bt BT_SEL 3
             >;
 
-            display-name = "Adjust";
+            display-name = "adjust";
         };
     };
 
