@@ -115,6 +115,20 @@
             label = "CMD_F15";
             tap-ms = <30>;
         };
+
+        nav_off_mo: nav_off_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&off 6>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+
+            label = "NAV_OFF_MO";
+        };
     };
 
     behaviors {
@@ -234,6 +248,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <215>;
         };
+
+        lo_nav_off: lo_nav_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LO_NAV_OFF";
+            bindings = <&nav_off_mo>, <&off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+        };
     };
 
     keymap {
@@ -305,10 +328,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans         &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ltqt 8 SPACE  &mtoff 7 6    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ltqt 8 SPACE  &lo_nav_off 7 6    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
             >;
 
             label = "Nav";
