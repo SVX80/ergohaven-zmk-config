@@ -119,7 +119,13 @@
         nav_off_mo: nav_off_mo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&off 6 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER &off 6>,
+                <&macro_pause_for_release>,
+                <&macro_press>,
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
+
             label = "NAV_OFF_MO";
         };
     };
