@@ -363,10 +363,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ltqt 8 SPACE  &lo_nav_off 7 6    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans         &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ltqt 8 SPACE  &nav_off_mo 7    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
             >;
 
             label = "Nav";
@@ -378,7 +378,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &on 6   &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
