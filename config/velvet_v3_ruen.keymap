@@ -183,7 +183,7 @@
         mtqt: mtqt {
             compatible = "zmk,behavior-hold-tap";
             label = "MTQT";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -193,7 +193,7 @@
         ltqt: ltqt {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQT";
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
