@@ -251,7 +251,7 @@
         lo_nav_off: lo_nav_off {
             compatible = "zmk,behavior-hold-tap";
             label = "LO_NAV_OFF";
-            bindings = <&nav_off_mo>, <&kp>;
+            bindings = <&nav_off_mo>, <&off>;
 
             #binding-cells = <2>;
             tapping-term-ms = <195>;
@@ -363,10 +363,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                        &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                        &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                        &trans         &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ltqt 8 SPACE  &lo_nav_off 7 LSHFT    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ltqt 8 SPACE  &mton 7 6    &trans  &ltqt 9 SPACE  &trans  &trans  &trans
             >;
 
             label = "Nav";
