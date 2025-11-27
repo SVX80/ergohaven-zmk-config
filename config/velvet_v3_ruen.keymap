@@ -137,7 +137,7 @@
             bindings = <&kp>, <&key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45>;
             hold-trigger-on-release;
@@ -150,7 +150,7 @@
             bindings = <&kp>, <&key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             hold-trigger-on-release;
             retro-tap;
@@ -206,7 +206,7 @@
             bindings = <&kp>, <&cmd_f15>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45>;
             hold-trigger-on-release;
@@ -218,7 +218,7 @@
             bindings = <&mo>, <&on>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
         };
 
         mtoff: mtoff {
@@ -254,7 +254,7 @@
             bindings = <&nav_off_mo>, <&on>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
         };
 
         lmod_en: lmod_en {
@@ -263,7 +263,7 @@
             bindings = <&kp>, <&en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45>;
             hold-trigger-on-release;
@@ -276,7 +276,7 @@
             bindings = <&kp>, <&en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             hold-trigger-on-release;
             retro-tap;
