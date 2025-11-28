@@ -118,6 +118,40 @@
 
             label = "NAV_OFF_MO";
         };
+
+        lctrl_mo: lctrl_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
+
+            label = "LCTRL_MO";
+        };
+
+        rctrl_mo: rctrl_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp RCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp RCTRL>,
+                <&macro_tap>,
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
+
+            label = "RCTRL_MO";
+        };
     };
 
     behaviors {
@@ -344,7 +378,7 @@
 &trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &cmd F15 F16  &kp LC(LEFT)  &kp UP         &kp LC(RIGHT)  &cmd F15 F17  &trans
 &trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &cmd F15 F18  &kp LEFT      &kp DOWN       &kp RIGHT      &kp RSHFT     &cmd F15 F19
 &trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                     &cmd F15 F20  &kp HOME      &kp PAGE_DOWN  &kp PG_UP      &kp END       &trans
-                    &trans        &trans           &mo 11        &trans  &trans    &trans  &trans        &mo 11        &trans         &trans
+                    &trans        &trans           &lctrl_mo 11  &trans  &trans    &trans  &trans        &rctrl_mo 11  &trans         &trans
             >;
 
             display-name = "_Edit_";
@@ -408,10 +442,10 @@
         ctrl {
             display-name = "control";
             bindings = <
-&trans  &kp LC(Q)          &kp LC(W)      &kp LC(E)  &kp LC(R)  &kp LC(T)                    &kp LC(Y)  &kp LC(U)  &kp LC(I)      &kp LC(O)     &kp LC(P)             &trans
-&trans  &lmod LSHFT LC(A)  &kp LC(S)      &kp LC(D)  &kp LC(F)  &kp LC(G)                    &kp LC(H)  &kp LC(J)  &kp LC(K)      &kp LC(L)     &rmod RSHFT LC(SEMI)  &kp LC(APOSTROPHE)
-&trans  &kp LC(Z)          &kp LC(X)      &kp LC(C)  &kp LC(V)  &kp LC(B)                    &kp LC(N)  &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)   &kp LC(FSLH)          &trans
-                           &kp LC(GRAVE)  &none      &trans     &trans     &trans    &trans  &trans     &trans     &kp LC(LBKT)   &kp LC(RBKT)
+&trans  &kp Q          &kp W      &kp E  &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O     &kp P             &trans
+&trans  &lmod LSHFT A  &kp S      &kp D  &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L     &rmod RSHFT SEMI  &kp APOSTROPHE
+&trans  &kp Z          &kp X      &kp C  &kp V   &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH          &trans
+                       &kp GRAVE  &none  &trans  &trans  &trans    &trans  &trans  &trans  &kp LBKT   &kp RBKT
             >;
 
             label = "Control";
