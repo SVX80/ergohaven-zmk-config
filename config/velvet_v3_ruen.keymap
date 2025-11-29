@@ -351,7 +351,7 @@
         lshft_mt: lshft_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "LSHFT_MT";
-            bindings = <&lshft_mo>, <&key>;
+            bindings = <&mo>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -364,10 +364,10 @@
 
         en {
             bindings = <
-&kp TAB   &kp Q  &kp W      &kp E  &kp R      &kp T                                       &kp Y               &kp U              &kp I      &kp O     &kp P     &bksp
-&kp CAPS  &kp A  &kp S      &kp D  &kp F      &kp G                                       &kp H               &kp J              &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
-&kp LGUI  &kp Z  &kp X      &kp C  &kp V      &kp B                                       &kp N               &kp M              &kp COMMA  &kp DOT   &kp FSLH  &kp LALT
-                 &kp GRAVE  &none  &kp LCTRL  &lshft_mt 12 SPACE  &mton 7 6    &kp ENTER  &lshft_mt 13 SPACE  &kp RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&kp TAB   &kp Q  &kp W      &kp E  &kp R      &kp T                                   &kp Y           &kp U              &kp I      &kp O     &kp P     &bksp
+&kp CAPS  &kp A  &kp S      &kp D  &kp F      &kp G                                   &kp H           &kp J              &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
+&kp LGUI  &kp Z  &kp X      &kp C  &kp V      &kp B                                   &kp N           &kp M              &kp COMMA  &kp DOT   &kp FSLH  &kp LALT
+                 &kp GRAVE  &none  &kp LCTRL  &ltqt 12 SPACE  &mton 7 6    &kp ENTER  &ltqt 13 SPACE  &kp RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
 
             display-name = "En";
@@ -379,7 +379,7 @@
 &kp TAB   &kp RU_CYRILLIC_SHORT_I     &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE           &bksp
 &kp CAPS  &lmod LSHFT RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &rmod RSHFT RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI  &kp RU_CYRILLIC_YA          &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                   &kp LALT
-                                      &kp RU_CYRILLIC_IO    &none               &kp LCTRL           &lshft_mt 8 SPACE   &mton 7 6    &kp ENTER  &lshft_mt 9 SPACE   &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                      &kp RU_CYRILLIC_IO    &none               &kp LCTRL           &ltqt 8 SPACE       &mton 7 6    &kp ENTER  &ltqt 9 SPACE       &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -495,10 +495,10 @@
         l_sym_en {
             display-name = "_Sym_En_";
             bindings = <
-&trans          &kp_sym N1    &kp_sym N2         &kp_sym N3        &kp_sym N4       &kp_sym N5                              &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)     &trans
-&kp_sym DOLLAR  &kp_sym PIPE  &kp_sym AMPERSAND  &kp_sym ASTERISK  &kp_sym PLUS     &kp_sym CARET                           &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMI)  &kp LS(APOS)
-&trans          &kp_sym HASH  &kp_sym AT         &kp_sym TILDE     &kp_sym PERCENT  &kp_sym BACKSLASH                       &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans
-                              &kp_sym GRAVE      &trans            &trans           &trans             &trans    &kp ENTER  &trans     &trans     &trans         &trans
+&trans          &kp_sym N1    &kp_sym N2         &kp_sym N3        &kp_sym N4       &kp_sym N5                                 &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)     &trans
+&kp_sym DOLLAR  &kp_sym PIPE  &kp_sym AMPERSAND  &kp_sym ASTERISK  &kp_sym PLUS     &kp_sym CARET                              &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMI)  &kp LS(APOS)
+&trans          &kp_sym HASH  &kp_sym AT         &kp_sym TILDE     &kp_sym PERCENT  &kp_sym BACKSLASH                          &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans
+                              &kp_sym GRAVE      &trans            &trans           &trans             &kp LSHFT    &kp ENTER  &trans     &trans     &trans         &trans
             >;
 
             label = "_L_Sym_En_";
@@ -507,10 +507,10 @@
         r_sym_en {
             display-name = "_Sym_En_";
             bindings = <
-&trans   &kp RS(Q)  &kp RS(W)      &kp RS(E)  &kp RS(R)  &kp RS(T)                           &kp_sym N6           &kp_sym N7          &kp_sym N8            &kp_sym N9             &kp_sym N0     &trans
-&kp ESC  &kp RS(A)  &kp RS(S)      &kp RS(D)  &kp RS(F)  &kp RS(G)                           &kp_sym EQUAL        &kp_sym MINUS       &kp_sym LPAR          &kp_sym RPAR           &kp_sym SEMI   &kp_sym APOSTROPHE
-&trans   &kp RS(Z)  &kp RS(X)      &kp RS(C)  &kp RS(V)  &kp RS(B)                           &kp_sym EXCLAMATION  &kp_sym UNDERSCORE  &kp_sym COMMA         &kp_sym DOT            &kp_sym SLASH  &trans
-                    &kp RS(GRAVE)  &trans     &trans     &trans     &kp LS(ENTER)    &trans  &trans               &trans              &kp_sym LEFT_BRACKET  &kp_sym RIGHT_BRACKET
+&trans   &kp RS(Q)  &kp RS(W)      &kp RS(E)  &kp RS(R)  &kp RS(T)                              &kp_sym N6           &kp_sym N7          &kp_sym N8            &kp_sym N9             &kp_sym N0     &trans
+&kp ESC  &kp RS(A)  &kp RS(S)      &kp RS(D)  &kp RS(F)  &kp RS(G)                              &kp_sym EQUAL        &kp_sym MINUS       &kp_sym LPAR          &kp_sym RPAR           &kp_sym SEMI   &kp_sym APOSTROPHE
+&trans   &kp RS(Z)  &kp RS(X)      &kp RS(C)  &kp RS(V)  &kp RS(B)                              &kp_sym EXCLAMATION  &kp_sym UNDERSCORE  &kp_sym COMMA         &kp_sym DOT            &kp_sym SLASH  &trans
+                    &kp RS(GRAVE)  &trans     &trans     &trans     &kp LS(ENTER)    &kp ENTER  &trans               &trans              &kp_sym LEFT_BRACKET  &kp_sym RIGHT_BRACKET
             >;
 
             label = "_R_Sym_En_";
