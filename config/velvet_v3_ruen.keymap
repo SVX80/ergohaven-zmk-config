@@ -385,20 +385,20 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&trans  &none        &kp N2     &kp N3         &kp N4     &none                     &none   &kp N7    &kp N8            &kp N9             &none      &trans
-&none   &kp N1       &kp EQUAL  &kp ASTERISK   &kp N5     &none                     &none   &kp N6    &kp LPAR          &kp RPAR           &kp N0     &none
-&trans  &kp PERCENT  &kp PIPE   &kp AMPERSAND  &kp CARET  &none                     &none   &kp SEMI  &kp COMMA         &kp DOT            &kp SLASH  &trans
-                     &kp GRAVE  &kp PLUS       &trans     &trans  &trans    &trans  &trans  &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &none        &kp EQUAL  &kp ASTRK      &kp CARET       &none                     &none   &none     &kp LPAR          &kp RPAR           &none      &trans
+&none   &kp N1       &kp N2     &kp N3         &kp N4          &kp N5                    &kp N6  &kp N7    &kp N8            &kp N9             &kp N0     &none
+&trans  &kp PERCENT  &kp PIPE   &kp AMPERSAND  &kp UNDERSCORE  &none                     &none   &kp SEMI  &kp COMMA         &kp DOT            &kp SLASH  &trans
+                     &kp GRAVE  &kp PLUS       &trans          &trans  &trans    &trans  &trans  &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&trans  &none        &kp N2     &kp N3         &kp N4     &none                     &none   &kp N7       &kp N8            &kp N9             &none         &trans
-&none   &kp N1       &kp EQUAL  &kp ASTERISK   &kp N5     &none                     &none   &kp N6       &kp LPAR          &kp RPAR           &kp N0        &none
-&trans  &en PERCENT  &en PIPE   &en AMPERSAND  &en CARET  &none                     &none   &kp RU_SEMI  &kp RU_COMMA      &kp RU_DOT         &kp RU_SLASH  &trans
-                     &en GRAVE  &kp PLUS       &trans     &trans  &trans    &trans  &trans  &trans       &en LEFT_BRACKET  &en RIGHT_BRACKET
+&trans  &none        &kp EQUAL  &kp ASTERISK   &kp CARET       &none                     &none   &none        &kp LPAR          &kp RPAR           &none         &trans
+&none   &kp N1       &kp N2     &kp N3         &kp N4          &kp N5                    &kp N6  &kp N7       &kp N8            &kp N9             &kp N0        &none
+&trans  &en PERCENT  &en PIPE   &en AMPERSAND  &en UNDERSCORE  &none                     &none   &kp RU_SEMI  &kp RU_COMMA      &kp RU_DOT         &kp RU_SLASH  &trans
+                     &en GRAVE  &kp PLUS       &trans          &trans  &trans    &trans  &trans  &trans       &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
