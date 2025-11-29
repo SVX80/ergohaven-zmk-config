@@ -448,7 +448,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)  &kp LS(APOS)
 &trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(FSLH)  &trans
-                &trans  &trans  &trans  &trans  &kp LSHFT    &kp ENTER  &mo 10     &trans     &kp LS(LBKT)   &kp LS(RBKT)
+                &trans  &trans  &trans  &trans  &kp LSHFT    &kp ENTER  &mo 9      &trans     &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
@@ -458,7 +458,7 @@
 &trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)      &kp LS(R)  &kp LS(T)                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(A)  &kp LS(S)      &kp LS(D)      &kp LS(F)  &kp LS(G)                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)      &kp LS(V)  &kp LS(B)                              &trans  &trans  &trans  &trans  &trans  &trans
-                   &kp LS(GRAVE)  &kp LS(MINUS)  &trans     &mo 10     &kp LS(ENTER)    &kp ENTER  &trans  &trans  &trans  &trans
+                   &kp LS(GRAVE)  &kp LS(MINUS)  &trans     &mo 8      &kp LS(ENTER)    &kp ENTER  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -466,7 +466,7 @@
             display-name = "sym-eng";
             bindings = <
 &trans  &none      &none     &none   &none       &none                     &none   &none          &none           &none              &none         &trans
-&none   &kp TILDE  &kp HASH  &kp AT  &kp DOLLAR  &none                     &none   &kp ASTERISK   &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp COLON     &none
+&none   &kp TILDE  &kp HASH  &kp AT  &kp DOLLAR  &none                     &none   &kp CARET      &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp COLON     &none
 &trans  &none      &none     &none   &none       &none                     &none   &kp BACKSLASH  &kp LT          &kp GT             &kp QUESTION  &trans
                    &none     &none   &trans      &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
@@ -544,6 +544,11 @@
         lnavm {
             if-layers = <7>;
             then-layer = <5>;
+        };
+
+        lrsymen {
+            if-layers = <8 9>;
+            then-layer = <10>;
         };
     };
 };
