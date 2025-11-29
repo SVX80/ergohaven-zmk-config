@@ -524,7 +524,7 @@
         };
 
         rsymen {
-            if-layers = <6>;
+            if-layers = <5>;
             then-layer = <2>;
         };
 
@@ -534,18 +534,18 @@
         };
 
         rsymru {
-            if-layers = <1 6>;
+            if-layers = <1 5>;
             then-layer = <3>;
         };
 
         lnav {
-            if-layers = <6>;
-            then-layer = <9>;
+            if-layers = <9>;
+            then-layer = <8>;
         };
 
         lnavm {
-            if-layers = <5>;
-            then-layer = <9>;
+            if-layers = <10>;
+            then-layer = <8>;
         };
 
         lrsymen {
