@@ -139,35 +139,21 @@
             label = "RCTRL_MO";
         };
 
-        lshft_mo: lshft_mo {
+        lshctrl_mo: lshctrl_mo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_press>,
-                <&kp LSHFT>,
+                <&kp LS(LCTRL)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LSHFT>,
+                <&kp LS(LCTRL)>,
                 <&macro_tap>,
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
-            label = "LSHFT_MO";
-        };
-
-        kp_sym: kp_sym {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp LSHFT>;
-
-            label = "KP_SYM";
+            label = "LSHCTRL_MO";
         };
     };
 
@@ -372,7 +358,7 @@
             display-name = "_sym_en_";
             bindings = <
 &kp LS(TAB)  &none     &kp CARET      &kp EQUAL  &kp ASTERISK  &none                     &none   &kp COLON        &kp LPAR          &kp RPAR           &none         &trans
-&kp ESCAPE   &kp N1    &kp N2         &kp N3     &kp N4        &kp N5                    &kp N6  &kp N7           &kp N8            &kp N9             &kp N0        &none
+&kp ESCAPE   &kp N1    &kp N2         &kp N3     &kp N4        &kp N5                    &kp N6  &kp N7           &kp N8            &kp N9             &kp N0        &trans
 &trans       &kp PIPE  &kp AMPERSAND  &kp PLUS   &kp SPACE     &none                     &none   &kp EXCLAMATION  &kp COMMA         &kp DOT            &kp QUESTION  &trans
                        &kp GRAVE      &layer_ru  &trans        &trans  &trans    &trans  &trans  &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
@@ -382,34 +368,34 @@
             display-name = "_sym_ru_";
             bindings = <
 &kp LS(TAB)  &none     &en CARET      &kp EQUAL  &kp ASTERISK  &none                     &none   &kp RU_COLON        &kp LPAR          &kp RPAR           &none            &trans
-&kp ESC      &kp N1    &kp N2         &kp N3     &kp N4        &kp N5                    &kp N6  &kp N7              &kp N8            &kp N9             &kp N0           &none
+&kp ESC      &kp N1    &kp N2         &kp N3     &kp N4        &kp N5                    &kp N6  &kp N7              &kp N8            &kp N9             &kp N0           &trans
 &trans       &en PIPE  &en AMPERSAND  &kp PLUS   &kp SPACE     &none                     &none   &kp RU_EXCLAMATION  &kp RU_COMMA      &kp RU_DOT         &kp RU_QUESTION  &trans
                        &en GRAVE      &layer_en  &trans        &trans  &trans    &trans  &trans  &trans              &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
         l-sym {
-            display-name = "_l_sym_";
+            display-name = "l-sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(MINUS)  &trans
-                &trans  &trans  &trans  &trans  &kp LSHFT    &kp ENTER  &mo 5      &trans     &kp LS(LBKT)   &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(Y)  &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
+&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(H)  &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
+&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(N)  &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(MINUS)  &trans
+                &trans  &trans  &lshctrl_mo 12  &trans  &kp LSHFT    &kp LS(ENTER)  &mo 5      &lshctrl_mo 12  &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
         r-sym {
-            display-name = "_r_sym_";
+            display-name = "r-sym";
             bindings = <
-&trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)                              &trans  &trans  &trans  &trans  &trans  &trans
-                   &kp LS(GRAVE)  &trans     &trans     &mo 4      &kp LS(ENTER)    &kp ENTER  &trans  &trans  &trans  &trans
+&trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)       &kp LS(T)                      &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)       &kp LS(G)                      &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)       &kp LS(B)                      &trans  &trans          &trans  &trans  &trans  &trans
+                   &kp LS(GRAVE)  &trans     &lshctrl_mo 12  &mo 4      &none    &kp ENTER  &trans  &lshctrl_mo 12  &trans  &trans
             >;
         };
 
         sym-eng {
-            display-name = "_sym_eng_";
+            display-name = "sym-en";
             bindings = <
 &trans       &none          &none       &none        &none      &none                     &none   &none      &none              &none            &none          &trans
 &kp LS(ESC)  &kp TILDE      &kp DOLLAR  &kp AT       &layer_en  &none                     &none   &layer_ru  &kp DOUBLE_QUOTES  &kp APOSTROPHE   &kp SEMICOLON  &none
@@ -419,7 +405,7 @@
         };
 
         sym-rus {
-            display-name = "_sym_rus_";
+            display-name = "sym-ru";
             bindings = <
 &trans       &none             &none       &none        &none      &none                     &none   &none      &none                 &none            &none             &trans
 &kp LS(ESC)  &en TILDE         &en DOLLAR  &en AT       &layer_en  &none                     &none   &layer_ru  &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_SEMICOLON  &none
@@ -427,7 +413,7 @@
                                &none       &none        &trans     &trans  &trans    &trans  &trans  &trans     &en LEFT_BRACE        &en RIGHT_BRACE
             >;
 
-            label = "_sym_rus_";
+            label = "sym-ru";
         };
 
         edit {
@@ -473,10 +459,10 @@
         ctrl {
             display-name = "control";
             bindings = <
-&trans  &kp Q          &kp W      &kp E  &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O     &kp P             &trans
-&trans  &lmod LSHFT A  &kp S      &kp D  &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L     &rmod RSHFT SEMI  &kp APOSTROPHE
-&trans  &kp Z          &kp X      &kp C  &kp V   &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH          &trans
-                       &kp GRAVE  &none  &trans  &trans  &trans    &trans  &trans  &trans  &kp LBKT   &kp RBKT
+&trans  &kp Q  &kp W      &kp E  &kp R   &kp T                           &kp Y      &kp U   &kp I      &kp O     &kp P     &trans
+&trans  &kp A  &kp S      &kp D  &kp F   &kp G                           &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
+&trans  &kp Z  &kp X      &kp C  &kp V   &kp B                           &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &trans
+               &kp GRAVE  &none  &trans  &kp LSHFT  &trans    &kp ENTER  &kp RSHFT  &trans  &kp LBKT   &kp RBKT
             >;
         };
 
