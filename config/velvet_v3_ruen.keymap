@@ -436,40 +436,40 @@
         edit {
             display-name = "_edit_";
             bindings = <
-&trans   &none       &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                        &cmd F15 F16  &kp LC(LEFT)  &kp UP         &kp LC(RIGHT)  &cmd F15 F17  &trans
-&kp ESC  &cmd F15 Y  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                        &cmd F15 F18  &kp LEFT      &kp DOWN       &kp RIGHT      &cmd F15 F19  &cmd F15 F20
-&trans   &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                        &cmd F15 F21  &kp HOME      &kp PAGE_DOWN  &kp PG_UP      &kp END       &trans
-                     &trans        &trans           &lctrl_mo 12  &trans  &trans    &kp ENTER  &trans        &rctrl_mo 12  &trans         &trans
+&trans  &none       &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &cmd F15 F16  &kp LC(LEFT)  &kp UP         &kp LC(RIGHT)  &cmd F15 F17  &trans
+&none   &cmd F15 Y  &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &cmd F15 F18  &kp LEFT      &kp DOWN       &kp RIGHT      &cmd F15 F19  &cmd F15 F20
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                     &cmd F15 F21  &kp HOME      &kp PAGE_DOWN  &kp PG_UP      &kp END       &trans
+                    &trans        &trans           &lctrl_mo 12  &trans  &trans    &trans  &trans        &rctrl_mo 12  &trans         &trans
             >;
         };
 
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans         &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ltqt 4 SPACE  &lo_nav_off 5 7    &trans  &ltqt 7 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans           &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &mt LSHFT SPACE  &mo 10    &mtoff 11 9  &mt RSHFT SPACE  &trans  &trans  &trans
             >;
         };
 
         left-fn {
             display-name = "l-fun";
             bindings = <
-&trans  &none       &kp F4      &kp F5      &kp F6      &none                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F17 Y  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F17 Z  &kp F1      &kp F2      &kp F3      &none                     &trans  &trans  &trans  &trans  &trans  &trans
-                    &trans      &trans      &trans      &trans  &trans    &mo 11  &trans  &trans  &trans  &trans
+&trans  &none       &kp F4      &kp F5      &kp F6      &none                        &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Y  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                        &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Z  &kp F1      &kp F2      &kp F3      &none                        &trans     &trans  &trans  &trans  &trans  &trans
+                    &trans      &trans      &trans      &trans  &kp LSHFT    &mo 11  &kp RSHFT  &trans  &trans  &trans
             >;
         };
 
         right-fn {
             display-name = "r-fun";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F10       &kp F11          &kp F12        &none         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &cmd F17 F15  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16  &trans
-                &trans  &trans  &trans  &trans  &mo 10    &trans  &trans  &trans        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &none   &kp F10       &kp F11          &kp F12        &none         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &cmd F17 F15  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16  &trans
+                &trans  &trans  &trans  &kp LSHFT  &mo 10    &kp ENTER  &trans  &trans        &trans           &trans
             >;
         };
 
