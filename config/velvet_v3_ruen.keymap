@@ -371,30 +371,30 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(TAB)  &none        &kp EQUAL  &kp ASTRK      &kp CARET  &none                     &none   &kp COLON      &kp LPAR          &kp RPAR           &none      &trans
-&kp ESC      &kp N1       &kp N2     &kp N3         &kp N4     &kp N5                    &kp N6  &kp N7         &kp N8            &kp N9             &kp N0     &none
-&trans       &kp PERCENT  &kp PIPE   &kp AMPERSAND  &kp SPACE  &none                     &none   &kp SEMICOLON  &kp COMMA         &kp DOT            &kp SLASH  &trans
-                          &kp GRAVE  &kp PLUS       &trans     &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(TAB)  &none        &kp CARET  &kp EQUAL      &kp ASTERISK  &none                     &none   &kp COLON        &kp LPAR          &kp RPAR           &none         &trans
+&layer_ru    &kp N1       &kp N2     &kp N3         &kp N4        &kp N5                    &kp N6  &kp N7           &kp N8            &kp N9             &kp N0        &none
+&trans       &kp PERCENT  &kp PIPE   &kp AMPERSAND  &kp SPACE     &none                     &none   &kp EXCLAMATION  &kp COMMA         &kp DOT            &kp QUESTION  &trans
+                          &kp GRAVE  &kp PLUS       &trans        &trans  &trans    &trans  &trans  &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(TAB)  &none        &kp EQUAL  &kp ASTERISK   &en CARET  &none                     &none   &kp RU_COLON      &kp LPAR          &kp RPAR           &none         &trans
-&kp ESC      &kp N1       &kp N2     &kp N3         &kp N4     &kp N5                    &kp N6  &kp N7            &kp N8            &kp N9             &kp N0        &none
-&trans       &en PERCENT  &en PIPE   &en AMPERSAND  &kp SPACE  &none                     &none   &kp RU_SEMICOLON  &kp RU_COMMA      &kp RU_DOT         &kp RU_SLASH  &trans
-                          &en GRAVE  &kp PLUS       &trans     &trans  &trans    &trans  &trans  &trans            &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(TAB)  &none        &en CARET  &kp EQUAL      &kp ASTERISK  &none                     &none   &kp RU_COLON        &kp LPAR          &kp RPAR           &none            &trans
+&layer_en    &kp N1       &kp N2     &kp N3         &kp N4        &kp N5                    &kp N6  &kp N7              &kp N8            &kp N9             &kp N0           &none
+&trans       &en PERCENT  &en PIPE   &en AMPERSAND  &kp SPACE     &none                     &none   &kp RU_EXCLAMATION  &kp RU_COMMA      &kp RU_DOT         &kp RU_QUESTION  &trans
+                          &en GRAVE  &kp PLUS       &trans        &trans  &trans    &trans  &trans  &trans              &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
         l-sym {
             display-name = "_l_sym_";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)  &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans  &trans                          &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(FSLH)  &trans
-                &trans  &trans  &trans  &trans  &kp LSHFT    &kp ENTER  &mo 5      &trans     &kp LS(LBKT)   &kp LS(RBKT)
+&trans   &trans  &trans  &trans  &trans  &trans                          &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)     &trans
+&kp ESC  &trans  &trans  &trans  &trans  &trans                          &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)  &kp LS(APOS)
+&trans   &trans  &trans  &trans  &trans  &trans                          &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(FSLH)  &trans
+                 &trans  &trans  &trans  &trans  &kp LSHFT    &kp ENTER  &mo 5      &trans     &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
@@ -411,20 +411,20 @@
         sym-eng {
             display-name = "_sym_eng_";
             bindings = <
-&trans       &none          &none       &none      &none      &none                     &none   &none      &none              &none            &none            &trans
-&kp LS(ESC)  &kp TILDE      &kp DOLLAR  &layer_ru  &layer_en  &none                     &none   &layer_ru  &kp DOUBLE_QUOTES  &kp APOSTROPHE   &kp EXCLAMATION  &none
-&trans       &kp BACKSLASH  &kp HASH    &kp AT     &none      &none                     &none   &none      &kp LT             &kp GT           &kp QUESTION     &trans
-                            &none       &none      &trans     &trans  &trans    &trans  &trans  &trans     &kp LEFT_BRACE     &kp RIGHT_BRACE
+&trans       &none          &none       &none   &none      &none                     &none   &none      &none              &none            &none          &trans
+&kp LS(ESC)  &kp TILDE      &kp DOLLAR  &kp AT  &layer_en  &none                     &none   &layer_ru  &kp DOUBLE_QUOTES  &kp APOSTROPHE   &kp SEMICOLON  &none
+&trans       &kp BACKSLASH  &kp HASH    &none   &none      &none                     &none   &none      &kp LT             &kp GT           &kp SLASH      &trans
+                            &none       &none   &trans     &trans  &trans    &trans  &trans  &trans     &kp LEFT_BRACE     &kp RIGHT_BRACE
             >;
         };
 
         sym-rus {
             display-name = "_sym_rus_";
             bindings = <
-&trans       &none             &none       &none      &none      &none                     &none   &none      &none                 &none            &none               &trans
-&kp LS(ESC)  &en TILDE         &en DOLLAR  &layer_en  &layer_en  &none                     &none   &layer_ru  &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_EXCLAMATION  &none
-&trans       &kp RU_BACKSLASH  &en HASH    &en AT     &none      &none                     &none   &none      &en LT                &en GT           &kp RU_QUESTION     &trans
-                               &none       &none      &trans     &trans  &trans    &trans  &trans  &trans     &en LEFT_BRACE        &en RIGHT_BRACE
+&trans       &none             &none       &none   &none      &none                     &none   &none      &none                 &none            &none             &trans
+&kp LS(ESC)  &en TILDE         &en DOLLAR  &en AT  &layer_en  &none                     &none   &layer_ru  &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_SEMICOLON  &none
+&trans       &kp RU_BACKSLASH  &en HASH    &none   &none      &none                     &none   &none      &en LT                &en GT           &kp RU_SLASH      &trans
+                               &none       &none   &trans     &trans  &trans    &trans  &trans  &trans     &en LEFT_BRACE        &en RIGHT_BRACE
             >;
 
             label = "_sym_rus_";
