@@ -84,7 +84,7 @@
                     &trans              &trans    &kp BACKSPACE        &trans   &kp SPACE    &kp ENTER  &mo 3            &kp DELETE  &kp N0  &trans
             >;
 
-            display-name = "Navigation";
+            display-name = "Nav";
         };
 
         sym {
