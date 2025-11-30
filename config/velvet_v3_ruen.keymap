@@ -10,13 +10,13 @@
 
         cmb_en {
             bindings = <&layer_en>;
-            key-positions = <3 4>;
+            key-positions = <39 42>;
             layers = <1>;
         };
 
         cmb_ru {
             bindings = <&layer_ru>;
-            key-positions = <3 4>;
+            key-positions = <39 42>;
             layers = <0>;
         };
     };
@@ -413,7 +413,7 @@
         };
 
         r-sym {
-            display-name = "_r-sym_";
+            display-name = "_r_sym_";
             bindings = <
 &trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)      &kp LS(R)  &kp LS(T)                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(A)  &kp LS(S)      &kp LS(D)      &kp LS(F)  &kp LS(G)                              &trans  &trans  &trans  &trans  &trans  &trans
@@ -433,7 +433,7 @@
         };
 
         sym-rus {
-            display-name = "sym-rus";
+            display-name = "_sym_rus_";
             bindings = <
 &trans       &none      &none     &none   &none       &none                     &none   &none          &none                 &none            &none               &trans
 &kp LS(ESC)  &en TILDE  &en HASH  &en AT  &en DOLLAR  &none                     &none   &kp BACKSLASH  &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_EXCLAMATION  &none
@@ -441,11 +441,11 @@
                         &none     &none   &trans      &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACE        &en RIGHT_BRACE
             >;
 
-            label = "sym-rus";
+            label = "_sym_rus_";
         };
 
         edit {
-            display-name = "_Edit_";
+            display-name = "_edit_";
             bindings = <
 &trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &cmd F15 F16  &kp LC(LEFT)  &kp UP         &kp LC(RIGHT)  &cmd F15 F17  &trans
 &trans  &kp LSHFT   &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &cmd F15 F18  &kp LEFT      &kp DOWN       &kp RIGHT      &kp RSHFT     &cmd F15 F19
