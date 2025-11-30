@@ -473,20 +473,20 @@
         left-fn {
             display-name = "l-fun";
             bindings = <
-&trans  &none       &kp F4      &kp F5      &kp F6      &none                              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F17 Y  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F17 Z  &kp F1      &kp F2      &kp F3      &none                              &trans     &trans  &trans  &trans  &trans  &trans
-                    &trans      &trans      &trans      &trans  &kp LSHFT    &lt 11 ENTER  &kp RSHFT  &trans  &trans  &trans
+&trans  &none       &kp F4      &kp F5      &kp F6      &none                                &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Y  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                                &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Z  &kp F1      &kp F2      &kp F3      &none                                &trans     &trans  &trans  &trans  &trans  &trans
+                    &trans      &trans      &trans      &trans  &kp LSHFT    &ltqt 11 ENTER  &kp RSHFT  &trans  &trans  &trans
             >;
         };
 
         right-fn {
             display-name = "r-fun";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                &none   &kp F10       &kp F11          &kp F12        &none         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &cmd F17 F15  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16  &trans
-                &trans  &trans  &trans  &kp LSHFT  &lt 10 ENTER    &kp ENTER  &trans  &trans        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &none   &kp F10       &kp F11          &kp F12        &none         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &cmd F17 F15  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16  &trans
+                &trans  &trans  &trans  &kp LSHFT  &ltqt 10 ENTER    &kp ENTER  &trans  &trans        &trans           &trans
             >;
         };
 
