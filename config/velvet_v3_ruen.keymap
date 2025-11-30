@@ -103,6 +103,8 @@
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "NAV_OFF_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         lctrl_mo: lctrl_mo {
@@ -120,6 +122,8 @@
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "LCTRL_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         rctrl_mo: rctrl_mo {
@@ -137,6 +141,8 @@
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "RCTRL_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         lshctrl_mo: lshctrl_mo {
@@ -154,6 +160,8 @@
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "LSHCTRL_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         rshctrl_mo: rshctrl_mo {
@@ -171,6 +179,8 @@
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "RSHCTRL_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         lshft_mo: lshft_mo {
@@ -188,6 +198,8 @@
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "LSHFT_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
