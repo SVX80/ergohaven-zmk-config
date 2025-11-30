@@ -172,6 +172,23 @@
 
             label = "RSHCTRL_MO";
         };
+
+        lshft_mo: lshft_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
+
+            label = "LSHFT_MO";
+        };
     };
 
     behaviors {
@@ -340,7 +357,7 @@
         lshft_mt: lshft_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "LSHFT_MT";
-            bindings = <&mo>, <&key>;
+            bindings = <&lshft_mo>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -446,30 +463,30 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans           &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &mt LSHFT SPACE  &mo 10    &mtoff 11 9  &mt RSHFT SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans           &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &lshft_mt 12 SPACE  &mo 10    &mtoff 11 9  &mt RSHFT SPACE  &trans  &trans  &trans
             >;
         };
 
         left-fn {
             display-name = "l-fun";
             bindings = <
-&trans  &none       &kp F4      &kp F5      &kp F6      &none                        &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F17 Y  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                        &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &cmd F17 Z  &kp F1      &kp F2      &kp F3      &none                        &trans     &trans  &trans  &trans  &trans  &trans
-                    &trans      &trans      &trans      &trans  &kp LSHFT    &mo 11  &kp RSHFT  &trans  &trans  &trans
+&trans  &none       &kp F4      &kp F5      &kp F6      &none                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Y  &cmd F17 S  &cmd F17 D  &cmd F17 F  &none                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &cmd F17 Z  &kp F1      &kp F2      &kp F3      &none                              &trans     &trans  &trans  &trans  &trans  &trans
+                    &trans      &trans      &trans      &trans  &kp LSHFT    &lt 11 ENTER  &kp RSHFT  &trans  &trans  &trans
             >;
         };
 
         right-fn {
             display-name = "r-fun";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &none   &kp F10       &kp F11          &kp F12        &none         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &cmd F17 F15  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16  &trans
-                &trans  &trans  &trans  &kp LSHFT  &mo 10    &kp ENTER  &trans  &trans        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &none   &kp F10       &kp F11          &kp F12        &none         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &none   &kp LS(LEFT)  &cmd F15 DELETE  &kp LS(RIGHT)  &cmd F17 F15  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &none   &kp F7        &kp F8           &kp F9         &cmd F17 F16  &trans
+                &trans  &trans  &trans  &kp LSHFT  &lt 10 ENTER    &kp ENTER  &trans  &trans        &trans           &trans
             >;
         };
 
