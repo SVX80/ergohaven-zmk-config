@@ -463,10 +463,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                     &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                     &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                     &trans           &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &lshft_mt 12 SPACE  &mo 10    &mtoff 11 9  &mt RSHFT SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans              &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &lshft_mt 12 SPACE  &mo 10    &mtoff 11 9  &lshft_mt 12 SPACE  &trans  &trans  &trans
             >;
         };
 
