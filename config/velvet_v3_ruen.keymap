@@ -403,20 +403,20 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &kp CARET      &kp ASTERISK     &kp PLUS      &kp EQUAL  &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp PIPE   &trans
-&kp LS(TAB)  &kp N1         &kp N2           &kp N3        &kp N4     &none                     &none   &kp N7         &kp N8            &kp N9             &kp N0     &trans
-&trans       &kp BACKSLASH  &kp EXCLAMATION  &kp QUESTION  &kp N5     &none                     &none   &kp N6         &kp COMMA         &kp DOT            &kp SLASH  &trans
-                            &kp GRAVE        &layer_ru     &trans     &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(ESC)  &kp CARET     &kp ASTERISK     &kp PLUS   &kp EQUAL  &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp PIPE   &trans
+&kp LS(TAB)  &kp N1        &kp N2           &kp N3     &kp N4     &none                     &none   &kp N7         &kp N8            &kp N9             &kp N0     &trans
+&trans       &kp QUESTION  &kp EXCLAMATION  &kp COLON  &kp N5     &none                     &none   &kp N6         &kp COMMA         &kp DOT            &kp SLASH  &trans
+                           &kp GRAVE        &layer_ru  &trans     &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &en CARET         &kp ASTERISK        &kp PLUS         &kp EQUAL  &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en PIPE      &trans
-&kp LS(TAB)  &kp N1            &kp N2              &kp N3           &kp N4     &none                     &none   &kp N7         &kp N8            &kp N9             &kp N0        &trans
-&trans       &kp RU_BACKSLASH  &kp RU_EXCLAMATION  &kp RU_QUESTION  &kp N5     &none                     &none   &kp N6         &kp RU_COMMA      &kp RU_DOT         &kp RU_SLASH  &trans
-                               &en GRAVE           &layer_en        &trans     &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &en CARET        &kp ASTERISK        &kp PLUS      &kp EQUAL  &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en PIPE      &trans
+&kp LS(TAB)  &kp N1           &kp N2              &kp N3        &kp N4     &none                     &none   &kp N7         &kp N8            &kp N9             &kp N0        &trans
+&trans       &kp RU_QUESTION  &kp RU_EXCLAMATION  &kp RU_COLON  &kp N5     &none                     &none   &kp N6         &kp RU_COMMA      &kp RU_DOT         &kp RU_SLASH  &trans
+                              &en GRAVE           &layer_en     &trans     &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
@@ -445,7 +445,7 @@
             bindings = <
 &trans  &none     &none       &none   &layer_en    &none                     &none   &layer_ru  &none              &none            &none          &trans
 &trans  &kp HASH  &kp DOLLAR  &kp AT  &kp PERCENT  &none                     &none   &kp TILDE  &kp DOUBLE_QUOTES  &kp APOSTROPHE   &kp SEMICOLON  &none
-&trans  &none     &none       &none   &kp SPACE    &none                     &none   &kp SPACE  &kp LT             &kp GT           &kp COLON      &trans
+&trans  &none     &none       &none   &kp SPACE    &none                     &none   &kp SPACE  &kp LT             &kp GT           &kp BACKSLASH  &trans
                   &none       &none   &trans       &trans  &trans    &trans  &trans  &trans     &kp LEFT_BRACE     &kp RIGHT_BRACE
             >;
         };
@@ -455,7 +455,7 @@
             bindings = <
 &trans  &none          &none       &none   &layer_en    &none                     &none   &layer_ru  &none                 &none            &none             &trans
 &trans  &en HASH       &en DOLLAR  &en AT  &en PERCENT  &none                     &none   &en TILDE  &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_SEMICOLON  &none
-&trans  &kp RU_NUMERO  &none       &none   &kp SPACE    &none                     &none   &kp SPACE  &en LT                &en GT           &kp COLON         &trans
+&trans  &kp RU_NUMERO  &none       &none   &kp SPACE    &none                     &none   &kp SPACE  &en LT                &en GT           &kp RU_BACKSLASH  &trans
                        &none       &none   &trans       &trans  &trans    &trans  &trans  &trans     &en LEFT_BRACE        &en RIGHT_BRACE
             >;
 
