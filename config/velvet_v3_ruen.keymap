@@ -11,7 +11,7 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&macro_tap>, <&kp LS(LC(N1))>;
+            bindings = <&off 1>, <&macro_tap>, <&kp LS(LC(N1))>;
 
             label = "LAYER_EN";
             wait-ms = <0>;
@@ -21,7 +21,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&macro_tap>, <&kp LS(LC(N2))>;
+            bindings = <&on 1>, <&macro_tap>, <&kp LS(LC(N2))>;
 
             label = "LAYER_RU";
             tap-ms = <50>;
@@ -269,9 +269,8 @@
             bindings = <&mo>, <&key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
-            quick-tap-ms = <185>;
-            flavor = "balanced";
+            tapping-term-ms = <215>;
+            flavor = "hold-preferred";
         };
 
         lmod_cmd15: lmod_cmd15 {
