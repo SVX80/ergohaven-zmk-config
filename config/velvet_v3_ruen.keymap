@@ -404,20 +404,20 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &none     &kp CARET      &kp EQUAL  &kp ASTERISK  &none                     &none   &kp COLON        &kp LPAR          &kp RPAR           &none         &trans
-&kp LS(TAB)  &kp N1    &kp N2         &kp N3     &kp N4        &kp N5                    &kp N6  &kp N7           &kp N8            &kp N9             &kp N0        &trans
-&trans       &kp PIPE  &kp AMPERSAND  &kp PLUS   &kp SPACE     &none                     &none   &kp EXCLAMATION  &kp COMMA         &kp DOT            &kp QUESTION  &trans
-                       &kp GRAVE      &layer_ru  &trans        &trans  &trans    &trans  &trans  &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(ESC)  &none     &kp CARET      &kp EQUAL  &kp ASTERISK  &none                     &none   &kp COLON  &kp LPAR          &kp RPAR           &kp EXCLAMATION  &trans
+&kp LS(TAB)  &kp N1    &kp N2         &kp N3     &kp N4        &none                     &none   &kp N7     &kp N8            &kp N9             &kp N0           &trans
+&trans       &kp PIPE  &kp AMPERSAND  &kp PLUS   &kp N5        &none                     &none   &kp N6     &kp COMMA         &kp DOT            &kp QUESTION     &trans
+                       &kp GRAVE      &layer_ru  &trans        &trans  &trans    &trans  &trans  &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &none     &en CARET      &kp EQUAL  &kp ASTERISK  &none                     &none   &kp RU_COLON        &kp LPAR          &kp RPAR           &none            &trans
-&kp LS(TAB)  &kp N1    &kp N2         &kp N3     &kp N4        &kp N5                    &kp N6  &kp N7              &kp N8            &kp N9             &kp N0           &trans
-&trans       &en PIPE  &en AMPERSAND  &kp PLUS   &kp SPACE     &none                     &none   &kp RU_EXCLAMATION  &kp RU_COMMA      &kp RU_DOT         &kp RU_QUESTION  &trans
-                       &en GRAVE      &layer_en  &trans        &trans  &trans    &trans  &trans  &trans              &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &none     &en CARET      &kp EQUAL  &kp ASTERISK  &none                     &none   &kp RU_COLON  &kp LPAR          &kp RPAR           &kp RU_EXCLAMATION  &trans
+&kp LS(TAB)  &kp N1    &kp N2         &kp N3     &kp N4        &none                     &none   &kp N7        &kp N8            &kp N9             &kp N0              &trans
+&trans       &en PIPE  &en AMPERSAND  &kp PLUS   &kp N5        &none                     &none   &kp N6        &kp RU_COMMA      &kp RU_DOT         &kp RU_QUESTION     &trans
+                       &en GRAVE      &layer_en  &trans        &trans  &trans    &trans  &trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
