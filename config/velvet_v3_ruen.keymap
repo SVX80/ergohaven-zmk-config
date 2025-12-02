@@ -423,20 +423,20 @@
         l-sym {
             display-name = "l-sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(Y)  &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
-&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(H)  &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(N)  &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(MINUS)  &trans
-                &trans  &trans  &lshctrl_mo 13  &trans  &kp LSHFT    &kp LS(ENTER)  &mo 5      &lshctrl_mo 13  &kp LS(LBKT)   &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(Y)      &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
+&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(H)      &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
+&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(N)      &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(MINUS)  &trans
+                &trans  &trans  &lshctrl_mo 13  &trans  &kp LSHFT    &kp LS(ENTER)  &ltqt 5 SPACE  &lshctrl_mo 13  &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
         r-sym {
             display-name = "r-sym";
             bindings = <
-&trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)       &kp LS(T)                      &trans  &trans          &trans  &trans  &trans  &trans
-&trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)       &kp LS(G)                      &trans  &trans          &trans  &trans  &trans  &trans
-&trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)       &kp LS(B)                      &trans  &trans          &trans  &trans  &trans  &trans
-                   &kp LS(GRAVE)  &trans     &lshctrl_mo 13  &mo 4      &none    &kp ENTER  &trans  &lshctrl_mo 13  &trans  &trans
+&trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)       &kp LS(T)                          &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)       &kp LS(G)                          &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)       &kp LS(B)                          &trans  &trans          &trans  &trans  &trans  &trans
+                   &kp LS(GRAVE)  &trans     &lshctrl_mo 13  &ltqt 4 SPACE  &none    &kp ENTER  &trans  &lshctrl_mo 13  &trans  &trans
             >;
         };
 
