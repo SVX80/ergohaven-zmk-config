@@ -453,7 +453,7 @@
         sym-rus {
             display-name = "sym-ru";
             bindings = <
-&trans  &kp F9  &kp F10    &kp F11    &kp F12  &none                     &none   &en GRAVE         &en HASH              &en DOLLAR       &kp COLON         &trans
+&trans  &kp F9  &kp F10    &kp F11    &kp F12  &none                     &none   &en GRAVE         &en HASH              &en DOLLAR       &kp RU_COLON      &trans
 &trans  &kp F5  &kp F6     &kp F7     &kp F8   &none                     &none   &kp SPACE         &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_SEMICOLON  &none
 &trans  &kp F1  &kp F2     &kp F3     &kp F4   &none                     &none   &kp RU_BACKSLASH  &en LT                &en GT           &kp RU_SLASH      &trans
                 &layer_en  &layer_ru  &trans   &trans  &trans    &trans  &trans  &trans            &en LEFT_BRACE        &en RIGHT_BRACE
