@@ -294,10 +294,10 @@
             tapping-term-ms = <190>;
         };
 
-        mtoff: mtoff {
+        mt_navoff: mt_navoff {
             compatible = "zmk,behavior-hold-tap";
-            label = "MTOFF";
-            bindings = <&mo>, <&off>;
+            label = "MT_NAVOFF";
+            bindings = <&nav_off_mo>, <&off>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -493,10 +493,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans              &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &lshft_mt 12 SPACE  &nav_off_mt 10 LSHFT    &mtoff 11 9  &lshft_mt 12 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans              &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &lshft_mt 12 SPACE  &nav_off_mt 10 LSHFT    &mt_navoff 11 9  &lshft_mt 12 SPACE  &trans  &trans  &trans
             >;
         };
 
