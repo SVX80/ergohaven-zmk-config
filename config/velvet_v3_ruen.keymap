@@ -441,10 +441,10 @@
         l-sym {
             display-name = "l-sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(Y)      &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
-&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(H)      &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans          &trans                              &kp LS(N)      &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &trans
-                &trans  &trans  &lshctrl_mo 13  &trans  &kp LSHFT    &kp LS(ENTER)  &ltqt 5 SPACE  &lshctrl_mo 13  &kp LS(LBKT)   &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans          &trans                          &kp LS(Y)      &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
+&trans  &trans  &trans  &trans  &trans          &trans                          &kp LS(H)      &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
+&trans  &trans  &trans  &trans  &trans          &trans                          &kp LS(N)      &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &trans
+                &trans  &trans  &lshctrl_mo 13  &trans  &kp LSHFT    &kp SPACE  &ltqt 5 SPACE  &lshctrl_mo 13  &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
@@ -454,7 +454,7 @@
 &trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)       &kp LS(T)                          &trans  &trans          &trans  &trans  &trans  &trans
 &trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)       &kp LS(G)                          &trans  &trans          &trans  &trans  &trans  &trans
 &trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)       &kp LS(B)                          &trans  &trans          &trans  &trans  &trans  &trans
-                   &kp LS(GRAVE)  &trans     &lshctrl_mo 13  &ltqt 4 SPACE  &none    &kp ENTER  &trans  &lshctrl_mo 13  &trans  &trans
+                   &kp LS(GRAVE)  &trans     &lshctrl_mo 13  &ltqt 4 SPACE  &none    &kp SPACE  &trans  &lshctrl_mo 13  &trans  &trans
             >;
         };
 
@@ -506,7 +506,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans     &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans     &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans     &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &kp LSHFT    &ltqt 11 ENTER  &kp RSHFT  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &kp LSHFT    &ltqt 11 SPACE  &kp RSHFT  &trans  &trans  &trans
             >;
         };
 
@@ -516,7 +516,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &kp LSHFT  &ltqt 10 ENTER    &kp ENTER  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &kp LSHFT  &ltqt 10 ENTER    &kp SPACE  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -525,7 +525,7 @@
 &trans  &trans  &trans  &trans  &trans        &trans                       &trans  &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans        &trans                       &trans  &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans        &trans                       &trans  &trans        &trans  &trans  &trans  &trans
-                &trans  &trans  &lctrl_mo 13  &trans  &trans    &kp ENTER  &trans  &rctrl_mo 13  &trans  &trans
+                &trans  &trans  &lctrl_mo 13  &mo 15  &trans    &kp SPACE  &mo 15  &rctrl_mo 13  &trans  &trans
             >;
 
             label = "shft";
@@ -548,6 +548,16 @@
 &out OUT_USB  &cmd F19 F6   &cmd F19 F7   &cmd F19 F8   &cmd F19 F9   &cmd F19 F10                  &none  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none  &kp F24
 &out OUT_BLE  &cmd F19 F1   &cmd F19 F2   &cmd F19 F3   &cmd F19 F4   &cmd F19 F5                   &none  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none  &bt BT_CLR
                             &bt BT_SEL 0  &bt BT_SEL 1  &none         &none         &none    &none  &none  &none         &bt BT_SEL 2      &bt BT_SEL 3
+            >;
+        };
+
+        nav-fn {
+            display-name = "nav_fn";
+            bindings = <
+&trans  &kp F4  &kp F5     &kp F6     &kp F7  &none                     &none   &kp F8  &kp F9  &kp F10  &kp F11  &trans
+&trans  &none   &none      &none      &none   &none                     &none   &none   &none   &none    &none    &none
+&trans  &kp F1  &kp F2     &kp F3     &none   &none                     &none   &none   &none   &none    &kp F12  &trans
+                &layer_en  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans  &none   &none
             >;
         };
     };
