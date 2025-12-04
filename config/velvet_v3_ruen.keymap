@@ -421,20 +421,20 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &kp CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp AT           &kp LS(ENTER)
-&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
-&trans       &kp PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &kp PIPE       &kp UNDERSCORE    &kp TILDE          &kp QUESTION     &kp DELETE
-                           &kp N0  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(ESC)  &none      &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp SEMICOLON    &kp LS(ENTER)
+&kp LS(TAB)  &kp TILDE  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
+&trans       &kp HASH   &kp BACKSLASH   &kp SLASH          &kp DOLLAR  &none                     &none   &kp PIPE       &kp UNDERSCORE    &kp COLON          &kp QUESTION     &kp DELETE
+                        &kp GRAVE       &layer_ru          &trans      &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &en CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en AT              &kp LS(ENTER)
-&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
-&trans       &en PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &en PIPE       &kp UNDERSCORE    &en TILDE          &kp RU_QUESTION     &kp DELETE
-                           &kp N0  &layer_en  &trans  &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &kp RU_NUMERO  &en APOSTROPHE    &kp RU_DOUBLE_QUOTES  &en AT      &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en RU_SEMICOLON    &kp LS(ENTER)
+&kp LS(TAB)  &en TILDE      &en PERCENT       &kp ASTERISK          &en CARET   &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
+&trans       &en HASH       &kp RU_BACKSLASH  &kp RU_SLASH          &en DOLLAR  &none                     &none   &en PIPE       &kp UNDERSCORE    &kp RU_COLON       &kp RU_QUESTION     &kp DELETE
+                            &en GRAVE         &layer_en             &trans      &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
@@ -461,20 +461,20 @@
         sym-eng {
             display-name = "sym-en";
             bindings = <
-&trans  &kp F9  &kp F10    &kp F11    &kp F12  &none                     &none   &kp GRAVE      &kp HASH           &kp DOLLAR       &kp COLON      &trans
-&trans  &kp F5  &kp F6     &kp F7     &kp F8   &none                     &none   &kp SPACE      &kp DOUBLE_QUOTES  &kp APOSTROPHE   &kp SEMICOLON  &none
-&trans  &kp F1  &kp F2     &kp F3     &kp F4   &none                     &none   &kp BACKSLASH  &kp LT             &kp GT           &kp SLASH      &trans
-                &layer_en  &layer_ru  &trans   &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACE     &kp RIGHT_BRACE
+&trans  &kp F4  &kp F5     &kp F6     &kp F7  &none                     &none   &kp F8  &kp F9          &kp F10          &kp F11  &trans
+&trans  &kp N1  &kp N2     &kp N3     &kp N4  &none                     &none   &kp N7  &kp N8          &kp N9           &kp N0   &none
+&trans  &kp F1  &kp F2     &kp F3     &kp N5  &none                     &none   &kp N6  &kp LT          &kp GT           &kp F12  &trans
+                &layer_en  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
         };
 
         sym-rus {
             display-name = "sym-ru";
             bindings = <
-&trans  &kp F9  &kp F10    &kp F11    &kp F12  &none                     &none   &en GRAVE         &en HASH              &en DOLLAR       &kp RU_COLON      &trans
-&trans  &kp F5  &kp F6     &kp F7     &kp F8   &none                     &none   &kp SPACE         &kp RU_DOUBLE_QUOTES  &en APOSTROPHE   &kp RU_SEMICOLON  &none
-&trans  &kp F1  &kp F2     &kp F3     &kp F4   &none                     &none   &kp RU_BACKSLASH  &en LT                &en GT           &kp RU_SLASH      &trans
-                &layer_en  &layer_ru  &trans   &trans  &trans    &trans  &trans  &trans            &en LEFT_BRACE        &en RIGHT_BRACE
+&trans  &kp F4  &kp F5     &kp F6     &kp F7  &none                     &none   &kp F8  &kp F9          &kp F10          &kp F11  &trans
+&trans  &kp N1  &kp N2     &kp N3     &kp N4  &none                     &none   &kp N7  &kp N8          &kp N9           &kp N0   &none
+&trans  &kp F1  &kp F2     &kp F3     &kp N5  &none                     &none   &kp N6  &en LT          &en GT           &kp F12  &trans
+                &layer_en  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans  &en LEFT_BRACE  &en RIGHT_BRACE
             >;
 
             label = "sym-ru";
@@ -483,10 +483,10 @@
         edit {
             display-name = "_edit_";
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14     &cmd F15 F15  &none                     &cmd F15 F16  &kp HOME      &cmd F15 F17   &cmd F15 F18  &kp END        &trans
-&trans  &none       &cmd F15 S    &cmd F15 DELETE  &cmd F15 F    &none                     &cmd F15 F19  &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT      &cmd F15 F20
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C       &cmd F15 V    &none                     &cmd F15 F21  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PG_UP     &kp LC(RIGHT)  &trans
-                    &trans        &trans           &lctrl_mo 13  &trans  &trans    &trans  &trans        &rctrl_mo 13  &trans         &trans
+&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                     &cmd F15 F16  &kp HOME      &kp BACKSPACE  &kp DELETE  &kp END        &kp ENTER
+&trans  &none       &cmd F15 S    &cmd F15 D    &cmd F15 F    &none                     &cmd F15 F19  &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &cmd F15 F20
+&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &none                     &cmd F15 F21  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PG_UP   &kp LC(RIGHT)  &kp BACKSPACE
+                    &trans        &trans        &lctrl_mo 13  &trans  &trans    &trans  &trans        &rctrl_mo 13  &trans         &trans
             >;
         };
 
