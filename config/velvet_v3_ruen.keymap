@@ -375,6 +375,24 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <235>;
         };
+
+        rctrl_lalt: rctrl_lalt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RCTRL_LALT";
+            bindings = <&kp RIGHT_CONTROL>, <&kp LEFT_ALT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        lctrl_lalt: lctrl_lalt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LCTRL_LALT";
+            bindings = <&kp RIGHT_CONTROL>, <&kp LEFT_ALT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL)>;
+        };
     };
 
     keymap {
@@ -383,9 +401,9 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC   &kp Q  &kp W      &kp E         &kp R         &kp T                                &kp Y          &kp U         &kp I      &kp O     &kp P      &bksp
+&kp ESC   &kp Q  &kp W      &kp E         &kp R         &kp T                                &kp Y          &kp U         &kp I      &kp O     &kp P      &kp ENTER
 &kp TAB   &kp A  &kp S      &kp D         &kp F         &kp G                                &kp H          &kp J         &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI  &kp Z  &kp X      &kp C         &kp V         &kp B                                &kp N          &kp M         &kp COMMA  &kp DOT   &kp SLASH  &kp LALT
+&kp LGUI  &kp Z  &kp X      &kp C         &kp V         &kp B                                &kp N          &kp M         &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSPACE
                  &kp GRAVE  &kp CAPSLOCK  &lctrl_mo 13  &ltqt 4 SPACE  &mton 10 9    &mo 11  &ltqt 5 SPACE  &rctrl_mo 13  &kp LBKT   &kp RBKT
             >;
         };
@@ -393,9 +411,9 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &bksp
+&kp ESC   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp ENTER
 &kp TAB   &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp LALT
+&kp LGUI  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp BACKSPACE
                                    &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &lctrl_mo 13        &ltqt 4 SPACE       &mton 10 9    &mo 11  &ltqt 5 SPACE       &rctrl_mo 13               &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
@@ -403,9 +421,9 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &kp CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp AT           &kp DELETE
-&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &trans
-&trans       &kp PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &kp PIPE       &kp UNDERSCORE    &kp TILDE          &kp QUESTION     &trans
+&kp LS(ESC)  &kp CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp AT           &kp LS(ENTER)
+&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
+&trans       &kp PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &kp PIPE       &kp UNDERSCORE    &kp TILDE          &kp QUESTION     &kp DELETE
                            &kp N0  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
@@ -413,9 +431,9 @@
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &en CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en AT              &kp DELETE
-&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &trans
-&trans       &en PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &en PIPE       &kp UNDERSCORE    &en TILDE          &kp RU_QUESTION     &trans
+&kp LS(ESC)  &en CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en AT              &kp LS(ENTER)
+&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
+&trans       &en PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &en PIPE       &kp UNDERSCORE    &en TILDE          &kp RU_QUESTION     &kp DELETE
                            &kp N0  &layer_en  &trans  &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
@@ -516,10 +534,10 @@
         ctrl {
             display-name = "control";
             bindings = <
-&trans  &kp Q  &kp W      &kp E  &kp R   &kp T                           &kp Y      &kp U   &kp I      &kp O     &kp P     &trans
-&trans  &kp A  &kp S      &kp D  &kp F   &kp G                           &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
-&trans  &kp Z  &kp X      &kp C  &kp V   &kp B                           &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &trans
-               &kp GRAVE  &none  &trans  &kp LSHFT  &trans    &kp ENTER  &kp RSHFT  &trans  &kp LBKT   &kp RBKT
+&trans  &kp Q  &kp W      &kp E  &kp R        &kp T                      &kp Y      &kp U        &kp I      &kp O     &kp P     &trans
+&trans  &kp A  &kp S      &kp D  &kp F        &kp G                      &kp H      &kp J        &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
+&trans  &kp Z  &kp X      &kp C  &kp V        &kp B                      &kp N      &kp M        &kp COMMA  &kp DOT   &kp FSLH  &trans
+               &kp GRAVE  &none  &lctrl_lalt  &kp LSHFT  &none    &none  &kp RSHFT  &rctrl_lalt  &kp LBKT   &kp RBKT
             >;
         };
 
