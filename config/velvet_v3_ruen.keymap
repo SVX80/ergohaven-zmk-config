@@ -493,10 +493,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans              &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &lshft_mt 12 SPACE  &nav_off_mt 10 LSHFT    &mt_navoff 11 9  &lshft_mt 12 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ltqt 12 SPACE  &nav_off_mt 10 LSHFT    &mt_navoff 11 9  &ltqt 12 SPACE  &trans  &trans  &trans
             >;
         };
 
@@ -522,10 +522,10 @@
 
         shft {
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans                       &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans        &trans                       &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans        &trans                       &trans  &trans        &trans  &trans  &trans  &trans
-                &trans  &trans  &lctrl_mo 13  &mo 15  &trans    &kp SPACE  &mo 15  &rctrl_mo 13  &trans  &trans
+&trans  &trans  &trans          &trans          &trans          &trans                       &trans  &kp LS(HOME)    &kp LC(BACKSPACE)  &kp LC(DELETE)  &kp LS(END)        &trans
+&trans  &trans  &cmd F15 LS(S)  &cmd F15 LS(D)  &cmd F15 LS(F)  &trans                       &trans  &kp LS(LEFT)    &kp LS(DOWN)       &kp LS(UP)      &kp LS(RIGHT)      &trans
+&trans  &trans  &cmd F15 LS(X)  &cmd F15 LS(C)  &cmd F15 LS(V)  &trans                       &trans  &kp LS(LC(N1))  &kp LS(PAGE_DOWN)  &kp LS(PG_UP)   &kp LS(LC(RIGHT))  &trans
+                &trans          &trans          &lctrl_mo 13    &mo 15  &trans    &kp SPACE  &mo 15  &rctrl_mo 13    &trans             &trans
             >;
 
             label = "shft";
