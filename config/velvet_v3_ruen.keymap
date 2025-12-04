@@ -403,20 +403,20 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &kp CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &kp AMPERSAND   &kp LPAR          &kp RPAR           &kp PIPE         &trans
-&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS       &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &trans
-&trans       &kp PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &kp UNDERSCORE  &kp AT            &kp TILDE          &kp QUESTION     &trans
-                           &kp N0  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(ESC)  &kp CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp AT           &kp DELETE
+&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &trans
+&trans       &kp PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &kp PIPE       &kp UNDERSCORE    &kp TILDE          &kp QUESTION     &trans
+                           &kp N0  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &en CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &en AMPERSAND   &kp LPAR          &kp RPAR           &en PIPE            &trans
-&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS       &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &trans
-&trans       &en PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &kp UNDERSCORE  &en AT            &en TILDE          &kp RU_QUESTION     &trans
-                           &kp N0  &layer_en  &trans  &trans  &trans    &trans  &trans  &trans          &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &en CARET     &kp N7  &kp N8     &kp N9  &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en AT              &kp DELETE
+&kp LS(TAB)  &kp ASTERISK  &kp N4  &kp N5     &kp N6  &none                     &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &trans
+&trans       &en PERCENT   &kp N1  &kp N2     &kp N3  &none                     &none   &en PIPE       &kp UNDERSCORE    &en TILDE          &kp RU_QUESTION     &trans
+                           &kp N0  &layer_en  &trans  &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
