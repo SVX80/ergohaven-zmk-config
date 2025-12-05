@@ -496,10 +496,10 @@
         edit {
             display-name = "_edit_";
             bindings = <
-&trans  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                     &cmd F15 F16  &kp HOME      &kp BACKSPACE  &kp DELETE  &kp END        &kp ENTER
-&trans  &none       &cmd F15 S    &cmd F15 D    &cmd F15 F    &none                     &cmd F15 F19  &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &cmd F15 F20
-&trans  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &none                     &cmd F15 F21  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PG_UP   &kp LC(RIGHT)  &kp BACKSPACE
-                    &trans        &trans        &lctrl_mo 13  &trans  &trans    &trans  &trans        &rctrl_mo 13  &trans         &trans
+&kp ESC   &cmd F15 Y    &cmd F15 F13  &kp LSHFT   &cmd F15 F14  &none                     &cmd F15 F15  &kp HOME      &kp BACKSPACE  &kp DELETE  &kp END        &kp ENTER
+&kp TAB   &cmd F15 F16  &cmd F15 S    &cmd F15 D  &cmd F15 F    &none                     &cmd F15 F19  &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &cmd F15 F20
+&kp LGUI  &cmd F15 Z    &cmd F15 X    &cmd F15 C  &cmd F15 V    &none                     &cmd F15 F21  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PG_UP   &kp LC(RIGHT)  &kp BACKSPACE
+                        &none         &none       &lctrl_mo 13  &trans  &trans    &trans  &trans        &rctrl_mo 13  &none          &none
             >;
         };
 
@@ -529,7 +529,7 @@
 &trans  &kp F4  &kp F5  &kp F6  &kp F7  &trans                                  &trans  &kp F8  &kp F9   &kp F10  &kp F11  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans   &trans   &trans   &trans
 &trans  &kp F1  &kp F2  &kp F3  &trans  &trans                                  &trans  &trans  &kp F12  &kp F13  &kp F12  &trans
-                &trans  &trans  &trans  &kp LSHFT  &ltqt 11 ENTER    &kp SPACE  &trans  &trans  &trans   &trans
+                &trans  &trans  &trans  &kp LSHFT  &ltqt 11 LSHFT    &kp SPACE  &trans  &trans  &trans   &trans
             >;
         };
 
