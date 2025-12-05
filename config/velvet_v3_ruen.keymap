@@ -458,20 +458,20 @@
             >;
         };
 
-        adv-eng {
-            display-name = "_adv_eng_";
+        sym-eng {
+            display-name = "_sym-eng_";
             bindings = <
-&trans  &kp F4  &kp F5     &kp F6     &kp F7  &none                     &none   &kp F8  &kp F9          &kp F10          &kp F11  &trans
-&trans  &kp N1  &kp N2     &kp N3     &kp N4  &none                     &none   &kp N7  &kp N8          &kp N9           &kp N0   &none
-&trans  &kp F1  &kp F2     &kp F3     &kp N5  &none                     &none   &kp N6  &kp LT          &kp GT           &kp F12  &trans
-                &layer_en  &layer_ru  &trans  &trans  &trans    &trans  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &kp LT          &kp GT           &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
 
             label = "_adv-eng_";
         };
 
-        adv-rus {
-            display-name = "_adv_rus_";
+        sum-rus {
+            display-name = "_sum_rus_";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans          &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans          &trans           &trans  &trans
@@ -479,7 +479,7 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &en LEFT_BRACE  &en RIGHT_BRACE
             >;
 
-            label = "_adv-rus_";
+            label = "_sym_rus_";
         };
 
         num {
@@ -558,7 +558,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &mo 14  &trans    &trans  &mo 14  &trans  &trans  &trans
             >;
 
             label = "shift";
@@ -593,11 +593,6 @@
             then-layer = <9>;
         };
 
-        rfun {
-            if-layers = <12>;
-            then-layer = <9>;
-        };
-
         lrsymen {
             if-layers = <4 5>;
             then-layer = <6>;
@@ -613,14 +608,14 @@
             then-layer = <9>;
         };
 
-        adv {
-            if-layers = <11 12>;
-            then-layer = <14>;
-        };
-
         num {
             if-layers = <12>;
             then-layer = <8>;
+        };
+
+        adv {
+            if-layers = <4 5>;
+            then-layer = <14>;
         };
     };
 };
