@@ -515,10 +515,10 @@
         r-fun {
             display-name = "r_fun";
             bindings = <
-&trans  &kp F4  &kp F5  &kp F6  &kp F7  &trans                                  &trans  &kp F8  &kp F9   &kp F10  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans   &trans   &trans   &trans
-&trans  &kp F1  &kp F2  &kp F3  &trans  &trans                                  &trans  &trans  &kp F12  &kp F13  &kp F12  &trans
-                &trans  &trans  &trans  &kp LSHFT  &ltqt 10 LSHFT    &kp SPACE  &trans  &trans  &trans   &trans
+&none  &kp F4  &kp F5  &kp F6  &kp F7  &none                                   &none   &kp F8  &kp F9   &kp F10  &kp F11  &none
+&none  &trans  &trans  &trans  &trans  &none                                   &none   &trans  &trans   &trans   &trans   &none
+&none  &kp F1  &kp F2  &kp F3  &trans  &none                                   &none   &trans  &kp F12  &kp F13  &kp F12  &none
+               &trans  &trans  &trans  &kp LSHFT  &ltqt 10 LSHFT    &kp SPACE  &trans  &trans  &trans   &trans
             >;
         };
 
@@ -537,7 +537,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &mo 13  &trans    &trans  &mo 13  &trans  &trans  &trans
+                &trans  &trans  &trans  &mo 14  &trans    &trans  &mo 14  &trans  &trans  &trans
             >;
 
             label = "shift";
@@ -599,7 +599,7 @@
 
         adv {
             if-layers = <4 5>;
-            then-layer = <13>;
+            then-layer = <14>;
         };
     };
 };
