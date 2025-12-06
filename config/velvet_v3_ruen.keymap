@@ -285,13 +285,12 @@
         ltqt: ltqt {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQT";
-            bindings = <&mo>, <&key>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
             flavor = "hold-preferred";
             quick-tap-ms = <210>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 44 45>;
         };
 
         lmod_cmd15: lmod_cmd15 {
@@ -424,17 +423,6 @@
             quick-tap-ms = <215>;
             flavor = "tap-preferred";
         };
-
-        mken: mken {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKEN";
-            bindings = <&kp>, <&en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            quick-tap-ms = <215>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
@@ -464,8 +452,8 @@
             display-name = "_sym_en_";
             bindings = <
 &kp LS(ESC)  &ru RU_NUMERO    &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                        &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp SEMICOLON    &kp LS(ENTER)
-&kp LS(TAB)  &mk LSHFT TILDE  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
-&trans       &kp HASH         &kp BACKSLASH   &kp SLASH          &kp DOLLAR  &none                        &none   &kp PIPE       &kp UNDERSCORE    &kp COLON          &kp QUESTION     &kp DELETE
+&kp LS(TAB)  &mk LSHFT SLASH  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
+&trans       &kp BACKSLASH    &kp HASH        &kp TILDE          &kp DOLLAR  &none                        &none   &kp PIPE       &kp UNDERSCORE    &kp COLON          &kp QUESTION     &kp DELETE
                               &kp GRAVE       &layer_ru          &trans      &trans  &layer_ru    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
@@ -473,10 +461,10 @@
         sym-ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &kp RU_NUMERO      &en APOSTROPHE    &kp RU_DOUBLE_QUOTES  &en AT      &none                        &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp RU_SEMICOLON    &kp LS(ENTER)
-&kp LS(TAB)  &mken LSHFT TILDE  &en PERCENT       &kp ASTERISK          &en CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
-&trans       &en HASH           &kp RU_BACKSLASH  &kp RU_SLASH          &en DOLLAR  &none                        &none   &en PIPE       &kp UNDERSCORE    &kp RU_COLON       &kp RU_QUESTION     &kp DELETE
-                                &en GRAVE         &layer_en             &trans      &trans  &layer_en    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &kp RU_NUMERO       &en APOSTROPHE  &kp RU_DOUBLE_QUOTES  &en AT      &none                        &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp RU_SEMICOLON    &kp LS(ENTER)
+&kp LS(TAB)  &mk LSHFT RU_SLASH  &en PERCENT     &kp ASTERISK          &en CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
+&trans       &kp RU_BACKSLASH    &en HASH        &en TILDE             &en DOLLAR  &none                        &none   &en PIPE       &kp UNDERSCORE    &kp RU_COLON       &kp RU_QUESTION     &kp DELETE
+                                 &en GRAVE       &layer_en             &trans      &trans  &layer_en    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
