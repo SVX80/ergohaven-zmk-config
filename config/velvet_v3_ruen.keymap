@@ -416,13 +416,12 @@
         mk: mk {
             compatible = "zmk,behavior-hold-tap";
             label = "MK";
-            bindings = <&kp>, <&key>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <215>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <235>;
+            quick-tap-ms = <215>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <0>;
         };
 
         mken: mken {
@@ -431,8 +430,8 @@
             bindings = <&kp>, <&en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <215>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <235>;
+            quick-tap-ms = <215>;
             flavor = "tap-preferred";
         };
 
@@ -442,8 +441,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <215>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <215>;
             flavor = "tap-preferred";
         };
     };
