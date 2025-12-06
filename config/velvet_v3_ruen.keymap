@@ -418,9 +418,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            quick-tap-ms = <215>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <275>;
+            quick-tap-ms = <270>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
         };
 
         mk_sh: mk_sh {
@@ -429,9 +430,10 @@
             bindings = <&lshft_mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            quick-tap-ms = <215>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <275>;
+            quick-tap-ms = <270>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
         };
     };
 
