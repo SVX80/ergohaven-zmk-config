@@ -555,7 +555,7 @@
         r-fun {
             display-name = "r_fun";
             bindings = <
-&none  &kp F4  &kp F5  &kp F6  &kp F7  &none                                &none   &kp F8  &kp F9   &kp F10  &kp F11  &none
+&none  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8                               &none   &kp F9  &kp F10  &kp F11  &none    &none
 &none  &trans  &trans  &trans  &trans  &none                                &none   &trans  &trans   &trans   &trans   &none
 &none  &kp F1  &kp F2  &kp F3  &trans  &none                                &none   &trans  &kp F12  &kp F13  &kp F14  &none
                &trans  &trans  &trans  &mtqt LSHFT SPACE  &mo 10    &trans  &trans  &trans  &trans   &trans
