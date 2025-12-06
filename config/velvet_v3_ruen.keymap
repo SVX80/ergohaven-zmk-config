@@ -221,6 +221,15 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        ltk_macro: ltk_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &ltk_space MACRO_PLACEHOLDER 11>;
+            label = "LTK_MACRO";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     behaviors {
@@ -387,7 +396,7 @@
         mt3: mt3 {
             compatible = "zmk,behavior-hold-tap";
             label = "MT3";
-            bindings = <&ltk_space>, <&mo>;
+            bindings = <&ltk_macro>, <&mo>;
 
             #binding-cells = <2>;
             tapping-term-ms = <215>;
@@ -401,10 +410,10 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC   &kp Q  &kp W       &kp E         &kp R         &kp T                               &kp Y         &kp U         &kp I      &kp O     &kp P      &kp ENTER
-&kp TAB   &kp A  &kp S       &kp D         &kp F         &kp G                               &kp H         &kp J         &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI  &kp Z  &kp X       &kp C         &kp V         &kp B                               &kp N         &kp M         &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSPACE
-                 &mt3 10 11  &kp CAPSLOCK  &lctrl_mo 12  &ltk 4 SPACE  &mton 10 9    &mo 11  &ltk 6 SPACE  &rctrl_mo 12  &kp LBKT   &kp RBKT
+&kp ESC   &kp Q  &kp W       &kp E     &kp R         &kp T                               &kp Y         &kp U         &kp I      &kp O     &kp P      &kp ENTER
+&kp TAB   &kp A  &kp S       &kp D     &kp F         &kp G                               &kp H         &kp J         &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
+&kp LGUI  &kp Z  &kp X       &kp C     &kp V         &kp B                               &kp N         &kp M         &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSPACE
+                 &mt3 10 12  &kp CAPS  &lctrl_mo 12  &ltk 4 SPACE  &mton 10 9    &mo 11  &ltk 6 SPACE  &rctrl_mo 12  &kp LBKT   &kp RBKT
             >;
         };
 
