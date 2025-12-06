@@ -353,6 +353,26 @@
             flavor = "hold-preferred";
             hold-while-undecided;
         };
+
+        ltleng: ltleng {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTLENG";
+            bindings = <&mo>, <&layer_en>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <215>;
+            flavor = "hold-preferred";
+        };
+
+        ltlrus: ltlrus {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTLRUS";
+            bindings = <&mo>, <&layer_ru>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <215>;
+            flavor = "hold-preferred";
+        };
     };
 
     keymap {
@@ -381,30 +401,30 @@
         sym-en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &ru RU_NUMERO    &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                           &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp COLON        &kp LS(ENTER)
-&kp LS(TAB)  &mk LSHFT SLASH  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                           &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
-&trans       &kp BACKSLASH    &kp HASH        &kp TILDE          &kp DOLLAR  &none                           &none   &kp PIPE       &kp UNDERSCORE    &kp SEMICOLON      &kp QUESTION     &kp DELETE
-                              &kp GRAVE       &layer_ru          &trans      &trans  &layer_ru    &layer_ru  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(ESC)  &ru RU_NUMERO    &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                          &none        &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp COLON        &kp LS(ENTER)
+&kp LS(TAB)  &mk LSHFT SLASH  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                          &none        &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
+&trans       &kp BACKSLASH    &kp HASH        &kp TILDE          &kp DOLLAR  &none                          &none        &kp PIPE       &kp UNDERSCORE    &kp SEMICOLON      &kp QUESTION     &kp DELETE
+                              &kp GRAVE       &layer_ru          &trans      &ltlrus 4 0  &trans    &trans  &ltlrus 6 0  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym-ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &kp RU_NUMERO      &en APOSTROPHE  &kp RU_DOUBLE_QUOTES  &en AT      &none                           &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp COLON           &kp LS(ENTER)
-&kp LS(TAB)  &mk_sh 5 RU_SLASH  &en PERCENT     &kp ASTERISK          &en CARET   &none                           &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
-&trans       &kp RU_BACKSLASH   &en HASH        &en TILDE             &en DOLLAR  &none                           &none   &en PIPE       &kp UNDERSCORE    &kp SEMICOLON      &kp RU_QUESTION     &kp DELETE
-                                &en GRAVE       &layer_en             &trans      &trans  &layer_en    &layer_en  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &kp RU_NUMERO      &en APOSTROPHE  &kp RU_DOUBLE_QUOTES  &en AT      &none                          &none        &en AMPERSAND  &kp LPAR          &kp RPAR           &kp COLON           &kp LS(ENTER)
+&kp LS(TAB)  &mk_sh 5 RU_SLASH  &en PERCENT     &kp ASTERISK          &en CARET   &none                          &none        &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
+&trans       &kp RU_BACKSLASH   &en HASH        &en TILDE             &en DOLLAR  &none                          &none        &en PIPE       &kp UNDERSCORE    &kp SEMICOLON      &kp RU_QUESTION     &kp DELETE
+                                &en GRAVE       &layer_en             &trans      &ltleng 4 0  &trans    &trans  &ltleng 6 0  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
         l-sym {
             display-name = "l_sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(Y)     &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
-&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(H)     &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(N)     &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &trans
-                &trans  &trans  &lshctrl_mo 12  &trans  &trans    &kp SPACE  &ltk 6 SPACE  &lshctrl_mo 12  &kp LS(LBKT)   &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(Y)  &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
+&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(H)  &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
+&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(N)  &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &trans
+                &trans  &trans  &lshctrl_mo 12  &trans  &trans    &kp SPACE  &trans     &lshctrl_mo 12  &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
@@ -421,10 +441,10 @@
         r-sym {
             display-name = "r_sym";
             bindings = <
-&trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)       &kp LS(T)                          &trans  &trans          &trans  &trans  &trans  &trans
-&trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)       &kp LS(G)                          &trans  &trans          &trans  &trans  &trans  &trans
-&trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)       &kp LS(B)                          &trans  &trans          &trans  &trans  &trans  &trans
-                   &kp LS(GRAVE)  &trans     &lshctrl_mo 12  &ltk 4 SPACE  &trans    &kp SPACE  &trans  &lshctrl_mo 12  &trans  &trans
+&trans  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)       &kp LS(T)                       &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)       &kp LS(G)                       &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)       &kp LS(B)                       &trans  &trans          &trans  &trans  &trans  &trans
+                   &kp LS(GRAVE)  &trans     &lshctrl_mo 12  &trans     &trans    &kp SPACE  &trans  &lshctrl_mo 12  &trans  &trans
             >;
         };
 
