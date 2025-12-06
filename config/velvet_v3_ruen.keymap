@@ -390,7 +390,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
         };
 
         mt3: mt3 {
@@ -400,7 +400,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
         };
     };
 
