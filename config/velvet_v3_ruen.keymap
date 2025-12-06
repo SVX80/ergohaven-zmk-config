@@ -280,7 +280,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick-tap-ms = <230>;
         };
 
         ltqt: ltqt {
@@ -412,6 +411,28 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL)>;
         };
+
+        mk: mk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MK";
+            bindings = <&kp>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <195>;
+            flavor = "balanced";
+        };
+
+        mken: mken {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKEN";
+            bindings = <&kp>, <&en>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <195>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -440,20 +461,20 @@
         sym-en {
             display-name = "_sym_en_";
             bindings = <
-&kp LS(ESC)  &ru RU_NUMERO  &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                        &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp SEMICOLON    &kp LS(ENTER)
-&kp LS(TAB)  &kp TILDE      &kp PERCENT     &kp ASTERISK       &kp CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
-&trans       &kp HASH       &kp BACKSLASH   &kp SLASH          &kp DOLLAR  &none                        &none   &kp PIPE       &kp UNDERSCORE    &kp COLON          &kp QUESTION     &kp DELETE
-                            &kp GRAVE       &layer_ru          &trans      &trans  &layer_ru    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(ESC)  &ru RU_NUMERO    &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                        &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp SEMICOLON    &kp LS(ENTER)
+&kp LS(TAB)  &mk LSHFT TILDE  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp EXCLAMATION  &none
+&trans       &kp HASH         &kp BACKSLASH   &kp SLASH          &kp DOLLAR  &none                        &none   &kp PIPE       &kp UNDERSCORE    &kp COLON          &kp QUESTION     &kp DELETE
+                              &kp GRAVE       &layer_ru          &trans      &trans  &layer_ru    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym-ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &kp RU_NUMERO  &en APOSTROPHE    &kp RU_DOUBLE_QUOTES  &en AT      &none                        &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp RU_SEMICOLON    &kp LS(ENTER)
-&kp LS(TAB)  &en TILDE      &en PERCENT       &kp ASTERISK          &en CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
-&trans       &en HASH       &kp RU_BACKSLASH  &kp RU_SLASH          &en DOLLAR  &none                        &none   &en PIPE       &kp UNDERSCORE    &kp RU_COLON       &kp RU_QUESTION     &kp DELETE
-                            &en GRAVE         &layer_en             &trans      &trans  &layer_en    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&kp LS(ESC)  &kp RU_NUMERO      &en APOSTROPHE    &kp RU_DOUBLE_QUOTES  &en AT      &none                        &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp RU_SEMICOLON    &kp LS(ENTER)
+&kp LS(TAB)  &mken LSHFT TILDE  &en PERCENT       &kp ASTERISK          &en CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
+&trans       &en HASH           &kp RU_BACKSLASH  &kp RU_SLASH          &en DOLLAR  &none                        &none   &en PIPE       &kp UNDERSCORE    &kp RU_COLON       &kp RU_QUESTION     &kp DELETE
+                                &en GRAVE         &layer_en             &trans      &trans  &layer_en    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
@@ -524,20 +545,20 @@
         l-fun {
             display-name = "l_fun";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &mo 11  &mt RSHFT SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans             &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &mo 11  &mtqt RSHFT SPACE  &trans  &trans  &trans
             >;
         };
 
         r-fun {
             display-name = "r_fun";
             bindings = <
-&none  &kp F4  &kp F5  &kp F6  &kp F7  &none                              &none   &kp F8  &kp F9   &kp F10  &kp F11  &none
-&none  &trans  &trans  &trans  &trans  &none                              &none   &trans  &trans   &trans   &trans   &none
-&none  &kp F1  &kp F2  &kp F3  &trans  &none                              &none   &trans  &kp F12  &kp F13  &kp F14  &none
-               &trans  &trans  &trans  &mt LSHFT SPACE  &mo 10    &trans  &trans  &trans  &trans   &trans
+&none  &kp F4  &kp F5  &kp F6  &kp F7  &none                                &none   &kp F8  &kp F9   &kp F10  &kp F11  &none
+&none  &trans  &trans  &trans  &trans  &none                                &none   &trans  &trans   &trans   &trans   &none
+&none  &kp F1  &kp F2  &kp F3  &trans  &none                                &none   &trans  &kp F12  &kp F13  &kp F14  &none
+               &trans  &trans  &trans  &mtqt LSHFT SPACE  &mo 10    &trans  &trans  &trans  &trans   &trans
             >;
         };
 
