@@ -418,9 +418,9 @@
             bindings = <&kp>, <&key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <215>;
             quick-tap-ms = <195>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         mken: mken {
@@ -429,9 +429,9 @@
             bindings = <&kp>, <&en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <215>;
             quick-tap-ms = <195>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
     };
 
