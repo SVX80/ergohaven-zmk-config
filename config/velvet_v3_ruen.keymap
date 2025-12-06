@@ -450,7 +450,7 @@
         sym-ru {
             display-name = "_sym_ru_";
             bindings = <
-&kp LS(ESC)  &kp RU_NUMERO  &en APOSTROPHE    &kp RU_DOUBLE_QUOTES  &en AT      &none                        &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &en RU_SEMICOLON    &kp LS(ENTER)
+&kp LS(ESC)  &kp RU_NUMERO  &en APOSTROPHE    &kp RU_DOUBLE_QUOTES  &en AT      &none                        &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp RU_SEMICOLON    &kp LS(ENTER)
 &kp LS(TAB)  &en TILDE      &en PERCENT       &kp ASTERISK          &en CARET   &none                        &none   &kp MINUS      &kp EQUAL         &kp PLUS           &kp RU_EXCLAMATION  &none
 &trans       &en HASH       &kp RU_BACKSLASH  &kp RU_SLASH          &en DOLLAR  &none                        &none   &en PIPE       &kp UNDERSCORE    &kp RU_COLON       &kp RU_QUESTION     &kp DELETE
                             &en GRAVE         &layer_en             &trans      &trans  &layer_en    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
