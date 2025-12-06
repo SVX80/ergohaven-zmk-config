@@ -373,7 +373,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick-tap-ms = <235>;
         };
 
         rctrl_lalt: rctrl_lalt {
@@ -495,10 +494,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ltqt 13 SPACE  &nav_off_mt 10 LSHFT    &mt_navoff 11 9  &ltqt 13 SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans             &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &lshft_mt 4 SPACE  &nav_off_mt 10 LSHFT    &mt_navoff 11 9  &lshft_mt 5 SPACE  &trans  &trans  &trans
             >;
         };
 
@@ -530,17 +529,6 @@
 &trans  &kp Z  &kp X      &kp C  &kp V        &kp B                      &kp N      &kp M        &kp COMMA  &kp DOT   &kp FSLH  &trans
                &kp GRAVE  &none  &lctrl_lalt  &kp LSHFT  &none    &none  &kp RSHFT  &rctrl_lalt  &kp LBKT   &kp RBKT
             >;
-        };
-
-        shift {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &mo 14  &trans    &trans  &mo 14  &trans  &trans  &trans
-            >;
-
-            label = "shift";
         };
 
         adv {
@@ -599,12 +587,7 @@
 
         adv {
             if-layers = <4 5>;
-            then-layer = <14>;
-        };
-
-        adv_nav {
-            if-layers = <13>;
-            then-layer = <14>;
+            then-layer = <13>;
         };
     };
 };
