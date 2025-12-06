@@ -290,6 +290,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <215>;
             flavor = "hold-preferred";
+            quick-tap-ms = <150>;
         };
 
         lmod_cmd15: lmod_cmd15 {
@@ -419,8 +420,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <215>;
-            quick-tap-ms = <195>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <0>;
         };
 
         mken: mken {
@@ -430,7 +432,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <215>;
-            quick-tap-ms = <195>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
     };
@@ -481,10 +483,10 @@
         l-sym {
             display-name = "l_sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans                          &kp LS(Y)      &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
-&trans  &trans  &trans  &trans  &trans          &trans                          &kp LS(H)      &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans          &trans                          &kp LS(N)      &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &trans
-                &trans  &trans  &lshctrl_mo 12  &trans  &kp LSHFT    &kp SPACE  &ltqt 5 SPACE  &lshctrl_mo 12  &kp LS(LBKT)   &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(Y)      &kp LS(U)       &kp LS(I)      &kp LS(O)     &kp LS(P)      &trans
+&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(H)      &kp LS(J)       &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
+&trans  &trans  &trans  &trans  &trans          &trans                       &kp LS(N)      &kp LS(M)       &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &trans
+                &trans  &trans  &lshctrl_mo 12  &trans  &trans    &kp SPACE  &ltqt 5 SPACE  &lshctrl_mo 12  &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
