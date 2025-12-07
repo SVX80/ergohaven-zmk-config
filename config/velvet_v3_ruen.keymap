@@ -282,15 +282,6 @@
             tapping-term-ms = <185>;
         };
 
-        mten: mten {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MTEN";
-            bindings = <&kp>, <&en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <215>;
-        };
-
         nav_off_mt: nav_off_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "NAV_OFF_MT";
@@ -298,16 +289,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <185>;
-        };
-
-        ltqte: ltqte {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTQTE";
-            bindings = <&mo>, <&key>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <230>;
         };
 
         lshft_mt: lshft_mt {
@@ -353,38 +334,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MK_SH";
             bindings = <&lshft_mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <275>;
-            quick-tap-ms = <270>;
-            flavor = "hold-preferred";
-            hold-while-undecided;
-        };
-
-        ltleng: ltleng {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTLENG";
-            bindings = <&mo>, <&layer_en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "hold-preferred";
-        };
-
-        ltlrus: ltlrus {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTLRUS";
-            bindings = <&mo>, <&layer_ru>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "hold-preferred";
-        };
-
-        mk_cmd15: mk_cmd15 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MK_CMD15";
-            bindings = <&kp>, <&cmd_f15>;
 
             #binding-cells = <2>;
             tapping-term-ms = <275>;
