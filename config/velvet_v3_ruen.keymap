@@ -285,7 +285,7 @@
         nav_off_mt: nav_off_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "NAV_OFF_MT";
-            bindings = <&nav_off_mo>, <&off>;
+            bindings = <&nav_off_mo>, <&on>;
 
             #binding-cells = <2>;
             tapping-term-ms = <185>;
@@ -419,10 +419,10 @@
         edit {
             display-name = "_edit_";
             bindings = <
-&kp ESC   &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                         &cmd F15 F15  &kp HOME      &kp BACKSPACE  &kp DELETE  &kp END        &kp ENTER
-&kp TAB   &kp LSHFT   &cmd F15 S    &cmd F15 D    &cmd F15 F    &cmd F15 G                    &cmd F15 F19  &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &cmd F15 F20
-&kp LGUI  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &cmd F15 Y                    &cmd F15 F21  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PG_UP   &kp LC(RIGHT)  &kp BACKSPACE
-                      &none         &none         &lctrl_mo 11  &trans      &trans    &trans  &trans        &rctrl_mo 11  &none          &none
+&kp ESC   &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                         &cmd F15 F15  &kp HOME      &kp BACKSPACE  &kp DELETE    &kp END        &kp ENTER
+&kp TAB   &kp LSHFT   &cmd F15 S    &cmd F15 D    &cmd F15 F    &cmd F15 G                    &cmd F15 F19  &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT      &cmd F15 F20
+&kp LGUI  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &cmd F15 Y                    &cmd F15 F21  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PG_UP     &kp LC(RIGHT)  &kp BACKSPACE
+                      &none         &none         &lctrl_mo 11  &trans      &trans    &trans  &trans        &rctrl_mo 11  &cmd F17 F13   &cmd F17 F14
             >;
         };
 
