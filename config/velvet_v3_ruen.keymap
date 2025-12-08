@@ -383,7 +383,6 @@
             #binding-cells = <1>;
             release-after-ms = <90>;
             quick-release;
-            lazy;
         };
 
         ltk_kbden: ltk_kbden {
@@ -438,7 +437,7 @@
         ssl: ssl {
             compatible = "zmk,behavior-sticky-key";
             label = "SSL";
-            bindings = <&none>;
+            bindings = <&mo>;
             #binding-cells = <1>;
             release-after-ms = <1000>;
             quick-release;
