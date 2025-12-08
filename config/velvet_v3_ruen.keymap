@@ -503,7 +503,7 @@
             display-name = "_edit_";
             bindings = <
 &kp ESC   &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                         &cmd F15 F15       &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &kp ENTER  &kp ENTER
-&kp TAB   &kp LSHFT   &cmd F15 S    &cmd F15 D    &cmd F15 F    &cmd F15 Y                    &kp DELETE         &kp LEFT       &kp DOWN       &kp UP         &kp HOME   &cmd F15 F20
+&kp TAB   &kp LSHFT   &cmd F15 S    &cmd F15 D    &cmd F15 F    &cmd F15 Y                    &kp DELETE         &kp LEFT       &kp DOWN       &kp RIGHT      &kp HOME   &cmd F15 F20
 &kp LGUI  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &cmd F15 Z                    &kp LC(BACKSPACE)  &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp END    &kp BACKSPACE
                       &none         &none         &lctrl_mo 11  &trans      &trans    &trans  &sk LSHFT          &rctrl_mo 11   &cmd F17 F13   &cmd F17 F14
             >;
