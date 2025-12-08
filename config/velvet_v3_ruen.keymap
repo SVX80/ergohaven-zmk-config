@@ -473,10 +473,10 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC   &kp Q  &kp W      &kp E         &kp R            &kp T                                          &kp Y               &kp U            &kp I      &kp O     &kp P      &kp ENTER
-&kp TAB   &kp A  &kp S      &kp D         &kp F            &kp G                                          &kp H               &kp J            &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI  &kp Z  &kp X      &kp C         &kp V            &kp B                                          &kp N               &kp M            &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSPACE
-                 &kp GRAVE  &kp CAPSLOCK  &lctrl_mt 11 11  &ltk_kbden 4 SPACE  &mton 9 8    &fn_mt 10 10  &ltk_kbden 6 SPACE  &rctrl_mt 11 11  &kp LBKT   &kp RBKT
+&kp ESC   &kp Q  &kp W      &kp E         &kp R         &kp T                                          &kp Y               &kp U            &kp I      &kp O     &kp P      &kp ENTER
+&kp TAB   &kp A  &kp S      &kp D         &kp F         &kp G                                          &kp H               &kp J            &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
+&kp LGUI  &kp Z  &kp X      &kp C         &kp V         &kp B                                          &kp N               &kp M            &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSPACE
+                 &kp GRAVE  &kp CAPSLOCK  &lctrl_mo 11  &ltk_kbden 4 SPACE  &mton 9 8    &fn_mt 10 10  &ltk_kbden 6 SPACE  &rctrl_mt 11 11  &kp LBKT   &kp RBKT
             >;
         };
 
@@ -486,7 +486,7 @@
 &kp ESC   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp ENTER
 &kp TAB   &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                             &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                              &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp BACKSPACE
-                                   &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &lctrl_mt 11 11     &ltk_kbdru 4 SPACE  &mton 9 8    &fn_mt 10 10  &ltk_kbdru 6 SPACE  &rctrl_mt 11 11            &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                   &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &lctrl_mo 11        &ltk_kbdru 4 SPACE  &mton 9 8    &fn_mt 10 10  &ltk_kbdru 6 SPACE  &rctrl_mt 11 11            &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -543,10 +543,10 @@
         edit {
             display-name = "_edit_";
             bindings = <
-&kp ESC   &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15     &none                         &cmd F15 F15       &kp LC(LEFT)     &kp UP         &kp LC(RIGHT)  &kp ENTER  &kp ENTER
-&kp TAB   &kp LSHFT   &cmd F15 S    &cmd F15 D    &cmd F15 F       &cmd F15 Y                    &kp DELETE         &kp LEFT         &kp DOWN       &kp RIGHT      &kp HOME   &cmd F15 F20
-&kp LGUI  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V       &cmd F15 Z                    &kp LC(BACKSPACE)  &kp BACKSPACE    &kp PAGE_DOWN  &kp PG_UP      &kp END    &kp BACKSPACE
-                      &none         &none         &lctrl_mt 11 11  &trans      &trans    &trans  &trans             &rctrl_mt 11 11  &cmd F17 F13   &cmd F17 F14
+&kp ESC   &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                         &cmd F15 F15       &kp LC(LEFT)     &kp UP         &kp LC(RIGHT)  &kp ENTER  &kp ENTER
+&kp TAB   &kp LSHFT   &cmd F15 S    &cmd F15 D    &cmd F15 F    &cmd F15 Y                    &kp DELETE         &kp LEFT         &kp DOWN       &kp RIGHT      &kp HOME   &cmd F15 F20
+&kp LGUI  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &cmd F15 Z                    &kp LC(BACKSPACE)  &kp BACKSPACE    &kp PAGE_DOWN  &kp PG_UP      &kp END    &kp BACKSPACE
+                      &none         &none         &lctrl_mo 11  &trans      &trans    &trans  &trans             &rctrl_mt 11 11  &cmd F17 F13   &cmd F17 F14
             >;
         };
 
