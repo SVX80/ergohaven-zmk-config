@@ -310,7 +310,7 @@
         fn_mt: fn_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "FN_MT";
-            bindings = <&mo>, <&ssl>;
+            bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
@@ -433,16 +433,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <235>;
         };
-
-        ssl: ssl {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SSL";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <1000>;
-            quick-release;
-            ignore-modifiers;
-        };
     };
 
     keymap {
@@ -541,20 +531,20 @@
         l-nav {
             display-name = "l_nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans              &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &fn_mt 10 10  &kp_sk RSHFT RSHFT  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans              &trans                              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans              &trans                              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans              &trans                              &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &fn_mt 10 10  &kp_sk RSHFT RSHFT  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &trans  &trans
             >;
         };
 
         r-fn-num {
             display-name = "r_fn_num";
             bindings = <
-&none  &kp ESC  &kp N7     &kp N8     &kp N9     &none                               &kp F15    &kp F1          &kp F2   &kp F3   &kp F4   &none
-&none  &kp N0   &kp N4     &kp N5     &kp N6     &none                               &kp F16    &kp F5          &kp F6   &kp F7   &kp F8   &none
-&none  &none    &kp N1     &kp N2     &kp N3     &none                               &kp F17    &kp F9          &kp F10  &kp F11  &kp F12  &none
-                &layer_en  &layer_ru  &kp LCTRL  &mtqt LSHFT SPACE  &trans    &none  &sk LSHFT  &l_sk LCTRL 10  &kp F13  &kp F14
+&none  &kp ESC  &kp N7     &kp N8     &kp N9     &none                               &kp F15         &kp F1          &kp F2   &kp F3   &kp F4   &none
+&none  &kp N0   &kp N4     &kp N5     &kp N6     &none                               &kp F16         &kp F5          &kp F6   &kp F7   &kp F8   &none
+&none  &none    &kp N1     &kp N2     &kp N3     &none                               &kp F17         &kp F9          &kp F10  &kp F11  &kp F12  &none
+                &layer_en  &layer_ru  &kp LCTRL  &mtqt LSHFT SPACE  &trans    &none  &l_sk LSHFT 10  &l_sk LCTRL 10  &kp F13  &kp F14
             >;
         };
 
