@@ -593,9 +593,9 @@
         adv {
             display-name = "_adv_";
             bindings = <
-&bootloader   &cmd F19 F9  &cmd F19 F10  &cmd F19 F11  &cmd F19 F12  &none                  &none  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &kp F24    &kp F23
+&bootloader   &cmd F19 F9  &cmd F19 F10  &cmd F19 F11  &cmd F19 F12  &none                  &none  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &kp F24    &kp F23
 &out OUT_BLE  &cmd F19 F5  &cmd F19 F6   &cmd F19 F7   &cmd F19 F8   &none                  &none  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &kp RSHFT  &out OUT_USB
-&bt BT_CLR    &cmd F19 F1  &cmd F19 F2   &cmd F19 F3   &cmd F19 F4   &none                  &none  &none         &none             &none         &none      &kp LC(LA(DELETE))
+&bt BT_CLR    &cmd F19 F1  &cmd F19 F2   &cmd F19 F3   &cmd F19 F4   &none                  &none  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none      &kp LC(LA(DELETE))
                            &bt BT_SEL 0  &bt BT_SEL 1  &none         &none  &none    &none  &none  &none         &bt BT_SEL 2      &bt BT_SEL 3
             >;
         };
