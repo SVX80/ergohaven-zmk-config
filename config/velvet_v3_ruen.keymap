@@ -506,7 +506,7 @@
             display-name = "_sym_en_";
             bindings = <
 &kp LS(ESC)  &ru RU_NUMERO    &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp AT      &none                     &none   &kp AMPERSAND  &kp LPAR          &kp RPAR           &kp COLON        &kp LS(ENTER)
-&kp LS(TAB)  &mk LSHFT SLASH  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                     &none   &kp EQUAL      &kp MINUS         &kp PLUS           &kp EXCLAMATION  &none
+&kp LS(TAB)  &mk LSHFT SLASH  &kp PERCENT     &kp ASTERISK       &kp CARET   &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
 &trans       &kp BACKSLASH    &kp HASH        &kp TILDE          &kp DOLLAR  &none                     &none   &kp PIPE       &kp UNDERSCORE    &kp SEMICOLON      &kp QUESTION     &kp DELETE
                               &kp GRAVE       &layer_ru          &trans      &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
@@ -516,7 +516,7 @@
             display-name = "_sym_ru_";
             bindings = <
 &kp LS(ESC)  &kp RU_NUMERO      &en APOSTROPHE  &kp RU_DOUBLE_QUOTES  &en AT      &none                     &none   &en AMPERSAND  &kp LPAR          &kp RPAR           &kp COLON           &kp LS(ENTER)
-&kp LS(TAB)  &mk_sh 5 RU_SLASH  &en PERCENT     &kp ASTERISK          &en CARET   &none                     &none   &kp EQUAL      &kp MINUS         &kp PLUS           &kp RU_EXCLAMATION  &none
+&kp LS(TAB)  &mk_sh 5 RU_SLASH  &en PERCENT     &kp ASTERISK          &en CARET   &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
 &trans       &kp RU_BACKSLASH   &en HASH        &en TILDE             &en DOLLAR  &none                     &none   &en PIPE       &kp UNDERSCORE    &kp SEMICOLON      &kp RU_QUESTION     &kp DELETE
                                 &en GRAVE       &layer_en             &trans      &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
