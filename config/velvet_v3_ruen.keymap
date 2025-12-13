@@ -36,15 +36,15 @@
             layers = <1>;
         };
 
-        cmbnumen {
-            bindings = <&mo 7>;
+        cmbsymen {
+            bindings = <&kp LSHFT>;
             key-positions = <39 14>;
             slow-release;
             layers = <0>;
         };
 
-        cmbnumru {
-            bindings = <&mo 8>;
+        cmbsymru {
+            bindings = <&lshft_mo 5>;
             key-positions = <39 13>;
             slow-release;
             layers = <0>;
