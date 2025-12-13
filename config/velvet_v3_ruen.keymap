@@ -555,10 +555,10 @@
         edit {
             display-name = "edit";
             bindings = <
-&none  &none      &sk LSHFT   &sk LCTRL   &sk LALT    &none                  &cmd F15 V  &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none         &none
-&none  &kp LC(Y)  &kp LC(S)   &cmd F15 D  &kp LC(F)   &none                  &cmd F15 C  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
-&none  &kp LC(Z)  &cmd F15 X  &cmd F15 C  &cmd F15 V  &none                  &cmd F15 X  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
-                  &none       &none       &none       &none  &none    &none  &none       &none             &none          &none
+&none  &none      &sk LSHFT   &sk LCTRL   &sk LALT    &none                   &cmd F15 V  &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none         &none
+&none  &kp LC(Y)  &kp LC(S)   &cmd F15 D  &kp LC(F)   &none                   &cmd F15 C  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
+&none  &kp LC(Z)  &cmd F15 X  &cmd F15 C  &cmd F15 V  &none                   &cmd F15 X  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
+                  &none       &none       &none       &none  &none    &trans  &none       &none             &none          &none
             >;
         };
 
