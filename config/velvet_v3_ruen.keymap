@@ -5,7 +5,51 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        cmbnaven {
+            bindings = <&mo 9>;
+            key-positions = <39 15>;
+            slow-release;
+            layers = <0>;
+        };
+
+        cmbnavru {
+            bindings = <&mo 9>;
+            key-positions = <39 15>;
+            slow-release;
+            layers = <1>;
+        };
+
+        cmbfnen {
+            bindings = <&mo 11>;
+            key-positions = <39 16>;
+            slow-release;
+            layers = <0>;
+        };
+
+        cmbfnru {
+            bindings = <&mo 9>;
+            key-positions = <39 16>;
+            slow-release;
+            layers = <1>;
+        };
+
+        cmbnumen {
+            bindings = <&mo 7>;
+            key-positions = <39 14>;
+            slow-release;
+            layers = <0>;
+        };
+
+        cmbnumru {
+            bindings = <&mo 8>;
+            key-positions = <39 13>;
+            slow-release;
+            layers = <0>;
+        };
+    };
 
     macros {
         layer_en: layer_en {
