@@ -485,20 +485,20 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&none          &none          &kp PERCENT  &kp CARET  &kp AT      &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none            &none
-&ru RU_NUMERO  &kp BACKSLASH  &mo 9        &mo 8      &mo 10      &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
-&none          &kp HASH       &kp LT       &kp GT     &kp DOLLAR  &none                     &none   &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp QUESTION     &none
-                              &kp GRAVE    &none      &trans      &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&none  &none          &kp PERCENT  &kp CARET      &kp AT      &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none            &none
+&none  &kp BACKSLASH  &mo 9        &mo 8          &mo 10      &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
+&none  &kp HASH       &kp LT       &kp GT         &kp DOLLAR  &none                     &none   &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp QUESTION     &none
+                      &kp GRAVE    &ru RU_NUMERO  &trans      &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&none          &none             &en PERCENT  &en CARET  &en AT      &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none               &none
-&kp RU_NUMERO  &kp RU_BACKSLASH  &mo 9        &mo 8      &mo 10      &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
-&none          &en HASH          &en LT       &en GT     &en DOLLAR  &none                     &none   &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_QUESTION     &none
-                                 &en GRAVE    &none      &trans      &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&none  &none             &en PERCENT  &en CARET      &en AT      &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none               &none
+&none  &kp RU_BACKSLASH  &mo 9        &mo 8          &mo 10      &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
+&none  &en HASH          &en LT       &en GT         &en DOLLAR  &none                     &none   &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_QUESTION     &none
+                         &en GRAVE    &kp RU_NUMERO  &trans      &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
