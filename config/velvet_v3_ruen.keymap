@@ -513,7 +513,7 @@
 &none  &cmd F15 Y  &cmd F15 F13  &cmd F15 F14  &cmd F15 F15  &none                           &cmd F15 V  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F15 F13  &none
 &none  &none       &cmd F15 S    &cmd F15 D    &cmd F15 F    &none                           &cmd F15 C  &kp LEFT       &kp DOWN       &kp RIGHT      &kp HOME      &kp END
 &none  &cmd F15 Z  &cmd F15 X    &cmd F15 C    &cmd F15 V    &none                           &cmd F15 V  &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
-                   &none         &none         &none         &kp LSHFT  &none    &cmd F15 D  &cmd F15 F  &kp ENTER      &cmd F17 F13   &cmd F17 F14
+                   &none         &none         &none         &kp LSHFT  &none    &cmd F15 F  &kp SPACE   &kp ENTER      &cmd F17 F13   &cmd F17 F14
             >;
         };
 
@@ -521,7 +521,7 @@
             display-name = "edit";
             bindings = <
 &none  &none      &sk LSHFT   &sk LCTRL   &sk LALT    &none                  &none      &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none         &none
-&none  &kp LC(Y)  &kp LC(S)   &none       &kp LC(F)   &none                  &kp LC(Y)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
+&none  &kp LC(Y)  &kp LC(S)   &cmd F15 D  &kp LC(F)   &none                  &kp LC(Y)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
 &none  &kp LC(Z)  &cmd F15 X  &cmd F15 C  &cmd F15 V  &none                  &kp LC(Z)  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
                   &none       &none       &none       &none  &none    &none  &none      &none             &none          &none
             >;
