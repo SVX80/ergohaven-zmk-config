@@ -38,7 +38,7 @@
 
         cmbediten {
             bindings = <&lshft_mo 9>;
-            key-positions = <39 14>;
+            key-positions = <39 13>;
             slow-release;
             layers = <0>;
         };
