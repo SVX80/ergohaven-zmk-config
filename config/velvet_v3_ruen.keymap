@@ -530,29 +530,29 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp ESC  &none       &none       &cmd F15 F13        &none       &none                      &cmd F17 F13  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
-&kp TAB  &cmd F15 Y  &kp LC(S)   &kp_sk LSHFT LSHFT  &kp LC(F)   &none                      &cmd F15 F    &kp LEFT       &kp DOWN       &kp RIGHT      &kp HOME      &kp END
-&none    &cmd F15 Z  &cmd F15 X  &cmd F15 C          &cmd F15 V  &none                      &cmd F15 D    &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
-                     &none       &none               &none       &none  &none    &kp ENTER  &kp SPACE     &none          &cmd F17 F13   &cmd F17 F14
+&kp ESC  &none       &none       &cmd F15 F13        &none       &none                      &cmd F15 F  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
+&kp TAB  &cmd F15 Y  &kp LC(S)   &kp_sk LSHFT LSHFT  &kp LC(F)   &none                      &kp HOME    &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
+&none    &cmd F15 Z  &cmd F15 X  &cmd F15 C          &cmd F15 V  &none                      &cmd F15 D  &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
+                     &none       &none               &none       &none  &none    &kp ENTER  &kp SPACE   &none          &cmd F17 F13   &cmd F17 F14
             >;
         };
 
         edit {
             display-name = "edit";
             bindings = <
-&none  &none       &none             &none      &none         &none                  &none      &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none         &none
-&none  &cmd F15 Y  &kp LEFT_CONTROL  &kp LSHFT  &kp LEFT_ALT  &none                  &lay_ru    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
-&none  &cmd F15 Z  &none             &none      &cmd F15 V    &none                  &none      &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
-                   &none             &none      &none         &none  &none    &none  &kp SPACE  &none             &none          &none
+&none  &none       &none             &none      &none         &none                  &none         &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
+&none  &cmd F15 Y  &kp LEFT_CONTROL  &kp LSHFT  &kp LEFT_ALT  &none                  &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru     &kp LS(END)
+&none  &cmd F15 Z  &none             &none      &cmd F15 V    &none                  &none         &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
+                   &none             &none      &none         &none  &none    &none  &kp SPACE     &none             &none          &none
             >;
         };
 
         edit-ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &lay_en  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans   &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &lay_en  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "edit-ru";
