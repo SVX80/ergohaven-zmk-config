@@ -441,10 +441,10 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC   &kp Q  &kp W      &kp E        &kp R             &kp T                                  &kp Y         &kp U              &kp I      &kp O     &kp P      &kp BACKSPACE
-&kp TAB   &kp A  &kp S      &kp D        &kp F             &kp G                                  &kp H         &kp J              &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI  &kp Z  &kp X      &kp C        &kp V             &kp B                                  &kp N         &kp M              &kp COMMA  &kp DOT   &kp SLASH  &lt_en 11 0
-                 &kp GRAVE  &ltk 6 CAPS  &kp LEFT_CONTROL  &ltk 4 SPACE  &lt_ru 9 0    &kp ENTER  &ltk 5 SPACE  &kp RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&kp ESC   &kp Q  &kp W      &kp E        &kp R             &kp T                                  &kp Y         &kp U   &kp I      &kp O     &kp P      &kp BACKSPACE
+&kp TAB   &kp A  &kp S      &kp D        &kp F             &kp G                                  &kp H         &kp J   &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
+&kp LGUI  &kp Z  &kp X      &kp C        &kp V             &kp B                                  &kp N         &kp M   &kp COMMA  &kp DOT   &kp SLASH  &lt_en 11 0
+                 &kp GRAVE  &ltk 6 CAPS  &kp LEFT_CONTROL  &ltk 4 SPACE  &lt_ru 9 0    &kp ENTER  &ltk 5 SPACE  &mo 11  &kp LBKT   &kp RBKT
             >;
         };
 
@@ -454,7 +454,7 @@
 &kp ESC   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BACKSPACE
 &kp TAB   &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                           &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                            &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &lt_en 11 0
-                                   &kp RU_CYRILLIC_IO    &ltk 6 CAPS         &kp LEFT_CONTROL    &ltk 4 SPACE        &lt_en 9 0    &kp ENTER  &ltk 5 SPACE        &kp RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                   &kp RU_CYRILLIC_IO    &ltk 6 CAPS         &kp LEFT_CONTROL    &ltk 4 SPACE        &lt_en 9 0    &kp ENTER  &ltk 5 SPACE        &mo 11                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -484,7 +484,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(Y)      &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)      &kp DELETE
 &trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(H)      &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
 &trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(N)      &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &none
-                &trans  &trans  &trans  &trans  &trans    &kp LS(ENTER)  &ltk 11 SPACE  &none      &kp LS(LBKT)   &kp LS(RBKT)
+                &trans  &trans  &trans  &trans  &trans    &kp LS(ENTER)  &ltk 12 SPACE  &none      &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
@@ -531,10 +531,10 @@
         edit {
             display-name = "edit";
             bindings = <
-&none  &none       &none             &none      &none         &none                  &none    &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none         &none
-&none  &cmd F15 Y  &kp LEFT_CONTROL  &kp LSHFT  &kp LEFT_ALT  &none                  &lay_ru  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
-&none  &cmd F15 Z  &none             &none      &cmd F15 V    &none                  &none    &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
-                   &none             &none      &none         &none  &none    &none  &mo 12   &none             &none          &none
+&none  &none       &none             &none      &none         &none                  &none      &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none         &none
+&none  &cmd F15 Y  &kp LEFT_CONTROL  &kp LSHFT  &kp LEFT_ALT  &none                  &lay_ru    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(HOME)  &kp LS(END)
+&none  &cmd F15 Z  &none             &none      &cmd F15 V    &none                  &none      &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
+                   &none             &none      &none         &none  &none    &none  &kp SPACE  &none             &none          &none
             >;
         };
 
@@ -552,20 +552,20 @@
         fn {
             display-name = "fn";
             bindings = <
-&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                        &none  &none         &none      &none             &none  &none
-&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                       &none  &sk LEFT_ALT  &sk LSHFT  &sk LEFT_CONTROL  &none  &none
-&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                       &none  &none         &none      &none             &none  &none
-                &kp F16  &kp F17  &none    &ltk 4 SPACE  &none    &none  &none  &none         &none      &none
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &none  &none         &none      &none             &none  &none
+&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &none  &sk LEFT_ALT  &sk LSHFT  &sk LEFT_CONTROL  &none  &none
+&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                    &none  &none         &none      &none             &none  &none
+                &kp F16  &kp F17  &none    &kp SPACE  &none    &none  &none  &none         &none      &none
             >;
         };
 
         utils {
             display-name = "utils";
             bindings = <
-&bootloader   &cmd F19 F9  &cmd F19 F10  &cmd F19 F11  &cmd F19 F12  &none                         &none         &none         &none             &none         &kp F24  &kp F23
-&out OUT_BLE  &cmd F19 F5  &cmd F19 F6   &cmd F19 F7   &cmd F19 F8   &none                         &none         &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none    &out OUT_USB
-&bt BT_CLR    &cmd F19 F1  &cmd F19 F2   &cmd F19 F3   &cmd F19 F4   &none                         &none         &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none    &kp LC(LA(DELETE))
-                           &bt BT_SEL 0  &bt BT_SEL 1  &none         &ltk 4 SPACE  &none    &none  &ltk 5 SPACE  &none         &bt BT_SEL 2      &bt BT_SEL 3
+&bootloader   &cmd F19 F1   &cmd F19 F2   &cmd F19 F3   &cmd F19 F4   &cmd F19 F5                   &none         &none         &none             &none         &kp F24  &kp F23
+&out OUT_BLE  &cmd F19 F6   &cmd F19 F7   &cmd F19 F8   &cmd F19 F9   &cmd F19 F10                  &none         &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none    &out OUT_USB
+&bt BT_CLR    &cmd F19 F11  &cmd F19 F12  &cmd F19 F13  &cmd F19 F14  &cmd F19 F15                  &none         &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none    &kp LC(LA(DELETE))
+                            &bt BT_SEL 0  &bt BT_SEL 1  &none         &ltk 4 SPACE  &none    &none  &ltk 5 SPACE  &none         &bt BT_SEL 2      &bt BT_SEL 3
             >;
         };
     };
