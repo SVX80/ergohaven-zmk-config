@@ -73,6 +73,7 @@
 
             label = "CMD";
             tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         cmd_f15: cmd_f15 {
@@ -90,6 +91,7 @@
 
             label = "CMD_F15";
             tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         nav_off_mo: nav_off_mo {
@@ -299,6 +301,24 @@
 
             label = "ON_OFF";
         };
+
+        cmd_2nav: cmd_nav {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&on 8 &off 9 &kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CMD_NAV";
+            tap-ms = <30>;
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -503,40 +523,40 @@
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&none  &none          &kp LT         &kp GT              &kp CARET   &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none            &none
-&none  &kp PERCENT    &kp LC(S)      &kp_sk LSHFT LSHFT  &kp TILDE   &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
-&none  &kp BACKSLASH  &kp AT         &kp HASH            &kp DOLLAR  &none                     &none   &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp QUESTION     &none
-                      &ru RU_NUMERO  &none               &trans      &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&none  &none               &kp LT         &kp GT     &kp CARET    &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none            &none
+&none  &kp_sk LSHFT LSHFT  &kp LC(S)      &kp TILDE  &kp PERCENT  &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
+&none  &kp BACKSLASH       &kp AT         &kp HASH   &kp DOLLAR   &none                     &none   &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp QUESTION     &none
+                           &ru RU_NUMERO  &none      &trans       &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&none  &none             &en LT         &en GT              &en CARET   &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none               &none
-&none  &en PERCENT       &kp LC(S)      &kp_sk LSHFT LSHFT  &en TILDE   &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
-&none  &kp RU_BACKSLASH  &en AT         &en HASH            &en DOLLAR  &none                     &none   &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_QUESTION     &none
-                         &kp RU_NUMERO  &none               &trans      &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&none  &none               &en LT         &en GT     &en CARET    &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none               &none
+&none  &kp_sk LSHFT LSHFT  &kp LC(S)      &en TILDE  &en PERCENT  &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
+&none  &kp RU_BACKSLASH    &en AT         &en HASH   &en DOLLAR   &none                     &none   &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_QUESTION     &none
+                           &kp RU_NUMERO  &none      &trans       &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
         l-sym {
             display-name = "l_sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(Y)      &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)      &kp DELETE
-&trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(H)      &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
-&trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(N)      &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &none
-                &trans  &trans  &trans  &trans  &trans    &kp LS(ENTER)  &ltk 12 SPACE  &none      &kp LS(LBKT)   &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)     &kp LS(P)      &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)     &kp LS(SEMI)   &kp LS(APOS)
+&trans  &trans  &trans  &trans  &trans  &trans                           &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &none
+                &trans  &trans  &trans  &trans  &trans    &kp LS(ENTER)  &trans     &trans     &kp LS(LBKT)   &kp LS(RBKT)
             >;
         };
 
         r-sym {
             display-name = "r_sym";
             bindings = <
-&kp LS(ESC)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LS(TAB)  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                      &trans  &trans  &trans  &trans  &trans  &trans
-&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)                      &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LS(GRAVE)  &none      &none      &ltk 8 SPACE  &none    &trans  &trans  &trans  &trans  &trans
+&kp LS(ESC)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LS(TAB)  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                    &trans  &trans  &trans  &trans  &trans  &trans
+&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)                    &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp LS(GRAVE)  &none      &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -563,20 +583,20 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp ESC  &none       &none       &cmd F15 F13  &none       &none                      &cmd F15 F  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
-&kp TAB  &cmd F15 Y  &kp LC(S)   &on_off 9 8   &kp LC(F)   &none                      &kp HOME    &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
-&none    &cmd F15 Z  &cmd F15 X  &cmd F15 C    &cmd F15 V  &none                      &cmd F15 D  &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
-                     &none       &none         &none       &none  &none    &kp ENTER  &kp SPACE   &none          &cmd F17 F13   &cmd F17 F14
+&kp ESC  &none      &cmd F15 Z  &cmd F15 Y   &none       &none                      &cmd F15 F13  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
+&kp TAB  &sk LSHFT  &cmd F15 S  &on_off 9 8  &cmd F15 F  &none                      &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
+&none    &none      &cmd F15 X  &cmd F15 C   &cmd F15 V  &none                      &cmd F15 D    &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
+                    &none       &none        &none       &none  &none    &kp ENTER  &kp SPACE     &none          &cmd F17 F13   &cmd F17 F14
             >;
         };
 
         edit {
             display-name = "edit";
             bindings = <
-&none  &none       &none  &none        &none       &none                  &none         &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
-&none  &cmd F15 Y  &none  &on_off 8 9  &none       &none                  &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru     &kp LS(END)
-&none  &cmd F15 Z  &none  &none        &cmd F15 V  &none                  &none         &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
-                   &none  &none        &none       &none  &none    &none  &kp SPACE     &none             &none          &none
+&kp ESC  &none      &cmd_2nav F15 Z  &cmd_2nav F15 Y  &none            &none                  &cmd F15 F13     &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
+&kp TAB  &sk LSHFT  &cmd_2nav F15 S  &on_off 8 9      &cmd_2nav F15 F  &none                  &kp LS(HOME)     &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru     &kp LS(END)
+&none    &none      &cmd_2nav F15 X  &cmd_2nav F15 C  &cmd_2nav F15 V  &none                  &cmd_2nav F15 D  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
+                    &none            &none            &none            &none  &none    &none  &kp SPACE        &none             &none          &none
             >;
         };
 
