@@ -277,17 +277,17 @@
             wait-ms = <0>;
         };
 
-        nv_edt_mo: nv_edt_mo {
+        lnv_mo: l_nv_edt_mo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER &off 6>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_press>,
-                <&off 8 &off 9>;
+                <&off 4 &off 8 &off 9>;
 
-            label = "NV_EDT_MO";
+            label = "L_NV_EDT_MO";
         };
 
         on_off: on_off {
@@ -509,6 +509,16 @@
             #binding-cells = <1>;
             toggle-mode = "off";
         };
+
+        lnv_tk: lnv_tk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LNV_TK";
+            bindings = <&lnv_mo>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+        };
     };
 
     keymap {
@@ -517,40 +527,40 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC   &kp Q  &kp W      &kp E         &kp R                  &kp T                             &kp Y         &kp U              &kp I      &kp O     &kp P      &kp BACKSPACE
-&kp TAB   &kp A  &kp S      &kp D         &kp F                  &kp G                             &kp H         &kp J              &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI  &kp Z  &kp X      &kp C         &kp V                  &kp B                             &kp N         &kp M              &kp COMMA  &kp DOT   &kp SLASH  &sk LEFT_ALT
-                 &kp GRAVE  &kp CAPSLOCK  &l_sk LEFT_CONTROL 11  &ltk 4 SPACE  &sl 6    &kp ENTER  &ltk 5 SPACE  &sk RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&kp ESC   &kp Q  &kp W      &kp E         &kp R             &kp T                                &kp Y         &kp U              &kp I      &kp O     &kp P      &kp BACKSPACE
+&kp TAB   &kp A  &kp S      &kp D         &kp F             &kp G                                &kp H         &kp J              &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
+&kp LGUI  &kp Z  &kp X      &kp C         &kp V             &kp B                                &kp N         &kp M              &kp COMMA  &kp DOT   &kp SLASH  &sk LEFT_ALT
+                 &kp GRAVE  &kp CAPSLOCK  &sk LEFT_CONTROL  &lnv_tk 4 SPACE  &sl 6    &kp ENTER  &ltk 5 SPACE  &sk RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
         };
 
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA     &kp RU_CYRILLIC_IE                      &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BACKSPACE
-&kp TAB   &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A      &kp RU_CYRILLIC_PE                      &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM     &kp RU_CYRILLIC_I                       &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &sk LEFT_ALT
-                                   &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &l_sk LEFT_CONTROL 11  &ltk 4 SPACE        &sl 6    &kp ENTER  &ltk 5 SPACE        &sk RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+&kp ESC   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                      &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BACKSPACE
+&kp TAB   &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                      &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LGUI  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                       &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &sk LEFT_ALT
+                                   &kp RU_CYRILLIC_IO    &kp CAPSLOCK        &sk LEFT_CONTROL    &lnv_tk 4 SPACE     &sl 6    &kp ENTER  &ltk 5 SPACE        &sk RIGHT_CONTROL          &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
         sym_en {
             display-name = "_sym_en_";
             bindings = <
-&none  &none               &kp LT         &kp GT     &kp CARET    &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none            &none
-&none  &kp_sk LSHFT LSHFT  &kp LC(S)      &kp TILDE  &kp PERCENT  &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
-&none  &kp BACKSLASH       &kp AT         &kp HASH   &kp DOLLAR   &none                     &none   &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp QUESTION     &none
-                           &ru RU_NUMERO  &layer_ru  &trans       &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&none  &ru RU_NUMERO       &kp AT     &on 9     &kp CARET    &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none            &none
+&none  &kp_sk LSHFT LSHFT  &kp LC(S)  &on 8     &kp PERCENT  &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp EXCLAMATION  &none
+&none  &kp BACKSLASH       &kp LT     &kp GT    &kp DOLLAR   &none                     &none   &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp QUESTION     &none
+                           &kp TILDE  &kp HASH  &trans       &trans  &trans    &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_ru {
             display-name = "_sym_ru_";
             bindings = <
-&none  &none               &en LT         &en GT     &en CARET    &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none               &none
-&none  &kp_sk LSHFT LSHFT  &kp LC(S)      &en TILDE  &en PERCENT  &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
-&none  &kp RU_BACKSLASH    &en AT         &en HASH   &en DOLLAR   &none                     &none   &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_QUESTION     &none
-                           &kp RU_NUMERO  &layer_en  &trans       &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&none  &kp RU_NUMERO       &en AT     &on 9     &en CARET    &none                     &none   &kp ASTERISK   &kp LPAR          &kp RPAR           &none               &none
+&none  &kp_sk LSHFT LSHFT  &kp LC(S)  &on 8     &en PERCENT  &none                     &none   &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_EXCLAMATION  &none
+&none  &kp RU_BACKSLASH    &en LT     &en GT    &en DOLLAR   &none                     &none   &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_QUESTION     &none
+                           &en TILDE  &en HASH  &trans       &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
@@ -570,27 +580,27 @@
 &kp LS(ESC)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LS(TAB)  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                    &trans  &trans  &trans  &trans  &trans  &trans
 &none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)                    &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LS(GRAVE)  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp LS(GRAVE)  &none      &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         num-fn {
             display-name = "num-fn";
             bindings = <
-&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                        &kp GRAVE          &kp N7  &kp N8          &kp N9           &kp COLON      &none
-&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                       &kp DOUBLE_QUOTES  &kp N4  &kp N5          &kp N6           &kp SEMICOLON  &kp APOSTROPHE
-&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                       &kp N0             &kp N1  &kp N2          &kp N3           &kp SLASH      &none
-                &none    &none    &none    &nv_edt_mo 8  &none    &none  &kp SPACE          &none   &kp LEFT_BRACE  &kp RIGHT_BRACE
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                   &kp GRAVE          &kp N7  &kp N8          &kp N9           &kp COLON      &none
+&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                  &kp DOUBLE_QUOTES  &kp N4  &kp N5          &kp N6           &kp SEMICOLON  &kp APOSTROPHE
+&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                  &kp N0             &kp N1  &kp N2          &kp N3           &kp SLASH      &none
+                &none    &none    &none    &lay_ru  &none    &none  &kp SPACE          &none   &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
         };
 
         num-fn-ru {
             display-name = "num-fn-ru";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &en GRAVE             &trans  &trans          &trans           &kp RU_COLON      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp RU_DOUBLE_QUOTES  &trans  &trans          &trans           &kp RU_SEMICOLON  &en APOSTROPHE
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans                &trans  &trans          &trans           &kp RU_SLASH      &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans  &en LEFT_BRACE  &en RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans                     &en GRAVE             &trans  &trans          &trans           &kp RU_COLON      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &kp RU_DOUBLE_QUOTES  &trans  &trans          &trans           &kp RU_SEMICOLON  &en APOSTROPHE
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans                &trans  &trans          &trans           &kp RU_SLASH      &trans
+                &trans  &trans  &trans  &lay_en  &trans    &trans  &trans                &trans  &en LEFT_BRACE  &en RIGHT_BRACE
             >;
         };
 
@@ -598,7 +608,7 @@
             display-name = "nav";
             bindings = <
 &kp ESC  &none      &cmd F15 Z  &on_off 9 8       &cmd F15 Y  &none                   &cmd F15 F13  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
-&kp TAB  &sk LSHFT  &cmd F15 S  &sk LEFT_CONTROL  &cmd F15 F  &none                   &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
+&kp TAB  &kp LSHFT  &cmd F15 S  &kp LEFT_CONTROL  &cmd F15 F  &none                   &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
 &none    &none      &cmd F15 X  &cmd F15 C        &cmd F15 V  &none                   &cmd F15 D    &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
                     &none       &none             &none       &none  &none    &trans  &trans        &trans         &cmd F17 F13   &cmd F17 F14
             >;
@@ -607,10 +617,10 @@
         edit {
             display-name = "edit";
             bindings = <
-&kp ESC  &none      &cmd_2nav F15 Z  &on_off 8 9       &cmd_2nav F15 Y  &none                   &cmd F15 F13     &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
-&kp TAB  &sk LSHFT  &cmd_2nav F15 S  &sk LEFT_CONTROL  &cmd_2nav F15 F  &none                   &kp LS(HOME)     &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru     &kp LS(END)
-&none    &none      &cmd_2nav F15 X  &cmd_2nav F15 C   &cmd_2nav F15 V  &none                   &cmd_2nav F15 D  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
-                    &none            &none             &none            &none  &none    &trans  &trans           &trans            &none          &none
+&kp ESC  &none      &cmd_2nav F15 Z  &none            &cmd_2nav F15 Y  &none                   &cmd F15 F13     &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
+&kp TAB  &kp LSHFT  &cmd_2nav F15 S  &on_off 8 9      &cmd_2nav F15 F  &none                   &kp LS(HOME)     &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru     &kp LS(END)
+&none    &none      &cmd_2nav F15 X  &cmd_2nav F15 C  &cmd_2nav F15 V  &none                   &cmd_2nav F15 D  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
+                    &none            &none            &none            &none  &none    &trans  &trans           &trans            &none          &none
             >;
         };
 
@@ -623,17 +633,6 @@
             >;
 
             label = "edit-ru";
-        };
-
-        lctrl {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &edt_mo LEFT_CONTROL 9  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "lctrl";
         };
 
         utils {
@@ -682,7 +681,7 @@
 
         utils {
             if-layers = <4 5>;
-            then-layer = <12>;
+            then-layer = <11>;
         };
     };
 };
