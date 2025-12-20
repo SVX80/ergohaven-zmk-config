@@ -570,7 +570,7 @@
 &kp LS(ESC)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LS(TAB)  &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                    &trans  &trans  &trans  &trans  &trans  &trans
 &none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)                    &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LS(GRAVE)  &none      &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp LS(GRAVE)  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
