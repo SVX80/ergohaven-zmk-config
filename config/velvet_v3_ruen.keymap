@@ -334,6 +334,20 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        kp_2nav: kp_2nav {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&on 8 &off 9>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KP_2NAV";
+            tap-ms = <30>;
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -627,20 +641,20 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp ESC  &none               &cmd F15 Z  &on_off 9 8                       &cmd F15 Y  &none                   &cmd F15 F13  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
-&kp TAB  &kp_sk LSHFT LSHFT  &cmd F15 S  &kp_sk LEFT_CONTROL LEFT_CONTROL  &cmd F15 F  &none                   &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
-&none    &none               &cmd F15 X  &cmd F15 C                        &cmd F15 V  &none                   &cmd F15 D    &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
-                             &none       &none                             &none       &none  &none    &trans  &trans        &trans         &cmd F17 F13   &cmd F17 F14
+&kp ESC  &none                             &cmd F15 Z  &on_off 9 8  &cmd F15 Y  &none                   &cmd F15 F13  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &cmd F17 F14  &none
+&kp TAB  &kp_sk LSHFT LSHFT                &cmd F15 S  &none        &cmd F15 F  &none                   &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &cmd F17 F13  &kp END
+&none    &kp_sk LEFT_CONTROL LEFT_CONTROL  &cmd F15 X  &cmd F15 C   &cmd F15 V  &none                   &cmd F15 D    &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE    &none
+                                           &none       &none        &none       &none  &none    &trans  &trans        &trans         &cmd F17 F13   &cmd F17 F14
             >;
         };
 
         edit {
             display-name = "edit";
             bindings = <
-&kp ESC  &none               &cmd_2nav F15 Z  &none            &cmd_2nav F15 Y  &none                   &cmd F15 F13     &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
-&kp TAB  &kp_sk LSHFT LSHFT  &cmd_2nav F15 S  &on_off 8 9      &cmd_2nav F15 F  &none                   &kp LS(HOME)     &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru     &kp LS(END)
-&none    &none               &cmd_2nav F15 X  &cmd_2nav F15 C  &cmd_2nav F15 V  &none                   &cmd_2nav F15 D  &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
-                             &none            &none            &none            &none  &none    &trans  &trans           &trans            &none          &none
+&kp ESC  &none               &cmd_2nav F15 Z  &none            &cmd_2nav F15 Y  &none                   &cmd F15 F13     &kp LC(LS(LEFT))    &kp LS(UP)     &kp LC(LS(RIGHT))  &none            &none
+&kp TAB  &kp_sk LSHFT LSHFT  &cmd_2nav F15 S  &on_off 8 9      &cmd_2nav F15 F  &none                   &kp LS(HOME)     &kp LS(LEFT)        &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru          &kp LS(END)
+&none    &none               &cmd_2nav F15 X  &cmd_2nav F15 C  &cmd_2nav F15 V  &none                   &cmd_2nav F15 D  &kp_2nav BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &kp_2nav DELETE  &none
+                             &none            &none            &none            &none  &none    &trans  &trans           &trans              &none          &none
             >;
         };
 
