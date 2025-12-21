@@ -654,16 +654,16 @@
 &kp ESC  &none                             &cmd_2nav F15 Z  &none            &cmd_2nav F15 Y  &none                      &cmd F15 F13     &kp LC(LS(LEFT))    &kp LS(UP)     &kp LC(LS(RIGHT))  &none            &none
 &kp TAB  &kp_sk LSHFT LSHFT                &cmd_2nav F15 S  &on_off 8 9      &cmd_2nav F15 F  &none                      &kp LS(HOME)     &kp LS(LEFT)        &kp LS(DOWN)   &kp LS(RIGHT)      &lay_ru          &kp LS(END)
 &none    &kp_sk LEFT_CONTROL LEFT_CONTROL  &cmd_2nav F15 X  &cmd_2nav F15 C  &cmd_2nav F15 V  &none                      &cmd_2nav F15 D  &kp_2nav BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &kp_2nav DELETE  &none
-                                           &none            &none            &none            &none  &none    &kp ENTER  &ltk 5 SPACE     &none               &none          &none
+                                           &none            &none            &none            &none  &none    &kp ENTER  &ltk 5 SPACE     &lay_ru             &none          &none
             >;
         };
 
         edit-ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &lay_en  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans   &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans   &trans  &trans  &lay_en  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans   &trans  &trans  &trans   &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &lay_en  &trans  &trans
             >;
 
             label = "edit-ru";
