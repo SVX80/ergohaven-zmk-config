@@ -250,7 +250,7 @@
 &kp ESC         &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P      &bksp_del
 &lt_cp_tab 4 0  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
 &kp LGUI        &kp Z  &kp X      &kp C    &kp V                             &kp B                                                   &kp N         &kp M                               &kp COMMA  &kp DOT   &kp SLASH  &kp_sk LEFT_ALT LEFT_ALT
-                       &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 2 SPACE  &ls_esc_mt LSHFT 0    &rs_ent_mt RSHFT 0  &ltk 5 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
+                       &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 3 SPACE  &ls_esc_mt LSHFT 0    &rs_ent_mt RSHFT 0  &ltk 3 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
         };
 
@@ -264,23 +264,23 @@
             >;
         };
 
-        nm-nav-en {
-            display-name = "nm_nav_en";
+        sym-en {
+            display-name = "sym_en";
             bindings = <
-&none      &ru RU_NUMERO  &kp N7  &kp N8  &kp N9  &kp CARET                        &cmd F15 F13  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &none
-&kp TILDE  &kp N0         &kp N4  &kp N5  &kp N6  &kp GRAVE                        &cmd F15 D    &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp DOUBLE_QUOTES
-&none      &kp HASH       &kp N1  &kp N2  &kp N3  &kp PERCENT                      &cmd F15 F    &kp BACKSPACE  &kp PAGE_DOWN   &kp PG_UP        &kp DELETE  &none
-                          &kp LT  &kp GT  &none   &none        &none    &kp ENTER  &ltk 5 SPACE  &none          &kp LEFT_BRACE  &kp RIGHT_BRACE
+&kp ESC  &kp F1   &kp F2   &kp F3      &kp F4   &kp F5                              &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
+&kp TAB  &kp F6   &kp F7   &kp F8      &kp F9   &kp F10                             &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
+&none    &kp F11  &kp F12  &kp F13     &kp F14  &kp F15                             &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
+                  &kp AT   &kp DOLLAR  &trans   &ltk 3 SPACE  &kp ESC    &kp ENTER  &trans           &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
-        nm-nav-ru {
-            display-name = "nm_nav_ru";
+        sym-ru {
+            display-name = "sym-ru";
             bindings = <
-&none      &kp RU_NUMERO  &kp N7  &kp N8  &kp N9  &en CARET                           &cmd F15 F13  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &none
-&en TILDE  &kp N0         &kp N4  &kp N5  &kp N6  &en GRAVE                           &cmd F15 D    &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp RU_DOUBLE_QUOTES
-&none      &en HASH       &kp N1  &kp N2  &kp N3  &kp RU_PERCENT                      &cmd F15 F    &kp BACKSPACE  &kp PAGE_DOWN   &kp PG_UP        &kp DELETE  &none
-                          &en LT  &en GT  &none   &none           &none    &kp ENTER  &ltk 5 SPACE  &none          &en LEFT_BRACE  &en RIGHT_BRACE
+&trans  &kp F1   &kp F2   &kp F3      &kp F4   &kp F5                     &kp RU_COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp RU_BACKSLASH  &none
+&trans  &kp F6   &kp F7   &kp F8      &kp F9   &kp F10                    &kp RU_EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_SEMICOLON  &en APOSTROPHE
+&trans  &kp F11  &kp F12  &en F13     &kp F14  &kp F15                    &kp RU_QUESTION     &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_SLASH      &none
+                 &en AT   &en DOLLAR  &trans   &trans   &trans    &trans  &trans              &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
@@ -294,23 +294,23 @@
             >;
         };
 
-        fn-sym-en {
-            display-name = "fn_sym_en";
+        fn-nav-en {
+            display-name = "fn_nav";
             bindings = <
-&kp ESC  &kp F1   &kp F2   &kp F3      &kp F4   &kp F5                              &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
-&kp TAB  &kp F6   &kp F7   &kp F8      &kp F9   &kp F10                             &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
-&none    &kp F11  &kp F12  &kp F13     &kp F14  &kp F15                             &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
-                  &kp AT   &kp DOLLAR  &trans   &ltk 2 SPACE  &kp ESC    &kp ENTER  &trans           &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&none      &ru RU_NUMERO  &kp N7  &kp N8  &kp N9  &kp CARET                        &cmd F15 F13  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &none
+&kp TILDE  &kp N0         &kp N4  &kp N5  &kp N6  &kp GRAVE                        &cmd F15 D    &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp DOUBLE_QUOTES
+&none      &kp HASH       &kp N1  &kp N2  &kp N3  &kp PERCENT                      &cmd F15 F    &kp BACKSPACE  &kp PAGE_DOWN   &kp PG_UP        &kp DELETE  &none
+                          &kp LT  &kp GT  &none   &none        &none    &kp ENTER  &ltk 3 SPACE  &none          &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
         };
 
-        fn-sym-ru {
-            display-name = "fn_sym_ru";
+        fn-nav-ru {
+            display-name = "fn-nav";
             bindings = <
-&kp ESC  &kp F1   &kp F2   &kp F3      &kp F4   &kp F5                     &kp RU_COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp RU_BACKSLASH  &none
-&kp TAB  &kp F6   &kp F7   &kp F8      &kp F9   &kp F10                    &kp RU_EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_SEMICOLON  &en APOSTROPHE
-&none    &kp F11  &kp F12  &en F13     &kp F14  &kp F15                    &kp RU_QUESTION     &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_SLASH      &none
-                  &en AT   &en DOLLAR  &trans   &trans   &trans    &trans  &trans              &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&none      &kp RU_NUMERO  &kp N7  &kp N8  &kp N9  &en CARET                           &cmd F15 F13  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &none
+&en TILDE  &kp N0         &kp N4  &kp N5  &kp N6  &en GRAVE                           &cmd F15 D    &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp RU_DOUBLE_QUOTES
+&none      &en HASH       &kp N1  &kp N2  &kp N3  &kp RU_PERCENT                      &cmd F15 F    &kp BACKSPACE  &kp PAGE_DOWN   &kp PG_UP        &kp DELETE  &none
+                          &en LT  &en GT  &none   &none           &none    &kp ENTER  &ltk 3 SPACE  &none          &en LEFT_BRACE  &en RIGHT_BRACE
             >;
         };
 
@@ -328,7 +328,12 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        fn-sym-ru {
+        symru {
+            if-layers = <2 1>;
+            then-layer = <3>;
+        };
+
+        fnnavru {
             if-layers = <5 1>;
             then-layer = <6>;
         };
@@ -336,11 +341,6 @@
         utils {
             if-layers = <2 5>;
             then-layer = <7>;
-        };
-
-        nm-nav-ru {
-            if-layers = <2 1>;
-            then-layer = <3>;
         };
     };
 };
