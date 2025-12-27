@@ -438,24 +438,6 @@
             tapping-term-ms = <250>;
         };
 
-        rctrl_lalt: rctrl_lalt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RCTRL_LALT";
-            bindings = <&kp RIGHT_CONTROL>, <&kp LEFT_ALT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        lctrl_lalt: lctrl_lalt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LCTRL_LALT";
-            bindings = <&kp RIGHT_CONTROL>, <&kp LEFT_ALT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL)>;
-        };
-
         mk: mk {
             compatible = "zmk,behavior-hold-tap";
             label = "MK";
@@ -542,40 +524,20 @@
             toggle-mode = "off";
         };
 
-        lnv_tk: lnv_tk {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LNV_TK";
-            bindings = <&lnv_mo>, <&key>;
+        caps_tab: caps_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CAPS_TAB";
+            bindings = <&kp CAPS>, <&kp TAB>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_RCTL|MOD_LCTL)>;
+            keep-mods = <(MOD_RSFT|MOD_LSFT|MOD_RCTL|MOD_LCTL)>;
         };
 
-        lnv_tk_ru: lnv_tk_ru {
+        lt_cp_tab: lt_cp_tab {
             compatible = "zmk,behavior-hold-tap";
-            label = "LNV_TK_RU";
-            bindings = <&lnv_mo>, <&lay_ru>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-        };
-
-        lnv_tk_en: lnv_tk_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LNV_TK_EN";
-            bindings = <&lnv_mo>, <&lay_en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-        };
-
-        nv_tk: nv_tk {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NV_TK";
-            bindings = <&nv_mo>, <&key>;
+            label = "LT_CP_TAB";
+            bindings = <&mo>, <&caps_tab>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
@@ -589,18 +551,18 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC     &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P      &kp ENTER
-&lt 4 CAPS  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI    &kp Z  &kp X      &kp C    &kp V                             &kp B                                                   &kp N         &kp M                               &kp COMMA  &kp DOT   &kp SLASH  &kp_sk LEFT_ALT LEFT_ALT
-                   &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 2 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 5 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&kp ESC         &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P      &kp BACKSPACE
+&lt_cp_tab 4 0  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
+&kp LGUI        &kp Z  &kp X      &kp C    &kp V                             &kp B                                                   &kp N         &kp M                               &kp COMMA  &kp DOT   &kp SLASH  &kp_sk LEFT_ALT LEFT_ALT
+                       &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 2 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 5 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
         };
 
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC         &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_IE                                            &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                 &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp ENTER
-&lt 4 LS(CAPS)  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A                 &kp RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                   &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp ESC         &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_IE                                            &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                 &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BACKSPACE
+&lt_cp_tab 4 0  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A                 &kp RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                   &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LGUI        &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM                &kp RU_CYRILLIC_I                                             &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN           &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp_sk LEFT_ALT LEFT_ALT
                                          &kp RU_CYRILLIC_IO    &lay_en             &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 2 SPACE        &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 5 SPACE        &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
@@ -639,10 +601,10 @@
         fn-sym-en {
             display-name = "fn_sym_en";
             bindings = <
-&kp ESC  &kp F1   &kp F2   &kp F3      &kp F4   &kp F5                           &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
-&kp TAB  &kp F6   &kp F7   &kp F8      &kp F9   &kp F10                          &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
-&none    &kp F11  &kp F12  &kp F13     &kp F14  &kp F15                          &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
-                  &kp AT   &kp DOLLAR  &trans   &ltk 2 SPACE  &kp ESC    &trans  &trans           &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp ESC  &kp F1   &kp F2   &kp F3      &kp F4   &kp F5                              &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
+&kp TAB  &kp F6   &kp F7   &kp F8      &kp F9   &kp F10                             &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
+&none    &kp F11  &kp F12  &kp F13     &kp F14  &kp F15                             &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
+                  &kp AT   &kp DOLLAR  &trans   &ltk 2 SPACE  &kp ESC    &kp ENTER  &trans           &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
@@ -664,6 +626,17 @@
 &bt BT_CLR    &kp F11  &kp F12       &kp F13       &kp F14  &kp F15                  &none   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &none    &kp LC(LA(DELETE))
                        &bt BT_SEL 0  &bt BT_SEL 1  &none    &trans   &none    &none  &trans  &none              &bt BT_SEL 2      &bt BT_SEL 3
             >;
+        };
+
+        spec {
+            bindings = <
+&trans   &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &kp ESC    &kp ENTER  &trans  &trans  &trans  &trans
+            >;
+
+            label = "spec";
         };
     };
 
