@@ -94,116 +94,6 @@
             wait-ms = <0>;
         };
 
-        nav_off_mo: nav_off_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER &off 0>,
-                <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "NAV_OFF_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        lctrl_mo: lctrl_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "LCTRL_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        rctrl_mo: rctrl_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "RCTRL_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        lshctrl_mo: lshctrl_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp LS(LCTRL)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LS(LCTRL)>,
-                <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "LSHCTRL_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        rshctrl_mo: rshctrl_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp RS(RCTRL)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp RS(RCTRL)>,
-                <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "RSHCTRL_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        lshft_mo: lshft_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "LSHFT_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -224,39 +114,6 @@
             tap-ms = <30>;
         };
 
-        l_sk: l_sk {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &sk MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
-            label = "L_SK";
-        };
-
-        lctrl_sl: lctrl_sl {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&sk LCTRL &macro_param_1to1 &sl MACRO_PLACEHOLDER>;
-            label = "LCTRL_SL";
-        };
-
-        rctrl_sl: rctrl_sl {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&sk RCTRL &macro_param_1to1 &sl MACRO_PLACEHOLDER>;
-            label = "RCTRL_SL";
-        };
-
-        nav_off_sl: nav_off_sl {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&off 0 &macro_param_1to1 &sl MACRO_PLACEHOLDER>;
-
-            label = "NAV_OFF_SL";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
         lay_en: lay_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -275,95 +132,6 @@
             label = "LAY_RU";
             tap-ms = <50>;
             wait-ms = <0>;
-        };
-
-        lnv_mo: l_nv_edt_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_press>,
-                <&off 0 &off 2 &off 4>;
-
-            label = "L_NV_EDT_MO";
-        };
-
-        on_off: on_off {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&macro_param_2to1 &off MACRO_PLACEHOLDER>;
-
-            label = "ON_OFF";
-        };
-
-        cmd_2nav: cmd_nav {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_press>,
-                <&on 2 &off 4 &kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "CMD_NAV";
-            tap-ms = <30>;
-            wait-ms = <0>;
-        };
-
-        edt_mo: edt_mo {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &kp_off MACRO_PLACEHOLDER &macro_param_2to1 &on MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_press>,
-                <&off 2 &off 4>;
-
-            label = "EDT_MO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        kp_2nav: kp_2nav {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&on 2 &off 4>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "KP_2NAV";
-            tap-ms = <30>;
-            wait-ms = <0>;
-        };
-
-        nv_mo: edt_mo_e {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&on 2>,
-                <&macro_pause_for_release>,
-                <&macro_press>,
-                <&off 2 &off 4>;
-
-            label = "EDT_MO_E";
-            wait-ms = <0>;
-            tap-ms = <0>;
         };
     };
 
@@ -400,13 +168,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <235>;
             hold-while-undecided;
-        };
-
-        kp_off: kp_off {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KP_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
         };
 
         caps_tab: caps_tab {
@@ -561,17 +322,6 @@
 &bt BT_CLR    &kp F11  &kp F12       &kp F13       &kp F14  &kp F15                  &none   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &none    &kp LC(LA(DELETE))
                        &bt BT_SEL 0  &bt BT_SEL 1  &none    &trans   &none    &none  &trans  &none              &bt BT_SEL 2      &bt BT_SEL 3
             >;
-        };
-
-        spec {
-            bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-                 &trans  &trans  &trans  &trans  &kp ESC    &kp ENTER  &trans  &trans  &trans  &trans
-            >;
-
-            label = "spec";
         };
     };
 
