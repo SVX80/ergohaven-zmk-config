@@ -599,15 +599,15 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_IE                                            &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                 &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp ENTER
-&lt 4 TAB  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A                 &kp RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                   &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LGUI   &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM                &kp RU_CYRILLIC_I                                             &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN           &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp_sk LEFT_ALT LEFT_ALT
-                                    &kp RU_CYRILLIC_IO    &lay_en             &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 2 SPACE        &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 5 SPACE        &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+&kp ESC         &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_IE                                            &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                 &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp ENTER
+&lt 4 LS(CAPS)  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A                 &kp RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                   &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LGUI        &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM                &kp RU_CYRILLIC_I                                             &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN           &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &kp_sk LEFT_ALT LEFT_ALT
+                                         &kp RU_CYRILLIC_IO    &lay_en             &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 2 SPACE        &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 5 SPACE        &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
         nm-nav-en {
-            display-name = "nm-nav-en";
+            display-name = "nm_nav_en";
             bindings = <
 &none      &ru RU_NUMERO  &kp N7  &kp N8  &kp N9  &kp CARET                        &cmd F15 F13  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &none
 &kp TILDE  &kp N0         &kp N4  &kp N5  &kp N6  &kp GRAVE                        &cmd F15 D    &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp DOUBLE_QUOTES
@@ -617,7 +617,7 @@
         };
 
         nm-nav-ru {
-            display-name = "nm-nav-ru";
+            display-name = "nm_nav_ru";
             bindings = <
 &none      &kp RU_NUMERO  &kp N7  &kp N8  &kp N9  &en CARET                           &cmd F15 F13  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &none
 &en TILDE  &kp N0         &kp N4  &kp N5  &kp N6  &en GRAVE                           &cmd F15 D    &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp RU_DOUBLE_QUOTES
@@ -678,6 +678,11 @@
         utils {
             if-layers = <2 5>;
             then-layer = <7>;
+        };
+
+        nm-nav-ru {
+            if-layers = <2 1>;
+            then-layer = <3>;
         };
     };
 };
