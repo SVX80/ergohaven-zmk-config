@@ -237,20 +237,20 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &kp TILDE  &kp N7  &kp N8      &kp N9  &kp CARET                             &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
-&kp TAB  &kp N0     &kp N4  &kp N5      &kp N6  &kp APOSTROPHE                        &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
-&none    &kp HASH   &kp N1  &kp N2      &kp N3  &kp PERCENT                           &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
-                    &kp AT  &kp DOLLAR  &trans  &ltk 5 SPACE    &kp ESC    &kp ENTER  &trans           &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&none    &kp N1    &kp N2     &kp N3      &kp N4          &kp N5                              &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
+&kp TAB  &kp N6    &kp N7     &kp N8      &kp N9          &kp N0                              &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
+&none    &kp HASH  &kp TILDE  &kp CARET   &kp APOSTROPHE  &kp PERCENT                         &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
+                   &kp AT     &kp DOLLAR  &trans          &ltk 5 SPACE  &kp ESC    &kp ENTER  &trans           &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &en TILDE  &trans  &trans      &trans  &en CARET                         &kp RU_COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp RU_BACKSLASH  &none
-&trans  &trans     &trans  &trans      &trans  &en APOSTROPHE                    &kp RU_EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_SEMICOLON  &en APOSTROPHE
-&trans  &en HASH   &trans  &trans      &trans  &kp RU_PERCENT                    &kp RU_QUESTION     &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_SLASH      &none
-                   &en AT  &en DOLLAR  &trans  &trans          &trans    &trans  &trans              &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
+&trans  &trans    &trans     &trans      &trans          &trans                            &kp RU_COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp RU_BACKSLASH  &none
+&trans  &trans    &trans     &trans      &trans          &trans                            &kp RU_EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp RU_SEMICOLON  &en APOSTROPHE
+&trans  &en HASH  &en TILDE  &en CARET   &en APOSTROPHE  &kp RU_PERCENT                    &kp RU_QUESTION     &en AMPERSAND  &kp UNDERSCORE    &en PIPE           &kp RU_SLASH      &none
+                  &en AT     &en DOLLAR  &trans          &trans          &trans    &trans  &trans              &trans         &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
