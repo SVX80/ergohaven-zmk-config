@@ -240,18 +240,18 @@
         edit {
             display-name = "edit";
             bindings = <
-&none  &none  &none  &none  &none  &none                  &none      &none             &none          &none              &none         &none
-&none  &none  &none  &none  &none  &none                  &none      &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &kp LS(HOME)  &kp ENTER
-&none  &none  &none  &none  &none  &none                  &none      &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(END)   &none
-&none  &none  &none  &none  &none  &none  &none    &none  &none      &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
-              &none  &none  &none  &none  &none    &none  &kp SPACE  &none             &none          &none
+&none  &none  &none  &none  &none  &none                   &none      &kp LC(X)         &kp LC(C)      &kp LC(V)          &none         &none
+&none  &none  &none  &none  &none  &none                   &none      &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &kp LS(HOME)  &kp ENTER
+&none  &none  &none  &none  &none  &none                   &none      &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &kp LS(END)   &none
+&none  &none  &none  &none  &none  &none  &none    &none   &none      &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE    &none
+              &none  &none  &none  &none  &none    &trans  &kp SPACE  &trans            &none          &none
             >;
         };
 
         fn-nav-en {
             display-name = "fn_nav";
             bindings = <
-&none    &none    &none    &none    &none    &none                      &none           &none          &none           &none            &none       &none
+&none    &none    &none    &none    &none    &none                      &none           &kp LC(X)      &kp LC(C)       &kp LC(V)        &none       &none
 &kp ESC  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP          &kp LC(RIGHT)    &kp HOME    &kp ENTER
 &kp TAB  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &none           &kp LEFT       &kp DOWN        &kp RIGHT        &kp END     &kp DOUBLE_QUOTES
 &none    &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN   &kp PG_UP        &kp DELETE  &ru RU_NUMERO
