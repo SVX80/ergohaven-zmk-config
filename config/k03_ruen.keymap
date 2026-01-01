@@ -187,7 +187,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48>;
             retro-tap;
@@ -199,7 +199,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <170>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41>;
             retro-tap;
@@ -222,9 +222,9 @@
         en {
             display-name = "En";
             bindings = <
-&none        &none         &none      &none    &none                             &none                                                   &on 2         &none                               &mo 5      &none     &bksp_del        &none
+&none        &none         &none      &none    &none                             &none                                                   &none         &none                               &mo 5      &none     &none            &none
 &kp ESC      &kp Q         &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P            &kp BACKSPACE
-&cp_edt_tab  &hr_lt_l 4 A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &hr_lt_r 5 SEMI  &kp APOSTROPHE
+&cp_edt_tab  &hr_lt_l 4 A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &hr_lt_r 8 SEMI  &kp APOSTROPHE
 &kp LGUI     &kp Z         &kp X      &kp C    &kp V                             &kp B         &none                 &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT   &kp SLASH        &sk LEFT_ALT
                            &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 5 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
@@ -243,7 +243,7 @@
             bindings = <
 &trans  &trans                     &trans                &trans              &trans              &trans                                &trans              &trans                     &trans               &trans                     &trans                      &trans
 &trans  &kp RU_CYRILLIC_SHORT_I    &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE          &trans
-&trans  &hr_lt_l 4 RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &hr_lt_r 5 RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&trans  &hr_lt_l 4 RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &hr_lt_r 8 RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA         &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT                  &trans
                                    &kp RU_CYRILLIC_IO    &lay_en             &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
@@ -252,7 +252,7 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none     &none      &none      &none       &none                          &off 2           &none          &none             &none              &none          &none
+&none    &none     &none      &none      &none       &none                          &none            &none          &none             &none              &none          &none
 &kp ESC  &kp N1    &kp N2     &kp N3     &kp N4      &kp N5                         &kp COLON        &kp ASTERISK   &kp LPAR          &kp RPAR           &kp BACKSLASH  &none
 &kp TAB  &kp N6    &kp N7     &kp N8     &kp N9      &kp N0                         &kp EXCLAMATION  &kp PLUS       &kp MINUS         &kp EQUAL          &kp SEMICOLON  &kp APOSTROPHE
 &none    &kp HASH  &kp AT     &kp CARET  &kp DOLLAR  &kp PERCENT  &none     &none   &kp QUESTION     &kp AMPERSAND  &kp UNDERSCORE    &kp PIPE           &kp SLASH      &none
@@ -313,6 +313,18 @@
 &bt BT_CLR    &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &none     &none   &kp LG(LS(S))  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &none         &none
                             &none         &none         &trans        &trans        &trans    &trans  &trans         &trans             &none             &none
             >;
+        };
+
+        fn {
+            bindings = <
+&trans  &trans   &trans   &trans   &trans   &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans   &trans   &trans   &trans   &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "fn";
         };
     };
 
