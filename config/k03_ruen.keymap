@@ -282,22 +282,22 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none                 &none           &none            &off 4     &none                        &none           &kp SLASH      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none       &none
-&kp ESC  &ru RU_NUMERO         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LC(Y)  &none                        &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP            &kp LC(RIGHT)      &kp HOME    &none
-&kp TAB  &hr_lt_l 6 BACKSLASH  &kp LT          &kp GT           &kp LC(Z)  &kp LC(E)                    &kp ENTER       &kp LEFT       &kp DOWN          &kp RIGHT          &kp END     &none
-&none    &none                 &kp LC(X)       &kp LC(C)        &kp LC(V)  &none      &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN     &kp PG_UP          &kp DELETE  &none
-                               &none           &none            &trans     &trans     &trans    &trans  &trans          &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&none    &none          &none           &none            &off 4     &none                        &none           &kp SLASH      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none       &none
+&kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LC(Y)  &none                        &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP            &kp LC(RIGHT)      &kp HOME    &none
+&kp TAB  &mo 6          &kp LT          &kp GT           &kp LC(Z)  &kp LC(E)                    &kp ENTER       &kp LEFT       &kp DOWN          &kp RIGHT          &kp END     &none
+&none    &none          &kp LC(X)       &kp LC(C)        &kp LC(V)  &none      &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN     &kp PG_UP          &kp DELETE  &none
+                        &none           &none            &trans     &trans     &trans    &trans  &trans          &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans                   &trans          &trans           &trans  &trans                    &trans  &en RU_SLASH  &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans
-&trans  &ru RU_NUMERO            &en LEFT_BRACE  &en RIGHT_BRACE  &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
-&trans  &hr_lt_l 6 RU_BACKSLASH  &en LT          &en GT           &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
-&trans  &trans                   &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans        &trans            &trans             &trans  &trans
-                                 &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET
+&trans  &trans         &trans          &trans           &trans  &trans                    &trans  &en RU_SLASH  &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans
+&trans  &ru RU_NUMERO  &en LEFT_BRACE  &en RIGHT_BRACE  &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
+&trans  &trans         &en LT          &en GT           &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
+&trans  &trans         &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans        &trans            &trans             &trans  &trans
+                       &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET
             >;
         };
 
