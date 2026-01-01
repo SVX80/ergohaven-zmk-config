@@ -145,13 +145,14 @@
             hold-while-undecided;
         };
 
-        cp_edt_tab: cp_edt_tab {
+        caps_tab: caps_tab {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&ltk 8 CAPSLOCK>, <&kp TAB>;
+            bindings = <&kp CAPSLOCK>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT|MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_LGUI)>;
             keep-mods = <(MOD_RSFT|MOD_LSFT|MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+            label = "CAPS_TAB";
         };
 
         bksp_del: bksp_del {
@@ -230,11 +231,11 @@
         en {
             display-name = "En";
             bindings = <
-&none        &none         &kp GRAVE  &lay_ru  &col_sem_e                        &none                                                   &on 4         &mo 7                               &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &bksp_del        &none
-&kp ESC      &kp Q         &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I             &kp O              &kp P            &exc_qst_e
-&cp_edt_tab  &hr_lt_l 6 A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K             &kp L              &hr_lt_r 7 SEMI  &kp APOSTROPHE
-&kp LGUI     &kp Z         &kp X      &kp C    &kp V                             &kp B         &lay_en               &kp ENTER           &kp N         &kp M                               &kp COMMA         &kp DOT            &kp SLASH        &sk LEFT_ALT
-                           &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT          &kp RBKT
+&none      &none         &kp GRAVE  &lay_ru  &col_sem_e                        &none                                                   &on 4         &mo 7                               &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &bksp_del        &none
+&kp ESC    &kp Q         &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I             &kp O              &kp P            &exc_qst_e
+&caps_tab  &hr_lt_l 6 A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K             &kp L              &hr_lt_r 7 SEMI  &kp APOSTROPHE
+&kp LGUI   &kp Z         &kp X      &kp C    &kp V                             &kp B         &lay_en               &kp ENTER           &kp N         &kp M                               &kp COMMA         &kp DOT            &kp SLASH        &sk LEFT_ALT
+                         &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT          &kp RBKT
             >;
 
             sensor-bindings =
