@@ -294,7 +294,7 @@
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans         &trans          &trans           &trans  &trans                    &trans  &en RU_SLASH  &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans
+&trans  &trans         &trans          &trans           &trans  &trans                    &trans  &kp RU_SLASH  &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans
 &trans  &ru RU_NUMERO  &en LEFT_BRACE  &en RIGHT_BRACE  &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
 &trans  &trans         &en LT          &en GT           &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
 &trans  &trans         &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans        &trans            &trans             &trans  &trans
