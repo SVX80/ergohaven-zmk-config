@@ -163,24 +163,6 @@
             keep-mods = <(MOD_LALT)>;
         };
 
-        ls_esc: ls_esc {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp_sk LSHFT LSHFT>, <&kp ESC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_RSFT|MOD_LALT)>;
-            keep-mods = <(MOD_RCTL|MOD_RSFT|MOD_LALT)>;
-        };
-
-        rs_enter: rs_enter {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp_sk RSHFT RSHFT>, <&kp ENTER>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
-            mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT)>;
-        };
-
         hr_lt_l: hr_lt_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HR_LT_L";
@@ -204,16 +186,6 @@
             hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41>;
             retro-tap;
         };
-
-        mo_kp: mo_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_KP";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            retro-tap;
-            tapping-term-ms = <195>;
-        };
     };
 
     keymap {
@@ -223,7 +195,7 @@
             display-name = "En";
             bindings = <
 &none        &none         &none      &none    &none                             &none                                                   &none         &none                               &mo 7      &on 4     &none            &none
-&kp ESC      &kp Q         &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P            &kp BACKSPACE
+&kp ESC      &kp Q         &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P            &bksp_del
 &cp_edt_tab  &hr_lt_l 6 A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &hr_lt_r 7 SEMI  &kp APOSTROPHE
 &kp LGUI     &kp Z         &kp X      &kp C    &kp V                             &kp B         &lay_en               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT   &kp SLASH        &sk LEFT_ALT
                            &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
