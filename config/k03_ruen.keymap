@@ -260,22 +260,22 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none     &kp GRAVE  &kp TILDE  &none       &none                          &none              &none          &none           &none      &none           &none
-&kp ESC  &kp N1    &kp N2     &kp N3     &kp N4      &kp N5                         &none              &kp ASTERISK   &kp LPAR        &kp RPAR   &none           &none
-&kp TAB  &kp N6    &kp N7     &kp N8     &kp N9      &kp N0                         &kp DOUBLE_QUOTES  &kp PLUS       &kp MINUS       &kp EQUAL  &kp APOSTROPHE  &none
-&none    &kp HASH  &kp AT     &kp CARET  &kp DOLLAR  &kp PERCENT  &none     &none   &none              &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none           &none
-                   &kp GRAVE  &kp TILDE  &trans      &trans       &trans    &trans  &trans             &trans         &none           &none
+&none    &none     &kp GRAVE  &kp TILDE  &kp BACKSLASH  &none                          &none              &none          &none           &none      &none           &none
+&kp ESC  &kp N1    &kp N2     &kp N3     &kp N4         &kp N5                         &none              &kp ASTERISK   &kp LPAR        &kp RPAR   &none           &none
+&kp TAB  &kp N6    &kp N7     &kp N8     &kp N9         &kp N0                         &kp DOUBLE_QUOTES  &kp PLUS       &kp MINUS       &kp EQUAL  &kp APOSTROPHE  &none
+&none    &kp HASH  &kp AT     &kp CARET  &kp DOLLAR     &kp PERCENT  &none     &none   &none              &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none           &none
+                   &kp GRAVE  &kp TILDE  &trans         &trans       &trans    &trans  &trans             &trans         &none           &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans    &en GRAVE  &en TILDE  &trans      &trans                            &trans                &trans         &trans          &trans     &trans          &trans
-&trans  &trans    &trans     &trans     &trans      &trans                            &trans                &kp ASTERISK   &kp LPAR        &kp RPAR   &trans          &trans
-&trans  &trans    &trans     &trans     &trans      &trans                            &kp RU_DOUBLE_QUOTES  &kp PLUS       &kp MINUS       &kp EQUAL  &en APOSTROPHE  &trans
-&trans  &en HASH  &en AT     &en CARET  &en DOLLAR  &kp RU_PERCENT  &trans    &trans  &trans                &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans          &trans
-                  &en GRAVE  &en TILDE  &trans      &trans          &trans    &trans  &trans                &trans         &trans          &trans
+&trans  &trans    &en GRAVE  &en TILDE  &kp RU_BACKSLASH  &trans                            &trans                &trans         &trans          &trans     &trans          &trans
+&trans  &trans    &trans     &trans     &trans            &trans                            &trans                &kp ASTERISK   &kp LPAR        &kp RPAR   &trans          &trans
+&trans  &trans    &trans     &trans     &trans            &trans                            &kp RU_DOUBLE_QUOTES  &kp PLUS       &kp MINUS       &kp EQUAL  &en APOSTROPHE  &trans
+&trans  &en HASH  &en AT     &en CARET  &en DOLLAR        &kp RU_PERCENT  &trans    &trans  &trans                &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans          &trans
+                  &en GRAVE  &en TILDE  &trans            &trans          &trans    &trans  &trans                &trans         &trans          &trans
             >;
         };
 
@@ -293,7 +293,7 @@
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans                   &trans          &trans           &trans  &trans                    &trans  &kp RU_SLASH  &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans
+&trans  &trans                   &trans          &trans           &trans  &trans                    &trans  &en RU_SLASH  &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans
 &trans  &ru RU_NUMERO            &en LEFT_BRACE  &en RIGHT_BRACE  &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
 &trans  &hr_lt_l 6 RU_BACKSLASH  &en LT          &en GT           &trans  &trans                    &trans  &trans        &trans            &trans             &trans  &trans
 &trans  &trans                   &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans        &trans            &trans             &trans  &trans
