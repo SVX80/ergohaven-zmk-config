@@ -145,14 +145,14 @@
             hold-while-undecided;
         };
 
-        cp_tab_edt: cp_tab_edt {
+        caps_tab: caps_tab {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&hr_lt_l 6 CAPSLOCK>, <&kp TAB>;
+            bindings = <&kp CAPSLOCK>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT|MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_LGUI)>;
             keep-mods = <(MOD_RSFT|MOD_LSFT|MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_LGUI)>;
-            label = "CP_TAB_EDT";
+            label = "CAPS_TAB";
         };
 
         bksp_del: bksp_del {
@@ -160,32 +160,8 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_LSFT)>;
             keep-mods = <(MOD_LALT)>;
-        };
-
-        hr_lt_l: hr_lt_l {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HR_LT_L";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <195>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48>;
-            retro-tap;
-        };
-
-        hr_lt_r: hr_lt_r {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HR_LT_R";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <195>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41>;
-            retro-tap;
         };
 
         exc_qst_e: exc_qst_e {
@@ -223,18 +199,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        hr_lt_re: hr_lt_re {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HR_LT_RE";
-            bindings = <&mo>, <&en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <195>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48>;
-            retro-tap;
-        };
     };
 
     keymap {
@@ -243,11 +207,11 @@
         en {
             display-name = "En";
             bindings = <
-&lay_en      &none  &kp GRAVE  &lay_ru  &col_sem_e                        &none                                                   &none         &on 4                               &sl 7      &none     &bksp_del  &kp C_MUTE
-&kp ESC      &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O     &kp P      &exc_qst_e
-&cp_tab_edt  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp LGUI     &kp Z  &kp X      &kp C    &kp V                             &kp B         &lay_ru               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT   &kp SLASH  &sk LEFT_ALT
-                    &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&lay_en    &mo 6  &kp GRAVE  &lay_ru  &col_sem_e                        &none                                                   &none         &exc_qst_e                          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &sl 7      &kp C_MUTE
+&kp ESC    &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I             &kp O              &kp P      &bksp_del
+&caps_tab  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K             &kp L              &kp SEMI   &kp APOSTROPHE
+&kp LGUI   &kp Z  &kp X      &kp C    &kp V                             &kp B         &lay_ru               &kp ENTER           &kp N         &kp M                               &kp COMMA         &kp DOT            &kp SLASH  &sk LEFT_ALT
+                  &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT          &kp RBKT
             >;
 
             sensor-bindings =
@@ -262,8 +226,8 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &trans                   &kp RU_CYRILLIC_IO    &lay_en             &col_sem_r          &trans                                 &trans              &trans                     &trans               &trans                     &trans               &trans
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                     &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_qst_r
+&trans  &trans                   &kp RU_CYRILLIC_IO    &lay_en             &col_sem_r          &trans                                 &trans              &exc_qst_r                 &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN  &trans               &trans
+&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                     &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                     &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &lay_en    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
                                  &kp RU_CYRILLIC_IO    &lay_en             &trans              &trans              &trans     &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
