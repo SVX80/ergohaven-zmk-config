@@ -199,6 +199,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        min_plus: min_plus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MIN_PLUS";
+            bindings = <&kp MINUS>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        fn_mul: fn_mul {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FN_MUL";
+            bindings = <&sl 7>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        und_div_e: und_div_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UND_DIV_E";
+            bindings = <&kp UNDERSCORE>, <&kp SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        und_div_r: und_div_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UND_DIV_R";
+            bindings = <&kp UNDERSCORE>, <&kp RU_SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -207,10 +243,10 @@
         en {
             display-name = "En";
             bindings = <
-&lay_en    &none  &lay_ru    &mo 6    &col_sem_e                        &none                                                   &none         &kp EQUAL                           &sl 7      &kp MINUS  &bksp_del  &kp C_MUTE
-&kp ESC    &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O      &kp P      &exc_qst_e
-&caps_tab  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L      &kp SEMI   &kp APOSTROPHE
-&kp LGUI   &kp Z  &kp X      &kp C    &kp V                             &kp B         &lay_ru               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT    &kp SLASH  &sk LEFT_ALT
+&lay_en    &none  &lay_ru    &mo 6    &col_sem_e                        &none                                                   &none         &min_plus                           &fn_mul    &und_div_e  &bksp_del  &kp C_MUTE
+&kp ESC    &kp Q  &kp W      &kp E    &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_qst_e
+&caps_tab  &kp A  &kp S      &kp D    &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
+&kp LGUI   &kp Z  &kp X      &kp C    &kp V                             &kp B         &lay_ru               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
                   &kp GRAVE  &lay_ru  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
 
@@ -226,7 +262,7 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &trans                   &lay_en               &trans              &col_sem_r          &trans                                 &trans              &trans                     &trans               &trans                     &trans               &trans
+&trans  &trans                   &lay_en               &trans              &col_sem_r          &trans                                 &trans              &trans                     &trans               &und_div_r                 &trans               &trans
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                     &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_qst_r
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                     &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &lay_en    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
@@ -259,11 +295,11 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none          &lay_ru           &mo 6              &none      &none                         &none           &none          &none          &none          &none       &none
-&kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &kp HOME    &none
-&kp TAB  &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN       &kp RIGHT      &kp END     &none
-&none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE  &none
-                        &none             &none              &trans     &trans      &trans    &trans  &trans          &trans         &none          &none
+&none    &none          &lay_ru           &mo 6              &none      &none                         &none           &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &none
+&kp TAB  &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &none
+&none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
+                        &none             &none              &trans     &trans      &trans    &trans  &trans          &trans         &none                 &none
             >;
         };
 
