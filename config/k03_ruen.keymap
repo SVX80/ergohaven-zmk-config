@@ -257,7 +257,7 @@
         lru_dlr_e: lru_dlr_e {
             compatible = "zmk,behavior-mod-morph";
             label = "LRU_DLR_E";
-            bindings = <&lay_en>, <&en DOLLAR>;
+            bindings = <&lay_ru>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
