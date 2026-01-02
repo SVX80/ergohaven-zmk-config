@@ -266,7 +266,7 @@
         len_dlr_r: len_dlr_r {
             compatible = "zmk,behavior-mod-morph";
             label = "LEN_DLR_R";
-            bindings = <&lay_ru>, <&kp DOLLAR>;
+            bindings = <&lay_en>, <&en DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
