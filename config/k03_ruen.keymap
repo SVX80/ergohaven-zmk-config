@@ -405,7 +405,7 @@
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans         &lay_en           &trans             &trans  &trans                        &kp AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans         &lay_en           &trans             &trans  &trans                        &en AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
 &trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
 &trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
 &trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
