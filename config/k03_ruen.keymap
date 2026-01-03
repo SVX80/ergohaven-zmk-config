@@ -316,6 +316,24 @@
             tapping-term-ms = <235>;
             label = "MO_SL";
         };
+
+        pp_dqts_e: pp_dqts_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PP_DQTS_E";
+            bindings = <&kp PIPE>, <&kp DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        pp_dqts_r: pp_dqts_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PP_DQTS_R";
+            bindings = <&en PIPE>, <&en DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -324,11 +342,11 @@
         en {
             display-name = "En";
             bindings = <
-&lay_en    &none  &lru_at_e  &edt_hsh_e      &eq_dlr_e                         &ast_num_e                                              &kp PLUS      &min_apo_e                          &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
-&kp ESC    &kp Q  &kp W      &kp E           &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_sem_e
-&caps_tab  &kp A  &kp S      &kp D           &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
-&kp LGUI   &kp Z  &kp X      &kp C           &kp V                             &kp B         &kp TAB               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
-                  &kp GRAVE  &kp APOSTROPHE  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&lay_en    &none  &lru_at_e  &edt_hsh_e  &eq_dlr_e                         &ast_num_e                                              &kp PLUS      &min_apo_e                          &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
+&kp ESC    &kp Q  &kp W      &kp E       &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_sem_e
+&caps_tab  &kp A  &kp S      &kp D       &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
+&kp LGUI   &kp Z  &kp X      &kp C       &kp V                             &kp B         &kp TAB               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
+                  &kp GRAVE  &pp_dqts_e  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -347,14 +365,14 @@
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
-                                 &kp RU_CYRILLIC_IO    &en APOSTROPHE      &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                 &kp RU_CYRILLIC_IO    &pp_dqts_r          &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE   &kp GRAVE                      &none   &none          &none           &none      &none          &none
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp HASH                       &none   &none          &none           &none      &none          &none
 &kp ESC  &kp N1     &kp N2            &kp N3             &kp N4     &kp N5                         &none   &kp ASTERISK   &kp LPAR        &kp RPAR   &none          &none
 &kp TAB  &kp N6     &kp N7            &kp N8             &kp N9     &kp N0                         &kp AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp BACKSLASH  &kp DOUBLE_QUOTES
 &none    &kp SLASH  &kp LT            &kp GT             &kp CARET  &kp PERCENT  &none     &none   &none   &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none          &none
@@ -365,18 +383,18 @@
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &en PIPE   &en GRAVE                         &trans  &trans         &trans          &trans     &trans            &trans
-&trans  &trans        &trans            &trans             &trans     &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
-&trans  &trans        &trans            &trans             &trans     &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
-&trans  &kp RU_SLASH  &en LT            &en GT             &en CARET  &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
-                      &en TILDE         &kp RU_BACKSLASH   &trans     &trans          &trans    &trans  &trans  &trans         &trans          &trans
+&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &en RU_COLON  &en HASH                          &trans  &trans         &trans          &trans     &trans            &trans
+&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
+&trans  &trans        &trans            &trans             &trans        &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
+&trans  &kp RU_SLASH  &en LT            &en GT             &en CARET     &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
+                      &en TILDE         &kp RU_BACKSLASH   &trans        &trans          &trans    &trans  &trans  &trans         &trans          &trans
             >;
         };
 
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none          &lay_ru           &mo 6              &none      &none                         &kp COLON       &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&none    &none          &lay_ru           &mo 6              &none      &none                         &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
 &kp TAB  &kp HASH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
 &none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
@@ -387,11 +405,11 @@
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans         &lay_en           &trans             &trans  &trans                        &kp RU_COLON  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
-&trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans        &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
-&trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans        &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
-&trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans        &trans         &trans                   &trans                    &trans  &trans
-                       &trans            &trans             &trans  &trans      &trans    &trans  &trans        &trans         &en LEFT_BRACE           &en RIGHT_BRACE
+&trans  &trans         &lay_en           &trans             &trans  &trans                        &kp AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
+&trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
+&trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
+&trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
+                       &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans         &en LEFT_BRACE           &en RIGHT_BRACE
             >;
         };
 
