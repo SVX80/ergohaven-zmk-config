@@ -309,22 +309,22 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none     &kp PIPE   &kp AMPERSAND  &kp APOSTROPHE  &none                          &none          &none          &none           &none      &none      &none
-&kp ESC  &kp N1    &kp N2     &kp N3         &kp N4          &kp N5                         &none          &kp ASTERISK   &kp LPAR        &kp RPAR   &none      &none
-&kp TAB  &kp N6    &kp N7     &kp N8         &kp N9          &kp N0                         &kp BACKSLASH  &kp PLUS       &kp MINUS       &kp EQUAL  &kp SLASH  &kp DOUBLE_QUOTES
-&none    &kp HASH  &kp LT     &kp GT         &kp CARET       &kp PERCENT  &none     &none   &none          &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none      &none
-                   &kp GRAVE  &kp TILDE      &trans          &trans       &trans    &trans  &trans         &trans         &none           &none
+&none    &none      &kp PIPE   &kp AMPERSAND  &kp APOSTROPHE  &none                          &none   &none          &none           &none      &none          &none
+&kp ESC  &kp N1     &kp N2     &kp N3         &kp N4          &kp N5                         &none   &kp ASTERISK   &kp LPAR        &kp RPAR   &none          &none
+&kp TAB  &kp N6     &kp N7     &kp N8         &kp N9          &kp N0                         &kp AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp BACKSLASH  &kp DOUBLE_QUOTES
+&none    &kp SLASH  &kp LT     &kp GT         &kp CARET       &kp PERCENT  &none     &none   &none   &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none          &none
+                    &kp GRAVE  &kp TILDE      &trans          &trans       &trans    &trans  &trans  &trans         &none           &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans    &en PIPE   &en AMPERSAND  &en APOSTROPHE  &trans                            &trans            &trans         &trans          &trans     &trans        &trans
-&trans  &trans    &trans     &trans         &trans          &trans                            &trans            &kp ASTERISK   &kp LPAR        &kp RPAR   &trans        &trans
-&trans  &trans    &trans     &trans         &trans          &trans                            &kp RU_BACKSLASH  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_SLASH  &kp RU_DOUBLE_QUOTES
-&trans  &en HASH  &en LT     &en GT         &en CARET       &kp RU_PERCENT  &trans    &trans  &trans            &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans        &trans
-                  &en GRAVE  &en TILDE      &trans          &trans          &trans    &trans  &trans            &trans         &trans          &trans
+&trans  &trans        &en PIPE   &en AMPERSAND  &en APOSTROPHE  &trans                            &trans  &trans         &trans          &trans     &trans            &trans
+&trans  &trans        &trans     &trans         &trans          &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
+&trans  &trans        &trans     &trans         &trans          &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
+&trans  &en RU_SLASH  &en LT     &en GT         &en CARET       &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
+                      &en GRAVE  &en TILDE      &trans          &trans          &trans    &trans  &trans  &trans         &trans          &trans
             >;
         };
 
@@ -333,7 +333,7 @@
             bindings = <
 &none    &none          &lay_ru           &mo 6              &none      &none                         &none           &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp BACKSLASH
-&kp TAB  &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
+&kp TAB  &kp HASH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
 &none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
                         &none             &none              &trans     &trans      &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
@@ -343,8 +343,8 @@
             display-name = "nav-sym";
             bindings = <
 &trans  &trans         &lay_en           &trans             &trans  &trans                        &trans  &kp PLUS  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
-&trans  &ru RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans  &trans    &trans                   &trans                    &trans  &kp RU_BACKSLASH
-&trans  &en AT         &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans  &trans    &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
+&trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans  &trans    &trans                   &trans                    &trans  &kp RU_BACKSLASH
+&trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans  &trans    &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
 &trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans    &trans                   &trans                    &trans  &trans
                        &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans    &en LEFT_BRACE           &en RIGHT_BRACE
             >;
