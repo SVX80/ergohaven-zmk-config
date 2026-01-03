@@ -164,109 +164,145 @@
             keep-mods = <(MOD_LALT)>;
         };
 
-        exc_qst_e: exc_qst_e {
+        exc_sem_e: exc_sem_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "EXC_QST_E";
-            bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
+            label = "EXC_SEM_E";
+            bindings = <&kp EXCLAMATION>, <&kp SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        exc_qst_r: exc_qst_r {
+        exc_sem_r: exc_sem_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "EXC_QST_R";
-            bindings = <&kp RU_EXCLAMATION>, <&kp RU_QUESTION>;
+            label = "EXC_SEM_R";
+            bindings = <&kp RU_EXCLAMATION>, <&kp RU_SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        eq_semi_e: eq_semi_e {
+        eq_dlr_e: eq_dlr_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "EQ_SEMI_E";
-            bindings = <&kp EQUAL>, <&kp SEMI>;
+            label = "EQ_DLR_E";
+            bindings = <&kp EQUAL>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        eq_semi_r: eq_semi_r {
+        eq_dlr_r: eq_dlr_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "EQ_SEMI_R";
-            bindings = <&kp EQUAL>, <&kp RU_SEMICOLON>;
+            label = "EQ_DLR_R";
+            bindings = <&kp EQUAL>, <&en DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        min_perc: min_perc {
+        und_tld_e: und_tld_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "MIN_PERC";
-            bindings = <&kp MINUS>, <&kp PERCENT>;
+            label = "UND_TLD_E";
+            bindings = <&kp UNDERSCORE>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        fn_mul: fn_mul {
+        und_tld_r: und_tld_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "FN_MUL";
-            bindings = <&sl 7>, <&kp ASTERISK>;
+            label = "UND_TLD_R";
+            bindings = <&kp UNDERSCORE>, <&en TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        und_div_e: und_div_e {
+        edt_hsh_e: edt_hsh_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "UND_DIV_E";
-            bindings = <&kp UNDERSCORE>, <&kp SLASH>;
+            label = "EDT_HSH_E";
+            bindings = <&mo 6>, <&kp HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        und_div_r: und_div_r {
+        edt_hsh_r: edt_hsh_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "UND_DIV_R";
-            bindings = <&kp UNDERSCORE>, <&kp RU_SLASH>;
+            label = "EDT_HSH_R";
+            bindings = <&mo 6>, <&en HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        edt_col_e: edt_col_e {
+        lru_at_e: lru_at_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "EDT_COL_E";
-            bindings = <&mo 6>, <&kp COLON>;
+            label = "LRU_AT_E";
+            bindings = <&lay_ru>, <&kp AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        edt_col_r: edt_col_r {
+        len_at_r: len_at_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "EDT_COL_R";
-            bindings = <&mo 6>, <&kp RU_COLON>;
+            label = "LEN_AT_R";
+            bindings = <&lay_en>, <&en AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lru_dlr_e: lru_dlr_e {
+        ast_bksl_e: ast_bksl_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "LRU_DLR_E";
-            bindings = <&lay_ru>, <&kp DOLLAR>;
+            label = "AST_BKSL_E";
+            bindings = <&kp ASTERISK>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        len_dlr_r: len_dlr_r {
+        ast_bksl_r: ast_bksl_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "LEN_DLR_R";
-            bindings = <&lay_en>, <&en DOLLAR>;
+            label = "AST_BKSL_R";
+            bindings = <&kp ASTERISK>, <&kp RU_BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        min_num_e: min_num_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MIN_NUM_E";
+            bindings = <&kp MINUS>, <&ru RU_NUMERO>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        min_num_r: min_num_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MIN_NUM_R";
+            bindings = <&kp MINUS>, <&kp RU_NUMERO>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        fn_grv_e: fn_grv_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FN_GRV_E";
+            bindings = <&sl 7>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        fn_grv_r: fn_grv_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FN_GRV_R";
+            bindings = <&sl 7>, <&en GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -279,11 +315,11 @@
         en {
             display-name = "En";
             bindings = <
-&lay_en    &none  &lru_dlr_e  &edt_col_e  &eq_semi_e                        &none                                                   &none         &min_perc                           &fn_mul    &und_div_e  &bksp_del  &kp C_MUTE
-&kp ESC    &kp Q  &kp W       &kp E       &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_qst_e
-&caps_tab  &kp A  &kp S       &kp D       &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
-&kp LGUI   &kp Z  &kp X       &kp C       &kp V                             &kp B         &lay_ru               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
-                  &kp GRAVE   &lay_ru     &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
+&lay_en    &none  &lru_at_e  &edt_hsh_e  &eq_dlr_e                         &ast_bksl_e                                             &kp PLUS      &min_num_e                          &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
+&kp ESC    &kp Q  &kp W      &kp E       &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_sem_e
+&caps_tab  &kp A  &kp S      &kp D       &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
+&kp LGUI   &kp Z  &kp X      &kp C       &kp V                             &kp B         &lay_ru               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
+                  &kp GRAVE  &lay_ru     &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -298,8 +334,8 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &trans                   &len_dlr_r            &edt_col_r          &eq_semi_r          &trans                                 &trans              &trans                     &trans               &und_div_r                 &trans               &trans
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                     &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_qst_r
+&trans  &trans                   &len_at_r             &edt_hsh_r          &eq_dlr_r           &ast_bksl_r                            &trans              &min_num_r                 &fn_grv_r            &und_tld_r                 &trans               &trans
+&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                     &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                     &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &lay_en    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
                                  &kp RU_CYRILLIC_IO    &lay_en             &trans              &trans              &trans     &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
@@ -309,44 +345,44 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none      &kp PIPE   &kp AMPERSAND  &kp APOSTROPHE  &none                          &none   &none          &none           &none      &none          &none
-&kp ESC  &kp N1     &kp N2     &kp N3         &kp N4          &kp N5                         &none   &kp ASTERISK   &kp LPAR        &kp RPAR   &none          &none
-&kp TAB  &kp N6     &kp N7     &kp N8         &kp N9          &kp N0                         &kp AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp BACKSLASH  &kp DOUBLE_QUOTES
-&none    &kp SLASH  &kp LT     &kp GT         &kp CARET       &kp PERCENT  &none     &none   &none   &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none          &none
-                    &kp GRAVE  &kp TILDE      &trans          &trans       &trans    &trans  &trans  &trans         &none           &none
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp PIPE                       &none   &none          &none           &none      &none          &none
+&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4     &kp N5                         &none   &kp ASTERISK   &kp LPAR        &kp RPAR   &none          &none
+&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9     &kp N0                         &kp AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp BACKSLASH  &kp DOUBLE_QUOTES
+&none    &kp SLASH  &kp LT            &kp GT             &kp CARET  &kp PERCENT  &none     &none   &none   &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none          &none
+                    &kp GRAVE         &kp TILDE          &trans     &trans       &trans    &trans  &trans  &trans         &none           &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans        &en PIPE   &en AMPERSAND  &en APOSTROPHE  &trans                            &trans  &trans         &trans          &trans     &trans            &trans
-&trans  &trans        &trans     &trans         &trans          &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
-&trans  &trans        &trans     &trans         &trans          &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
-&trans  &en RU_SLASH  &en LT     &en GT         &en CARET       &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
-                      &en GRAVE  &en TILDE      &trans          &trans          &trans    &trans  &trans  &trans         &trans          &trans
+&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_COLON  &en PIPE                          &trans  &trans         &trans          &trans     &trans            &trans
+&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
+&trans  &trans        &trans            &trans             &trans        &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
+&trans  &kp RU_SLASH  &en LT            &en GT             &en CARET     &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
+                      &en GRAVE         &en TILDE          &trans        &trans          &trans    &trans  &trans  &trans         &trans          &trans
             >;
         };
 
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none          &lay_ru           &mo 6              &none      &none                         &none           &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp BACKSLASH
-&kp TAB  &kp HASH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
-&none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
-                        &none             &none              &trans     &trans      &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none          &lay_ru           &mo 6              &none      &none                         &kp AMPERSAND   &kp APOSTROPHE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)    &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
+&kp TAB  &kp HASH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT        &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
+&none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE   &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
+                        &none             &none              &trans     &trans      &trans    &trans  &trans          &trans          &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans         &lay_en           &trans             &trans  &trans                        &trans  &kp PLUS  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
-&trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans  &trans    &trans                   &trans                    &trans  &kp RU_BACKSLASH
-&trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans  &trans    &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
-&trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans    &trans                   &trans                    &trans  &trans
-                       &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans    &en LEFT_BRACE           &en RIGHT_BRACE
+&trans  &trans         &lay_en           &trans             &trans  &trans                        &en AMPERSAND  &en APOSTROPHE  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
+&trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans         &trans          &trans                   &trans                    &trans  &kp RU_QUESTION
+&trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans         &trans          &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
+&trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans         &trans          &trans                   &trans                    &trans  &trans
+                       &trans            &trans             &trans  &trans      &trans    &trans  &trans         &trans          &en LEFT_BRACE           &en RIGHT_BRACE
             >;
         };
 
