@@ -334,6 +334,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ctrl_z_y: ctrl_z_y {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_Z_Y";
+            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -394,22 +403,22 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none          &lay_ru           &mo 6              &none      &none                         &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &ru RU_NUMERO  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LC(Y)  &kp DOLLAR                    &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
-&kp TAB  &kp HASH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(Z)  &kp LC(E)                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
-&none    &none          &kp LC(X)         &kp LC(C)          &kp LC(V)  &none       &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
-                        &none             &none              &trans     &trans      &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none      &lay_ru           &mo 6              &none          &none                     &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&kp ESC  &none      &kp DOLLAR        &kp LC(E)          &ru RU_NUMERO  &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(X)         &kp LC(C)          &kp LC(V)      &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp HASH       &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
+                    &none             &none              &trans         &trans  &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans         &lay_en           &trans             &trans  &trans                        &en AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
-&trans  &kp RU_NUMERO  &en LEFT_BRACE    &en RIGHT_BRACE    &trans  &en DOLLAR                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
-&trans  &en HASH       &en LEFT_BRACKET  &en RIGHT_BRACKET  &trans  &trans                        &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
-&trans  &trans         &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
-                       &trans            &trans             &trans  &trans      &trans    &trans  &trans  &trans         &en LEFT_BRACE           &en RIGHT_BRACE
+&trans  &trans  &lay_en           &trans             &trans         &trans                    &en AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans  &en DOLLAR        &trans             &kp RU_NUMERO  &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
+&trans  &trans  &trans            &trans             &trans         &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
+&trans  &trans  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en HASH       &trans  &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
+                &trans            &trans             &trans         &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACE           &en RIGHT_BRACE
             >;
         };
 
