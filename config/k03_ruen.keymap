@@ -254,37 +254,37 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ast_apo_e: ast_apo_e {
+        ast_num_e: ast_num_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "AST_APO_E";
-            bindings = <&kp ASTERISK>, <&kp APOSTROPHE>;
+            label = "AST_NUM_E";
+            bindings = <&kp ASTERISK>, <&ru RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ast_apo_r: ast_apo_r {
+        ast_num_r: ast_num_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "AST_APO_R";
-            bindings = <&kp ASTERISK>, <&en APOSTROPHE>;
+            label = "AST_NUM_R";
+            bindings = <&kp ASTERISK>, <&kp RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        min_num_e: min_num_e {
+        min_apo_e: min_apo_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "MIN_NUM_E";
-            bindings = <&kp MINUS>, <&ru RU_NUMERO>;
+            label = "MIN_APO_E";
+            bindings = <&kp MINUS>, <&kp APOSTROPHE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        min_num_r: min_num_r {
+        min_apo_r: min_apo_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "MIN_NUM_R";
-            bindings = <&kp MINUS>, <&kp RU_NUMERO>;
+            label = "MIN_APO_R";
+            bindings = <&kp MINUS>, <&en APOSTROPHE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -324,7 +324,7 @@
         en {
             display-name = "En";
             bindings = <
-&lay_en    &none  &lru_at_e  &edt_hsh_e  &eq_dlr_e                         &ast_apo_e                                              &kp PLUS      &min_num_e                          &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
+&lay_en    &none  &lru_at_e  &edt_hsh_e  &eq_dlr_e                         &ast_num_e                                              &kp PLUS      &min_apo_e                          &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
 &kp ESC    &kp Q  &kp W      &kp E       &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_sem_e
 &caps_tab  &kp A  &kp S      &kp D       &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
 &kp LGUI   &kp Z  &kp X      &kp C       &kp V                             &kp B         &kp TAB               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
@@ -343,7 +343,7 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &trans                   &len_at_r             &edt_hsh_r          &eq_dlr_r           &ast_apo_r                            &trans              &min_num_r                 &fn_grv_r            &und_tld_r                 &trans               &trans
+&trans  &trans                   &len_at_r             &edt_hsh_r          &eq_dlr_r           &ast_num_r                            &trans              &min_apo_r                 &fn_grv_r            &und_tld_r                 &trans               &trans
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
