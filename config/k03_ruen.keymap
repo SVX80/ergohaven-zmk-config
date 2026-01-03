@@ -383,7 +383,7 @@
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &en RU_COLON  &en APOSTROPHE                    &trans  &trans         &trans          &trans     &trans            &trans
+&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_COLON  &en APOSTROPHE                    &trans  &trans         &trans          &trans     &trans            &trans
 &trans  &trans        &trans            &trans             &trans        &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
 &trans  &trans        &trans            &trans             &trans        &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
 &trans  &kp RU_SLASH  &en LT            &en GT             &en CARET     &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
