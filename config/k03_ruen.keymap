@@ -221,7 +221,7 @@
         edt_hsh_e: edt_hsh_e {
             compatible = "zmk,behavior-mod-morph";
             label = "EDT_HSH_E";
-            bindings = <&mo 6>, <&kp HASH>;
+            bindings = <&mo_sl 6 6>, <&kp HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -230,7 +230,7 @@
         edt_hsh_r: edt_hsh_r {
             compatible = "zmk,behavior-mod-morph";
             label = "EDT_HSH_R";
-            bindings = <&mo 6>, <&en HASH>;
+            bindings = <&mo_sl 6 6>, <&en HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -293,7 +293,7 @@
         fn_grv_e: fn_grv_e {
             compatible = "zmk,behavior-mod-morph";
             label = "FN_GRV_E";
-            bindings = <&sl 7>, <&kp GRAVE>;
+            bindings = <&mo_sl 7 7>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -302,10 +302,20 @@
         fn_grv_r: fn_grv_r {
             compatible = "zmk,behavior-mod-morph";
             label = "FN_GRV_R";
-            bindings = <&sl 7>, <&en GRAVE>;
+            bindings = <&mo_sl 7 7>, <&en GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mo_sl: mo_sl {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            hold-while-undecided;
+            label = "MO_SL";
         };
     };
 
