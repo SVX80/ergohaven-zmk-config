@@ -221,7 +221,7 @@
         edt_hsh_e: edt_hsh_e {
             compatible = "zmk,behavior-mod-morph";
             label = "EDT_HSH_E";
-            bindings = <&mo_sl 6 6>, <&kp HASH>;
+            bindings = <&mo_sl 7 7>, <&kp HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -230,7 +230,7 @@
         edt_hsh_r: edt_hsh_r {
             compatible = "zmk,behavior-mod-morph";
             label = "EDT_HSH_R";
-            bindings = <&mo_sl 6 6>, <&en HASH>;
+            bindings = <&mo_sl 7 7>, <&en HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -272,28 +272,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        min_apo_e: min_apo_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MIN_APO_E";
-            bindings = <&kp MINUS>, <&kp APOSTROPHE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        min_apo_r: min_apo_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MIN_APO_R";
-            bindings = <&kp MINUS>, <&en APOSTROPHE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         fn_grv_e: fn_grv_e {
             compatible = "zmk,behavior-mod-morph";
             label = "FN_GRV_E";
-            bindings = <&mo_sl 7 7>, <&kp GRAVE>;
+            bindings = <&mo_sl 8 8>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -302,7 +284,7 @@
         fn_grv_r: fn_grv_r {
             compatible = "zmk,behavior-mod-morph";
             label = "FN_GRV_R";
-            bindings = <&mo_sl 7 7>, <&en GRAVE>;
+            bindings = <&mo_sl 8 8>, <&en GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -351,11 +333,11 @@
         en {
             display-name = "En";
             bindings = <
-&lay_en    &none  &lru_at_e  &edt_hsh_e  &eq_dlr_e                         &ast_num_e                                              &kp PLUS      &kp MINUS                           &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
+&lay_en    &on 2  &lru_at_e  &edt_hsh_e  &eq_dlr_e                         &ast_num_e                                              &kp PLUS      &kp MINUS                           &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
 &kp ESC    &kp Q  &kp W      &kp E       &kp R                             &kp T                                                   &kp Y         &kp U                               &kp I      &kp O       &kp P      &exc_sem_e
 &caps_tab  &kp A  &kp S      &kp D       &kp F                             &kp G                                                   &kp H         &kp J                               &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
 &kp LGUI   &kp Z  &kp X      &kp C       &kp V                             &kp B         &kp TAB               &kp ENTER           &kp N         &kp M                               &kp COMMA  &kp DOT     &kp SLASH  &sk LEFT_ALT
-                  &kp GRAVE  &pp_dqts_e  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 4 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 2 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
+                  &kp GRAVE  &pp_dqts_e  &kp_sk LEFT_CONTROL LEFT_CONTROL  &ltk 5 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 3 SPACE  &kp_sk RIGHT_CONTROL RIGHT_CONTROL  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -378,47 +360,58 @@
             >;
         };
 
+        nav {
+            display-name = "nav";
+            bindings = <
+&none    &none      &none      &off 2     &none      &none                     &none           &none          &mo 8          &none          &none       &none
+&kp ESC  &none      &none      &kp LC(E)  &none      &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &kp HOME    &none
+&kp TAB  &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none                     &kp ENTER       &kp LEFT       &kp DOWN       &kp RIGHT      &kp END     &none
+&none    &none      &none      &none      &none      &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE  &none
+                    &none      &none      &trans     &trans  &trans    &trans  &trans          &trans         &none          &none
+            >;
+        };
+
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp APOSTROPHE                    &none   &none          &none           &none      &none          &none
-&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4     &kp N5                            &none   &kp ASTERISK   &kp LPAR        &kp RPAR   &none          &none
-&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9     &kp N0                            &kp AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp BACKSLASH  &kp DOUBLE_QUOTES
-&none    &kp SLASH  &kp LT            &kp GT             &kp CARET  &kp PERCENT     &none     &none   &none   &kp AMPERSAND  &kp UNDERSCORE  &kp PIPE   &none          &none
-                    &kp TILDE         &kp BACKSLASH      &trans     &trans          &trans    &trans  &trans  &trans         &none           &none
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp APOSTROPHE                    &none   &none           &none             &none         &none     &none
+&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4     &kp N5                            &none   &none           &none             &none         &none     &none
+&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9     &kp N0                            &none   &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LGUI  &none
+&none    &kp SLASH  &kp LT            &kp GT             &kp CARET  &kp PERCENT     &none     &none   &none   &none           &none             &none         &none     &none
+                    &kp TILDE         &kp BACKSLASH      &trans     &trans          &trans    &trans  &trans  &trans          &none             &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_COLON  &en APOSTROPHE                    &trans  &trans         &trans          &trans     &trans            &trans
-&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &kp ASTERISK   &kp LPAR        &kp RPAR   &trans            &trans
-&trans  &trans        &trans            &trans             &trans        &trans                            &en AT  &kp PLUS       &kp MINUS       &kp EQUAL  &kp RU_BACKSLASH  &kp RU_DOUBLE_QUOTES
-&trans  &kp RU_SLASH  &en LT            &en GT             &en CARET     &kp RU_PERCENT  &trans    &trans  &trans  &en AMPERSAND  &kp UNDERSCORE  &en PIPE   &trans            &trans
-                      &en TILDE         &kp RU_BACKSLASH   &trans        &trans          &trans    &trans  &trans  &trans         &trans          &trans
+&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_COLON  &en APOSTROPHE                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RU_SLASH  &en LT            &en GT             &en CARET     &kp RU_PERCENT  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                      &en TILDE         &kp RU_BACKSLASH   &trans        &trans          &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &lay_ru           &mo 6              &none          &none                     &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &none      &kp DOLLAR        &kp LC(E)          &ru RU_NUMERO  &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(X)         &kp LC(C)          &kp LC(V)      &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
-&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp HASH       &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
-                    &none             &none              &trans         &trans  &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none      &none      &none      &none      &none                     &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&kp ESC  &none      &none      &kp LC(E)  &none      &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
+&none    &none      &none      &none      &none      &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
+                    &none      &none      &trans     &trans  &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans  &lay_en           &trans             &trans         &trans                    &en AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
-&trans  &trans  &en DOLLAR        &trans             &kp RU_NUMERO  &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
-&trans  &trans  &trans            &trans             &trans         &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
-&trans  &trans  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en HASH       &trans  &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
-                &trans            &trans             &trans         &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACE           &en RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans                    &en AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACE           &en RIGHT_BRACE
             >;
         };
 
@@ -461,18 +454,18 @@
         compatible = "zmk,conditional-layers";
 
         numsymru {
-            if-layers = <2 1>;
-            then-layer = <3>;
+            if-layers = <3 1>;
+            then-layer = <4>;
         };
 
         fnnavru {
-            if-layers = <4 1>;
-            then-layer = <5>;
+            if-layers = <5 1>;
+            then-layer = <6>;
         };
 
         utils {
-            if-layers = <2 4>;
-            then-layer = <8>;
+            if-layers = <3 5>;
+            then-layer = <9>;
         };
     };
 };
