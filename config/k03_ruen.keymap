@@ -365,7 +365,7 @@
             bindings = <
 &none    &none      &off 2     &mo 7      &none      &none                     &none           &none          &mo 8          &none          &none       &none
 &kp ESC  &none      &none      &kp LC(E)  &none      &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &kp HOME    &none
-&kp TAB  &ctrl_z_y  &none      &none      &none      &none                     &kp ENTER       &kp LEFT       &kp DOWN       &kp RIGHT      &kp END     &none
+&kp TAB  &ctrl_z_y  &kp LC(S)  &none      &none      &none                     &kp ENTER       &kp LEFT       &kp DOWN       &kp RIGHT      &kp END     &none
 &none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE  &none
                     &none      &none      &trans     &trans  &trans    &trans  &trans          &trans         &none          &none
             >;
@@ -374,11 +374,11 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp APOSTROPHE                    &none   &none           &none             &none         &none     &none
-&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4     &kp N5                            &none   &none           &none             &none         &none     &none
-&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9     &kp N0                            &none   &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LGUI  &none
-&none    &kp SLASH  &kp LT            &kp GT             &kp CARET  &kp PERCENT     &none     &none   &none   &none           &none             &none         &none     &none
-                    &kp TILDE         &kp BACKSLASH      &trans     &trans          &trans    &trans  &trans  &trans          &none             &none
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp APOSTROPHE                    &none   &none      &none             &none         &none     &none
+&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4     &kp N5                            &none   &none      &none             &none         &none     &none
+&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9     &kp N0                            &none   &none      &none             &none         &sk LGUI  &none
+&none    &kp SLASH  &kp LT            &kp GT             &kp CARET  &kp PERCENT     &none     &none   &none   &sk LSHFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
+                    &kp TILDE         &kp BACKSLASH      &trans     &trans          &trans    &trans  &trans  &trans     &none             &none
             >;
         };
 
@@ -398,7 +398,7 @@
             bindings = <
 &none    &none      &none      &none      &none      &none                     &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &none      &none      &kp LC(E)  &none      &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp HOME    &kp QUESTION
-&kp TAB  &ctrl_z_y  &none      &none      &none      &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
+&kp TAB  &ctrl_z_y  &kp LC(S)  &none      &none      &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &kp END     &kp DOUBLE_QUOTES
 &none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
                     &none      &none      &trans     &trans  &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
