@@ -428,33 +428,33 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp HASH                         &none   &none        &none             &none         &none     &none
-&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4          &kp N5                           &none   &none        &lay_en           &none         &none     &none
-&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9          &kp N0                           &none   &none        &none             &none         &sk LGUI  &none
-&none    &kp SLASH  &kp LT            &kp GT             &kp PERCENT     &kp BACKSLASH  &none     &none   &none   &sk LSHFT    &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
-                    &kp TILDE         &kp GRAVE          &lay_ru         &trans         &trans    &trans  &trans  &key_repeat  &none             &none
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp HASH                         &none   &none      &none             &none         &none     &none
+&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4          &kp N5                           &none   &none      &none             &lay_en       &none     &none
+&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9          &kp N0                           &none   &none      &none             &lay_ru       &sk LGUI  &none
+&none    &kp SLASH  &kp LT            &kp GT             &kp PERCENT     &kp BACKSLASH  &none     &none   &none   &sk LSHFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
+                    &kp TILDE         &kp GRAVE          &trans          &trans         &trans    &trans  &trans  &trans     &none             &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &en APOSTROPHE  &en HASH                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RU_SLASH  &en LT            &en GT             &kp RU_PERCENT  &kp RU_BACKSLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                      &en TILDE         &en GRAVE          &lay_en         &trans            &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &en APOSTROPHE  &en HASH                            &trans  &trans  &trans  &trans   &trans  &trans
+&trans  &trans        &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans   &trans  &trans
+&trans  &trans        &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &lay_en  &trans  &trans
+&trans  &kp RU_SLASH  &en LT            &en GT             &kp RU_PERCENT  &kp RU_BACKSLASH  &trans    &trans  &trans  &trans  &trans  &trans   &trans  &trans
+                      &en TILDE         &en GRAVE          &trans          &trans            &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none        &none                     &kp DOLLAR      &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &none      &none      &kp LC(E)  &none        &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp LC(F)   &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &none        &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &home_end   &kp DOUBLE_QUOTES
-&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)    &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
-                    &none      &none      &key_repeat  &trans  &trans    &trans  &trans          &key_repeat    &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none      &none      &none      &none      &none                     &kp DOLLAR      &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&kp ESC  &none      &none      &kp LC(E)  &none      &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp LC(F)   &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &none      &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &home_end   &kp DOUBLE_QUOTES
+&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
+                    &none      &none      &trans     &trans  &trans    &trans  &trans          &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
@@ -475,7 +475,7 @@
 &none  &none  &none  &none  &none   &none                     &none          &none             &none          &none              &none       &none
 &none  &none  &none  &none  &none   &none                     &none          &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(LS(RIGHT))  &none       &none
 &none  &none  &none  &none  &none   &none                     &kp LS(ENTER)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)      &sh_hm_en   &none
-&none  &none  &none  &none  &none   &none   &none     &none   &none          &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
+&none  &none  &none  &none  &none   &none   &none     &none   &key_repeat    &kp BACKSPACE     &kp LS(PG_DN)  &kp LS(PG_UP)      &kp DELETE  &none
               &none  &none  &trans  &trans  &trans    &trans  &kp SPACE      &trans            &none          &none
             >;
         };
