@@ -182,109 +182,109 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        eq_dlr_e: eq_dlr_e {
+        eq_ap_e: eq_ap_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "EQ_DLR_E";
-            bindings = <&kp EQUAL>, <&kp DOLLAR>;
+            label = "EQ_AP_E";
+            bindings = <&kp EQUAL>, <&kp APOSTROPHE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        eq_dlr_r: eq_dlr_r {
+        eq_ap_r: eq_ap_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "EQ_DLR_R";
-            bindings = <&kp EQUAL>, <&en DOLLAR>;
+            label = "EQ_AP_R";
+            bindings = <&kp EQUAL>, <&en APOSTROPHE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        und_tld_e: und_tld_e {
+        amp_rp_e: amp_rp_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "UND_TLD_E";
-            bindings = <&kp UNDERSCORE>, <&kp TILDE>;
+            label = "AMP_RP_E";
+            bindings = <&kp AMPERSAND>, <&kp RIGHT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        und_tld_r: und_tld_r {
+        amp_rp_r: amp_rp_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "UND_TLD_R";
-            bindings = <&kp UNDERSCORE>, <&en TILDE>;
+            label = "AMP_RP_R";
+            bindings = <&en AMPERSAND>, <&kp RIGHT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        edt_hsh_e: edt_hsh_e {
+        ast_rbr_e: ast_rbr_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "EDT_HSH_E";
-            bindings = <&mo_sl 7 7>, <&kp HASH>;
+            label = "AST_RBR_E";
+            bindings = <&kp ASTERISK>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        edt_hsh_r: edt_hsh_r {
+        ast_rbr_r: ast_rbr_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "EDT_HSH_R";
-            bindings = <&mo_sl 7 7>, <&en HASH>;
+            label = "AST_RBR_R";
+            bindings = <&kp RU_ASTERISK>, <&en RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lru_at_e: lru_at_e {
+        col_lbr_e: col_lbr_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "LRU_AT_E";
-            bindings = <&lay_ru>, <&kp AT>;
+            label = "COL_LBR_E";
+            bindings = <&kp COLON>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        len_at_r: len_at_r {
+        col_lbr_r: col_lbr_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "LEN_AT_R";
-            bindings = <&lay_en>, <&en AT>;
+            label = "COL_LBR_R";
+            bindings = <&kp RU_COLON>, <&en LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ast_num_e: ast_num_e {
+        crt_num_e: crt_num_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "AST_NUM_E";
-            bindings = <&kp ASTERISK>, <&ru RU_NUMERO>;
+            label = "CRT_NUM_E";
+            bindings = <&kp CARET>, <&ru RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ast_num_r: ast_num_r {
+        crt_num_r: crt_num_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "AST_NUM_R";
-            bindings = <&kp ASTERISK>, <&kp RU_NUMERO>;
+            label = "CRT_NUM_R";
+            bindings = <&en CARET>, <&kp RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        fn_grv_e: fn_grv_e {
+        und_lp_e: und_lp_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "FN_GRV_E";
-            bindings = <&mo_sl 8 8>, <&kp GRAVE>;
+            label = "UND_LP_E";
+            bindings = <&kp UNDERSCORE>, <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        fn_grv_r: fn_grv_r {
+        und_lp_r: und_lp_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "FN_GRV_R";
-            bindings = <&mo_sl 8 8>, <&en GRAVE>;
+            label = "UND_LP_R";
+            bindings = <&kp UNDERSCORE>, <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -343,6 +343,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mns_at_e: mns_at_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MNS_AT_E";
+            bindings = <&kp MINUS>, <&kp AT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mns_at_r: mns_at_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MNS_AT_R";
+            bindings = <&kp MINUS>, <&en AT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        pls_dlr_e: pls_dlr_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLS_DLR_E";
+            bindings = <&kp PLUS>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        pls_dlr_r: pls_dlr_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLS_DLR_R";
+            bindings = <&kp PLUS>, <&en DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -351,11 +387,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI                          &on 2  &lru_at_e  &edt_hsh_e  &eq_dlr_e   &ast_num_e                                              &kp PLUS      &kp MINUS   &fn_grv_e  &und_tld_e  &bksp_del  &kp C_MUTE
-&kp ESC                           &kp Q  &kp W      &kp E       &kp R       &kp T                                                   &kp Y         &kp U       &kp I      &kp O       &kp P      &exc_sem_e
-&caps_tab                         &kp A  &kp S      &kp D       &kp F       &kp G                                                   &kp H         &kp J       &kp K      &kp L       &kp SEMI   &kp APOSTROPHE
-&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C       &kp V       &kp B         &kp TAB               &kp ENTER           &kp N         &kp M       &kp COMMA  &kp DOT     &kp SLASH  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
-                                         &kp GRAVE  &pp_dqts_e  &mo_sl 7 7  &ltk 5 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 3 SPACE  &mo_sl 8 8  &kp LBKT   &kp RBKT
+&kp LGUI                          &on 2  &col_lbr_e  &ast_rbr_e  &eq_ap_e    &crt_num_e                                              &pls_dlr_e    &mns_at_e   &und_lp_e  &amp_rp_e  &bksp_del  &kp C_MUTE
+&kp ESC                           &kp Q  &kp W       &kp E       &kp R       &kp T                                                   &kp Y         &kp U       &kp I      &kp O      &kp P      &exc_sem_e
+&caps_tab                         &kp A  &kp S       &kp D       &kp F       &kp G                                                   &kp H         &kp J       &kp K      &kp L      &kp SEMI   &kp APOSTROPHE
+&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X       &kp C       &kp V       &kp B         &kp TAB               &kp ENTER           &kp N         &kp M       &kp COMMA  &kp DOT    &kp SLASH  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
+                                         &kp GRAVE   &pp_dqts_e  &mo_sl 7 7  &ltk 5 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 3 SPACE  &mo_sl 8 8  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -370,7 +406,7 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &trans                   &len_at_r             &edt_hsh_r          &eq_dlr_r           &ast_num_r                            &trans              &trans                     &fn_grv_r            &und_tld_r                 &trans               &trans
+&trans  &trans                   &col_lbr_r            &ast_rbr_r          &eq_ap_r            &crt_num_r                            &pls_dlr_r          &mns_at_r                  &und_lp_r            &amp_rp_r                  &trans               &trans
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
@@ -392,29 +428,29 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON    &kp APOSTROPHE                    &none   &none        &none             &none         &none     &none
-&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4       &kp N5                            &none   &none        &lay_en           &none         &none     &none
-&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9       &kp N0                            &none   &none        &lay_ru           &none         &sk LGUI  &none
-&none    &kp SLASH  &kp LT            &kp GT             &kp CARET    &kp PERCENT     &none     &none   &none   &sk LSHFT    &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
-                    &kp TILDE         &kp BACKSLASH      &key_repeat  &trans          &trans    &trans  &trans  &key_repeat  &none             &none
+&none    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp HASH                         &none   &none        &none             &none         &none     &none
+&kp ESC  &kp N1     &kp N2            &kp N3             &kp N4          &kp N5                           &none   &none        &lay_en           &none         &none     &none
+&kp TAB  &kp N6     &kp N7            &kp N8             &kp N9          &kp N0                           &none   &none        &none             &none         &sk LGUI  &none
+&none    &kp SLASH  &kp LT            &kp GT             &kp PERCENT     &kp BACKSLASH  &none     &none   &none   &sk LSHFT    &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
+                    &kp TILDE         &kp GRAVE          &lay_ru         &trans         &trans    &trans  &trans  &key_repeat  &none             &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_COLON  &en APOSTROPHE                    &trans  &trans  &trans   &trans  &trans  &trans
-&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &trans  &trans   &trans  &trans  &trans
-&trans  &trans        &trans            &trans             &trans        &trans                            &trans  &trans  &lay_en  &trans  &trans  &trans
-&trans  &kp RU_SLASH  &en LT            &en GT             &en CARET     &kp RU_PERCENT  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans
-                      &en TILDE         &kp RU_BACKSLASH   &trans        &trans          &trans    &trans  &trans  &trans  &trans   &trans
+&trans  &trans        &en LEFT_BRACKET  &en RIGHT_BRACKET  &en APOSTROPHE  &en HASH                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RU_SLASH  &en LT            &en GT             &kp RU_PERCENT  &kp RU_BACKSLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                      &en TILDE         &en GRAVE          &lay_en         &trans            &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none        &none                     &kp AT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&none    &none      &none      &none      &none        &none                     &kp DOLLAR      &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &none      &none      &kp LC(E)  &none        &none                     &cmd_f15 LS(F)  &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp LC(F)   &kp QUESTION
 &kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &none        &none                     &kp ENTER       &kp LEFT       &kp DOWN              &kp RIGHT              &home_end   &kp DOUBLE_QUOTES
 &none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)    &none   &none     &none   &cmd_f15 F      &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
@@ -425,11 +461,11 @@
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &en AT  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_QUESTION
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans                   &trans                    &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &en LEFT_BRACE           &en RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans                    &en DOLLAR  &en AT  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans                   &trans                    &trans  &kp RU_QUESTION
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans                   &trans                    &trans  &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans                   &trans                    &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &en LEFT_BRACE           &en RIGHT_BRACE
             >;
         };
 
