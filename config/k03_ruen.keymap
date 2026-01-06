@@ -266,7 +266,7 @@
         und_lb_r: und_lb_r {
             compatible = "zmk,behavior-mod-morph";
             label = "UND_LB_R";
-            bindings = <&kp UNDERSCORE>, <&kp LEFT_BRACE>;
+            bindings = <&kp UNDERSCORE>, <&en LEFT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
