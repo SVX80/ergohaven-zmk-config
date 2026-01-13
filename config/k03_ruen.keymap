@@ -327,7 +327,7 @@
             bindings = <&kp UP>, <&kp LC(HOME)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         sh_up_top: sh_up_top {
@@ -363,7 +363,7 @@
             bindings = <&kp LEFT>, <&kp HOME>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         r_end: r_end {
@@ -372,7 +372,7 @@
             bindings = <&kp RIGHT>, <&kp END>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         sh_l_hm: sh_l_hm {
@@ -408,7 +408,7 @@
             bindings = <&kp DOWN>, <&kp LC(END)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         sh_dn_bot: sh_dn_bot {
@@ -490,11 +490,11 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none      &none                     &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none
-&kp ESC  &none      &none      &kp LC(E)  &find_nxt  &none                     &kp LC(DOT)    &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON       &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                     &kp BACKSPACE  &l_hm          &dn_bot               &r_end                 &kp DELETE      &kp DOUBLE_QUOTES
-&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat           &kp PG_UP              &kp LS(DELETE)  &none
-                    &none      &none      &trans     &trans  &trans    &trans  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none      &none      &none      &none      &none                        &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none
+&kp ESC  &none      &none      &kp LC(E)  &find_nxt  &none                        &kp LC(DOT)    &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON       &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                        &kp BACKSPACE  &l_hm          &dn_bot               &r_end                 &kp DELETE      &kp DOUBLE_QUOTES
+&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none      &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat           &kp PG_UP              &kp LS(DELETE)  &none
+                    &none      &none      &trans     &trans  &trans    &kp ENTER  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
