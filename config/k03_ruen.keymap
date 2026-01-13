@@ -458,8 +458,8 @@
             display-name = "nav";
             bindings = <
 &trans   &none      &none      &none      &none      &none                            &none          &none          &none        &none          &none       &trans
-&trans   &none      &none      &kp LC(E)  &find_nxt  &none                            &kp LC(DOT)    &kp LC(LEFT)   &up_top      &kp LC(RIGHT)  &none       &none
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                            &kp BACKSPACE  &l_hm          &dn_bot      &r_end         &kp DELETE  &none
+&trans   &none      &none      &kp LC(E)  &kp LC(F)  &none                            &kp LC(DOT)    &kp LC(LEFT)   &up_top      &kp LC(RIGHT)  &none       &none
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &kp BACKSPACE  &l_hm          &dn_bot      &r_end         &kp DELETE  &none
 &trans   &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &none     &none   &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat  &kp PG_UP      &kp ENTER   &trans
                     &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &trans         &none        &none
             >;
@@ -491,8 +491,8 @@
             display-name = "nav_sym";
             bindings = <
 &none    &none      &none      &none      &none      &none                     &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &none      &none      &kp LC(E)  &find_nxt  &none                     &kp LC(DOT)    &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON   &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                     &kp BACKSPACE  &l_hm          &dn_bot               &r_end                 &kp DELETE  &kp DOUBLE_QUOTES
+&kp ESC  &none      &none      &kp LC(E)  &kp LC(F)  &none                     &kp LC(DOT)    &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON   &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &l_hm          &dn_bot               &r_end                 &kp DELETE  &kp DOUBLE_QUOTES
 &none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat           &kp PG_UP              &kp ENTER   &none
                     &none      &none      &trans     &trans  &trans    &trans  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
