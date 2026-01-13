@@ -457,11 +457,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans   &none      &none      &none      &none      &none                               &none          &none          &none        &none          &none           &trans
-&trans   &none      &none      &kp LC(E)  &find_nxt  &none                               &kp LC(DOT)    &kp LC(LEFT)   &up_top      &kp LC(RIGHT)  &none           &none
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                               &kp BACKSPACE  &l_hm          &dn_bot      &r_end         &kp DELETE      &none
-&trans   &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &none     &none      &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat  &kp PG_UP      &kp LS(DELETE)  &trans
-                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &kp ENTER  &trans         &trans         &none        &none
+&trans   &none      &none      &none      &none      &none                            &none          &none          &none        &none          &none           &trans
+&trans   &none      &none      &kp LC(E)  &find_nxt  &none                            &kp LC(DOT)    &kp LC(LEFT)   &up_top      &kp LC(RIGHT)  &none           &none
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                            &kp BACKSPACE  &l_hm          &dn_bot      &r_end         &kp DELETE      &none
+&trans   &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &none     &none   &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat  &kp PG_UP      &kp LS(DELETE)  &trans
+                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &kp ENTER      &none        &none
             >;
         };
 
@@ -490,11 +490,11 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none      &none                        &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none
-&kp ESC  &none      &none      &kp LC(E)  &find_nxt  &none                        &kp LC(DOT)    &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON       &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                        &kp BACKSPACE  &l_hm          &dn_bot               &r_end                 &kp DELETE      &kp DOUBLE_QUOTES
-&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none      &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat           &kp PG_UP              &kp LS(DELETE)  &none
-                    &none      &none      &trans     &trans  &trans    &kp ENTER  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none      &none      &none      &none      &none                     &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none
+&kp ESC  &none      &none      &kp LC(E)  &find_nxt  &none                     &kp LC(DOT)    &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON       &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                     &kp BACKSPACE  &l_hm          &dn_bot               &r_end                 &kp DELETE      &kp DOUBLE_QUOTES
+&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat           &kp PG_UP              &kp LS(DELETE)  &none
+                    &none      &none      &trans     &trans  &trans    &trans  &trans         &kp ENTER      &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
@@ -512,11 +512,11 @@
         edit {
             display-name = "edit";
             bindings = <
-&none  &none  &none  &none  &none   &none                            &none          &none              &none        &none              &none           &none
-&none  &none  &none  &none  &none   &none                            &none          &kp LC(LS(LEFT))   &sh_up_top   &kp LC(LS(RIGHT))  &none           &none
-&none  &none  &none  &none  &none   &none                            &kp BACKSPACE  &sh_l_hm           &sh_dn_bot   &sh_r_end          &kp DELETE      &none
-&none  &none  &none  &none  &none   &none   &none     &none          &none          &kp LS(PAGE_DOWN)  &key_repeat  &kp LS(PG_UP)      &kp LS(DELETE)  &none
-              &none  &none  &trans  &trans  &trans    &kp LS(ENTER)  &kp SPACE      &trans             &none        &none
+&none  &none  &none  &none  &none   &none                     &none          &none              &none        &none              &none           &none
+&none  &none  &none  &none  &none   &none                     &none          &kp LC(LS(LEFT))   &sh_up_top   &kp LC(LS(RIGHT))  &none           &none
+&none  &none  &none  &none  &none   &none                     &kp BACKSPACE  &sh_l_hm           &sh_dn_bot   &sh_r_end          &kp DELETE      &none
+&none  &none  &none  &none  &none   &none   &none     &none   &none          &kp LS(PAGE_DOWN)  &key_repeat  &kp LS(PG_UP)      &kp LS(DELETE)  &none
+              &none  &none  &trans  &trans  &trans    &trans  &kp SPACE      &kp LS(ENTER)      &none        &none
             >;
         };
 
