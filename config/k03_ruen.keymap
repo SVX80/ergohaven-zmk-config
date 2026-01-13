@@ -357,40 +357,40 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lsh_len: lsh_len {
+        l_hm: l_hm {
             compatible = "zmk,behavior-mod-morph";
-            label = "LSH_LEN";
-            bindings = <&kp_sk LSHFT LSHFT>, <&lay_en>;
+            label = "L_HM";
+            bindings = <&kp LEFT>, <&kp HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        lsh_lru: lsh_lru {
+        r_end: r_end {
             compatible = "zmk,behavior-mod-morph";
-            label = "LSH_LRU";
-            bindings = <&kp_sk LSHFT LSHFT>, <&lay_ru>;
+            label = "R_END";
+            bindings = <&kp RIGHT>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        rsh_len: rsh_len {
+        sh_l_hm: sh_l_hm {
             compatible = "zmk,behavior-mod-morph";
-            label = "RSH_LEN";
-            bindings = <&kp_sk RSHFT RSHFT>, <&lay_en>;
+            label = "SH_L_HM";
+            bindings = <&kp LS(LEFT)>, <&kp LS(HOME)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
-        rsh_lru: rsh_lru {
+        sh_r_end: sh_r_end {
             compatible = "zmk,behavior-mod-morph";
-            label = "RSH_LRU";
-            bindings = <&kp_sk RSHFT RSHFT>, <&lay_ru>;
+            label = "SH_R_END";
+            bindings = <&kp LS(RIGHT)>, <&kp LS(END)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         find_nxt: find_nxt {
@@ -409,11 +409,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI                          &grv_num_e  &crt_at_e  &ast_hsh_e  &eq_dlr_e   &none                                &none         &mns_tld_e  &und_lb_e  &amp_rb_e  &bksp_del  &kp C_MUTE
-&kp ESC                           &kp Q       &kp W      &kp E       &kp R       &kp T                                &kp Y         &kp U       &kp I      &kp O      &kp P      &exc_sem_e
-&caps_tab                         &kp A       &kp S      &kp D       &kp F       &kp G                                &kp H         &kp J       &kp K      &kp L      &kp SEMI   &kp APOSTROPHE
-&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z       &kp X      &kp C       &kp V       &kp B         &kp TAB     &kp ENTER  &kp N         &kp M       &kp COMMA  &kp DOT    &kp SLASH  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
-                                              &kp GRAVE  &lay_en     &mo_sl 7 7  &ltk 5 SPACE  &lsh_lru    &rsh_lru   &ltk 3 SPACE  &mo_sl 8 8  &kp LBKT   &kp RBKT
+&kp LGUI                          &grv_num_e  &crt_at_e  &ast_hsh_e  &eq_dlr_e   &none                                                   &none         &mns_tld_e  &und_lb_e  &amp_rb_e  &bksp_del  &kp C_MUTE
+&kp ESC                           &kp Q       &kp W      &kp E       &kp R       &kp T                                                   &kp Y         &kp U       &kp I      &kp O      &kp P      &exc_sem_e
+&caps_tab                         &kp A       &kp S      &kp D       &kp F       &kp G                                                   &kp H         &kp J       &kp K      &kp L      &kp SEMI   &kp APOSTROPHE
+&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z       &kp X      &kp C       &kp V       &kp B         &kp TAB               &kp ENTER           &kp N         &kp M       &kp COMMA  &kp DOT    &kp SLASH  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
+                                              &kp GRAVE  &lay_en     &mo_sl 7 7  &ltk 5 SPACE  &kp_sk LSHFT LSHFT    &kp_sk RSHFT RSHFT  &ltk 3 SPACE  &mo_sl 8 8  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -428,22 +428,22 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &grv_num_r               &crt_at_r             &ast_hsh_r          &eq_dlr_r           &trans                                    &trans              &mns_tld_r                 &und_lb_r            &amp_rb_r                  &trans               &trans
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
-&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans      &trans    &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
-                                 &kp RU_CYRILLIC_IO    &lay_en             &trans              &trans              &lsh_len    &rsh_len  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+&trans  &grv_num_r               &crt_at_r             &ast_hsh_r          &eq_dlr_r           &trans                                &trans              &mns_tld_r                 &und_lb_r            &amp_rb_r                  &trans               &trans
+&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
+&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_DOT           &trans
+                                 &kp RU_CYRILLIC_IO    &lay_en             &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
         nav {
             display-name = "nav";
             bindings = <
-&trans   &none      &none      &none      &none      &none                            &none        &none          &none          &none          &none       &trans
-&trans   &none      &none      &kp LC(E)  &none      &none                            &find_nxt    &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &none       &none
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &none      &none                            &kp ENTER    &kp LEFT       &kp DOWN       &kp RIGHT      &home_end   &none
-&trans   &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &none     &none   &key_repeat  &kp BACKSPACE  &kp PAGE_DOWN  &kp PG_UP      &kp DELETE  &trans
-                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans       &trans         &none          &none
+&trans   &none      &none      &none      &none      &none                               &none          &none          &none        &none          &none           &trans
+&trans   &none      &none      &kp LC(E)  &find_nxt  &none                               &kp LC(DOT)    &kp LC(LEFT)   &kp UP       &kp LC(RIGHT)  &none           &none
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                               &kp BACKSPACE  &l_hm          &kp DOWN     &r_end         &kp DELETE      &none
+&trans   &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &none     &none      &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat  &kp PG_UP      &kp LS(DELETE)  &trans
+                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &kp ENTER  &trans         &trans         &none        &none
             >;
         };
 
@@ -472,11 +472,11 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none      &none                     &none        &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &none      &none      &kp LC(E)  &none      &none                     &find_nxt    &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp COLON   &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &none      &none                     &kp ENTER    &kp LEFT       &kp DOWN              &kp RIGHT              &home_end   &kp DOUBLE_QUOTES
-&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &key_repeat  &kp BACKSPACE  &kp PAGE_DOWN         &kp PG_UP              &kp DELETE  &none
-                    &none      &none      &trans     &trans  &trans    &trans  &trans       &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
+&none    &none      &none      &none      &none      &none                     &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none
+&kp ESC  &none      &none      &kp LC(E)  &find_nxt  &none                     &kp LC(DOT)    &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp COLON       &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none                     &kp BACKSPACE  &l_hm          &kp DOWN              &r_end                 &kp DELETE      &kp DOUBLE_QUOTES
+&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp LC(COMMA)  &kp PAGE_DOWN  &key_repeat           &kp PG_UP              &kp LS(DELETE)  &none
+                    &none      &none      &trans     &trans  &trans    &trans  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE
             >;
         };
 
@@ -494,11 +494,11 @@
         edit {
             display-name = "edit";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none          &none             &none              &none              &none       &none
-&none  &none  &none  &none  &none   &none                     &none          &kp LC(LS(LEFT))  &kp LS(UP)         &kp LC(LS(RIGHT))  &none       &none
-&none  &none  &none  &none  &none   &none                     &kp LS(ENTER)  &kp LS(LEFT)      &kp LS(DOWN)       &kp LS(RIGHT)      &sh_hm_en   &none
-&none  &none  &none  &none  &none   &none   &none     &none   &key_repeat    &kp BACKSPACE     &kp LS(PAGE_DOWN)  &kp LS(PG_UP)      &kp DELETE  &none
-              &none  &none  &trans  &trans  &trans    &trans  &kp SPACE      &trans            &none              &none
+&none  &none  &none  &none  &none   &none                            &none          &none              &none         &none              &none           &none
+&none  &none  &none  &none  &none   &none                            &none          &kp LC(LS(LEFT))   &kp LS(UP)    &kp LC(LS(RIGHT))  &none           &none
+&none  &none  &none  &none  &none   &none                            &kp BACKSPACE  &sh_l_hm           &kp LS(DOWN)  &sh_r_end          &kp DELETE      &none
+&none  &none  &none  &none  &none   &none   &none     &none          &none          &kp LS(PAGE_DOWN)  &key_repeat   &kp LS(PG_UP)      &kp LS(DELETE)  &none
+              &none  &none  &trans  &trans  &trans    &kp LS(ENTER)  &kp SPACE      &trans             &none         &none
             >;
         };
 
