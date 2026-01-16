@@ -487,11 +487,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &none      &none      &none      &none      &none                            &none          &none         &none    &none          &none       &trans
-&trans  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)  &up_top  &kp LC(RIGHT)  &none       &none
-&trans  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &kp BACKSPACE  &l_hm         &dn_bot  &r_end         &kp DELETE  &none
-&trans  &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &none   &kp PAGE_DOWN  &key_repeat   &none    &none          &kp ENTER   &trans
-                   &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &trans        &none    &none
+&trans  &none      &none      &none      &none      &none                            &none          &none          &none    &none          &none       &trans
+&trans  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)   &up_top  &kp LC(RIGHT)  &none       &none
+&trans  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &l_hm          &dn_bot  &r_end         &kp DELETE  &none
+&trans  &none      &none      &none      &none      &none          &trans    &none   &kp PAGE_DOWN  &kp BACKSPACE  &none    &none          &kp ENTER   &trans
+                   &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &trans         &none    &none
             >;
         };
 
@@ -499,8 +499,8 @@
             display-name = "num_sym";
             bindings = <
 &none        &kp APOSTROPHE  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp PIPE     &none                            &none    &none          &none             &none         &none     &none
-&kp LS(ESC)  &kp N1          &kp N2             &kp N3             &kp N4       &kp N5                           &none    &none          &kp LC(I)         &none         &none     &none
-&kp LS(TAB)  &kp N6          &kp N7             &kp N8             &kp N9       &kp N0                           &none    &kp LC(COMMA)  &kp LC(K)         &kp LC(DOT)   &sk LGUI  &none
+&kp LS(ESC)  &kp N1          &kp N2             &kp N3             &kp N4       &kp N5                           &none    &none          &kp LC(LA(UP))    &none         &none     &none
+&kp LS(TAB)  &kp N6          &kp N7             &kp N8             &kp N9       &kp N0                           &none    &kp LC(COMMA)  &kp LC(LA(DOWN))  &kp LC(DOT)   &sk LGUI  &none
 &none        &kp SLASH       &kp LT             &kp GT             &kp PERCENT  &kp BACKSLASH  &none     &none   &lay_en  &sk LSHFT      &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
                              &kp DOUBLE_QUOTES  &none              &trans       &trans         &trans    &trans  &trans   &trans         &none             &none
             >;
@@ -520,11 +520,11 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none      &none                     &none          &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
-&kp ESC  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                     &kp PG_UP      &kp LC(LEFT)  &up_top               &kp LC(RIGHT)          &kp COLON   &kp QUESTION
-&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &l_hm         &dn_bot               &r_end                 &kp DELETE  &kp DOUBLE_QUOTES
-&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp PAGE_DOWN  &key_repeat   &kp COMMA             &kp DOT                &kp ENTER   &none
-                    &none      &none      &trans     &trans  &trans    &trans  &trans         &trans        &none                 &none
+&none    &none      &none      &none      &none      &none                     &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&kp ESC  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                     &kp PG_UP      &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON   &kp QUESTION
+&kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &key_repeat    &l_hm          &dn_bot               &r_end                 &kp DELETE  &kp DOUBLE_QUOTES
+&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp PAGE_DOWN  &kp BACKSPACE  &kp COMMA             &kp DOT                &kp ENTER   &none
+                    &none      &none      &trans     &trans  &trans    &trans  &trans         &trans         &none                 &none
             >;
         };
 
@@ -544,8 +544,8 @@
             bindings = <
 &none  &none  &none  &none  &none   &none                     &none              &none             &none       &none              &none          &none
 &none  &none  &none  &none  &none   &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))  &sh_up_top  &kp LC(LS(RIGHT))  &none          &none
-&none  &none  &none  &none  &none   &none                     &kp BACKSPACE      &sh_l_hm          &sh_dn_bot  &sh_r_end          &kp DELETE     &none
-&none  &none  &none  &none  &none   &none   &none     &none   &kp LS(PAGE_DOWN)  &key_repeat       &none       &none              &kp LC(ENTER)  &none
+&none  &none  &none  &none  &none   &none                     &key_repeat        &sh_l_hm          &sh_dn_bot  &sh_r_end          &kp DELETE     &none
+&none  &none  &none  &none  &none   &none   &none     &none   &kp LS(PAGE_DOWN)  &kp LC(V)         &kp LC(C)   &kp LC(X)          &kp LC(ENTER)  &none
               &none  &none  &trans  &trans  &trans    &trans  &kp SPACE          &trans            &none       &none
             >;
         };
