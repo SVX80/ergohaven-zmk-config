@@ -496,11 +496,11 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none        &kp APOSTROPHE  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp PIPE     &none                            &none    &none          &none             &none         &none     &none
-&kp LS(ESC)  &kp N1          &kp N2             &kp N3             &kp N4       &kp N5                           &none    &none          &kp LC(LA(UP))    &none         &none     &none
-&kp LS(TAB)  &kp N6          &kp N7             &kp N8             &kp N9       &kp N0                           &none    &kp LC(COMMA)  &kp LC(LA(DOWN))  &kp LC(DOT)   &sk LGUI  &none
-&none        &kp SLASH       &kp LT             &kp GT             &kp PERCENT  &kp BACKSLASH  &none     &none   &lay_en  &sk LSHFT      &sk LEFT_CONTROL  &sk LEFT_ALT  &none     &none
-                             &kp DOUBLE_QUOTES  &none              &trans       &trans         &trans    &trans  &trans   &trans         &none             &none
+&none        &kp APOSTROPHE  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp PIPE     &none                            &none    &none                &none             &none                  &none     &none
+&kp LS(ESC)  &kp N1          &kp N2             &kp N3             &kp N4       &kp N5                           &none    &none                &kp LC(LA(UP))    &none                  &none     &none
+&kp LS(TAB)  &kp N6          &kp N7             &kp N8             &kp N9       &kp N0                           &none    &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &sk LGUI  &none
+&none        &kp SLASH       &kp LT             &kp GT             &kp PERCENT  &kp BACKSLASH  &none     &none   &lay_en  &sk LSHFT            &sk LEFT_CONTROL  &sk LEFT_ALT           &none     &none
+                             &kp DOUBLE_QUOTES  &none              &trans       &trans         &trans    &trans  &trans   &trans               &none             &none
             >;
         };
 
@@ -543,7 +543,7 @@
 &none  &none  &none  &none  &none   &none                     &none              &none             &none       &none              &none        &none
 &none  &none  &none  &none  &none   &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))  &sh_up_top  &kp LC(LS(RIGHT))  &none        &none
 &none  &none  &none  &none  &none   &none                     &kp LS(PAGE_DOWN)  &sh_l_hm          &sh_dn_bot  &sh_r_end          &key_repeat  &none
-&none  &none  &none  &none  &none   &none   &none     &none   &none              &kp LC(V)         &kp LC(C)   &kp LC(X)          &kp DELETE   &none
+&none  &none  &none  &none  &none   &none   &none     &none   &none              &kp LC(X)         &kp LC(C)   &kp LC(V)          &kp DELETE   &none
               &none  &none  &trans  &trans  &trans    &trans  &kp SPACE          &kp LC(ENTER)     &none       &none
             >;
         };
@@ -564,9 +564,9 @@
             display-name = "utils";
             bindings = <
 &bootloader   &none         &none         &none         &none         &none                           &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4  &none
-&none         &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &none          &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &none         &none
-&out OUT_BLE  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp LS(LG(S))  &kp INS            &none             &none            &none         &out OUT_USB
-&bt BT_CLR    &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &none     &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &none         &none
+&none         &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &none          &none              &none             &none            &none         &none
+&out OUT_BLE  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp LS(LG(S))  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &none         &out OUT_USB
+&bt BT_CLR    &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &none     &none   &none          &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &kp INSERT    &none
                             &kp F23       &kp F24       &trans        &trans        &trans    &trans  &trans         &trans             &none             &none
             >;
         };
