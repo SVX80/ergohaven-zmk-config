@@ -521,7 +521,7 @@
 &none    &none      &none      &none      &none      &none                     &none          &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &none
 &kp ESC  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                     &kp PG_UP      &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON    &kp QUESTION
 &kp TAB  &ctrl_z_y  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PAGE_DOWN  &l_hm          &dn_bot               &r_end                 &key_repeat  &kp DOUBLE_QUOTES
-&none    &none      &none      &none      &none      &none   &none     &none   &none          &kp BACKSPACE  &kp COMMA             &kp DOT                &kp DELETE   &none
+&none    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &none          &kp BACKSPACE  &kp COMMA             &kp DOT                &kp DELETE   &none
                     &none      &none      &trans     &trans  &trans    &trans  &trans         &trans         &none                 &none
             >;
         };
