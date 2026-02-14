@@ -669,10 +669,5 @@
             if-layers = <3 5>;
             then-layer = <12>;
         };
-
-        nav-edit {
-            if-layers = <5 8>;
-            then-layer = <9>;
-        };
     };
 };
