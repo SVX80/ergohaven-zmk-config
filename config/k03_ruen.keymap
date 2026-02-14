@@ -582,11 +582,11 @@
 
         nav-e {
             bindings = <
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans    &trans        &trans   &trans  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans    &kp LC(HOME)  &trans   &trans  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp HOME  &kp LC(END)   &kp END  &trans  &trans
-&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans    &trans        &trans   &trans  &trans
-                           &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans    &trans        &trans
+&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &trans    &trans        &trans   &trans          &trans
+&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &trans    &kp LC(HOME)  &trans   &trans          &trans
+&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &kp HOME  &kp LC(END)   &kp END  &trans          &trans
+&trans  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans    &trans        &trans   &kp LS(DELETE)  &trans
+                   &trans         &trans         &trans         &trans  &trans    &trans  &trans  &trans    &trans        &trans
             >;
 
             label = "nav-e";
@@ -618,10 +618,10 @@
 
         nav-edit-e {
             bindings = <
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans        &trans            &trans       &trans  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans        &kp LC(LS(HOME))  &trans       &trans  &trans
-&trans  &off 9             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)  &kp LC(LS(END))   &kp LS(END)  &trans  &trans
-&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans        &trans            &trans       &trans  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans        &trans            &trans       &trans                  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans        &kp LC(LS(HOME))  &trans       &trans                  &trans
+&trans  &off 9             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)  &kp LC(LS(END))   &kp LS(END)  &trans                  &trans
+&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans        &trans            &trans       &edt_off_kp LS(DELETE)  &trans
                            &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans        &trans            &trans
             >;
 
