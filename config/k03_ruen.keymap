@@ -267,7 +267,7 @@
         und_hsh_e: und_hsh_e {
             compatible = "zmk,behavior-mod-morph";
             label = "UND_HSH_E";
-            bindings = <&kp HASH>, <&kp HASH>;
+            bindings = <&kp UNDERSCORE>, <&kp HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -491,7 +491,7 @@
 &kp LGUI                          &none  &exc_at_e  &und_hsh_e  &pls_dlr_e          &none                                             &none         &ast_crt_e          &und_lb_e  &eq_rb_e  &bksp_del  &kp C_MUTE
 &kp ESC                           &kp Q  &kp W      &kp E       &kp R               &kp T                                             &kp Y         &kp U               &kp I      &kp O     &kp P      &kp ENTER
 &kp TAB                           &kp A  &kp S      &kp D       &kp F               &kp G                                             &kp H         &kp J               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C       &kp V               &kp B             &layer_en      &none            &kp N         &kp M               &kp COMMA  &kp DOT   &sl_qst_e  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
+&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C       &kp V               &kp B             &layer_en      &lay_ru          &kp N         &kp M               &kp COMMA  &kp DOT   &sl_qst_e  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
                                          &kp GRAVE  &tld_dqt_e  &kp_sk LSHFT LSHFT  &nav_ltk 5 SPACE  &lru_mo 7 0    &ltk 9 CAPSLOCK  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
             >;
 
@@ -529,7 +529,7 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none        &ru RU_NUMERO   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE     &none                            &none    &none                &none             &none                  &none         &none
+&none        &ru RU_NUMERO   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE     &kp GRAVE                        &none    &none                &none             &none                  &none         &none
 &kp LS(ESC)  &kp N1          &kp N2            &kp N3             &kp N4       &kp N5                           &none    &none                &kp LC(LA(UP))    &none                  &none         &none
 &kp LS(TAB)  &kp N6          &kp N7            &kp N8             &kp N9       &kp N0                           &none    &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &mo_sl 9 9    &none
 &none        &kp APOSTROPHE  &kp LT            &kp GT             &kp PERCENT  &kp BACKSLASH  &none     &none   &lay_en  &sk LSHFT            &sk LEFT_CONTROL  &sk LGUI               &sk LEFT_ALT  &none
@@ -540,7 +540,7 @@
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &kp RU_NUMERO   &en LEFT_BRACKET  &en RIGHT_BRACKET  &en PIPE        &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RU_NUMERO   &en LEFT_BRACKET  &en RIGHT_BRACKET  &en PIPE        &en GRAVE                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &en APOSTROPHE  &en LT            &en GT             &kp RU_PERCENT  &kp RU_BACKSLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -551,7 +551,7 @@
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none      &none      &none      &none      &none                     &none          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
+&none    &none      &none      &none      &none      &none                     &kp TILDE      &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                     &kp PG_UP      &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON   &kp ENTER
 &kp TAB  &on 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &key_repeat    &l_hm          &dn_bot               &r_end                 &sk LSHIFT  &kp DOUBLE_QUOTES
 &none    &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp PAGE_DOWN  &kp BACKSPACE  &kp COMMA             &kp DOT                &kp DELETE  &none
@@ -562,11 +562,11 @@
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans                   &trans                    &kp RU_COLON  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans                   &trans                    &trans        &kp RU_DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &kp RU_COMMA             &kp RU_DOT                &trans        &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &en TILDE  &en AMPERSAND  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans         &trans                   &trans                    &kp RU_COLON  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans         &trans                   &trans                    &trans        &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans         &kp RU_COMMA             &kp RU_DOT                &trans        &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans         &trans                   &trans
             >;
         };
 
