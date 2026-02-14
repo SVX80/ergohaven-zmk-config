@@ -129,6 +129,39 @@
             tap-ms = <50>;
             label = "LAYER_EN";
         };
+
+        nav_mo: nav_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&off 7 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
+
+            label = "NAV_MO";
+        };
+
+        edt_off_kp: edt_off_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &off 7>;
+
+            label = "EDT_OFF_KP";
+            tap-ms = <30>;
+            wait-ms = <0>;
+        };
+
+        eoff_fnxt: eoff_fnxt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&cmd_f15 F &off 7>;
+
+            label = "EOFF_FNXT";
+            tap-ms = <30>;
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -294,19 +327,19 @@
             label = "MO_SL";
         };
 
-        tld_sm_e: tld_sm_e {
+        tld_num_e: tld_num_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "TLD_SM_E";
-            bindings = <&kp TILDE>, <&kp SEMICOLON>;
+            label = "TLD_NUM_E";
+            bindings = <&kp TILDE>, <&ru RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        tld_sm_r: tld_sm_r {
+        tld_num_r: tld_num_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "TLD_SM_R";
-            bindings = <&en TILDE>, <&kp RU_SEMICOLON>;
+            label = "TLD_NUM_R";
+            bindings = <&en TILDE>, <&kp RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -437,6 +470,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <235>;
         };
+
+        nav_ltk: nav_ltk {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&nav_mo>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+            label = "NAV_LTK";
+        };
     };
 
     keymap {
@@ -445,11 +488,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI                          &none  &sl_at_e   &und_hsh_e  &pls_dlr_e          &none                                         &none         &ast_crt_e          &und_lb_e  &eq_rb_e  &bksp_del  &kp C_MUTE
-&kp ESC                           &kp Q  &kp W      &kp E       &kp R               &kp T                                         &kp Y         &kp U               &kp I      &kp O     &kp P      &exc_sem_e
-&kp TAB                           &kp A  &kp S      &kp D       &kp F               &kp G                                         &kp H         &kp J               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C       &kp V               &kp B         &layer_en      &none            &kp N         &kp M               &kp COMMA  &kp DOT   &kp ENTER  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
-                                         &kp GRAVE  &tld_sm_e   &kp_sk LSHFT LSHFT  &ltk 5 SPACE  &lru_mo 7 0    &ltk 8 CAPSLOCK  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
+&kp LGUI                          &none  &sl_at_e   &und_hsh_e  &pls_dlr_e          &none                                             &none         &ast_crt_e          &und_lb_e  &eq_rb_e  &bksp_del  &kp C_MUTE
+&kp ESC                           &kp Q  &kp W      &kp E       &kp R               &kp T                                             &kp Y         &kp U               &kp I      &kp O     &kp P      &exc_sem_e
+&kp TAB                           &kp A  &kp S      &kp D       &kp F               &kp G                                             &kp H         &kp J               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
+&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C       &kp V               &kp B             &layer_en      &none            &kp N         &kp M               &kp COMMA  &kp DOT   &kp ENTER  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
+                                         &kp GRAVE  &tld_num_e  &kp_sk LSHFT LSHFT  &nav_ltk 5 SPACE  &lru_mo 7 0    &ltk 8 CAPSLOCK  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -468,7 +511,7 @@
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                         &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &exc_sem_r
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                         &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans         &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &trans               &trans
-                                 &kp RU_CYRILLIC_IO    &tld_sm_r           &trans              &trans              &len_mo 7 0    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                 &kp RU_CYRILLIC_IO    &tld_num_r          &trans              &trans              &len_mo 7 0    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -478,7 +521,7 @@
 &trans  &none      &none      &none      &none      &none                            &none          &none          &none    &none          &none      &trans
 &trans  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)   &up_top  &kp LC(RIGHT)  &none      &none
 &trans  &mo 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &l_hm          &dn_bot  &r_end         &sk LSHFT  &none
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &none   &kp PAGE_DOWN  &kp BACKSPACE  &none    &none          &kp ENTER  &trans
+&trans  &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &none   &kp PAGE_DOWN  &kp BACKSPACE  &none    &none          &kp ENTER  &trans
                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &trans         &none    &none
             >;
         };
@@ -510,7 +553,7 @@
             bindings = <
 &none    &none      &none      &none      &none      &none                          &none          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                          &kp PG_UP      &kp LC(LEFT)   &up_top               &kp LC(RIGHT)          &kp COLON   &kp QUESTION
-&kp TAB  &mo 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                          &key_repeat    &l_hm          &dn_bot               &r_end                 &sk LSHIFT  &kp DOUBLE_QUOTES
+&kp TAB  &on 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                          &key_repeat    &l_hm          &dn_bot               &r_end                 &sk LSHIFT  &kp DOUBLE_QUOTES
 &none    &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none        &kp PAGE_DOWN  &kp BACKSPACE  &kp COMMA             &kp DOT                &kp ENTER   &none
                     &none      &none      &trans     &trans  &trans    &key_repeat  &trans         &trans         &none                 &none
             >;
@@ -530,11 +573,11 @@
         edit {
             display-name = "edit";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none              &none             &none       &none              &none          &none
-&none  &none  &none  &none  &none   &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))  &sh_up_top  &kp LC(LS(RIGHT))  &none          &none
-&none  &none  &none  &none  &none   &none                     &key_repeat        &sh_l_hm          &sh_dn_bot  &sh_r_end          &sk LSHFT      &none
-&none  &none  &none  &none  &none   &none   &none     &none   &kp LS(PAGE_DOWN)  &kp DELETE        &kp LC(C)   &kp LC(X)          &kp LC(ENTER)  &none
-              &none  &none  &trans  &trans  &trans    &trans  &kp SPACE          &trans            &none       &none
+&none            &none              &none              &none              &none              &none                     &none              &none             &none       &none              &none          &none
+&edt_off_kp ESC  &none              &none              &none              &edt_off_kp LC(F)  &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))  &sh_up_top  &kp LC(LS(RIGHT))  &none          &none
+&edt_off_kp TAB  &off 7             &edt_off_kp LC(S)  &edt_off_kp LC(D)  &eoff_fnxt         &none                     &key_repeat        &sh_l_hm          &sh_dn_bot  &sh_r_end          &sk LSHFT      &none
+&none            &edt_off_kp LC(Z)  &edt_off_kp LC(X)  &edt_off_kp LC(C)  &edt_off_kp LC(V)  &none   &none     &none   &kp LS(PAGE_DOWN)  &kp DELETE        &none       &none              &kp LC(ENTER)  &none
+                                    &none              &none              &trans             &trans  &trans    &trans  &kp SPACE          &trans            &none       &none
             >;
         };
 
