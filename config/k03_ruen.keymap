@@ -529,10 +529,10 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none        &ru RU_NUMERO   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE     &none                            &none    &none                &none             &none                  &none       &none
-&kp LS(ESC)  &kp N1          &kp N2            &kp N3             &kp N4       &kp N5                           &none    &none                &kp LC(LA(UP))    &none                  &none       &none
-&kp LS(TAB)  &kp N6          &kp N7            &kp N8             &kp N9       &kp N0                           &none    &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &mo_sl 8 8  &none
-&none        &kp APOSTROPHE  &kp LT            &kp GT             &kp PERCENT  &kp BACKSLASH  &none     &none   &lay_en  &sk LSHFT            &sk LEFT_CONTROL  &sk LEFT_ALT           &sk LGUI    &none
+&none        &none           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE     &none                            &none    &none                &none             &none                  &none         &none
+&kp LS(ESC)  &kp N1          &kp N2            &kp N3             &kp N4       &kp N5                           &none    &none                &kp LC(LA(UP))    &none                  &none         &none
+&kp LS(TAB)  &kp N6          &kp N7            &kp N8             &kp N9       &kp N0                           &none    &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &mo_sl 8 8    &none
+&none        &kp APOSTROPHE  &kp LT            &kp GT             &kp PERCENT  &kp BACKSLASH  &none     &none   &lay_en  &sk LSHFT            &sk LEFT_CONTROL  &sk LGUI               &sk LEFT_ALT  &none
                              &kp GRAVE         &kp DOUBLE_QUOTES  &trans       &trans         &trans    &trans  &trans   &trans               &none             &none
             >;
         };
@@ -540,7 +540,7 @@
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &kp RU_NUMERO   &en LEFT_BRACKET  &en RIGHT_BRACKET  &en PIPE        &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &en LEFT_BRACKET  &en RIGHT_BRACKET  &en PIPE        &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans            &trans             &trans          &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &en APOSTROPHE  &en LT            &en GT             &kp RU_PERCENT  &kp RU_BACKSLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
