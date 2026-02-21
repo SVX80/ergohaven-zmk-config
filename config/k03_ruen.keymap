@@ -530,7 +530,7 @@
             bindings = <
 &trans  &none      &none      &none      &none      &none                            &none          &none          &none     &none          &none       &trans
 &trans  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none       &kp ENTER
-&trans  &on 9      &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &kp LEFT       &kp DOWN  &kp RIGHT      &sl 7       &none
+&trans  &sl 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &kp LEFT       &kp DOWN  &kp RIGHT      &on 9       &none
 &trans  &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &none     &none          &kp DELETE  &trans
                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &trans         &none     &none
             >;
@@ -563,7 +563,7 @@
             bindings = <
 &none    &none      &none      &none      &none      &none                     &kp TILDE      &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none       &none
 &kp ESC  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                     &kp PG_UP      &kp LC(LEFT)   &kp UP                &kp LC(RIGHT)          &kp COLON   &kp ENTER
-&kp TAB  &on 9      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &key_repeat    &kp LEFT       &kp DOWN              &kp RIGHT              &sl 7       &kp DOUBLE_QUOTES
+&kp TAB  &sl 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &key_repeat    &kp LEFT       &kp DOWN              &kp RIGHT              &on 9       &kp DOUBLE_QUOTES
 &none    &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &none     &none   &kp PAGE_DOWN  &kp BACKSPACE  &kp COMMA             &kp DOT                &kp DELETE  &none
                     &none      &none      &trans     &trans  &trans    &trans  &trans         &trans         &none                 &none
             >;
@@ -582,11 +582,11 @@
 
         nav-e {
             bindings = <
-&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &trans    &trans        &trans   &trans          &trans
-&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &trans    &kp LC(HOME)  &trans   &trans          &trans
-&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &kp HOME  &kp LC(END)   &kp END  &trans          &trans
-&trans  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans    &trans        &trans   &kp LS(DELETE)  &trans
-                   &trans         &trans         &trans         &trans  &trans    &trans  &trans  &trans    &trans        &trans
+&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &trans             &trans        &trans         &trans          &trans
+&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &kp LA(LEFT)       &kp LC(HOME)  &kp LA(RIGHT)  &trans          &trans
+&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &kp HOME           &kp LC(END)   &kp END        &trans          &trans
+&trans  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &trans  &trans    &trans  &trans  &kp LS(BACKSPACE)  &trans        &trans         &kp LS(DELETE)  &trans
+                   &trans         &trans         &trans         &trans  &trans    &trans  &trans  &trans             &trans        &trans
             >;
 
             label = "nav-e";
@@ -595,37 +595,37 @@
         edit {
             display-name = "edit";
             bindings = <
-&none    &none  &none  &none  &none       &none                     &none              &none             &none         &none              &none       &none
-&kp ESC  &none  &none  &none  &none       &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))  &kp LS(UP)    &kp LC(LS(RIGHT))  &none       &kp LC(ENTER)
-&kp TAB  &none  &none  &none  &eoff_fnxt  &none                     &key_repeat        &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &sl 10      &none
-&none    &none  &none  &none  &none       &none   &none     &none   &kp LS(PAGE_DOWN)  &kp BACKSPACE     &none         &none              &kp DELETE  &none
-                &none  &none  &trans      &trans  &trans    &trans  &kp SPACE          &trans            &none         &none
+&none  &none  &none  &none  &none       &none                     &none        &none             &none         &none              &none       &none
+&none  &none  &none  &none  &none       &none                     &none        &kp LC(LS(LEFT))  &kp LS(UP)    &kp LC(LS(RIGHT))  &none       &kp LC(ENTER)
+&none  &none  &none  &none  &eoff_fnxt  &none                     &key_repeat  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &none       &none
+&none  &none  &none  &none  &none       &none   &none     &none   &none        &kp BACKSPACE     &none         &none              &kp DELETE  &none
+              &none  &none  &trans      &trans  &trans    &trans  &kp SPACE    &trans            &none         &none
             >;
         };
 
-        nav-edit {
-            display-name = "edit";
+        nav-sel {
+            display-name = "nav-sel";
             bindings = <
 &none            &none              &none              &none              &none              &none                     &none              &none                  &none         &none              &none               &none
 &edt_off_kp ESC  &none              &none              &none              &edt_off_kp LC(F)  &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))       &kp LS(UP)    &kp LC(LS(RIGHT))  &none               &edt_off_kp ENTER
-&edt_off_kp TAB  &off 9             &edt_off_kp LC(S)  &edt_off_kp LC(D)  &eoff_fnxt         &none                     &key_repeat        &kp LS(LEFT)           &kp LS(DOWN)  &kp LS(RIGHT)      &sl 10              &none
+&edt_off_kp TAB  &sl 10             &edt_off_kp LC(S)  &edt_off_kp LC(D)  &eoff_fnxt         &none                     &key_repeat        &kp LS(LEFT)           &kp LS(DOWN)  &kp LS(RIGHT)      &off 9              &none
 &none            &edt_off_kp LC(Z)  &edt_off_kp LC(X)  &edt_off_kp LC(C)  &edt_off_kp LC(V)  &none   &none     &none   &kp LS(PAGE_DOWN)  &edt_off_kp BACKSPACE  &none         &none              &edt_off_kp DELETE  &none
                                     &none              &none              &trans             &trans  &trans    &trans  &kp SPACE          &trans                 &none         &none
             >;
 
-            label = "nav-edit";
+            label = "nav-sel";
         };
 
-        nav-edit-e {
+        nav-sel-e {
             bindings = <
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans        &trans            &trans       &trans                  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans        &kp LC(LS(HOME))  &trans       &trans                  &trans
-&trans  &off 9             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)  &kp LC(LS(END))   &kp LS(END)  &trans                  &trans
-&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans        &trans            &trans       &edt_off_kp LS(DELETE)  &trans
-                           &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans        &trans            &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans                     &trans            &trans             &trans                  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LA(LS(LEFT))           &kp LC(LS(HOME))  &kp LA(LS(RIGHT))  &trans                  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)               &kp LC(LS(END))   &kp LS(END)        &off 9                  &trans
+&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &edt_off_kp LS(BACKSPACE)  &trans            &trans             &edt_off_kp LS(DELETE)  &trans
+                           &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans                     &trans            &trans
             >;
 
-            label = "nav-edit-e";
+            label = "nav-sel-e";
         };
 
         fn {
