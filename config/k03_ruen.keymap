@@ -220,109 +220,19 @@
             keep-mods = <(MOD_LALT)>;
         };
 
-        sl_qst_e: sl_qst_e {
+        sl_bslh_e: sl_bslh_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "SL_QST_E";
-            bindings = <&kp SLASH>, <&kp QUESTION>;
+            label = "SL_BSLH_E";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        sl_qst_r: sl_qst_r {
+        sl_bslh_r: sl_bslh_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "SL_QST_R";
-            bindings = <&kp RU_SLASH>, <&kp RU_QMARK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        pls_dlr_e: pls_dlr_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PLS_DLR_E";
-            bindings = <&kp RS(PLUS)>, <&kp DOLLAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        pls_dlr_r: pls_dlr_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PLS_DLR_R";
-            bindings = <&kp PLUS>, <&en DOLLAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        eq_rb_e: eq_rb_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EQ_RB_E";
-            bindings = <&kp EQUAL>, <&kp RIGHT_BRACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        eq_rb_r: eq_rb_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EQ_RB_R";
-            bindings = <&kp EQUAL>, <&en RIGHT_BRACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mns_hsh_e: mns_hsh_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MNS_HSH_E";
-            bindings = <&kp MINUS>, <&kp HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mns_hsh_r: mns_hsh_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MNS_HSH_R";
-            bindings = <&kp MINUS>, <&en HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        exc_at_e: exc_at_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXC_AT_E";
-            bindings = <&kp EXCLAMATION>, <&kp AT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        exl_at_r: exl_at_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXL_AT_R";
-            bindings = <&kp RU_EXCLAMATION>, <&en AT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        und_lb_e: und_lb_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UND_LB_E";
-            bindings = <&kp UNDERSCORE>, <&kp LEFT_BRACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        und_lb_r: und_lb_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UND_LB_R";
-            bindings = <&kp UNDERSCORE>, <&en LEFT_BRACE>;
+            label = "SL_BSLH_R";
+            bindings = <&kp RU_SLASH>, <&kp RU_BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -337,19 +247,19 @@
             label = "MO_SL";
         };
 
-        tld_dqt_e: tld_dqt_e {
+        dqt_no_e: dqt_no_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "TLD_DQT_E";
-            bindings = <&kp TILDE>, <&kp DOUBLE_QUOTES>;
+            label = "DQT_NO_E";
+            bindings = <&ru RU_DOUBLE_QUOTES>, <&ru RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        tld_dqt_r: tld_dqt_r {
+        dqt_no_r: dqt_no_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "TLD_DQT_R";
-            bindings = <&en TILDE>, <&en DOUBLE_QUOTES>;
+            label = "DQT_NO_R";
+            bindings = <&kp RU_DOUBLE_QUOTES>, <&kp RU_NUMERO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -364,78 +274,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        up_top: up_top {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_TOP";
-            bindings = <&kp UP>, <&kp LC(HOME)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        sh_up_top: sh_up_top {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SH_UP_TOP";
-            bindings = <&kp LS(UP)>, <&kp LS(LC(HOME))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        ast_crt_e: ast_crt_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "AST_CRT_E";
-            bindings = <&kp ASTERISK>, <&kp CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ast_crt_r: ast_crt_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "AST_CRT_R";
-            bindings = <&kp ASTERISK>, <&en CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        l_hm: l_hm {
-            compatible = "zmk,behavior-mod-morph";
-            label = "L_HM";
-            bindings = <&kp LEFT>, <&kp HOME>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        r_end: r_end {
-            compatible = "zmk,behavior-mod-morph";
-            label = "R_END";
-            bindings = <&kp RIGHT>, <&kp END>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        sh_l_hm: sh_l_hm {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SH_L_HM";
-            bindings = <&kp LS(LEFT)>, <&kp LS(HOME)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        sh_r_end: sh_r_end {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SH_R_END";
-            bindings = <&kp LS(RIGHT)>, <&kp LS(END)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
         find_nxt: find_nxt {
             compatible = "zmk,behavior-mod-morph";
             label = "FIND_NXT";
@@ -443,42 +281,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dn_bot: dn_bot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DN_BOT";
-            bindings = <&kp DOWN>, <&kp LC(END)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        sh_dn_bot: sh_dn_bot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SH_DN_BOT";
-            bindings = <&kp LS(DOWN)>, <&kp LC(LS(END))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        len_mo: len_mo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEN_MO";
-            bindings = <&mo>, <&lay_en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-        };
-
-        lru_mo: lru_mo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LRU_MO";
-            bindings = <&mo>, <&lay_ru>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
         };
 
         nav_ltk: nav_ltk {
@@ -498,11 +300,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI                          &none  &none      &kp CAPSLOCK  &none               &none                                           &none         &none               &lay_ru    &mo_sl 12 12  &bksp_del  &kp C_MUTE
-&kp ESC                           &kp Q  &kp W      &kp E         &kp R               &kp T                                           &kp Y         &kp U               &kp I      &kp O         &kp P      &kp ENTER
-&kp TAB                           &kp A  &kp S      &kp D         &kp F               &kp G                                           &kp H         &kp J               &kp K      &kp L         &kp SEMI   &kp APOSTROPHE
-&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C         &kp V               &kp B             &layer_en       &layer_ru     &kp N         &kp M               &kp COMMA  &kp DOT       &sl_qst_e  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
-                                         &kp GRAVE  &tld_dqt_e    &kp_sk LSHFT LSHFT  &nav_ltk 5 SPACE  &mo_sl 11 11    &mo_sl 10 10  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
+&kp LGUI                          &none  &none      &kp CAPSLOCK  &none               &none                                           &none         &none               &lay_ru    &mo_sl 12 12  &bksp_del   &kp C_MUTE
+&kp ESC                           &kp Q  &kp W      &kp E         &kp R               &kp T                                           &kp Y         &kp U               &kp I      &kp O         &kp P       &kp ENTER
+&kp TAB                           &kp A  &kp S      &kp D         &kp F               &kp G                                           &kp H         &kp J               &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
+&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C         &kp V               &kp B             &layer_en       &layer_ru     &kp N         &kp M               &kp COMMA  &kp DOT       &sl_bslh_e  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
+                                         &kp GRAVE  &dqt_no_e     &kp_sk LSHFT LSHFT  &nav_ltk 5 SPACE  &mo_sl 11 11    &mo_sl 10 10  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -520,8 +322,8 @@
 &trans  &trans                   &trans                &trans              &trans              &trans                                &trans              &trans                     &lay_en              &trans                     &trans               &trans
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &sl_qst_r            &trans
-                                 &kp RU_CYRILLIC_IO    &tld_dqt_r          &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &sl_bslh_r           &trans
+                                 &kp RU_CYRILLIC_IO    &dqt_no_r           &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -539,22 +341,22 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none        &none      &none             &none              &none          &none                          &none          &none            &none                 &none                  &none          &none
-&kp LS(ESC)  &kp N1     &kp N2            &kp N3             &kp N4         &kp N5                         &ru RU_NUMERO  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &none
-&kp LS(TAB)  &kp N6     &kp N7            &kp N8             &kp N9         &kp N0                         &kp GRAVE      &kp UNDERSCORE   &kp MINUS             &kp PLUS               &kp EQUAL      &kp APOSTROPHE
-&none        &kp CARET  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND  &kp PERCENT  &none     &none   &kp AT         &kp EXCLAMATION  &kp COMMA             &kp DOT                &kp BACKSLASH  &none
-                        &kp TILDE         &kp SEMICOLON      &trans         &trans       &trans    &trans  &trans         &trans           &none                 &none
+&none        &none      &none             &none              &none          &none                          &none      &none            &none                 &none                  &none         &none
+&kp LS(ESC)  &kp N1     &kp N2            &kp N3             &kp N4         &kp N5                         &none      &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none         &none
+&kp LS(TAB)  &kp N6     &kp N7            &kp N8             &kp N9         &kp N0                         &kp GRAVE  &kp UNDERSCORE   &kp MINUS             &kp PLUS               &kp EQUAL     &kp APOSTROPHE
+&none        &kp CARET  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND  &kp PERCENT  &none     &none   &kp AT     &kp EXCLAMATION  &kp COMMA             &kp DOT                &kp QUESTION  &none
+                        &kp TILDE         &kp SEMICOLON      &trans         &trans       &trans    &trans  &trans     &trans           &none                 &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans     &trans            &trans             &trans         &trans                            &trans         &trans              &trans        &trans      &trans            &trans
-&trans  &trans     &trans            &trans             &trans         &trans                            &kp RU_NUMERO  &trans              &trans        &trans      &trans            &trans
-&trans  &trans     &trans            &trans             &trans         &trans                            &en GRAVE      &trans              &trans        &trans      &trans            &en APOSTROPHE
-&trans  &en CARET  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en AMPERSAND  &kp RU_PERCENT  &trans    &trans  &en AT         &kp RU_EXCLAMATION  &kp RU_COMMA  &kp RU_DOT  &kp RU_BACKSLASH  &trans
-                   &en TILDE         &kp RU_SEMICOLON   &trans         &trans          &trans    &trans  &trans         &trans              &trans        &trans
+&trans  &trans     &trans            &trans             &trans         &trans                            &trans     &trans              &trans        &trans      &trans           &trans
+&trans  &trans     &trans            &trans             &trans         &trans                            &trans     &trans              &trans        &trans      &trans           &trans
+&trans  &trans     &trans            &trans             &trans         &trans                            &en GRAVE  &trans              &trans        &trans      &trans           &en APOSTROPHE
+&trans  &en CARET  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en AMPERSAND  &kp RU_PERCENT  &trans    &trans  &en AT     &kp RU_EXCLAMATION  &kp RU_COMMA  &kp RU_DOT  &kp RU_QUESTION  &trans
+                   &en TILDE         &kp RU_SEMICOLON   &trans         &trans          &trans    &trans  &trans     &trans              &trans        &trans
             >;
         };
 
