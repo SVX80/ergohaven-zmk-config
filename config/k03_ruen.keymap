@@ -498,10 +498,10 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI                          &none  &none      &kp CAPSLOCK  &none               &none                                           &none         &none               &lay_ru    &none     &bksp_del  &kp C_MUTE
-&kp ESC                           &kp Q  &kp W      &kp E         &kp R               &kp T                                           &kp Y         &kp U               &kp I      &kp O     &kp P      &kp ENTER
-&kp TAB                           &kp A  &kp S      &kp D         &kp F               &kp G                                           &kp H         &kp J               &kp K      &kp L     &kp SEMI   &kp APOSTROPHE
-&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C         &kp V               &kp B             &layer_en       &layer_ru     &kp N         &kp M               &kp COMMA  &kp DOT   &sl_qst_e  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
+&kp LGUI                          &none  &none      &kp CAPSLOCK  &none               &none                                           &none         &none               &lay_ru    &mo_sl 12 12  &bksp_del  &kp C_MUTE
+&kp ESC                           &kp Q  &kp W      &kp E         &kp R               &kp T                                           &kp Y         &kp U               &kp I      &kp O         &kp P      &kp ENTER
+&kp TAB                           &kp A  &kp S      &kp D         &kp F               &kp G                                           &kp H         &kp J               &kp K      &kp L         &kp SEMI   &kp APOSTROPHE
+&kp_sk LEFT_CONTROL LEFT_CONTROL  &kp Z  &kp X      &kp C         &kp V               &kp B             &layer_en       &layer_ru     &kp N         &kp M               &kp COMMA  &kp DOT       &sl_qst_e  &kp_sk RIGHT_CONTROL RIGHT_CONTROL
                                          &kp GRAVE  &tld_dqt_e    &kp_sk LSHFT LSHFT  &nav_ltk 5 SPACE  &mo_sl 11 11    &mo_sl 10 10  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
             >;
 
@@ -530,8 +530,8 @@
             bindings = <
 &trans  &none      &none      &none      &none      &none                            &none          &none          &none     &none          &none       &trans
 &trans  &none      &kp LC(Y)  &kp LC(E)  &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none       &kp ENTER
-&trans  &sl 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &kp LEFT       &kp DOWN  &kp RIGHT      &on 7       &none
-&trans  &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &none     &none          &kp DELETE  &trans
+&trans  &sl 7      &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &kp LEFT       &kp DOWN  &kp RIGHT      &kp DELETE  &none
+&trans  &ctrl_z_y  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &none     &none          &none       &trans
                    &none      &none      &trans     &nvoff_mo 2 5  &trans    &trans  &trans         &trans         &none     &none
             >;
         };
@@ -596,20 +596,20 @@
         ext-nav {
             display-name = "ext-nav";
             bindings = <
-&bootloader   &none         &none         &none         &none         &none                           &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &none
-&out OUT_USB  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &kp F24        &kp HOME      &kp LC(HOME)  &kp END        &none         &none
-&out OUT_BLE  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp LS(LG(S))  &kp LA(LEFT)  &kp LC(END)   &kp LA(RIGHT)  &none         &none
-&bt BT_CLR    &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &none     &none   &kp F23        &none         &none         &none          &kp INSERT    &none
-                            &cmd_f15 F16  &cmd_f15 F17  &trans        &trans        &trans    &trans  &trans         &trans        &none         &none
+&bootloader   &none      &kp F23        &kp INSERT     &kp F24        &none                     &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none
+&out OUT_USB  &none      &none          &none          &none          &none                     &none         &kp HOME           &kp LC(HOME)  &kp END        &none           &none
+&out OUT_BLE  &none      &kp LS(LG(S))  &none          &none          &none                     &none         &kp LA(LEFT)       &kp LC(END)   &kp LA(RIGHT)  &kp LS(DELETE)  &none
+&bt BT_CLR    &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &none   &none     &none   &none         &kp LS(BACKSPACE)  &none         &none          &none           &none
+                         &none          &none          &trans         &trans  &trans    &trans  &trans        &trans             &none         &none
             >;
         };
 
         ext-nav-sel {
             bindings = <
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans                     &trans            &trans             &trans              &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)               &kp LC(LS(HOME))  &kp LS(END)        &trans              &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(LA(LEFT))           &kp LC(LS(END))   &kp LS(LA(RIGHT))  &edt_off_kp DELETE  &trans
-&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &edt_off_kp LS(BACKSPACE)  &trans            &trans             &trans              &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans                     &trans            &trans             &trans                  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)               &kp LC(LS(HOME))  &kp LS(END)        &trans                  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(LA(LEFT))           &kp LC(LS(END))   &kp LS(LA(RIGHT))  &edt_off_kp LS(DELETE)  &trans
+&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &edt_off_kp LS(BACKSPACE)  &trans            &trans             &trans                  &trans
                            &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans                     &trans            &trans
             >;
 
@@ -631,24 +631,24 @@
         utils {
             display-name = "utils";
             bindings = <
-&none  &none  &none  &none  &none       &none                     &none        &kp C_VOLUME_DOWN    &kp C_MUTE        &kp C_VOLUME_UP        &none         &none
-&none  &none  &none  &none  &none       &none                     &none        &none                &kp LC(LA(UP))    &none                  &none         &kp LC(ENTER)
-&none  &none  &none  &none  &eoff_fnxt  &none                     &key_repeat  &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &none         &none
-&none  &none  &none  &none  &none       &none   &none     &none   &none        &sk LSHFT            &sk LEFT_CONTROL  &sk LGUI               &sk LEFT_ALT  &none
-              &none  &none  &trans      &trans  &trans    &trans  &kp SPACE    &trans               &none             &none
+&none  &none  &none  &none  &none       &none                     &none      &kp C_VOLUME_DOWN    &kp C_MUTE        &kp C_VOLUME_UP        &none         &none
+&none  &none  &none  &none  &none       &none                     &none      &none                &kp LC(LA(UP))    &none                  &none         &kp LC(ENTER)
+&none  &none  &none  &none  &eoff_fnxt  &none                     &none      &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &none         &none
+&none  &none  &none  &none  &none       &none   &none     &none   &none      &sk LSHFT            &sk LEFT_CONTROL  &sk LGUI               &sk LEFT_ALT  &none
+              &none  &none  &trans      &trans  &trans    &trans  &kp SPACE  &trans               &none             &none
             >;
         };
 
-        nav-e {
+        desktop {
             bindings = <
-&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &trans             &trans        &trans         &trans          &trans
-&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &kp LA(LEFT)       &kp LC(HOME)  &kp LA(RIGHT)  &trans          &trans
-&trans  &trans     &trans         &trans         &trans         &trans                    &trans  &kp HOME           &kp LC(END)   &kp END        &kp LS(DELETE)  &trans
-&trans  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &trans  &trans    &trans  &trans  &kp LS(BACKSPACE)  &trans        &trans         &trans          &trans
-                   &trans         &trans         &trans         &trans  &trans    &trans  &trans  &trans             &trans        &trans
+&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                      &cmd_f15 F16  &cmd_f15 F17  &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "nav-e";
+            label = "desktop";
         };
     };
 
