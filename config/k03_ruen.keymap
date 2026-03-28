@@ -443,7 +443,7 @@
             display-name = "ext-nav";
             bindings = <
 &bootloader   &none      &kp F23        &kp INSERT     &kp F24        &none                     &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none
-&out OUT_USB  &none      &none          &none          &none          &none                     &none         &kp HOME           &kp LC(HOME)  &kp END        &none           &none
+&out OUT_USB  &none      &none          &on 7          &none          &none                     &none         &kp HOME           &kp LC(HOME)  &kp END        &none           &none
 &out OUT_BLE  &none      &kp LS(LG(S))  &kp LC(E)      &none          &none                     &none         &kp LA(LEFT)       &kp LC(END)   &kp LA(RIGHT)  &kp LS(DELETE)  &none
 &bt BT_CLR    &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &none   &trans    &trans  &none         &kp LS(BACKSPACE)  &none         &none          &none           &none
                          &none          &none          &trans         &trans  &trans    &trans  &trans        &trans             &none         &none
@@ -453,7 +453,7 @@
         ext-nav-sel {
             bindings = <
 &trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans                     &trans            &trans             &trans                  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &kp LS(HOME)               &kp LC(LS(HOME))  &kp LS(END)        &trans                  &trans
+&trans  &trans             &trans                 &off 7                 &trans                 &trans                    &trans  &kp LS(HOME)               &kp LC(LS(HOME))  &kp LS(END)        &trans                  &trans
 &trans  &trans             &trans                 &kp LC(E)              &trans                 &trans                    &trans  &kp LS(LA(LEFT))           &kp LC(LS(END))   &kp LS(LA(RIGHT))  &edt_off_kp LS(DELETE)  &trans
 &trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &edt_off_kp LS(BACKSPACE)  &trans            &trans             &trans                  &trans
                            &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans                     &trans            &trans
