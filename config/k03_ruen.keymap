@@ -385,22 +385,22 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none        &none           &none             &none              &none            &none                        &none        &none           &none                 &none                  &none            &none
-&kp LS(TAB)  &kp N1          &kp N2            &kp N3             &kp N4           &kp N5                       &kp PERCENT  &kp CARET       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE        &none
-&lay_ru      &kp N6          &kp N7            &kp N8             &kp N9           &kp N0                       &kp ENTER    &kp MINUS       &kp PLUS              &kp ASTERISK           &kp AMPERSAND    &kp APOSTROPHE
-&none        &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp EQUAL  &trans    &trans  &kp AT       &kp UNDERSCORE  &kp COMMA             &kp DOT                &kp EXCLAMATION  &none
-                             &none             &none              &trans           &trans     &trans    &trans  &trans       &trans          &none                 &none
+&none        &none          &none             &none              &none           &none                              &none        &none           &none                 &none                  &none            &none
+&kp LS(TAB)  &kp N1         &kp N2            &kp N3             &kp N4          &kp N5                             &kp PERCENT  &kp PLUS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE        &none
+&none        &kp N6         &kp N7            &kp N8             &kp N9          &kp N0                             &kp ENTER    &kp MINUS       &kp EQUAL             &kp ASTERISK           &kp CARET        &kp APOSTROPHE
+&none        &kp AMPERSAND  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans    &trans  &kp AT       &kp UNDERSCORE  &kp COMMA             &kp DOT                &kp EXCLAMATION  &none
+                            &none             &none              &trans          &trans           &trans    &trans  &trans       &trans          &none                 &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans   &trans          &trans            &trans             &trans           &trans                    &trans          &trans     &trans        &trans      &trans              &trans
-&trans   &trans          &trans            &trans             &trans           &trans                    &kp RU_PERCENT  &en CARET  &trans        &trans      &en TILDE           &trans
-&lay_en  &trans          &trans            &trans             &trans           &trans                    &trans          &trans     &trans        &trans      &en AMPERSAND       &en APOSTROPHE
-&trans   &en LEFT_BRACE  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en RIGHT_BRACE  &trans  &trans    &trans  &en AT          &trans     &kp RU_COMMA  &kp RU_DOT  &kp RU_EXCLAMATION  &trans
-                         &trans            &trans             &trans           &trans  &trans    &trans  &trans          &trans     &trans        &trans
+&trans  &trans         &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &trans              &trans
+&trans  &trans         &trans            &trans             &trans          &trans                             &kp RU_PERCENT  &trans  &trans        &trans      &en TILDE           &trans
+&trans  &trans         &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &en CARET           &en APOSTROPHE
+&trans  &en AMPERSAND  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en LEFT_BRACE  &en RIGHT_BRACE  &trans    &trans  &en AT          &trans  &kp RU_COMMA  &kp RU_DOT  &kp RU_EXCLAMATION  &trans
+                       &trans            &trans             &trans          &trans           &trans    &trans  &trans          &trans  &trans        &trans
             >;
         };
 
