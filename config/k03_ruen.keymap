@@ -20,16 +20,40 @@
             layers = <1>;
         };
 
-        ru_io {
+        cmb_ru_io {
             bindings = <&kp RU_CYRILLIC_IO>;
             key-positions = <15 16>;
             layers = <1>;
         };
 
-        ru_hs {
+        cmb_ru_hs {
             bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
             key-positions = <19 20>;
             layers = <1>;
+        };
+
+        cmb_home {
+            bindings = <&kp HOME>;
+            key-positions = <19 20>;
+            layers = <5 6>;
+        };
+
+        cmb_s_home {
+            bindings = <&kp LS(HOME)>;
+            key-positions = <19 20>;
+            layers = <7>;
+        };
+
+        cmd_end {
+            bindings = <&kp END>;
+            key-positions = <20 21>;
+            layers = <5 6>;
+        };
+
+        cmb_s_end {
+            bindings = <&kp LS(END)>;
+            key-positions = <20 21>;
+            layers = <7>;
         };
     };
 
@@ -385,44 +409,44 @@
         num-sym-en {
             display-name = "num_sym";
             bindings = <
-&none        &none          &none             &none              &none           &none                              &none        &none           &none                 &none                  &none            &none
-&kp LS(TAB)  &kp N1         &kp N2            &kp N3             &kp N4          &kp N5                             &kp PERCENT  &kp PLUS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE        &none
-&none        &kp N6         &kp N7            &kp N8             &kp N9          &kp N0                             &kp ENTER    &kp MINUS       &kp EQUAL             &kp ASTERISK           &kp CARET        &kp APOSTROPHE
-&none        &kp AMPERSAND  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans    &trans  &kp AT       &kp UNDERSCORE  &kp COMMA             &kp DOT                &kp EXCLAMATION  &none
-                            &none             &none              &trans          &trans           &trans    &trans  &trans       &trans          &none                 &none
+&none        &none            &none             &none              &none           &none                              &none        &none           &none                 &none                  &none          &none
+&kp LS(TAB)  &kp N1           &kp N2            &kp N3             &kp N4          &kp N5                             &kp PERCENT  &kp PLUS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &none
+&none        &kp N6           &kp N7            &kp N8             &kp N9          &kp N0                             &kp ENTER    &kp MINUS       &kp EQUAL             &kp ASTERISK           &kp COLON      &kp APOSTROPHE
+&none        &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans    &trans  &kp AT       &kp UNDERSCORE  &kp COMMA             &kp DOT                &kp QUESTION   &none
+                              &none             &none              &trans          &trans           &trans    &trans  &trans       &trans          &none                 &none
             >;
         };
 
         num-sym-ru {
             display-name = "num-sym";
             bindings = <
-&trans  &trans         &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &trans              &trans
-&trans  &trans         &trans            &trans             &trans          &trans                             &kp RU_PERCENT  &trans  &trans        &trans      &en TILDE           &trans
-&trans  &trans         &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &en CARET           &en APOSTROPHE
-&trans  &en AMPERSAND  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en LEFT_BRACE  &en RIGHT_BRACE  &trans    &trans  &en AT          &trans  &kp RU_COMMA  &kp RU_DOT  &kp RU_EXCLAMATION  &trans
-                       &trans            &trans             &trans          &trans           &trans    &trans  &trans          &trans  &trans        &trans
+&trans  &trans              &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &trans            &trans
+&trans  &trans              &trans            &trans             &trans          &trans                             &kp RU_PERCENT  &trans  &trans        &trans      &kp RU_SEMICOLON  &trans
+&trans  &trans              &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &kp RU_COLON      &en APOSTROPHE
+&trans  &kp RU_EXCLAMATION  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en LEFT_BRACE  &en RIGHT_BRACE  &trans    &trans  &en AT          &trans  &kp RU_COMMA  &kp RU_DOT  &kp RU_QUESTION   &trans
+                            &trans            &trans             &trans          &trans           &trans    &trans  &trans          &trans  &trans        &trans
             >;
         };
 
         nav-sym-en {
             display-name = "nav_sym";
             bindings = <
-&none    &none          &none      &none      &none      &none                            &none          &none          &none          &none             &none         &none
-&kp TAB  &ru RU_NUMERO  &kp LC(Y)  &on 7      &kp LC(F)  &kp SEMICOLON                    &kp PG_UP      &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)     &kp COLON     &kp PIPE
-&kp ESC  &kp HASH       &kp LC(S)  &kp LC(D)  &find_nxt  &kp GRAVE                        &key_repeat    &kp LEFT       &kp DOWN       &kp RIGHT         &kp DELETE    &kp DOUBLE_QUOTES
-&none    &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp DOLLAR     &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &none
-                        &none      &none      &trans     &trans         &trans    &trans  &trans         &trans         &none          &none
+&none    &none          &none      &none      &none      &none                         &none          &none          &none          &none             &none          &none
+&kp TAB  &ru RU_NUMERO  &kp LC(Y)  &on 7      &kp LC(F)  &kp TILDE                     &kp PG_UP      &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)     &kp AMPERSAND  &kp PIPE
+&kp ESC  &kp HASH       &kp LC(S)  &kp LC(D)  &find_nxt  &kp GRAVE                     &key_repeat    &kp LEFT       &kp DOWN       &kp RIGHT         &kp DELETE     &kp DOUBLE_QUOTES
+&none    &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp DOLLAR  &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &kp LESS_THAN  &kp GREATER_THAN  &kp CARET      &none
+                        &none      &none      &trans     &trans      &trans    &trans  &trans         &trans         &none          &none
             >;
         };
 
         nav-sym-ru {
             display-name = "nav-sym";
             bindings = <
-&trans  &trans         &trans  &trans  &trans  &trans                              &trans  &trans  &trans         &trans            &trans           &trans
-&trans  &kp RU_NUMERO  &trans  &trans  &trans  &kp RU_SEMICOLON                    &trans  &trans  &trans         &trans            &kp RU_COLON     &en PIPE
-&trans  &en HASH       &trans  &trans  &trans  &en GRAVE                           &trans  &trans  &trans         &trans            &trans           &kp RU_DOUBLE_QUOTES
-&trans  &trans         &trans  &trans  &trans  &en DOLLAR        &trans    &trans  &trans  &trans  &en LESS_THAN  &en GREATER_THAN  &kp RU_QUESTION  &trans
-                       &trans  &trans  &trans  &trans            &trans    &trans  &trans  &trans  &trans         &trans
+&trans  &trans         &trans  &trans  &trans  &trans                        &trans  &trans  &trans         &trans            &trans         &trans
+&trans  &kp RU_NUMERO  &trans  &trans  &trans  &en TILDE                     &trans  &trans  &trans         &trans            &en AMPERSAND  &en PIPE
+&trans  &en HASH       &trans  &trans  &trans  &en GRAVE                     &trans  &trans  &trans         &trans            &trans         &kp RU_DOUBLE_QUOTES
+&trans  &trans         &trans  &trans  &trans  &en DOLLAR  &trans    &trans  &trans  &trans  &en LESS_THAN  &en GREATER_THAN  &en CARET      &trans
+                       &trans  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans         &trans
             >;
         };
 
