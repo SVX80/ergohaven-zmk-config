@@ -411,7 +411,7 @@
             bindings = <
 &none        &none            &none             &none              &none           &none                              &none        &none           &none                 &none                  &none          &none
 &kp LS(TAB)  &kp N1           &kp N2            &kp N3             &kp N4          &kp N5                             &kp PERCENT  &kp PLUS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &none
-&none        &kp N6           &kp N7            &kp N8             &kp N9          &kp N0                             &kp ENTER    &kp MINUS       &kp EQUAL             &kp ASTERISK           &kp COLON      &kp APOSTROPHE
+&none        &kp N6           &kp N7            &kp N8             &kp N9          &kp N0                             &kp ENTER    &kp MINUS       &kp EQUAL             &kp ASTERISK           &kp CARET      &kp APOSTROPHE
 &none        &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans    &trans  &kp AT       &kp UNDERSCORE  &kp COMMA             &kp DOT                &kp QUESTION   &none
                               &none             &none              &trans          &trans           &trans    &trans  &trans       &trans          &none                 &none
             >;
@@ -422,7 +422,7 @@
             bindings = <
 &trans  &trans              &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &trans            &trans
 &trans  &trans              &trans            &trans             &trans          &trans                             &kp RU_PERCENT  &trans  &trans        &trans      &kp RU_SEMICOLON  &trans
-&trans  &trans              &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &kp RU_COLON      &en APOSTROPHE
+&trans  &trans              &trans            &trans             &trans          &trans                             &trans          &trans  &trans        &trans      &en CARET         &en APOSTROPHE
 &trans  &kp RU_EXCLAMATION  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en LEFT_BRACE  &en RIGHT_BRACE  &trans    &trans  &en AT          &trans  &kp RU_COMMA  &kp RU_DOT  &kp RU_QUESTION   &trans
                             &trans            &trans             &trans          &trans           &trans    &trans  &trans          &trans  &trans        &trans
             >;
@@ -434,7 +434,7 @@
 &none    &none          &none      &none      &none      &none                         &none          &none          &none          &none             &none          &none
 &kp TAB  &ru RU_NUMERO  &kp LC(Y)  &on 7      &kp LC(F)  &kp TILDE                     &kp PG_UP      &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)     &kp AMPERSAND  &kp PIPE
 &kp ESC  &kp HASH       &kp LC(S)  &kp LC(D)  &find_nxt  &kp GRAVE                     &key_repeat    &kp LEFT       &kp DOWN       &kp RIGHT         &kp DELETE     &kp DOUBLE_QUOTES
-&none    &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp DOLLAR  &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &kp LESS_THAN  &kp GREATER_THAN  &kp CARET      &none
+&none    &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp DOLLAR  &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &kp LESS_THAN  &kp GREATER_THAN  &kp COLON      &none
                         &none      &none      &trans     &trans      &trans    &trans  &trans         &trans         &none          &none
             >;
         };
@@ -445,7 +445,7 @@
 &trans  &trans         &trans  &trans  &trans  &trans                        &trans  &trans  &trans         &trans            &trans         &trans
 &trans  &kp RU_NUMERO  &trans  &trans  &trans  &en TILDE                     &trans  &trans  &trans         &trans            &en AMPERSAND  &en PIPE
 &trans  &en HASH       &trans  &trans  &trans  &en GRAVE                     &trans  &trans  &trans         &trans            &trans         &kp RU_DOUBLE_QUOTES
-&trans  &trans         &trans  &trans  &trans  &en DOLLAR  &trans    &trans  &trans  &trans  &en LESS_THAN  &en GREATER_THAN  &en CARET      &trans
+&trans  &trans         &trans  &trans  &trans  &en DOLLAR  &trans    &trans  &trans  &trans  &en LESS_THAN  &en GREATER_THAN  &kp RU_COLON   &trans
                        &trans  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans         &trans
             >;
         };
