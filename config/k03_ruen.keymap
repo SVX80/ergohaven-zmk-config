@@ -368,11 +368,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC           &none  &sk LGUI   &sk LEFT_CONTROL  &sk LEFT_ALT  &none                                           &none         &none      &lay_ru    &sl 12    &bksp_del   &kp C_MUTE
-&kp TAB           &kp Q  &kp W      &kp E             &kp R         &kp T                                           &kp Y         &kp U      &kp I      &kp O     &kp P       &kp LEFT_BRACKET
-&kp CAPSLOCK      &kp A  &kp S      &kp D             &kp F         &kp G                                           &kp H         &kp J      &kp K      &kp L     &kp SEMI    &kp APOSTROPHE
-&sk LEFT_CONTROL  &kp Z  &kp X      &kp C             &kp V         &kp B             &layer_en       &kp ENTER     &kp N         &kp M      &kp COMMA  &kp DOT   &sl_bslh_e  &sk RIGHT_CONTROL
-                         &kp GRAVE  &dqt_no_e         &sk LSHFT     &nav_ltk 5 SPACE  &mo_sl 11 11    &mo_sl 10 10  &ltk 3 SPACE  &sk RSHFT  &kp LBKT   &kp RBKT
+&kp ESC           &none  &sk LGUI   &kp_sk LCTRL LCTRL  &sk LEFT_ALT        &none                                           &none         &none               &lay_ru    &sl 12    &bksp_del   &kp C_MUTE
+&kp TAB           &kp Q  &kp W      &kp E               &kp R               &kp T                                           &kp Y         &kp U               &kp I      &kp O     &kp P       &kp LEFT_BRACKET
+&kp CAPSLOCK      &kp A  &kp S      &kp D               &kp F               &kp G                                           &kp H         &kp J               &kp K      &kp L     &kp SEMI    &kp APOSTROPHE
+&sk LEFT_CONTROL  &kp Z  &kp X      &kp C               &kp V               &kp B             &layer_en       &kp ENTER     &kp N         &kp M               &kp COMMA  &kp DOT   &sl_bslh_e  &sk RIGHT_CONTROL
+                         &kp GRAVE  &dqt_no_e           &kp_sk LSHFT LSHFT  &nav_ltk 5 SPACE  &mo_sl 11 11    &mo_sl 10 10  &ltk 3 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
