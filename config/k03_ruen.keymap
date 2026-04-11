@@ -405,7 +405,7 @@
             display-name = "nav";
             bindings = <
 &trans  &none  &none      &none      &none      &none                            &none          &none          &none     &none          &none       &trans
-&trans  &none  &none      &on 8      &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none       &none
+&trans  &none  &none      &on 7      &kp LC(F)  &none                            &kp PAGE_UP    &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none       &none
 &trans  &none  &kp LC(S)  &kp LC(D)  &find_nxt  &none                            &key_repeat    &kp LEFT       &kp DOWN  &kp RIGHT      &kp DELETE  &none
 &trans  &none  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp PAGE_DOWN  &kp BACKSPACE  &none     &none          &none       &trans
                &none      &none      &trans     &nvoff_mo 2 3  &trans    &trans  &trans         &trans         &none     &none
@@ -460,7 +460,7 @@
             display-name = "nav-sel";
             bindings = <
 &none                &none  &none              &none              &none              &none                     &none              &none                  &none         &none              &none               &none
-&edt_off_kp LS(ESC)  &none  &none              &off 8             &edt_off_kp LC(F)  &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))       &kp LS(UP)    &kp LC(LS(RIGHT))  &none               &none
+&edt_off_kp LS(ESC)  &none  &none              &off 7             &edt_off_kp LC(F)  &none                     &kp LS(PG_UP)      &kp LC(LS(LEFT))       &kp LS(UP)    &kp LC(LS(RIGHT))  &none               &none
 &none                &none  &edt_off_kp LC(S)  &edt_off_kp LC(D)  &eoff_fnxt         &none                     &key_repeat        &kp LS(LEFT)           &kp LS(DOWN)  &kp LS(RIGHT)      &edt_off_kp DELETE  &none
 &none                &none  &edt_off_kp LC(X)  &edt_off_kp LC(C)  &edt_off_kp LC(V)  &none   &trans    &trans  &kp LS(PAGE_DOWN)  &edt_off_kp BACKSPACE  &none         &none              &none               &none
                             &none              &none              &trans             &trans  &trans    &trans  &trans             &trans                 &none         &none
