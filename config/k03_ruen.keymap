@@ -416,7 +416,7 @@
             display-name = "nav_sym";
             bindings = <
 &none        &none          &none        &none      &none      &none                         &kp C_PP       &kp C_PREV     &none          &kp C_NEXT        &none       &none
-&kp LS(ESC)  &ru RU_NUMERO  &key_repeat  &on 8      &kp LC(F)  &none                         &kp PG_UP      &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)     &kp COLON   &kp PIPE
+&kp LS(ESC)  &ru RU_NUMERO  &key_repeat  &on 7      &kp LC(F)  &none                         &kp PG_UP      &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)     &kp COLON   &kp PIPE
 &none        &lay_ru        &kp LC(S)    &kp LC(D)  &find_nxt  &kp GRAVE                     &kp AMPERSAND  &kp LEFT       &kp DOWN       &kp RIGHT         &kp DELETE  &kp DOUBLE_QUOTES
 &none        &kp TILDE      &kp LC(X)    &kp LC(C)  &kp LC(V)  &kp DOLLAR  &trans    &trans  &kp PG_DN      &kp BACKSPACE  &kp LESS_THAN  &kp GREATER_THAN  &kp HASH    &none
                             &none        &none      &trans     &trans      &trans    &trans  &trans         &trans         &none          &none
@@ -547,7 +547,7 @@
         };
 
         ext-nav-sel {
-            if-layers = <3 7>;
+            if-layers = <3 5 7>;
             then-layer = <9>;
         };
     };
