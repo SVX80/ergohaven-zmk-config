@@ -482,11 +482,11 @@
 
         ext-nav-sel {
             bindings = <
-&trans  &trans  &trans                 &trans                 &trans                 &trans                    &trans                  &trans                     &trans         &trans             &trans                 &trans
-&trans  &trans  &trans                 &off 7                 &trans                 &trans                    &kp LS(LC(HOME))        &kp LS(HOME)               &kp LS(PG_UP)  &kp LS(END)        &trans                 &trans
-&trans  &trans  &trans                 &kp LC(E)              &trans                 &trans                    &edt_off_kp LS(DELETE)  &kp LS(LA(LEFT))           &kp LS(PG_DN)  &kp LS(LA(RIGHT))  &edt_off_kp LC(ENTER)  &trans
-&trans  &trans  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &kp LS(LC(END))         &edt_off_kp LS(BACKSPACE)  &trans         &trans             &trans                 &trans
-                &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans                  &trans                     &trans         &trans
+&trans  &trans               &trans                 &trans                 &trans                 &trans                    &trans                  &trans                     &trans         &trans             &trans                 &trans
+&trans  &trans               &trans                 &off 7                 &trans                 &trans                    &kp LS(LC(HOME))        &kp LS(HOME)               &kp LS(PG_UP)  &kp LS(END)        &trans                 &trans
+&trans  &edt_off_kp LS(ESC)  &trans                 &kp LC(E)              &trans                 &trans                    &edt_off_kp LS(DELETE)  &kp LS(LA(LEFT))           &kp LS(PG_DN)  &kp LS(LA(RIGHT))  &edt_off_kp LC(ENTER)  &trans
+&trans  &trans               &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &kp LS(LC(END))         &edt_off_kp LS(BACKSPACE)  &trans         &trans             &trans                 &trans
+                             &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans                  &trans                     &trans         &trans
             >;
 
             label = "ext-nav-sel";
