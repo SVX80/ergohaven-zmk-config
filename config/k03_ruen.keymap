@@ -399,7 +399,7 @@
 &kp TAB           &kp Q         &kp W         &kp E         &kp R               &kp T                                           &kp Y         &kp U               &kp I      &kp O         &kp P       &kp LEFT_BRACKET
 &caps_layen       &kp A         &kp S         &kp D         &kp F               &kp G                                           &kp H         &kp J               &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
 &sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V               &kp B             &layer_en       &kp ENTER     &kp N         &kp M               &kp COMMA  &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
-                                &kp GRAVE     &dqt_no_e     &kp_sk LSHFT LSHFT  &nav_ltk 3 SPACE  &mo_sl 11 11    &mo_sl 10 10  &ltk 5 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
+                                &kp GRAVE     &dqt_no_e     &kp_sk LSHFT LSHFT  &nav_ltk 3 SPACE  &mo_sl 10 10    &mo_sl 11 11  &ltk 5 SPACE  &kp_sk RSHFT RSHFT  &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -513,6 +513,17 @@
             label = "ext-nav-sel";
         };
 
+        utils {
+            display-name = "utils";
+            bindings = <
+&none  &none  &none      &none      &none      &none                     &none        &none                &none             &none                  &none          &none
+&none  &none  &none      &none      &none      &none                     &none        &none                &kp LC(LA(UP))    &none                  &none          &none
+&none  &none  &none      &none      &none      &none                     &kp LS(ESC)  &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &kp LC(F)      &kp LS(ENTER)
+&none  &none  &kp LA(X)  &kp LA(C)  &kp LA(V)  &none   &trans    &trans  &none        &none                &none             &none                  &kp LC(SLASH)  &none
+              &none      &none      &trans     &trans  &trans    &trans  &trans       &trans               &none             &none
+            >;
+        };
+
         fn {
             bindings = <
 &none    &none    &none    &none    &none    &none                      &none        &none         &none      &none     &none      &none
@@ -523,17 +534,6 @@
             >;
 
             label = "fn";
-        };
-
-        utils {
-            display-name = "utils";
-            bindings = <
-&none  &none  &none      &none      &none      &none                     &none        &none                &none             &none                  &none          &none
-&none  &none  &none      &none      &none      &none                     &none        &none                &kp LC(LA(UP))    &none                  &none          &none
-&none  &none  &none      &none      &none      &none                     &kp LS(ESC)  &kp LC(LA(PAGE_UP))  &kp LC(LA(DOWN))  &kp LC(LA(PAGE_DOWN))  &kp LC(F)      &kp LS(ENTER)
-&none  &none  &kp LA(X)  &kp LA(C)  &kp LA(V)  &none   &trans    &trans  &none        &none                &none             &none                  &kp LC(SLASH)  &none
-              &none      &none      &trans     &trans  &trans    &trans  &trans       &trans               &none             &none
-            >;
         };
 
         desktop {
