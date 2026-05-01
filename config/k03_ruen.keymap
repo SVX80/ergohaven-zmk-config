@@ -527,11 +527,11 @@
         l-up-en {
             display-name = "l_up";
             bindings = <
-&none  &none    &none    &none    &none    &none                      &none      &none          &none      &none      &none          &none
-&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp LS(Y)  &kp LS(U)      &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp RBKT
-&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &kp LS(H)  &kp LS(J)      &kp LS(K)  &kp LS(L)  &kp COLON      &kp DOUBLE_QUOTES
-&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans    &trans  &kp LS(N)  &kp LS(M)      &kp LT     &kp GT     &kp BACKSLASH  &none
-                &none    &none    &kp F16  &trans   &trans    &trans  &trans     &kp LS(ENTER)  &none      &none
+&none  &none    &none    &none    &none    &none                      &none               &none          &none      &none      &none          &none
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp LS(Y)           &kp LS(U)      &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp RBKT
+&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &kp LS(H)           &kp LS(J)      &kp LS(K)  &kp LS(L)  &kp COLON      &kp DOUBLE_QUOTES
+&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans    &trans  &kp LS(N)           &kp LS(M)      &kp LT     &kp GT     &kp BACKSLASH  &none
+                &none    &none    &kp F16  &trans   &trans    &trans  &ltk (5) LS(SPACE)  &kp LS(ENTER)  &none      &none
             >;
         };
 
@@ -548,11 +548,11 @@
 
         r-up {
             bindings = <
-&none        &none      &none      &none      &none        &none                        &none        &none         &none      &none     &none      &none
-&kp LS(ESC)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                    &none        &none         &none      &none     &none      &none
-&lay_en      &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                    &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
-&none        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)  &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
-                        &none      &none      &kp LS(TAB)  &trans     &trans    &trans  &trans       &trans        &none      &none
+&none        &none      &none      &none      &none        &none                                     &none        &none         &none      &none     &none      &none
+&kp LS(ESC)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                                 &none        &none         &none      &none     &none      &none
+&lay_en      &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                                 &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
+&none        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)               &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
+                        &none      &none      &kp LS(TAB)  &nav_ltk (3) LS(SPACE)  &trans    &trans  &trans       &trans        &none      &none
             >;
 
             label = "r-up";
