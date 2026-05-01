@@ -506,7 +506,7 @@
             bindings = <
 &bootloader   &none  &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &bt BT_CLR
 &none         &none  &none          &on 7          &none           &none                             &kp LC(HOME)    &kp LA(LEFT)       &kp PG_UP     &kp LA(RIGHT)  &none         &none
-&on 2         &none  &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &kp LC(DELETE)  &kp HOME           &kp PG_DN     &kp END        &none         &none
+&on 2         &none  &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &kp LS(DELETE)  &kp HOME           &kp PG_DN     &kp END        &none         &none
 &out OUT_USB  &none  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &kp LC(END)     &kp LS(BACKSPACE)  &none         &none          &none         &out OUT_BLE
                      &none          &none          &trans          &trans          &trans    &trans  &trans          &trans             &none         &none
             >;
@@ -516,7 +516,7 @@
             bindings = <
 &trans  &trans  &trans                 &trans                 &trans                 &trans                    &trans                  &trans                     &trans         &trans             &trans  &trans
 &trans  &trans  &trans                 &off 7                 &trans                 &trans                    &kp LS(LC(HOME))        &kp LS(LA(LEFT))           &kp LS(PG_UP)  &kp LS(LA(RIGHT))  &trans  &trans
-&trans  &trans  &trans                 &kp LC(E)              &trans                 &trans                    &edt_off_kp LC(DELETE)  &kp LS(HOME)               &kp LS(PG_DN)  &kp LS(END)        &trans  &trans
+&trans  &trans  &trans                 &kp LC(E)              &trans                 &trans                    &edt_off_kp LS(DELETE)  &kp LS(HOME)               &kp LS(PG_DN)  &kp LS(END)        &trans  &trans
 &trans  &trans  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &kp LS(LC(END))         &edt_off_kp LS(BACKSPACE)  &trans         &trans             &trans  &trans
                 &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans                  &trans                     &trans         &trans
             >;
