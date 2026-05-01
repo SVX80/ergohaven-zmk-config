@@ -407,10 +407,10 @@
             display-name = "En";
             bindings = <
 &kp ESC           &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16   &cmd_f16 F17                                    &kp C_MUTE    &kp C_VOL_DN  &sl 14     &kp C_VOL_UP  &bksp_del   &none
-&kp TAB           &kp Q         &kp W         &kp E         &kp R          &kp T                                           &kp Y         &kp U         &kp I      &kp O         &kp P       &lr_bkt
+&kp ESC           &kp Q         &kp W         &kp E         &kp R          &kp T                                           &kp Y         &kp U         &kp I      &kp O         &kp P       &lr_bkt
 &kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F          &kp G                                           &kp H         &kp J         &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
 &sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V          &kp B             &layer_en       &layer_ru     &kp N         &kp M         &kp COMMA  &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
-                                &kp GRAVE     &dqt_no_e     &mt LSHFT ESC  &nav_ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &ltk 5 SPACE  &kp ENTER     &kp LBKT   &kp RBKT
+                                &kp GRAVE     &dqt_no_e     &mt LSHFT TAB  &nav_ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &ltk 5 SPACE  &kp ENTER     &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -470,10 +470,10 @@
             display-name = "num_sym";
             bindings = <
 &none        &cmd_f16 F18     &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21   &cmd_f16 F22                    &none        &none           &none                 &none                  &none          &none
-&kp LS(TAB)  &kp N1           &kp N2            &kp N3             &kp N4         &kp N5                          &none        &kp CARET       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &none
+&kp LS(ESC)  &kp N1           &kp N2            &kp N3             &kp N4         &kp N5                          &none        &kp CARET       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &none
 &lay_ru      &kp N6           &kp N7            &kp N8             &kp N9         &kp N0                          &kp PERCENT  &kp MINUS       &kp PLUS              &kp ASTERISK           &kp EQUAL      &kp APOSTROPHE
 &none        &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND  &kp PIPE      &trans    &trans  &kp TILDE    &kp UNDERSCORE  &kp COMMA             &kp DOT                &kp HASH       &none
-                              &none             &none              &trans         &trans        &trans    &trans  &trans       &trans          &none                 &none
+                              &none             &none              &kp LS(TAB)    &trans        &trans    &trans  &trans       &trans          &none                 &none
             >;
         };
 
@@ -527,11 +527,11 @@
         l-up-en {
             display-name = "l_up";
             bindings = <
-&none    &none    &none    &none    &none    &none                      &none      &none          &none      &none      &none          &none
-&kp F16  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp LS(Y)  &kp LS(U)      &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp RBKT
-&none    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &kp LS(H)  &kp LS(J)      &kp LS(K)  &kp LS(L)  &kp COLON      &kp DOUBLE_QUOTES
-&none    &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans    &trans  &kp LS(N)  &kp LS(M)      &kp LT     &kp GT     &kp BACKSLASH  &none
-                  &none    &none    &trans   &trans   &trans    &trans  &trans     &kp LS(ENTER)  &none      &none
+&none  &none    &none    &none    &none    &none                      &none      &none          &none      &none      &none          &none
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp LS(Y)  &kp LS(U)      &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp RBKT
+&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &kp LS(H)  &kp LS(J)      &kp LS(K)  &kp LS(L)  &kp COLON      &kp DOUBLE_QUOTES
+&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans    &trans  &kp LS(N)  &kp LS(M)      &kp LT     &kp GT     &kp BACKSLASH  &none
+                &none    &none    &kp F16  &trans   &trans    &trans  &trans     &kp LS(ENTER)  &none      &none
             >;
         };
 
@@ -549,10 +549,10 @@
         r-up {
             bindings = <
 &none        &none      &none      &none      &none        &none                        &none        &none         &none      &none     &none      &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                    &none        &none         &none      &none     &none      &none
+&kp LS(ESC)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                    &none        &none         &none      &none     &none      &none
 &lay_en      &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                    &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
 &none        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)  &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
-                        &none      &none      &kp LS(ESC)  &trans     &trans    &trans  &trans       &trans        &none      &none
+                        &none      &none      &kp LS(TAB)  &trans     &trans    &trans  &trans       &trans        &none      &none
             >;
 
             label = "r-up";
