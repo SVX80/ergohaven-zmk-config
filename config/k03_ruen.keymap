@@ -22,6 +22,18 @@
             layers = <1>;
         };
 
+        cmb_ru_cio {
+            bindings = <&kp LS(RU_CYRILLIC_IO)>;
+            key-positions = <15 16>;
+            layers = <12>;
+        };
+
+        cmb_ru_chs {
+            bindings = <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
+            key-positions = <19 20>;
+            layers = <11>;
+        };
+
         cmb_home {
             bindings = <&kp HOME>;
             key-positions = <19 20>;
