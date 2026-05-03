@@ -402,10 +402,10 @@
             retro-tap;
         };
 
-        lr_bkt: lr_bkt {
+        lr_brace: lr_brace {
             compatible = "zmk,behavior-mod-morph";
-            label = "LR_BKT";
-            bindings = <&kp LBKT>, <&kp RBKT>;
+            label = "LR_BRACE";
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -419,7 +419,7 @@
             display-name = "En";
             bindings = <
 &kp ESC           &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16   &cmd_f16 F17                                &kp C_MUTE        &kp C_VOL_DN  &sl 15     &kp C_VOL_UP  &bksp_del   &none
-&kp ESC           &kp Q         &kp W         &kp E         &kp R          &kp T                                       &kp Y             &kp U         &kp I      &kp O         &kp P       &lr_bkt
+&kp ESC           &kp Q         &kp W         &kp E         &kp R          &kp T                                       &kp Y             &kp U         &kp I      &kp O         &kp P       &lr_brace
 &kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F          &kp G                                       &kp H             &kp J         &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
 &sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V          &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA  &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
                                 &kp GRAVE     &dqt_no_e     &mt LSHFT TAB  &ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT   &kp RBKT
@@ -481,11 +481,11 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none        &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21    &cmd_f16 F22                     &none         &none          &none          &none          &none       &none
-&kp LS(ESC)  &kp N1        &kp N2            &kp N3             &kp N4          &kp N5                           &kp LC(HOME)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &on 2       &none
-&lay_ru      &kp N6        &kp N7            &kp N8             &kp N9          &kp N0                           &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &on 7       &kp END
-&none        &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp AMPERSAND  &trans    &trans  &kp LC(END)   &kp BACKSPACE  &kp PAGE_DOWN  &kp PAGE_UP    &kp DELETE  &none
-                           &none             &none              &kp LS(TAB)     &trans         &trans    &trans  &trans        &trans         &none          &none
+&none    &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21    &cmd_f16 F22                     &none         &none          &none          &none          &none       &none
+&kp ESC  &kp N1        &kp N2            &kp N3             &kp N4          &kp N5                           &kp LC(HOME)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &on 2       &none
+&lay_ru  &kp N6        &kp N7            &kp N8             &kp N9          &kp N0                           &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &on 7       &kp END
+&none    &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp AMPERSAND  &trans    &trans  &kp LC(END)   &kp BACKSPACE  &kp PAGE_DOWN  &kp PAGE_UP    &kp DELETE  &none
+                       &none             &none              &kp LS(TAB)     &trans         &trans    &trans  &trans        &trans         &none          &none
             >;
         };
 
@@ -503,11 +503,11 @@
         nav-sel {
             display-name = "nav_sel";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none             &none                  &none          &none              &none               &none
-&none  &none  &none  &none  &none   &none                     &kp LS(LC(HOME))  &kp LC(LS(LEFT))       &kp LS(UP)     &kp LC(LS(RIGHT))  &on 2               &none
-&none  &none  &none  &none  &none   &none                     &kp LS(HOME)      &kp LS(LEFT)           &kp LS(DOWN)   &kp LS(RIGHT)      &off 7              &kp LS(END)
-&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))   &edt_off_kp BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &edt_off_kp DELETE  &none
-              &none  &none  &trans  &trans  &trans    &trans  &trans            &trans                 &none          &none
+&none   &none  &none  &none  &none   &none                     &none             &none                  &none          &none              &none               &none
+&none   &none  &none  &none  &none   &none                     &kp LS(LC(HOME))  &kp LC(LS(LEFT))       &kp LS(UP)     &kp LC(LS(RIGHT))  &on 2               &none
+&trans  &none  &none  &none  &none   &none                     &kp LS(HOME)      &kp LS(LEFT)           &kp LS(DOWN)   &kp LS(RIGHT)      &off 7              &kp LS(END)
+&none   &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))   &edt_off_kp BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &edt_off_kp DELETE  &none
+               &none  &none  &trans  &trans  &trans    &trans  &trans            &trans                 &none          &none
             >;
 
             label = "nav-sel";
