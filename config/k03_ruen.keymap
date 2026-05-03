@@ -459,11 +459,11 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none  &none      &none      &none      &none      &none                        &kp C_PP     &kp C_PREV      &kp LS(LC(M))         &kp C_NEXT             &none           &none
-&none  &kp LC(Y)  &none      &lay_ru    &none      &none                        &kp CARET    &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE
-&none  &mo 13     &kp LC(S)  &kp LC(D)  &find_nxt  &layer_en                    &kp EXCL     &kp MINUS       &kp PLUS              &kp EQUAL              &kp COLON       &kp DOUBLE_QUOTES
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none      &trans    &trans  &kp PERCENT  &kp UNDERSCORE  &kp LT                &kp GT                 &kp DOT         &none
-                  &none      &none      &trans     &trans     &trans    &trans  &trans       &kp LS(ENTER)   &none                 &none
+&none  &none      &none      &none      &none      &none                     &kp C_PP     &kp C_PREV      &kp LS(LC(M))         &kp C_NEXT             &none           &none
+&none  &kp LC(Y)  &none      &lay_ru    &none      &none                     &kp CARET    &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&none  &mo 13     &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp EXCL     &kp MINUS       &kp PLUS              &kp EQUAL              &kp COLON       &kp DOUBLE_QUOTES
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp PERCENT  &kp UNDERSCORE  &kp LT                &kp GT                 &kp DOT         &none
+                  &none      &none      &trans     &trans  &trans    &trans  &trans       &kp LS(ENTER)   &none                 &none
             >;
         };
 
@@ -503,11 +503,11 @@
         nav-sel {
             display-name = "nav_sel";
             bindings = <
-&none   &none  &none  &none  &none   &none                     &none             &none                  &none          &none              &none               &none
-&none   &none  &none  &none  &none   &none                     &kp LS(LC(HOME))  &kp LC(LS(LEFT))       &kp LS(UP)     &kp LC(LS(RIGHT))  &on 2               &none
-&trans  &none  &none  &none  &none   &none                     &kp LS(HOME)      &kp LS(LEFT)           &kp LS(DOWN)   &kp LS(RIGHT)      &off 7              &kp LS(END)
-&none   &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))   &edt_off_kp BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &edt_off_kp DELETE  &none
-               &none  &none  &trans  &trans  &trans    &trans  &trans            &trans                 &none          &none
+&none  &none  &none  &none  &none   &none                     &none             &none                  &none          &none              &none               &none
+&none  &none  &none  &none  &none   &none                     &kp LS(LC(HOME))  &kp LC(LS(LEFT))       &kp LS(UP)     &kp LC(LS(RIGHT))  &on 2               &none
+&none  &none  &none  &none  &none   &none                     &kp LS(HOME)      &kp LS(LEFT)           &kp LS(DOWN)   &kp LS(RIGHT)      &off 7              &kp LS(END)
+&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))   &edt_off_kp BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &edt_off_kp DELETE  &none
+              &none  &none  &trans  &trans  &trans    &trans  &trans            &trans                 &none          &none
             >;
 
             label = "nav-sel";
@@ -517,7 +517,7 @@
             display-name = "ext-nav";
             bindings = <
 &bootloader   &none  &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2           &bt BT_SEL 3       &bt BT_SEL 4    &bt BT_CLR
-&none         &none  &none          &none          &none           &none                             &none         &none              &kp LA(LC(UP))         &none              &on 2           &none
+&none         &none  &none          &lay_en        &none           &none                             &none         &none              &kp LA(LC(UP))         &none              &on 2           &none
 &none         &none  &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &none         &kp LA(LEFT)       &kp LA(LC(DOWN))       &kp LA(RIGHT)      &on 7           &none
 &out OUT_USB  &none  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none         &kp LC(BACKSPACE)  &kp LA(LC(PAGE_DOWN))  &kp LA(LC(PG_UP))  &kp LS(DELETE)  &out OUT_BLE
                      &none          &none          &trans          &trans          &trans    &trans  &trans        &trans             &none                  &none
