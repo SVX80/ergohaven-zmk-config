@@ -4,8 +4,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&mt { tapping-term-ms = <235>; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -282,24 +280,6 @@
             flavor = "hold-preferred";
         };
 
-        kp_sk: kp_sk {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            hold-while-undecided;
-        };
-
-        bksp_del: bksp_del {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_LSFT)>;
-            keep-mods = <(MOD_LALT)>;
-        };
-
         sl_bslh_e: sl_bslh_e {
             compatible = "zmk,behavior-mod-morph";
             label = "SL_BSLH_E";
@@ -345,15 +325,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        caps_layen: caps_layen {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CAPS_LAYEN";
-            bindings = <&kp LC(CAPSLOCK)>, <&lay_en>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         find_nxt: find_nxt {
             compatible = "zmk,behavior-mod-morph";
             label = "FIND_NXT";
@@ -373,35 +344,6 @@
             label = "NAV_LTK";
         };
 
-        exc_sem_e: exc_sem_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXC_SEM_E";
-            bindings = <&kp EXCLAMATION>, <&kp SEMICOLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        exc_sem_r: exc_sem_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXC_SEM_R";
-            bindings = <&kp RU_EXCLAMATION>, <&kp RU_SEMICOLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ltk_repeat: ltk_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-            label = "LTK_REPEAT";
-            retro-tap;
-        };
-
         lr_bkt: lr_bkt {
             compatible = "zmk,behavior-mod-morph";
             label = "LR_BKT";
@@ -418,11 +360,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI          &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16   &cmd_f16 F17                                &kp C_MUTE        &kp C_VOL_DN  &sl 15     &kp C_VOL_UP  &none       &none
-&kp ESC           &kp Q         &kp W         &kp E         &kp R          &kp T                                       &kp Y             &kp U         &kp I      &kp O         &kp P       &lr_bkt
-&kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F          &kp G                                       &kp H             &kp J         &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
-&sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V          &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA  &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
-                                &kp GRAVE     &dqt_no_e     &mt LSHFT TAB  &ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT   &kp RBKT
+&kp LGUI          &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16  &cmd_f16 F17                                &kp C_MUTE        &kp C_VOL_DN  &sl 15     &kp C_VOL_UP  &none       &none
+&kp ESC           &kp Q         &kp W         &kp E         &kp R         &kp T                                       &kp Y             &kp U         &kp I      &kp O         &kp P       &lr_bkt
+&kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F         &kp G                                       &kp H             &kp J         &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
+&sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V         &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA  &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
+                                &kp GRAVE     &dqt_no_e     &kp TAB       &ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings =
@@ -460,7 +402,7 @@
             display-name = "act_sym";
             bindings = <
 &none  &none      &none      &none      &none      &none                     &kp C_PP       &kp C_PREV      &none                 &kp C_NEXT             &none            &none
-&none  &kp LC(Y)  &none      &lay_ru    &none      &none                     &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&none  &kp LC(Y)  &none      &lay_ru    &kp LSHFT  &none                     &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
 &none  &mo 13     &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
 &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
                   &none      &none      &trans     &trans  &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
