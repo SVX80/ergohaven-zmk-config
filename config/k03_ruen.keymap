@@ -462,7 +462,7 @@
 &none  &none      &none      &none      &none      &none                     &kp C_PP     &kp C_PREV      &kp LS(LC(M))         &kp C_NEXT             &none           &none
 &none  &kp LC(Y)  &none      &lay_ru    &none      &none                     &kp CARET    &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE
 &none  &mo 13     &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp EXCL     &kp MINUS       &kp PLUS              &kp EQUAL              &kp COLON       &kp DOUBLE_QUOTES
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp PERCENT  &kp UNDERSCORE  &kp LT                &kp GT                 &kp DOT         &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp PERCENT  &kp UNDERSCORE  &kp LT                &kp GT                 &kp COMMA       &none
                   &none      &none      &trans     &trans  &trans    &trans  &trans       &kp LS(ENTER)   &none                 &none
             >;
         };
@@ -473,7 +473,7 @@
 &trans  &trans  &trans  &trans   &trans  &trans                    &trans          &trans  &trans  &trans  &trans          &trans
 &trans  &trans  &trans  &lay_en  &trans  &trans                    &en CARET       &trans  &trans  &trans  &en LEFT_BRACE  &en RIGHT_BRACE
 &trans  &trans  &trans  &trans   &trans  &trans                    &kp RU_EXCL     &trans  &trans  &trans  &kp RU_COLON    &kp RU_DOUBLE_QUOTES
-&trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans  &kp RU_PERCENT  &trans  &en LT  &en GT  &kp RU_DOT      &trans
+&trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans  &kp RU_PERCENT  &trans  &en LT  &en GT  &kp RU_COMMA    &trans
                 &trans  &trans   &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
         };
@@ -484,7 +484,7 @@
 &none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21   &cmd_f16 F22                    &none         &none          &none          &none          &none       &none
 &kp ESC         &kp N1        &kp N2            &kp N3             &kp N4         &kp N5                          &kp LC(HOME)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &on 2       &none
 &kp APOSTROPHE  &kp N6        &kp N7            &kp N8             &kp N9         &kp N0                          &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &on 7       &kp END
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND  &kp PIPE      &trans    &trans  &kp LC(END)   &kp BACKSPACE  &kp PAGE_DOWN  &kp PAGE_UP    &kp DELETE  &none
+&none           &kp DOT       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND  &kp PIPE      &trans    &trans  &kp LC(END)   &kp BACKSPACE  &kp PAGE_DOWN  &kp PAGE_UP    &kp DELETE  &none
                               &none             &none              &kp LS(TAB)    &trans        &trans    &trans  &trans        &trans         &none          &none
             >;
         };
@@ -492,11 +492,11 @@
         num-nav-ru {
             display-name = "num-nav";
             bindings = <
-&trans          &trans        &trans            &trans             &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans        &trans            &trans             &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&en APOSTROPHE  &trans        &trans            &trans             &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &kp RU_COMMA  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en AMPERSAND  &en PIPE  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans            &trans             &trans         &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans          &trans      &trans            &trans             &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans      &trans            &trans             &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&en APOSTROPHE  &trans      &trans            &trans             &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp RU_DOT  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en AMPERSAND  &en PIPE  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans            &trans             &trans         &trans    &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
