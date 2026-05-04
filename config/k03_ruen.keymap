@@ -402,10 +402,10 @@
             retro-tap;
         };
 
-        lr_brace: lr_brace {
+        lr_bkt: lr_bkt {
             compatible = "zmk,behavior-mod-morph";
-            label = "LR_BRACE";
-            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+            label = "LR_BKT";
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -418,10 +418,10 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC           &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16   &cmd_f16 F17                                &kp C_MUTE        &kp C_VOL_DN  &sl 15     &kp C_VOL_UP  &bksp_del   &none
-&kp ESC           &kp Q         &kp W         &kp E         &kp R          &kp T                                       &kp Y             &kp U         &kp I      &kp O         &kp P       &lr_brace
-&kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F          &kp G                                       &kp H             &kp J         &kp K      &kp L         &kp SEMI    &kp APOSTROPHE
-&sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V          &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA  &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
+&kp ESC           &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16   &cmd_f16 F17                                &kp C_MUTE        &kp C_VOL_DN  &sl 15     &kp C_VOL_UP  &kp LS(LC(M))  &none
+&kp ESC           &kp Q         &kp W         &kp E         &kp R          &kp T                                       &kp Y             &kp U         &kp I      &kp O         &kp P          &lr_bkt
+&kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F          &kp G                                       &kp H             &kp J         &kp K      &kp L         &kp SEMI       &kp APOSTROPHE
+&sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V          &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA  &kp DOT       &sl_bslh_e     &sk RIGHT_CONTROL
                                 &kp GRAVE     &dqt_no_e     &mt LSHFT TAB  &ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT   &kp RBKT
             >;
 
@@ -448,11 +448,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &none      &none      &none      &none      &none                     &none          &none          &kp LS(LC(M))  &none          &none       &trans
-&trans  &kp LC(Y)  &none      &none      &none      &none                     &kp LC(HOME)   &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &none       &none
-&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp HOME       &kp LEFT       &kp DOWN       &kp RIGHT      &on 7       &kp END
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp BACKSPACE  &kp PG_DN      &kp PG_UP      &kp DELETE  &trans
-                   &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans         &none          &none
+&trans  &none      &none      &none      &none      &none                     &none          &none          &none      &none          &kp LS(LC(M))  &trans
+&trans  &kp LC(Y)  &none      &none      &none      &none                     &kp LC(HOME)   &kp LC(LEFT)   &kp UP     &kp LC(RIGHT)  &none          &none
+&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp HOME       &kp LEFT       &kp DOWN   &kp RIGHT      &on 7          &kp END
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp BACKSPACE  &kp PG_DN  &kp PG_UP      &kp DELETE     &trans
+                   &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans         &none      &none
             >;
         };
 
@@ -540,7 +540,7 @@
             display-name = "l_up";
             bindings = <
 &none  &none    &none    &none    &none    &none                      &none                   &none          &none      &none      &none          &none
-&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp LS(Y)               &kp LS(U)      &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp RIGHT_BRACE
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp LS(Y)               &kp LS(U)      &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp RIGHT_BRACKET
 &none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &kp LS(H)               &kp LS(J)      &kp LS(K)  &kp LS(L)  &kp COLON      &kp DOUBLE_QUOTES
 &none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans    &trans  &kp LS(N)               &kp LS(M)      &kp LT     &kp GT     &kp BACKSLASH  &none
                 &none    &none    &kp F16  &trans   &trans    &trans  &nav_ltk (5) LS(SPACE)  &kp LS(ENTER)  &none      &none
@@ -584,21 +584,21 @@
         sym-ru {
             display-name = "sym-ru";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none            &none          &none           &none            &none             &none
-&none  &none  &none  &none  &none   &none                     &kp RU_NUMERO    &trans         &en LEFT_BRACE  &en RIGHT_BRACE  &trans            &trans
-&none  &none  &none  &none  &none   &none                     &kp RU_QUESTION  &en TILDE      &en AT          &en DOLLAR       &kp RU_SEMICOLON  &en APOSTROPHE
-&none  &none  &none  &none  &none   &none   &trans    &trans  &trans           &en GRAVE      &kp RU_COMMA    &kp RU_DOT       &en HASH          &trans
-              &none  &none  &trans  &trans  &trans    &trans  &trans           &kp LC(ENTER)  &none           &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans     &trans          &trans           &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp RU_NUMERO    &trans     &en LEFT_BRACE  &en RIGHT_BRACE  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp RU_QUESTION  &en TILDE  &en AT          &en DOLLAR       &kp RU_SEMICOLON  &en APOSTROPHE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &en GRAVE  &kp RU_COMMA    &kp RU_DOT       &en HASH          &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans     &trans          &trans
             >;
         };
 
         desktop {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans        &trans        &kp LA(TAB)   &trans        &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "desktop";
