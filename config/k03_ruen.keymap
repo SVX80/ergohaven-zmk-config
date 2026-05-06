@@ -366,10 +366,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &none      &none      &none      &none      &none                     &none          &none          &none      &none          &none       &trans
-&trans  &none      &none      &none      &none      &none                     &kp LC(HOME)   &kp LC(LEFT)   &kp UP     &kp LC(RIGHT)  &none       &none
-&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp HOME       &kp LEFT       &kp DOWN   &kp RIGHT      &on 7       &kp END
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp BACKSPACE  &kp PG_DN  &kp PG_UP      &kp DELETE  &trans
+&trans  &none      &none      &none      &none      &none                     &none          &none          &none      &none          &none         &trans
+&trans  &none      &none      &none      &none      &none                     &none          &kp BACKSPACE  &kp UP     &kp DELETE     &kp LC(HOME)  &none
+&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp HOME       &kp LEFT       &kp DOWN   &kp RIGHT      &on 7         &kp END
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp PG_UP      &kp LC(LEFT)   &kp PG_DN  &kp LC(RIGHT)  &kp LC(END)   &trans
                    &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans         &none      &none
             >;
         };
@@ -399,11 +399,11 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none    &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21    &cmd_f16 F22                    &none         &none          &none          &none          &none       &none
-&kp ESC  &kp N1        &kp N2            &kp N3             &kp N4          &kp N5                          &kp LC(HOME)  &kp LC(LEFT)   &kp UP         &kp LC(RIGHT)  &on 2       &none
-&kp DOT  &kp N6        &kp N7            &kp N8             &kp N9          &kp N0                          &kp HOME      &kp LEFT       &kp DOWN       &kp RIGHT      &on 7       &kp END
-&none    &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET       &kp PERCENT   &trans    &trans  &kp LC(END)   &kp BACKSPACE  &kp PAGE_DOWN  &kp PAGE_UP    &kp DELETE  &none
-                       &none             &none              &kp APOSTROPHE  &trans        &trans    &trans  &trans        &trans         &none          &none
+&none    &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21    &cmd_f16 F22                    &none      &none          &none      &none          &none         &none
+&kp ESC  &kp N1        &kp N2            &kp N3             &kp N4          &kp N5                          &on 2      &kp BACKSPACE  &kp UP     &kp DELETE     &kp LC(HOME)  &none
+&kp DOT  &kp N6        &kp N7            &kp N8             &kp N9          &kp N0                          &kp HOME   &kp LEFT       &kp DOWN   &kp RIGHT      &on 7         &kp END
+&none    &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET       &kp PERCENT   &trans    &trans  &kp PG_UP  &kp LC(LEFT)   &kp PG_DN  &kp LC(RIGHT)  &kp LC(END)   &none
+                       &none             &none              &kp APOSTROPHE  &trans        &trans    &trans  &trans     &trans         &none      &none
             >;
         };
 
@@ -421,11 +421,11 @@
         nav-sel {
             display-name = "nav_sel";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none             &none                  &none          &none              &none               &none
-&none  &none  &none  &none  &none   &none                     &kp LS(LC(HOME))  &kp LC(LS(LEFT))       &kp LS(UP)     &kp LC(LS(RIGHT))  &on 2               &none
-&none  &none  &none  &none  &none   &none                     &kp LS(HOME)      &kp LS(LEFT)           &kp LS(DOWN)   &kp LS(RIGHT)      &off 7              &kp LS(END)
-&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))   &edt_off_kp BACKSPACE  &kp LS(PG_DN)  &kp LS(PG_UP)      &edt_off_kp DELETE  &none
-              &none  &none  &trans  &trans  &trans    &trans  &trans            &trans                 &none          &none
+&none  &none  &none  &none  &none   &none                     &none          &none                      &none          &none                   &none             &none
+&none  &none  &none  &none  &none   &none                     &on 2          &edt_off_kp LS(BACKSPACE)  &kp LS(UP)     &edt_off_kp LS(DELETE)  &kp LS(LC(HOME))  &none
+&none  &none  &none  &none  &none   &none                     &kp LS(HOME)   &kp LS(LEFT)               &kp LS(DOWN)   &kp LS(RIGHT)           &off 7            &kp LS(END)
+&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(PG_UP)  &kp LS(LC(LEFT))           &kp LS(PG_DN)  &kp LS(LC(RIGHT))       &kp LS(LC(END))   &none
+              &none  &none  &trans  &trans  &trans    &trans  &trans         &trans                     &none          &none
             >;
 
             label = "nav-sel";
@@ -434,21 +434,21 @@
         ext-nav {
             display-name = "ext-nav";
             bindings = <
-&bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2           &bt BT_SEL 3       &bt BT_SEL 4    &bt BT_CLR
-&none         &none      &none          &lay_en        &lay_ru         &none                             &none         &none              &kp LA(LC(UP))         &none              &on 2           &none
-&none         &none      &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &none         &kp LA(LEFT)       &kp LA(LC(DOWN))       &kp LA(RIGHT)      &on 7           &none
-&out OUT_USB  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none         &kp LC(BACKSPACE)  &kp LA(LC(PAGE_DOWN))  &kp LA(LC(PG_UP))  &kp LS(DELETE)  &out OUT_BLE
-                         &none          &none          &trans          &trans          &trans    &trans  &trans        &trans             &none                  &none
+&bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3           &bt BT_SEL 4  &bt BT_CLR
+&none         &none      &none          &lay_en        &lay_ru         &none                             &on 2         &kp LC(BACKSPACE)  &kp LA(LC(UP))    &kp LS(DELETE)         &none         &none
+&none         &none      &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &none         &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &on 7         &none
+&out OUT_USB  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none         &kp LA(LEFT)       &none             &kp LA(RIGHT)          &none         &out OUT_BLE
+                         &none          &none          &trans          &trans          &trans    &trans  &trans        &trans             &none             &none
             >;
         };
 
         ext-nav-sel {
             bindings = <
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans            &trans  &trans             &trans  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans            &trans  &trans             &trans  &trans
-&trans  &trans             &trans                 &kp LC(E)              &trans                 &trans                    &trans  &kp LS(LA(LEFT))  &trans  &kp LS(LA(RIGHT))  &off 7  &trans
-&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &trans            &trans  &trans             &trans  &trans
-                           &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans            &trans  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &trans                     &trans                    &trans                 &trans  &trans
+&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans  &edt_off_kp LC(BACKSPACE)  &edt_off_kp LA(LC(UP))    &edt_off_kp LS(RIGHT)  &trans  &trans
+&trans  &trans             &trans                 &kp LC(E)              &trans                 &trans                    &trans  &edt_off_kp LA(LC(PG_UP))  &edt_off_kp LA(LC(DOWN))  &kp LA(LC(PG_DN))      &off 7  &trans
+&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans  &kp LS(LA(LEFT))           &trans                    &kp LS(LA(RIGHT))      &trans  &trans
+                           &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans  &trans                     &trans                    &trans
             >;
 
             label = "ext-nav-sel";
