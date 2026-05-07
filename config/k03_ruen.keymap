@@ -366,10 +366,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none        &trans
-&trans  &none      &none      &none      &none      &none                     &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &kp LC(END)  &none
-&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7        &kp DELETE
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp HOME       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &kp END      &trans
+&trans  &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none    &trans
+&trans  &none      &none      &none      &none      &none                     &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &none    &none
+&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7    &kp DELETE
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp LC(LEFT)  &kp HOME  &kp LC(RIGHT)  &kp END  &trans
                    &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans        &none     &none
             >;
         };
@@ -399,10 +399,10 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none     &none          &none        &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &kp LC(END)  &none
-&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7        &kp DELETE
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp HOME       &kp LC(LEFT)  &on 2     &kp LC(RIGHT)  &kp END      &none
+&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none     &none          &none    &none
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &on 2    &none
+&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7    &kp DELETE
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp LC(END)    &kp LC(LEFT)  &kp HOME  &kp LC(RIGHT)  &kp END  &none
                               &none             &none              &trans        &trans        &trans    &trans  &trans         &trans        &none     &none
             >;
         };
@@ -421,10 +421,10 @@
         nav-sel {
             display-name = "nav_sel";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none                  &none             &none         &none              &none            &none
-&none  &none  &none  &none  &none   &none                     &kp LS(LC(HOME))       &kp LS(PG_UP)     &kp LS(UP)    &kp LS(PG_DN)      &kp LS(LC(END))  &none
-&none  &none  &none  &none  &none   &none                     &edt_off_kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &off 7           &edt_off_kp DELETE
-&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(HOME)           &kp LS(LC(LEFT))  &on 2         &kp LS(LC(RIGHT))  &kp LS(END)      &none
+&none  &none  &none  &none  &none   &none                     &none                  &none             &none         &none              &none        &none
+&none  &none  &none  &none  &none   &none                     &kp LS(LC(HOME))       &kp LS(PG_UP)     &kp LS(UP)    &kp LS(PG_DN)      &on 2        &none
+&none  &none  &none  &none  &none   &none                     &edt_off_kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &off 7       &edt_off_kp DELETE
+&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))        &kp LS(LC(LEFT))  &kp LS(HOME)  &kp LS(LC(RIGHT))  &kp LS(END)  &none
               &none  &none  &trans  &trans  &trans    &trans  &trans                 &trans            &none         &none
             >;
 
@@ -435,9 +435,9 @@
             display-name = "ext-nav";
             bindings = <
 &bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3           &bt BT_SEL 4  &bt BT_CLR
-&none         &none      &none          &lay_en        &lay_ru         &none                             &none              &none              &kp LA(LC(UP))    &none                  &none         &none
+&none         &none      &none          &lay_en        &lay_ru         &none                             &none              &none              &kp LA(LC(UP))    &none                  &on 2         &none
 &none         &none      &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &kp LC(BACKSPACE)  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &on 7         &kp LS(DELETE)
-&out OUT_USB  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none              &kp LA(LEFT)       &on 2             &kp LA(RIGHT)          &none         &out OUT_BLE
+&out OUT_USB  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none              &kp LA(LEFT)       &none             &kp LA(RIGHT)          &none         &out OUT_BLE
                          &none          &none          &trans          &trans          &trans    &trans  &trans             &trans             &none             &none
             >;
         };
@@ -504,12 +504,12 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        numsymru {
+        num-nav {
             if-layers = <5 1>;
             then-layer = <6>;
         };
 
-        fnnavru {
+        act-sym {
             if-layers = <3 1>;
             then-layer = <4>;
         };
@@ -525,12 +525,12 @@
         };
 
         ext-nav-p {
-            if-layers = <2 5>;
+            if-layers = <2 3>;
             then-layer = <8>;
         };
 
         ext-nav-sel-p {
-            if-layers = <2 5 7>;
+            if-layers = <2 3 7>;
             then-layer = <9>;
         };
 
