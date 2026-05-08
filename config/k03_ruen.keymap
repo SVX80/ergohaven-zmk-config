@@ -460,11 +460,11 @@
 
         r-up {
             bindings = <
-&none        &none      &none               &none      &none        &none                                 &none        &none         &none      &none     &none      &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)           &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &none         &none      &none     &none      &none
-&none        &kp LS(A)  &kp LS(S)           &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
-&none        &kp LS(Z)  &kp LS(X)           &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
-                        &kp LS(APOSTROPHE)  &none      &kp LS(ESC)  &ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none      &none
+&none        &none      &none          &none      &none        &none                                 &none        &none         &none      &none     &none      &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &none         &none      &none     &none      &none
+&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
+&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
+                        &kp LS(GRAVE)  &none      &kp LS(ESC)  &ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none      &none
             >;
 
             label = "r-up";
