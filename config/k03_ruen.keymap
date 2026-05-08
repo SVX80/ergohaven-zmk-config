@@ -283,24 +283,6 @@
             label = "MO_SL";
         };
 
-        dqt_no_e: dqt_no_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DQT_NO_E";
-            bindings = <&ru RU_DOUBLE_QUOTES>, <&ru RU_NUMERO>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dqt_no_r: dqt_no_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DQT_NO_R";
-            bindings = <&kp RU_DOUBLE_QUOTES>, <&kp RU_NUMERO>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         find_nxt: find_nxt {
             compatible = "zmk,behavior-mod-morph";
             label = "FIND_NXT";
@@ -339,8 +321,8 @@
 &kp LGUI          &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16  &cmd_f16 F17                                &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none       &none
 &kp TAB           &kp Q         &kp W         &kp E         &kp R         &kp T                                       &kp Y             &kp U         &kp I       &kp O         &kp P       &lr_bkt
 &kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F         &kp G                                       &kp H             &kp J         &kp K       &kp L         &kp SEMI    &kp APOSTROPHE
-&sk LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V         &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA   &kp DOT       &sl_bslh_e  &sk RIGHT_CONTROL
-                                &kp GRAVE     &dqt_no_e     &kp ESC       &ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT    &kp RBKT
+&kp LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V         &kp B         &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA   &kp DOT       &sl_bslh_e  &kp RIGHT_CONTROL
+                                &kp GRAVE     &kp LSHFT     &kp ESC       &ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT    &kp RBKT
             >;
 
             sensor-bindings =
@@ -359,7 +341,7 @@
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &sl_bslh_r           &trans
-                                 &kp RU_CYRILLIC_IO    &dqt_no_r           &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                 &kp RU_CYRILLIC_IO    &trans              &trans              &trans              &trans    &trans  &trans              &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -379,7 +361,7 @@
             bindings = <
 &none          &none          &none      &none      &none      &none                         &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
 &none          &ru RU_NUMERO  &lay_ru    &kp AT     &kp HASH   &kp DOLLAR                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&kp SEMICOLON  &kp LSHFT      &kp LC(S)  &kp LC(D)  &find_nxt  &kp TILDE                     &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
+&kp SEMICOLON  &none          &kp LC(S)  &kp LC(D)  &find_nxt  &kp TILDE                     &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
 &none          &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp GRAVE   &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
                               &none      &none      &trans     &trans      &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
@@ -478,11 +460,11 @@
 
         r-up {
             bindings = <
-&none        &none      &none      &none      &none        &none                                 &none        &none         &none      &none     &none      &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &none         &none      &none     &none      &none
-&none        &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
-&none        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
-                        &none      &none      &kp LS(ESC)  &ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none      &none
+&none        &none      &none               &none      &none        &none                                 &none        &none         &none      &none     &none      &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)           &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &none         &none      &none     &none      &none
+&none        &kp LS(A)  &kp LS(S)           &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
+&none        &kp LS(Z)  &kp LS(X)           &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
+                        &kp LS(APOSTROPHE)  &none      &kp LS(ESC)  &ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none      &none
             >;
 
             label = "r-up";
