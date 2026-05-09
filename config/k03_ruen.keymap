@@ -359,22 +359,22 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none          &none          &none      &none      &none      &none                         &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
-&none          &ru RU_NUMERO  &lay_ru    &kp AT     &kp HASH   &kp DOLLAR                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&kp SEMICOLON  &none          &kp LC(S)  &kp LC(D)  &find_nxt  &kp TILDE                     &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none          &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp GRAVE   &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
-                              &none      &none      &trans     &trans      &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
+&none      &none          &none      &none      &none      &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
+&none      &kp SEMICOLON  &kp GRAVE  &kp AT     &kp HASH   &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&kp LC(Y)  &lay_ru        &kp LC(S)  &kp LC(D)  &find_nxt  &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
+&none      &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
+                          &none      &none      &trans     &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
         };
 
         act-sym-ru {
             display-name = "act-sym";
             bindings = <
-&trans            &trans         &trans   &trans  &trans    &trans                        &trans              &trans          &trans  &trans  &trans           &trans
-&trans            &kp RU_NUMERO  &lay_en  &en AT  &en HASH  &en DOLLAR                    &en AMPERSAND       &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
-&kp RU_SEMICOLON  &trans         &trans   &trans  &trans    &en TILDE                     &trans              &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
-&trans            &trans         &trans   &trans  &trans    &en GRAVE   &trans    &trans  &kp RU_EXCLAMATION  &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
-                                 &trans   &trans  &trans    &trans      &trans    &trans  &trans              &trans          &trans  &trans
+&trans  &trans            &trans     &trans  &trans    &trans                           &trans              &trans          &trans  &trans  &trans           &trans
+&trans  &kp RU_SEMICOLON  &en GRAVE  &en AT  &en HASH  &kp RU_NUMERO                    &en AMPERSAND       &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
+&trans  &lay_en           &trans     &trans  &trans    &en TILDE                        &trans              &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
+&trans  &trans            &trans     &trans  &trans    &en DOLLAR     &trans    &trans  &kp RU_EXCLAMATION  &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
+                          &trans     &trans  &trans    &trans         &trans    &trans  &trans              &trans          &trans  &trans
             >;
         };
 
