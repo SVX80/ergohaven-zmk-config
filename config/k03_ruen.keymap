@@ -348,11 +348,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none    &trans
-&trans  &none      &none      &none      &none      &none                     &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &none    &none
-&trans  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7    &kp DELETE
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp LC(LEFT)  &kp HOME  &kp LC(RIGHT)  &kp END  &trans
-                   &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans        &none     &none
+&trans     &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none    &trans
+&trans     &none      &none      &none      &none      &none                     &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &none    &none
+&kp LC(Y)  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7    &kp DELETE
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp LC(LEFT)  &kp HOME  &kp LC(RIGHT)  &kp END  &trans
+                      &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans        &none     &none
             >;
         };
 
