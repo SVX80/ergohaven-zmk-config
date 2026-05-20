@@ -403,11 +403,11 @@
         nav-sel {
             display-name = "nav_sel";
             bindings = <
-&none  &none  &none  &none  &none   &none                     &none                  &none             &none         &none              &none        &none
-&none  &none  &none  &none  &none   &none                     &kp LS(LC(HOME))       &kp LS(PG_UP)     &kp LS(UP)    &kp LS(PG_DN)      &on 2        &none
-&none  &none  &none  &none  &none   &none                     &edt_off_kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &off 7       &edt_off_kp DELETE
-&none  &none  &none  &none  &none   &none   &trans    &trans  &kp LS(LC(END))        &kp LS(LC(LEFT))  &kp LS(HOME)  &kp LS(LC(RIGHT))  &kp LS(END)  &none
-              &none  &none  &trans  &trans  &trans    &trans  &trans                 &trans            &none         &none
+&none              &none              &none              &none              &none              &none                     &none                  &none             &none         &none              &none        &none
+&none              &none              &none              &none              &none              &none                     &kp LS(LC(HOME))       &kp LS(PG_UP)     &kp LS(UP)    &kp LS(PG_DN)      &on 2        &none
+&edt_off_kp LC(Y)  &none              &kp LC(S)          &edt_off_kp LC(D)  &none              &none                     &edt_off_kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &off 7       &edt_off_kp DELETE
+&none              &edt_off_kp LC(Z)  &edt_off_kp LC(X)  &edt_off_kp LC(C)  &edt_off_kp LC(V)  &none   &trans    &trans  &kp LS(LC(END))        &kp LS(LC(LEFT))  &kp LS(HOME)  &kp LS(LC(RIGHT))  &kp LS(END)  &none
+                                      &none              &none              &trans             &trans  &trans    &trans  &trans                 &trans            &none         &none
             >;
 
             label = "nav-sel";
@@ -417,8 +417,8 @@
             display-name = "ext-nav";
             bindings = <
 &bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3           &bt BT_SEL 4  &bt BT_CLR
-&none         &none      &none          &lay_en        &lay_ru         &none                             &none              &none              &kp LA(LC(UP))    &none                  &on 2         &none
-&none         &none      &kp LS(LG(S))  &kp LC(E)      &cmd_f15 LS(F)  &kp INS                           &kp LC(BACKSPACE)  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &on 7         &kp LS(DELETE)
+&none         &none      &kp LC(E)      &none          &lay_ru         &none                             &none              &none              &kp LA(LC(UP))    &none                  &on 2         &none
+&none         &lay_en    &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &kp LC(BACKSPACE)  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &on 7         &kp LS(DELETE)
 &out OUT_USB  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none              &kp LA(LEFT)       &none             &kp LA(RIGHT)          &none         &out OUT_BLE
                          &none          &none          &trans          &trans          &trans    &trans  &trans             &trans             &none             &none
             >;
@@ -428,7 +428,7 @@
             bindings = <
 &trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans                     &trans                     &trans                    &trans             &trans  &trans
 &trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans                     &trans                     &edt_off_kp LA(LC(UP))    &trans             &trans  &trans
-&trans  &trans             &trans                 &kp LC(E)              &trans                 &trans                    &edt_off_kp LC(BACKSPACE)  &edt_off_kp LA(LC(PG_UP))  &edt_off_kp LA(LC(DOWN))  &kp LA(LC(PG_DN))  &off 7  &edt_off_kp LS(DELETE)
+&trans  &trans             &trans                 &edt_off_kp LC(LS(D))  &trans                 &trans                    &edt_off_kp LC(BACKSPACE)  &edt_off_kp LA(LC(PG_UP))  &edt_off_kp LA(LC(DOWN))  &kp LA(LC(PG_DN))  &off 7  &edt_off_kp LS(DELETE)
 &trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans                     &kp LS(LA(LEFT))           &trans                    &kp LS(LA(RIGHT))  &trans  &trans
                            &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans                     &trans                     &trans                    &trans
             >;
