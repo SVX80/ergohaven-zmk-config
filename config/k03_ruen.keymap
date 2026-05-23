@@ -310,6 +310,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        kp_sk: kp_sk {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+            label = "KP_SK";
+        };
     };
 
     keymap {
@@ -359,11 +369,11 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none      &none          &none      &none      &none      &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
-&none      &kp SEMICOLON  &kp GRAVE  &kp AT     &kp HASH   &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&kp LC(Y)  &lay_ru        &kp LC(S)  &kp LC(D)  &find_nxt  &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none      &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
-                          &none      &none      &trans     &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
+&none  &none             &none               &none               &none             &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
+&none  &kp SEMICOLON     &kp GRAVE           &kp AT              &kp HASH          &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&none  &lay_ru           &kp LC(S)           &kp LC(D)           &find_nxt         &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
+&none  &kp_sk LGUI LGUI  &kp_sk LSHFT LSHFT  &kp_sk LCTRL LCTRL  &kp_sk LALT LALT  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
+                         &none               &none               &trans            &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
         };
 
@@ -381,11 +391,11 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none     &none          &none    &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &on 2    &none
-&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7    &kp DELETE
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp LC(END)    &kp LC(LEFT)  &kp HOME  &kp LC(RIGHT)  &kp END  &none
-                              &none             &none              &trans        &trans        &trans    &trans  &trans         &trans        &none     &none
+&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none             &none               &none               &none             &none
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LA(LEFT)      &kp UP              &kp LA(RIGHT)       &none             &none
+&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT          &kp DOWN            &kp RIGHT           &on 2             &kp DELETE
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none          &kp_sk RALT RALT  &kp_sk RCTRL RCTRL  &kp_sk RSHFT RSHFT  &kp_sk RGUI RGUI  &none
+                              &none             &none              &trans        &trans        &trans    &trans  &trans         &trans            &none               &none
             >;
         };
 
@@ -460,26 +470,26 @@
 
         r-up {
             bindings = <
-&none        &none      &none          &none      &none        &none                                 &none        &none         &none      &none     &none      &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &none         &none      &none     &none      &none
-&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &sk LEFT_ALT  &sk LCTRL  &sk LGUI  &sk LSHFT  &none
-&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &sk RALT      &sk RCTRL  &sk RGUI  &sk RSHFT  &none
-                        &kp LS(GRAVE)  &none      &kp LS(ESC)  &ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none      &none
+&none        &none      &none          &none      &none        &none                                 &none        &none         &none         &none        &none  &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &kp LS(HOME)  &kp LC(HOME)  &kp LS(END)  &none  &none
+&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &kp HOME      &kp LC(END)   &kp END      &none  &none
+&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &none         &none         &none        &none  &none
+                        &kp LS(GRAVE)  &none      &kp LS(ESC)  &ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none         &none
             >;
 
             label = "r-up";
         };
 
-        desktop {
+        desk-extra {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans             &trans     &trans                 &trans  &trans
+&kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &kp LA(LC(UP))     &kp PG_UP  &kp LA(LC(DOWN))       &trans  &trans
+&trans       &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &kp LA(LC(PG_UP))  &kp PG_DN  &kp LA(LC(PAGE_DOWN))  &trans  &trans
+&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans             &trans     &trans                 &trans  &trans
+                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans             &trans     &trans
             >;
 
-            label = "desktop";
+            label = "desktop-extra";
         };
     };
 
