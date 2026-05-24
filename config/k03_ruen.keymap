@@ -403,7 +403,7 @@
             bindings = <&kpm_l>, <&skm_l>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <235>;
+            tapping-term-ms = <350>;
             flavor = "hold-preferred";
             label = "KPM_SKM_L";
             hold-while-undecided;
@@ -414,7 +414,7 @@
             bindings = <&kpm_r>, <&skm_r>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <235>;
+            tapping-term-ms = <350>;
             flavor = "hold-preferred";
             label = "KPM_SKM_R";
             hold-while-undecided;
@@ -615,11 +615,11 @@
 
         r-mod {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans              &trans              &trans            &trans
-&trans  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans            &trans              &trans              &trans            &trans
-&trans  &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans            &trans              &trans              &trans            &trans
-&trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk RALT RALT  &kp_sk RCTRL RCTRL  &kp_sk RSHFT RSHFT  &kp_sk RGUI RGUI  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans            &trans              &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans              &trans              &trans            &trans
+&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans            &trans              &trans              &trans            &trans
+&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans            &trans              &trans              &trans            &trans
+&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk RALT RALT  &kp_sk RCTRL RCTRL  &kp_sk RSHFT RSHFT  &kp_sk RGUI RGUI  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans            &trans              &trans
             >;
 
             label = "r-mod";
