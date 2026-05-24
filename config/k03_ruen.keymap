@@ -283,7 +283,7 @@
             label = "SKM_R";
         };
 
-        mom_l: mom_l {
+        mod_mo_l: mom_l {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -396,6 +396,7 @@
             tapping-term-ms = <235>;
             flavor = "hold-preferred";
             label = "KPM_SKM_L";
+            hold-while-undecided;
         };
 
         kpm_skm_r: kpm_skm_r {
@@ -406,11 +407,12 @@
             tapping-term-ms = <235>;
             flavor = "hold-preferred";
             label = "KPM_SKM_R";
+            hold-while-undecided;
         };
 
         lmod_ltk: lmod_ltk {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&nav_mo>, <&key>;
+            bindings = <&mod_mo_l>, <&key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
@@ -489,8 +491,8 @@
             display-name = "num_nav";
             bindings = <
 &none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none                 &none                   &none                   &none                 &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LA(LEFT)      &kp UP              &kp LA(RIGHT)       &none             &none
-&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT          &kp DOWN            &kp RIGHT           &on 2             &kp DELETE
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LA(LEFT)          &kp UP                  &kp LA(RIGHT)           &none                 &none
+&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT              &kp DOWN                &kp RIGHT               &on 2                 &kp DELETE
 &none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp LC(END)    &kpm_skm_r RALT RALT  &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &kpm_skm_r RGUI RGUI  &none
                               &none             &none              &trans        &trans        &trans    &trans  &trans         &trans                &none                   &none
             >;
@@ -567,11 +569,11 @@
 
         r-up {
             bindings = <
-&none        &none      &none          &none      &none        &none                                 &none        &none         &none         &none        &none  &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)    &kp LS(T)                             &none        &kp LS(HOME)  &kp LC(HOME)  &kp LS(END)  &none  &none
-&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)    &kp LS(G)                             &key_repeat  &kp HOME      &kp LC(END)   &kp END      &none  &none
-&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)    &kp LS(B)           &trans    &trans  &none        &none         &none         &none        &none  &none
-                        &kp LS(GRAVE)  &none      &kp LS(ESC)  &lmod_ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none      &none
+&none        &none      &none          &none      &none        &none                                      &none        &none         &none         &none        &none  &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)    &kp LS(T)                                  &none        &kp LS(HOME)  &kp LC(HOME)  &kp LS(END)  &none  &none
+&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)    &kp LS(G)                                  &key_repeat  &kp HOME      &kp LC(END)   &kp END      &none  &none
+&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)    &kp LS(B)                &trans    &trans  &none        &none         &none         &none        &none  &none
+                        &kp LS(GRAVE)  &none      &kp LS(ESC)  &lmod_ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none         &none
             >;
 
             label = "r-up";
@@ -579,11 +581,11 @@
 
         desktop {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans             &trans     &trans                 &trans  &trans
 &kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &kp LA(LC(UP))     &kp PG_UP  &kp LA(LC(DOWN))       &trans  &trans
 &trans       &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &kp LA(LC(PG_UP))  &kp PG_DN  &kp LA(LC(PAGE_DOWN))  &trans  &trans
-&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans             &trans     &trans                 &trans  &trans
+                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans             &trans     &trans
             >;
 
             label = "desktop";
