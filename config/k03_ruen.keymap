@@ -61,6 +61,7 @@
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 23>,
@@ -80,6 +81,7 @@
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 30>,
@@ -162,9 +164,11 @@
             bindings =
                 <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
                 <&off 7 &off 15 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "NAV_MO";
+            wait-ms = <0>;
         };
 
         edt_off_kp: edt_off_kp {
@@ -239,6 +243,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KPM_L";
+            wait-ms = <0>;
         };
 
         kpm_r: kpm_r {
@@ -253,6 +258,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KPM_R";
+            wait-ms = <0>;
         };
 
         skm_l: skm_l {
@@ -267,6 +273,7 @@
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>;
 
             label = "SKM_L";
+            wait-ms = <0>;
         };
 
         skm_r: skm_r {
@@ -281,6 +288,7 @@
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>;
 
             label = "SKM_R";
+            wait-ms = <0>;
         };
 
         mod_mo_l: mom_l {
@@ -289,9 +297,11 @@
             bindings =
                 <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
                 <&off 14 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "MOM_L";
+            wait-ms = <0>;
         };
     };
 
@@ -599,6 +609,8 @@
 &trans  &kp_sk LGUI LGUI  &kp_sk LSHFT LSHFT  &kp_sk LCTRL LCTRL  &kp_sk LALT LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                           &trans              &trans              &trans            &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
+
+            label = "l-mod";
         };
 
         r-mod {
@@ -609,6 +621,8 @@
 &trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk RALT RALT  &kp_sk RCTRL RCTRL  &kp_sk RSHFT RSHFT  &kp_sk RGUI RGUI  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans            &trans              &trans
             >;
+
+            label = "r-mod";
         };
     };
 
