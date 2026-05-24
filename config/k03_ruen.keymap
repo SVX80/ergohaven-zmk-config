@@ -23,13 +23,13 @@
         cmb_ru_cio {
             bindings = <&kp LS(RU_CYRILLIC_IO)>;
             key-positions = <15 16>;
-            layers = <12>;
+            layers = <10>;
         };
 
         cmb_ru_chs {
             bindings = <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
             key-positions = <19 20>;
-            layers = <11>;
+            layers = <9>;
         };
     };
 
@@ -141,7 +141,7 @@
             bindings =
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER &macro_param_2to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
-                <&macro_param_2to1 &off MACRO_PLACEHOLDER &off 7>;
+                <&macro_param_2to1 &off MACRO_PLACEHOLDER>;
 
             label = "NVOFF_MO";
             wait-ms = <0>;
@@ -165,31 +165,9 @@
                 <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&off 7 &off 15 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
+                <&off 14 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "NAV_MO";
-            wait-ms = <0>;
-        };
-
-        edt_off_kp: edt_off_kp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &off 7>;
-
-            label = "EDT_OFF_KP";
-            tap-ms = <30>;
-            wait-ms = <0>;
-        };
-
-        eoff_fnxt: eoff_fnxt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&cmd_f15 F &off 7>;
-
-            label = "EOFF_FNXT";
-            tap-ms = <30>;
             wait-ms = <0>;
         };
 
@@ -221,21 +199,11 @@
             label = "CMD_F16";
         };
 
-        eof_sfnxt: eof_sfnxt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&cmd_f15 LS(F) &off 7>;
-
-            label = "EOF_SFNXT";
-            tap-ms = <30>;
-            wait-ms = <0>;
-        };
-
         kpm_l: kpm_l {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&on 14>,
+                <&on 13>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -250,7 +218,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&on 15>,
+                <&on 14>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -265,7 +233,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&on 14>,
+                <&on 13>,
                 <&macro_press>,
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -280,7 +248,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&on 15>,
+                <&on 14>,
                 <&macro_press>,
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -298,7 +266,7 @@
                 <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&off 14 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
+                <&off 13 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "MOM_L";
             wait-ms = <0>;
@@ -308,10 +276,10 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER &off 12>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER &off 10>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&off 7 &macro_param_1to1 &off MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
             label = "NAV_MO_L";
             wait-ms = <0>;
@@ -466,11 +434,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp LGUI          &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16  &cmd_f16 F17                                     &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none       &none
-&kp TAB           &kp Q         &kp W         &kp E         &kp R         &kp T                                            &kp Y             &kp U         &kp I       &kp O         &kp P       &lr_bkt
-&kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F         &kp G                                            &kp H             &kp J         &kp K       &kp L         &kp SEMI    &kp APOSTROPHE
-&kp LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V         &kp B              &layer_en       &layer_ru     &kp N             &kp M         &kp COMMA   &kp DOT       &sl_bslh_e  &kp RIGHT_CONTROL
-                                &kp GRAVE     &kp LSHFT     &kp ESC       &lmod_ltk 3 SPACE  &mo_sl 10 10    &mo_sl 12 12  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT    &kp RBKT
+&kp LGUI          &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16  &cmd_f16 F17                                   &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none       &none
+&kp TAB           &kp Q         &kp W         &kp E         &kp R         &kp T                                          &kp Y             &kp U         &kp I       &kp O         &kp P       &lr_bkt
+&kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F         &kp G                                          &kp H             &kp J         &kp K       &kp L         &kp SEMI    &kp APOSTROPHE
+&kp LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V         &kp B              &layer_en     &layer_ru     &kp N             &kp M         &kp COMMA   &kp DOT       &sl_bslh_e  &kp RIGHT_CONTROL
+                                &kp GRAVE     &kp LSHFT     &kp ESC       &lmod_ltk 3 SPACE  &mo_sl 8 8    &mo_sl 10 10  &nav_ltk 5 SPACE  &kp ENTER     &kp LBKT    &kp RBKT
             >;
 
             sensor-bindings =
@@ -497,7 +465,7 @@
             display-name = "nav";
             bindings = <
 &trans     &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none      &trans
-&trans     &none      &none      &none      &none      &none                     &none          &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none      &none
+&trans     &none      &kp LC(E)  &none      &none      &none                     &none          &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none      &none
 &kp LC(Y)  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &kp RSHFT  &kp DELETE
 &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &none          &none         &none     &none          &none      &trans
                       &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans        &none     &none
@@ -548,40 +516,15 @@
             >;
         };
 
-        nav-sel {
-            display-name = "nav_sel";
-            bindings = <
-&none              &none              &none              &none              &none              &none                     &none                  &none             &none         &none              &none        &none
-&none              &none              &none              &none              &none              &none                     &kp LS(LC(HOME))       &kp LS(PG_UP)     &kp LS(UP)    &kp LS(PG_DN)      &on 2        &none
-&edt_off_kp LC(Y)  &none              &kp LC(S)          &edt_off_kp LC(D)  &none              &none                     &edt_off_kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &off 7       &edt_off_kp DELETE
-&none              &edt_off_kp LC(Z)  &edt_off_kp LC(X)  &edt_off_kp LC(C)  &edt_off_kp LC(V)  &none   &trans    &trans  &kp LS(LC(END))        &kp LS(LC(LEFT))  &kp LS(HOME)  &kp LS(LC(RIGHT))  &kp LS(END)  &none
-                                      &none              &none              &trans             &trans  &trans    &trans  &trans                 &trans            &none         &none
-            >;
-
-            label = "nav-sel";
-        };
-
         ext-nav {
             display-name = "ext-nav";
             bindings = <
-&bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3           &bt BT_SEL 4  &bt BT_CLR
-&none         &none      &kp LC(E)      &none          &lay_ru         &none                             &none              &none              &kp LA(LC(UP))    &none                  &on 2         &none
-&none         &lay_en    &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &kp LC(BACKSPACE)  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &on 7         &kp LS(DELETE)
-&out OUT_USB  &kp LC(Y)  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))   &kp SCROLLLOCK  &trans    &trans  &none              &kp LA(LEFT)       &none             &kp LA(RIGHT)          &none         &out OUT_BLE
-                         &none          &none          &trans          &trans          &trans    &trans  &trans             &trans             &none             &none
+&bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
+&none         &none      &kp LC(E)      &lay_en        &lay_ru         &none                             &none              &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &none         &none
+&kp LC(Y)     &none      &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &kp LC(BACKSPACE)  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &on 2         &kp LS(DELETE)
+&out OUT_USB  &kp LC(Y)  &kp LC(X)      &kp LC(C)      &kp LC(V)       &kp SCROLLLOCK  &trans    &trans  &none              &none             &none         &kp RSHFT          &none         &out OUT_BLE
+                         &none          &none          &trans          &trans          &trans    &trans  &trans             &trans            &none         &none
             >;
-        };
-
-        ext-nav-sel {
-            bindings = <
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans                     &trans                     &trans                    &trans             &trans  &trans
-&trans  &trans             &trans                 &trans                 &trans                 &trans                    &trans                     &trans                     &edt_off_kp LA(LC(UP))    &trans             &trans  &trans
-&trans  &trans             &trans                 &edt_off_kp LC(LS(D))  &trans                 &trans                    &edt_off_kp LC(BACKSPACE)  &edt_off_kp LA(LC(PG_UP))  &edt_off_kp LA(LC(DOWN))  &kp LA(LC(PG_DN))  &off 7  &edt_off_kp LS(DELETE)
-&trans  &edt_off_kp LC(Y)  &edt_off_kp LS(LC(X))  &edt_off_kp LS(LC(C))  &edt_off_kp LS(LC(V))  &trans  &trans    &trans  &trans                     &kp LS(LA(LEFT))           &trans                    &kp LS(LA(RIGHT))  &trans  &trans
-                           &trans                 &trans                 &trans                 &trans  &trans    &trans  &trans                     &trans                     &trans                    &trans
-            >;
-
-            label = "ext-nav-sel";
         };
 
         l-up-en {
@@ -612,13 +555,25 @@
 &kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                      &kp LC(HOME)  &kp LA(LEFT)  &kp PG_UP  &kp LA(RIGHT)  &none  &none
 &none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                      &key_repeat   &kp HOME      &kp PG_DN  &kp END        &none  &none
 &none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)    &trans    &trans  &kp LC(END)   &none         &none      &none          &none  &none
-                        &kp LS(GRAVE)  &none      &trans     &nav_mo_l 2  &trans    &trans  &sl 13        &trans        &none      &none
+                        &kp LS(GRAVE)  &none      &trans     &nav_mo_l 2  &trans    &trans  &sl 12        &trans        &none      &none
             >;
 
             label = "r-up";
         };
 
-        desktop {
+        r-up-sel {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &trans            &trans         &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LS(LC(HOME))  &kp LS(LA(LEFT))  &kp LS(PG_UP)  &kp LS(LA(RIGHT))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &kp LS(HOME)      &kp LS(PG_DN)  &kp LS(RIGHT)      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(LC(END))   &trans            &trans         &trans             &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans         &trans
+            >;
+
+            label = "r-up-sel";
+        };
+
+        desk-extra {
             bindings = <
 &trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans             &trans            &trans                 &trans  &trans
 &kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &trans             &kp LA(LC(UP))    &trans                 &trans  &trans
@@ -627,7 +582,7 @@
                            &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans             &trans            &trans
             >;
 
-            label = "desktop";
+            label = "desk-extra";
         };
 
         l-mod {
@@ -670,26 +625,21 @@
 
         ext-nav {
             if-layers = <3 5>;
-            then-layer = <8>;
-        };
-
-        ext-nav-sel {
-            if-layers = <3 5 7>;
-            then-layer = <9>;
+            then-layer = <7>;
         };
 
         ext-nav-p {
-            if-layers = <2 3>;
-            then-layer = <8>;
-        };
-
-        ext-nav-sel-p {
-            if-layers = <2 3 7>;
-            then-layer = <9>;
+            if-layers = <3 2>;
+            then-layer = <7>;
         };
 
         l-up {
-            if-layers = <1 10>;
+            if-layers = <1 8>;
+            then-layer = <9>;
+        };
+
+        r-up-sel {
+            if-layers = <3 2 10>;
             then-layer = <11>;
         };
     };
