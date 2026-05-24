@@ -400,10 +400,10 @@
 
         kpm_skm_l: kpm_skm_l {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kpm_l>, <&skm_l>;
+            bindings = <&kpm_l>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <500>;
             flavor = "hold-preferred";
             label = "KPM_SKM_L";
             hold-while-undecided;
@@ -411,10 +411,10 @@
 
         kpm_skm_r: kpm_skm_r {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kpm_r>, <&skm_r>;
+            bindings = <&kpm_r>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <500>;
             flavor = "hold-preferred";
             label = "KPM_SKM_R";
             hold-while-undecided;
