@@ -483,10 +483,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans     &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none    &trans
-&trans     &none      &none      &none      &none      &none                     &kp LC(HOME)   &kp PG_UP     &kp UP    &kp PG_DN      &none    &none
-&kp LC(Y)  &none      &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &on 7    &kp DELETE
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp LC(END)    &kp LC(LEFT)  &kp HOME  &kp LC(RIGHT)  &kp END  &trans
+&trans     &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none      &trans
+&trans     &none      &none      &none      &none      &none                     &none          &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none      &none
+&kp LC(Y)  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &kp RSHFT  &kp DELETE
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &none          &none         &none     &none          &none      &trans
                       &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans        &none     &none
             >;
         };
@@ -517,9 +517,9 @@
             display-name = "num_nav";
             bindings = <
 &none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none                   &none                   &none        &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LA(LEFT)  &kp UP                  &kp LA(RIGHT)           &none        &none
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LC(LEFT)  &kp UP                  &kp LC(RIGHT)           &none        &none
 &kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN                &kp RIGHT               &on 2        &kp DELETE
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp LC(END)    &skm_r RALT   &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &skm_r RGUI  &none
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none          &skm_r RALT   &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &skm_r RGUI  &none
                               &none             &none              &trans        &trans        &trans    &trans  &trans         &trans        &none                   &none
             >;
         };
@@ -595,11 +595,11 @@
 
         r-up {
             bindings = <
-&none        &none      &none          &none      &none        &none                                      &none        &none         &none         &none        &none  &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)    &kp LS(T)                                  &none        &kp LS(HOME)  &kp LC(HOME)  &kp LS(END)  &none  &none
-&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)    &kp LS(G)                                  &key_repeat  &kp HOME      &kp LC(END)   &kp END      &none  &none
-&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)    &kp LS(B)                &trans    &trans  &none        &none         &none         &none        &none  &none
-                        &kp LS(GRAVE)  &none      &kp LS(ESC)  &lmod_ltk (3) LS(SPACE)  &trans    &trans  &sl 13       &trans        &none         &none
+&none        &none      &none          &none      &none      &none                        &none         &none         &none      &none          &none  &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                    &kp LC(HOME)  &kp LA(LEFT)  &kp PG_UP  &kp LA(RIGHT)  &none  &none
+&none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                    &key_repeat   &kp HOME      &kp PG_DN  &kp END        &none  &none
+&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)  &trans    &trans  &kp LC(END)   &none         &none      &none          &none  &none
+                        &kp LS(GRAVE)  &none      &trans     &mo 2      &trans    &trans  &sl 13        &trans        &none      &none
             >;
 
             label = "r-up";
@@ -607,11 +607,11 @@
 
         desktop {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans             &trans     &trans                 &trans  &trans
-&kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &kp LA(LC(UP))     &kp PG_UP  &kp LA(LC(DOWN))       &trans  &trans
-&trans       &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &kp LA(LC(PG_UP))  &kp PG_DN  &kp LA(LC(PAGE_DOWN))  &trans  &trans
-&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans             &trans     &trans                 &trans  &trans
-                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans             &trans     &trans
+&trans       &trans        &trans        &trans        &trans        &trans                          &trans  &trans             &trans            &trans                 &trans  &trans
+&kp LA(TAB)  &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &trans  &trans             &kp LA(LC(UP))    &trans                 &trans  &trans
+&trans       &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &trans  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &trans  &trans
+&trans       &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &trans  &trans             &trans            &trans                 &trans  &trans
+                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans             &trans            &trans
             >;
 
             label = "desktop";
