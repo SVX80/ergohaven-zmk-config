@@ -388,14 +388,28 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        kp_sk: kp_sk {
+        kp_sk_l: kp_sk_l {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <235>;
+            tapping-term-ms = <275>;
             flavor = "hold-preferred";
-            label = "KP_SK";
+            label = "KP_SK_L";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
+            hold-while-undecided;
+        };
+
+        kp_sk_r: kp_sk_r {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <275>;
+            flavor = "hold-preferred";
+            label = "KP_SK_R";
+            hold-while-undecided;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
         };
 
         kpm_skm_l: kpm_skm_l {
@@ -403,7 +417,7 @@
             bindings = <&kpm_l>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <275>;
             flavor = "hold-preferred";
             label = "KPM_SKM_L";
             hold-while-undecided;
@@ -415,7 +429,7 @@
             bindings = <&kpm_r>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <275>;
             flavor = "hold-preferred";
             label = "KPM_SKM_R";
             hold-while-undecided;
@@ -605,11 +619,11 @@
 
         l-mod {
             bindings = <
-&trans  &trans            &trans              &trans              &trans            &trans                    &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &trans            &trans              &trans              &trans            &trans                    &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
-&trans  &trans            &trans              &trans              &trans            &trans                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&trans  &kp_sk LGUI LGUI  &kp_sk LSHFT LSHFT  &kp_sk LCTRL LCTRL  &kp_sk LALT LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                          &trans              &trans              &trans            &trans  &trans    &trans  &trans  &trans  &trans     &trans
+&trans  &trans              &trans                &trans                &trans              &trans                    &trans  &trans  &trans     &trans   &trans    &trans
+&trans  &trans              &trans                &trans                &trans              &trans                    &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&trans  &trans              &trans                &trans                &trans              &trans                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&trans  &kp_sk_l LGUI LGUI  &kp_sk_l LSHFT LSHFT  &kp_sk_l LCTRL LCTRL  &kp_sk_l LALT LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                            &trans                &trans                &trans              &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
             label = "l-mod";
@@ -617,11 +631,11 @@
 
         r-mod {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans              &trans              &trans            &trans
-&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans            &trans              &trans              &trans            &trans
-&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans            &trans              &trans              &trans            &trans
-&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk RALT RALT  &kp_sk RCTRL RCTRL  &kp_sk RSHFT RSHFT  &kp_sk RGUI RGUI  &trans
-                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans            &trans              &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans              &trans                &trans                &trans              &trans
+&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans              &trans                &trans                &trans              &trans
+&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans              &trans                &trans                &trans              &trans
+&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk_r RALT RALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &kp_sk_r RGUI RGUI  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans              &trans                &trans
             >;
 
             label = "r-mod";
