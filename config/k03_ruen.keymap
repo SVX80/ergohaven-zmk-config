@@ -523,7 +523,7 @@
 &bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
 &none         &none      &kp LC(E)      &lay_en        &lay_ru         &none                             &none              &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &none         &none
 &kp LC(Y)     &none      &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &kp LC(BACKSPACE)  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &on 2         &kp LS(DELETE)
-&out OUT_USB  &kp LC(Y)  &kp LC(X)      &kp LC(C)      &kp LC(V)       &kp SCROLLLOCK  &trans    &trans  &none              &none             &none         &kp RSHFT          &none         &out OUT_BLE
+&out OUT_USB  &kp LC(Z)  &kp LC(X)      &kp LC(C)      &kp LC(V)       &kp SCROLLLOCK  &trans    &trans  &none              &none             &none         &kp RSHFT          &none         &out OUT_BLE
                          &none          &none          &trans          &trans          &trans    &trans  &trans             &trans            &none         &none
             >;
         };
