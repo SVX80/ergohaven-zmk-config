@@ -494,11 +494,11 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none  &none                 &none                   &none                   &none                 &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
-&none  &kp SEMICOLON         &kp GRAVE               &kp AT                  &kp HASH              &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&none  &lay_ru               &kp LC(S)               &kp LC(D)               &find_nxt             &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none  &kpm_skm_l LGUI LGUI  &kpm_skm_l LSHFT LSHFT  &kpm_skm_l LCTRL LCTRL  &kpm_skm_l LALT LALT  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
-                             &none                   &none                   &trans                &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
+&none  &none          &none                   &none                   &none        &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
+&none  &kp SEMICOLON  &kp GRAVE               &kp AT                  &kp HASH     &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&none  &lay_ru        &kp LC(S)               &kp LC(D)               &find_nxt    &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
+&none  &skm_l LGUI    &kpm_skm_l LSHFT LSHFT  &kpm_skm_l LCTRL LCTRL  &skm_l LALT  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
+                      &none                   &none                   &trans       &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
         };
 
@@ -516,11 +516,11 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none                 &none                   &none                   &none                 &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LA(LEFT)          &kp UP                  &kp LA(RIGHT)           &none                 &none
-&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT              &kp DOWN                &kp RIGHT               &on 2                 &kp DELETE
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp LC(END)    &kpm_skm_r RALT RALT  &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &kpm_skm_r RGUI RGUI  &none
-                              &none             &none              &trans        &trans        &trans    &trans  &trans         &trans                &none                   &none
+&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none                   &none                   &none        &none
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LA(LEFT)  &kp UP                  &kp LA(RIGHT)           &none        &none
+&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN                &kp RIGHT               &on 2        &kp DELETE
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &kp LC(END)    &skm_r RALT   &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &skm_r RGUI  &none
+                              &none             &none              &trans        &trans        &trans    &trans  &trans         &trans        &none                   &none
             >;
         };
 
@@ -619,11 +619,11 @@
 
         l-mod {
             bindings = <
-&trans  &trans              &trans                &trans                &trans              &trans                    &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &trans              &trans                &trans                &trans              &trans                    &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
-&trans  &trans              &trans                &trans                &trans              &trans                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&trans  &kp_sk_l LGUI LGUI  &kp_sk_l LSHFT LSHFT  &kp_sk_l LCTRL LCTRL  &kp_sk_l LALT LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                            &trans                &trans                &trans              &trans  &trans    &trans  &trans  &trans  &trans     &trans
+&trans  &trans    &trans                &trans                &trans    &trans                    &trans  &trans  &trans     &trans   &trans    &trans
+&trans  &trans    &trans                &trans                &trans    &trans                    &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&trans  &trans    &trans                &trans                &trans    &trans                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&trans  &sk LGUI  &kp_sk_l LSHFT LSHFT  &kp_sk_l LCTRL LCTRL  &sk LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                  &trans                &trans                &trans    &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
             label = "l-mod";
@@ -631,11 +631,11 @@
 
         r-mod {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans              &trans                &trans                &trans              &trans
-&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans              &trans                &trans                &trans              &trans
-&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans              &trans                &trans                &trans              &trans
-&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk_r RALT RALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &kp_sk_r RGUI RGUI  &trans
-                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans              &trans                &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans                &trans                &trans    &trans
+&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans    &trans                &trans                &trans    &trans
+&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans    &trans                &trans                &trans    &trans
+&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &sk RALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &sk RGUI  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans                &trans
             >;
 
             label = "r-mod";
