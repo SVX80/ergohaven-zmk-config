@@ -340,6 +340,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <235>;
             label = "MO_SL";
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         find_nxt: find_nxt {
@@ -380,6 +382,7 @@
             label = "KP_SK_L";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
             hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         kp_sk_r: kp_sk_r {
@@ -392,6 +395,7 @@
             label = "KP_SK_R";
             hold-while-undecided;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
+            hold-while-undecided-linger;
         };
 
         kpm_skm_l: kpm_skm_l {
@@ -404,6 +408,7 @@
             label = "KPM_SKM_L";
             hold-while-undecided;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
+            hold-while-undecided-linger;
         };
 
         kpm_skm_r: kpm_skm_r {
@@ -416,6 +421,7 @@
             label = "KPM_SKM_R";
             hold-while-undecided;
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 3>;
+            hold-while-undecided-linger;
         };
 
         lmod_ltk: lmod_ltk {
@@ -466,7 +472,7 @@
             display-name = "nav";
             bindings = <
 &trans     &none      &none      &none      &none      &none                     &none          &none         &none     &none          &none  &trans
-&trans     &none      &kp LC(E)  &none      &none      &none                     &none          &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none  &none
+&trans     &none      &kp LC(E)  &mo 10     &none      &none                     &none          &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none  &none
 &kp LC(Y)  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT      &none  &kp DELETE
 &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &none          &none         &none     &kp RSHFT      &none  &trans
                       &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans        &none     &none
@@ -476,11 +482,11 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none  &none          &none                   &none                   &none        &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
-&none  &kp SEMICOLON  &kp GRAVE               &kp AT                  &kp HASH     &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&none  &lay_ru        &kp LC(S)               &kp LC(D)               &find_nxt    &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none  &skm_l LGUI    &kpm_skm_l LSHFT LSHFT  &kpm_skm_l LCTRL LCTRL  &skm_l LALT  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
-                      &none                   &none                   &trans       &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
+&none  &none                 &none                   &none                   &none                 &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
+&none  &kp SEMICOLON         &kp GRAVE               &kp AT                  &kp HASH              &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&none  &lay_ru               &kp LC(S)               &kp LC(D)               &find_nxt             &kp TILDE                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
+&none  &kpm_skm_l LGUI LGUI  &kpm_skm_l LSHFT LSHFT  &kpm_skm_l LCTRL LCTRL  &kpm_skm_l LALT LALT  &kp DOLLAR     &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
+                             &none                   &none                   &trans                &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
         };
 
@@ -498,11 +504,11 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none                   &none                   &none        &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LC(LEFT)  &kp UP                  &kp LC(RIGHT)           &none        &none
-&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN                &kp RIGHT               &on 2        &kp DELETE
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none          &skm_r LALT   &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &skm_r RGUI  &none
-                              &none             &none              &trans        &trans        &trans    &trans  &trans         &trans        &none                   &none
+&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none                 &none                   &none                   &none                 &none
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LC(LEFT)          &kp UP                  &kp LC(RIGHT)           &none                 &none
+&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT              &kp DOWN                &kp RIGHT               &on 2                 &kp DELETE
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none          &kpm_skm_r LALT LALT  &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &kpm_skm_r RGUI RGUI  &none
+                              &none             &none              &trans        &trans        &trans    &trans  &trans         &trans                &none                   &none
             >;
         };
 
@@ -588,11 +594,11 @@
 
         l-mod {
             bindings = <
-&trans  &trans    &trans                &trans                &trans    &trans                    &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &trans    &trans                &trans                &trans    &trans                    &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
-&trans  &trans    &trans                &trans                &trans    &trans                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&trans  &sk LGUI  &kp_sk_l LSHFT LSHFT  &kp_sk_l LCTRL LCTRL  &sk LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                  &trans                &trans                &trans    &trans  &trans    &trans  &trans  &trans  &trans     &trans
+&trans  &trans              &trans                &trans                &trans              &trans                    &trans  &trans  &trans     &trans   &trans    &trans
+&trans  &trans              &trans                &trans                &trans              &trans                    &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&trans  &trans              &trans                &trans                &trans              &trans                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&trans  &kp_sk_l LGUI LGUI  &kp_sk_l LSHFT LSHFT  &kp_sk_l LCTRL LCTRL  &kp_sk_l LALT LALT  &trans  &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                            &trans                &trans                &trans              &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
             label = "l-mod";
@@ -600,11 +606,11 @@
 
         r-mod {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans                &trans                &trans    &trans
-&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans        &trans                &trans                &trans    &trans
-&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans        &trans                &trans                &trans    &trans
-&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &sk LEFT_ALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &sk RGUI  &trans
-                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans                &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans              &trans                &trans                &trans              &trans
+&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans              &trans                &trans                &trans              &trans
+&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans              &trans                &trans                &trans              &trans
+&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &kp_sk_r LALT LALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &kp_sk_r RGUI RGUI  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans              &trans                &trans
             >;
 
             label = "r-mod";
