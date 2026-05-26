@@ -501,7 +501,7 @@
 &none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none          &none         &none                   &none                   &none        &none
 &kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none          &kp LC(LEFT)  &kp UP                  &kp LC(RIGHT)           &none        &none
 &kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp BACKSPACE  &kp LEFT      &kp DOWN                &kp RIGHT               &on 2        &kp DELETE
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none          &skm_r RALT   &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &skm_r RGUI  &none
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none          &skm_r LALT   &kpm_skm_r RCTRL RCTRL  &kpm_skm_r RSHFT RSHFT  &skm_r RGUI  &none
                               &none             &none              &trans        &trans        &trans    &trans  &trans         &trans        &none                   &none
             >;
         };
@@ -600,11 +600,11 @@
 
         r-mod {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans                &trans                &trans    &trans
-&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans    &trans                &trans                &trans    &trans
-&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans    &trans                &trans                &trans    &trans
-&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &sk RALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &sk RGUI  &trans
-                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans                &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans                &trans                &trans    &trans
+&kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                     &trans  &trans        &trans                &trans                &trans    &trans
+&trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &trans  &trans        &trans                &trans                &trans    &trans
+&trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &trans  &sk LEFT_ALT  &kp_sk_r RCTRL RCTRL  &kp_sk_r RSHFT RSHFT  &sk RGUI  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans                &trans
             >;
 
             label = "r-mod";
