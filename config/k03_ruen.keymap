@@ -471,6 +471,18 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
         };
+
+        kp_sk: kp_sk {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <275>;
+            flavor = "hold-preferred";
+            label = "KP_SK";
+            hold-while-undecided;
+            hold-while-undecided-linger;
+        };
     };
 
     keymap {
@@ -479,11 +491,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC       &cmd_f16 F13  &cmd_f16 F14  &cmd_f16 F15  &cmd_f16 F16  &cmd_f16 F17                                   &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none       &none
-&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                          &kp Y             &kp U         &kp I       &kp O         &kp P       &lr_bkt
-&kp CAPSLOCK  &kp A         &kp S         &kp D         &kp F         &kp G                                          &kp H             &kp J         &kp K       &kp L         &kp SEMI    &kp APOSTROPHE
-&kp LALT      &kp Z         &kp X         &kp C         &kp V         &kp B              &layer_en     &layer_ru     &kp N             &kp M         &kp COMMA   &kp DOT       &sl_bslh_e  &kp LALT
-                            &kp LGUI      &kp LCTRL     &kp ESC       &lmod_ltk 3 SPACE  &mo_sl 8 8    &mo_sl 10 10  &nav_ltk 5 SPACE  &kp ENTER     &kp RCTRL   &kp RGUI
+&kp ESC       &cmd_f16 F13  &cmd_f16 F14      &cmd_f16 F15        &cmd_f16 F16  &cmd_f16 F17                                   &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE          &kp C_VOL_UP      &none       &none
+&kp TAB       &kp Q         &kp W             &kp E               &kp R         &kp T                                          &kp Y             &kp U         &kp I               &kp O             &kp P       &lr_bkt
+&kp CAPSLOCK  &kp A         &kp S             &kp D               &kp F         &kp G                                          &kp H             &kp J         &kp K               &kp L             &kp SEMI    &kp APOSTROPHE
+&layer_en     &kp Z         &kp X             &kp C               &kp V         &kp B              &layer_en     &layer_ru     &kp N             &kp M         &kp COMMA           &kp DOT           &sl_bslh_e  &layer_ru
+                            &kp_sk LGUI LGUI  &kp_sk LCTRL LCTRL  &kp ESC       &lmod_ltk 3 SPACE  &mo_sl 8 8    &mo_sl 10 10  &nav_ltk 5 SPACE  &kp ENTER     &kp_sk RCTRL RCTRL  &kp_sk LALT LALT
             >;
 
             sensor-bindings =
@@ -511,7 +523,7 @@
             bindings = <
 &trans     &none      &none      &none      &none      &none                     &none          &none          &none     &none          &none  &trans
 &trans     &none      &kp LC(E)  &mo 10     &none      &none                     &none          &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none  &none
-&kp LC(Y)  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp HOME       &kp LEFT       &kp DOWN  &kp RIGHT      &none  &kp END
+&kp LC(Y)  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &none          &kp LEFT       &kp DOWN  &kp RIGHT      &none  &none
 &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &none          &kp BACKSPACE  &none     &kp DELETE     &none  &trans
                       &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans         &none     &none
             >;
@@ -542,11 +554,11 @@
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none     &none          &none     &none          &none  &none
-&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none     &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none  &none
-&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT      &on 2  &kp END
-&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none     &kp BACKSPACE  &none     &kp DELETE     &none  &none
-                              &none             &none              &trans        &trans        &trans    &trans  &trans    &trans         &none     &none
+&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none   &none          &none     &none          &none  &none
+&kp APOSTROPHE  &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none   &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none  &none
+&kp DOT         &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &none   &kp LEFT       &kp DOWN  &kp RIGHT      &on 2  &none
+&none           &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none   &kp BACKSPACE  &none     &kp DELETE     &none  &none
+                              &none             &none              &trans        &trans        &trans    &trans  &trans  &trans         &none     &none
             >;
         };
 
@@ -566,7 +578,7 @@
             bindings = <
 &bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
 &none         &none      &kp LC(E)      &lay_en        &lay_ru         &none                             &none         &kp LS(LC(LEFT))   &kp LS(UP)    &kp LS(LC(RIGHT))  &none         &none
-&kp LC(Y)     &none      &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &kp LS(HOME)  &kp LS(LEFT)       &kp LS(DOWN)  &kp LS(RIGHT)      &on 2         &kp LS(END)
+&kp LC(Y)     &none      &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &none         &kp LS(LEFT)       &kp LS(DOWN)  &kp LS(RIGHT)      &on 2         &none
 &out OUT_USB  &kp LC(Z)  &kp LC(X)      &kp LC(C)      &kp LC(V)       &kp SCROLLLOCK  &trans    &trans  &none         &kp LC(BACKSPACE)  &none         &kp LS(DELETE)     &none         &out OUT_BLE
                          &none          &none          &trans          &trans          &trans    &trans  &trans        &trans             &none         &none
             >;
