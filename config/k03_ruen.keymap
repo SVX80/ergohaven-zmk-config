@@ -371,55 +371,55 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans     &none      &none      &none      &none      &none                     &none          &none          &none     &none          &none  &trans
-&trans     &none      &kp LC(E)  &mo 10     &none      &none                     &none          &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none  &none
-&kp LC(Y)  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &none          &kp LEFT       &kp DOWN  &kp RIGHT      &none  &none
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &none          &kp BACKSPACE  &none     &kp DELETE     &none  &trans
-                      &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans         &none     &none
+&trans  &none      &none      &none      &none      &none                     &none          &none          &none     &none          &none      &trans
+&trans  &none      &kp LC(E)  &mo 10     &none      &none                     &none          &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &none      &none
+&trans  &kp LSHFT  &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &none          &kp LEFT       &kp DOWN  &kp RIGHT      &none      &none
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &none          &kp BACKSPACE  &none     &kp DELETE     &kp LC(Y)  &trans
+                   &none      &none      &trans     &trans  &trans    &trans  &nvoff_mo 2 5  &trans         &none     &none
             >;
         };
 
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none      &none          &none       &none      &none      &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
-&none      &kp SEMICOLON  &kp DOLLAR  &kp AT     &kp HASH   &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&kp LC(Y)  &kp LSHFT      &kp LC(S)   &kp LC(D)  &find_nxt  &kp LC(F)                        &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none      &kp LC(Z)      &kp LC(X)   &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
-                          &none       &none      &trans     &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
+&none  &none          &none      &none      &none      &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
+&none  &kp SEMICOLON  &kp TILDE  &kp AT     &kp HASH   &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&none  &kp LSHFT      &kp LC(S)  &kp LC(D)  &find_nxt  &kp DOLLAR                       &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
+&none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
+                      &none      &none      &trans     &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
         };
 
         act-sym-ru {
             display-name = "act-sym";
             bindings = <
-&trans  &trans            &trans      &trans  &trans    &trans                           &trans              &trans          &trans  &trans  &trans           &trans
-&trans  &kp RU_SEMICOLON  &en DOLLAR  &en AT  &en HASH  &kp RU_NUMERO                    &en AMPERSAND       &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
-&trans  &trans            &trans      &trans  &trans    &trans                           &trans              &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
-&trans  &trans            &trans      &trans  &trans    &trans         &trans    &trans  &kp RU_EXCLAMATION  &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
-                          &trans      &trans  &trans    &trans         &trans    &trans  &trans              &trans          &trans  &trans
+&trans  &trans            &trans     &trans  &trans    &trans                           &trans              &trans          &trans  &trans  &trans           &trans
+&trans  &kp RU_SEMICOLON  &en TILDE  &en AT  &en HASH  &kp RU_NUMERO                    &en AMPERSAND       &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
+&trans  &trans            &trans     &trans  &trans    &en DOLLAR                       &trans              &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
+&trans  &trans            &trans     &trans  &trans    &trans         &trans    &trans  &kp RU_EXCLAMATION  &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
+                          &trans     &trans  &trans    &trans         &trans    &trans  &trans              &trans          &trans  &trans
             >;
         };
 
         num-nav-en {
             display-name = "num_nav";
             bindings = <
-&none      &cmd_f16 F18    &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none   &none          &none      &none          &none    &none
-&kp TILDE  &kp N1          &kp N2            &kp N3             &kp N4        &kp N5                          &none   &kp LC(LEFT)   &kp UP     &kp LC(RIGHT)  &none    &none
-&kp GRAVE  &kp N6          &kp N7            &kp N8             &kp N9        &kp N0                          &none   &kp LEFT       &kp DOWN   &kp RIGHT      &on 2    &none
-&none      &kp APOSTROPHE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none   &kp BACKSPACE  &kp COMMA  &kp DELETE     &kp DOT  &none
-                           &none             &none              &trans        &trans        &trans    &trans  &trans  &trans         &none      &none
+&none           &cmd_f16 F18  &cmd_f16 F19      &cmd_f16 F20       &cmd_f16 F21  &cmd_f16 F22                    &none   &none          &none      &none          &none      &none
+&kp GRAVE       &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none   &kp LC(LEFT)   &kp UP     &kp LC(RIGHT)  &none      &none
+&kp APOSTROPHE  &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &none   &kp LEFT       &kp DOWN   &kp RIGHT      &on 2      &none
+&none           &kp DOT       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET     &kp PERCENT   &trans    &trans  &none   &kp BACKSPACE  &kp COMMA  &kp DELETE     &kp LC(Y)  &none
+                              &none             &none              &trans        &trans        &trans    &trans  &trans  &trans         &none      &none
             >;
         };
 
         num-nav-ru {
             display-name = "num-nav";
             bindings = <
-&trans     &trans          &trans            &trans             &trans     &trans                            &trans  &trans  &trans        &trans  &trans      &trans
-&en TILDE  &trans          &trans            &trans             &trans     &trans                            &trans  &trans  &trans        &trans  &trans      &trans
-&en GRAVE  &trans          &trans            &trans             &trans     &trans                            &trans  &trans  &trans        &trans  &trans      &trans
-&trans     &en APOSTROPHE  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en CARET  &kp RU_PERCENT  &trans    &trans  &trans  &trans  &kp RU_COMMA  &trans  &kp RU_DOT  &trans
-                           &trans            &trans             &trans     &trans          &trans    &trans  &trans  &trans  &trans        &trans
+&trans          &trans      &trans            &trans             &trans     &trans                            &trans  &trans  &trans        &trans  &trans      &trans
+&en GRAVE       &trans      &trans            &trans             &trans     &trans                            &trans  &trans  &trans        &trans  &trans      &trans
+&en APOSTROPHE  &trans      &trans            &trans             &trans     &trans                            &trans  &trans  &trans        &trans  &trans      &trans
+&trans          &kp RU_DOT  &en LEFT_BRACKET  &en RIGHT_BRACKET  &en CARET  &kp RU_PERCENT  &trans    &trans  &trans  &trans  &kp RU_COMMA  &trans  &kp RU_DOT  &trans
+                            &trans            &trans             &trans     &trans          &trans    &trans  &trans  &trans  &trans        &trans
             >;
         };
 
@@ -428,8 +428,8 @@
             bindings = <
 &bootloader   &none      &kp F23        &none          &kp F24         &none                             &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
 &none         &none      &kp LC(E)      &lay_en        &lay_ru         &none                             &none         &kp LS(LC(LEFT))   &kp LS(UP)    &kp LS(LC(RIGHT))  &none         &none
-&kp LC(Y)     &none      &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &none         &kp LS(LEFT)       &kp LS(DOWN)  &kp LS(RIGHT)      &on 2         &none
-&out OUT_USB  &kp LC(Z)  &kp LC(X)      &kp LC(C)      &kp LC(V)       &kp SCROLLLOCK  &trans    &trans  &none         &kp LC(BACKSPACE)  &none         &kp LS(DELETE)     &none         &out OUT_BLE
+&none         &none      &kp LS(LG(S))  &kp LC(LS(D))  &cmd_f15 LS(F)  &kp INS                           &none         &kp LS(LEFT)       &kp LS(DOWN)  &kp LS(RIGHT)      &on 2         &none
+&out OUT_USB  &kp LC(Z)  &kp LC(X)      &kp LC(C)      &kp LC(V)       &kp SCROLLLOCK  &trans    &trans  &none         &kp LC(BACKSPACE)  &none         &kp LS(DELETE)     &kp LC(Y)     &out OUT_BLE
                          &none          &none          &trans          &trans          &trans    &trans  &trans        &trans             &none         &none
             >;
         };
