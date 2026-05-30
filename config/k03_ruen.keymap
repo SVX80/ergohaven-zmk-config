@@ -16,7 +16,7 @@
 
         cmb_ru_hs {
             bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
-            key-positions = <19 20>;
+            key-positions = <45 46>;
             layers = <1>;
         };
 
@@ -28,14 +28,32 @@
 
         cmb_ru_c_hs {
             bindings = <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
-            key-positions = <19 20>;
+            key-positions = <45 46>;
             layers = <9>;
         };
 
-        cmb_comma {
+        cmb_ru_comma {
             bindings = <&kp RU_COMMA>;
-            key-positions = <45 46>;
+            key-positions = <46 47>;
             layers = <1>;
+        };
+
+        cmb_en_comma {
+            bindings = <&kp COMMA>;
+            key-positions = <46 47>;
+            layers = <1>;
+        };
+
+        cmb_lay_en {
+            bindings = <&lay_en>;
+            key-positions = <19 20>;
+            layers = <1>;
+        };
+
+        cmb_lay_ru {
+            bindings = <&lay_ru>;
+            key-positions = <19 20>;
+            layers = <0>;
         };
     };
 
