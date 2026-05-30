@@ -41,7 +41,7 @@
         cmb_en_comma {
             bindings = <&kp COMMA>;
             key-positions = <46 47>;
-            layers = <1>;
+            layers = <0>;
         };
 
         cmb_lay_en {
