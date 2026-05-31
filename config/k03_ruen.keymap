@@ -488,10 +488,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &none                 &none              &none              &none              &none                     &none      &none                  &none     &none               &none               &trans
-&trans  &none                 &kp LC(E)          &mo 9              &none              &none                     &none      &kp LC(LEFT)           &kp UP    &kp LC(RIGHT)       &none               &none
-&trans  &kp_ktgl LSHFT LSHFT  &sel_off_kp LC(S)  &sel_off_kp LC(D)  &find_nxt          &none                     &none      &kp LEFT               &kp DOWN  &kp RIGHT           &kp_sk RSHFT RSHFT  &none
-&trans  &sel_off_kp LC(Z)     &sel_off_kp LC(X)  &sel_off_kp LC(C)  &sel_off_kp LC(V)  &none   &trans    &trans  &none      &sel_off_kp BACKSPACE  &none     &sel_off_kp DELETE  &sel_off_kp LC(Y)   &trans
+&trans  &none                 &none              &none              &none              &none                     &none      &none                  &none     &none          &none               &trans
+&trans  &none                 &kp LC(E)          &mo 9              &none              &none                     &none      &kp LC(LEFT)           &kp UP    &kp LC(RIGHT)  &none               &none
+&trans  &kp_ktgl LSHFT LSHFT  &sel_off_kp LC(S)  &sel_off_kp LC(D)  &find_nxt          &none                     &none      &kp LEFT               &kp DOWN  &kp RIGHT      &kp_sk RSHFT RSHFT  &none
+&trans  &sel_off_kp LC(Z)     &sel_off_kp LC(X)  &sel_off_kp LC(C)  &sel_off_kp LC(V)  &none   &trans    &trans  &none      &sel_off_kp BACKSPACE  &none     &kp DELETE     &sel_off_kp LC(Y)   &trans
                               &none              &none              &trans             &trans  &trans    &trans  &kp SPACE  &trans                 &none     &none
             >;
         };
