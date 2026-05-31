@@ -427,16 +427,16 @@
             toggle-mode = "off";
         };
 
-        kt: kt {
+        kt_flip: kt_flip {
             compatible = "zmk,behavior-key-toggle";
-            label = "KT";
+            label = "KT_FLIP";
             #binding-cells = <1>;
             toggle-mode = "flip";
         };
 
         kp_ktgl: kp_ktgl {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp_on_off>, <&kt>;
+            bindings = <&kp_on_off>, <&kt_flip>;
 
             #binding-cells = <2>;
             tapping-term-ms = <275>;
