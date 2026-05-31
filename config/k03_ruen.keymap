@@ -285,6 +285,19 @@
             label = "L_UP_MO";
             wait-ms = <0>;
         };
+
+        kp_on_off: kp_on_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &kp_on MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_tap_time 0>,
+                <&macro_param_1to1 &kp_off MACRO_PLACEHOLDER>;
+
+            label = "KP_ON_OFF";
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -408,12 +421,19 @@
 
         kp_ktgl: kp_ktgl {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp_toggle>;
+            bindings = <&kp_on_off>, <&kp_toggle>;
 
             #binding-cells = <2>;
             tapping-term-ms = <275>;
             flavor = "hold-preferred";
             label = "KP_KTGL";
+        };
+
+        kp_on: kp_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KP_ON";
+            #binding-cells = <1>;
+            toggle-mode = "on";
         };
     };
 
