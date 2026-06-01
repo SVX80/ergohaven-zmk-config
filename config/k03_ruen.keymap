@@ -254,6 +254,7 @@
 
             label = "NAV_MO_L";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         ext_nav_mo_l: ext_nav_mo_l {
@@ -271,6 +272,7 @@
 
             label = "EXT_NAV_MO_L";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         l_up_mo: l_up_mo {
@@ -284,6 +286,7 @@
 
             label = "L_UP_MO";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         kp_on_off: kp_on_off {
@@ -298,6 +301,7 @@
 
             label = "KP_ON_OFF";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         sel_off_kp: sel_off_kp {
@@ -312,6 +316,7 @@
 
             label = "SEL_OFF_KP";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
@@ -458,10 +463,10 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC       &cmd_f16 F13  &cmd_f16 F14      &cmd_f16 F15        &cmd_f16 F16  &cmd_f16 F17                            &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE          &kp C_VOL_UP      &none           &none
-&kp TAB       &kp Q         &kp W             &kp E               &kp R         &kp T                                   &kp Y             &kp U         &kp I               &kp O             &kp P           &lr_bkt
-&kp CAPSLOCK  &kp A         &kp S             &kp D               &kp F         &kp G                                   &kp H             &kp J         &kp K               &kp L             &kp SEMI        &kp APOSTROPHE
-&kp LSHFT     &kp Z         &kp X             &kp C               &kp V         &kp B         &layer_en     &layer_ru   &kp N             &kp M         &kp COMMA           &kp DOT           &kp UNDERSCORE  &kp RSHFT
+&kp ESC       &cmd_f16 F13  &cmd_f16 F14      &cmd_f16 F15        &cmd_f16 F16  &cmd_f16 F17                            &kp LS(LC(M))     &kp C_VOL_DN  &kp C_MUTE          &kp C_VOL_UP      &none       &none
+&kp TAB       &kp Q         &kp W             &kp E               &kp R         &kp T                                   &kp Y             &kp U         &kp I               &kp O             &kp P       &lr_bkt
+&kp CAPSLOCK  &kp A         &kp S             &kp D               &kp F         &kp G                                   &kp H             &kp J         &kp K               &kp L             &kp SEMI    &kp APOSTROPHE
+&kp LSHFT     &kp Z         &kp X             &kp C               &kp V         &kp B         &layer_en     &layer_ru   &kp N             &kp M         &kp COMMA           &kp DOT           &sl_bslh_e  &kp RSHFT
                             &kp_sk LALT LALT  &kp_sk LCTRL LCTRL  &kp ESC       &ltk 3 SPACE  &mo_sl 7 7    &mo_sl 9 9  &nav_ltk 5 SPACE  &kp ENTER     &kp_sk RCTRL RCTRL  &kp_sk LGUI LGUI
             >;
 
@@ -480,7 +485,7 @@
 &trans  &trans                   &trans                &trans              &trans              &trans                                &trans              &trans                     &trans               &trans                 &trans               &trans
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp UNDERSCORE       &trans
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &sl_bslh_r           &trans
                                  &trans                &trans              &trans              &trans              &trans    &trans  &trans              &trans                     &trans               &trans
             >;
         };
@@ -502,7 +507,7 @@
 &none  &none          &none      &none      &none      &none                            &none          &kp C_PREV      &kp C_PP              &kp C_NEXT             &none            &none
 &none  &kp SEMICOLON  &kp TILDE  &kp AT     &kp HASH   &ru RU_NUMERO                    &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
 &none  &lay_ru        &kp LC(S)  &kp LC(D)  &find_nxt  &kp DOLLAR                       &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp QUESTION   &kp EXCL        &kp LT                &kp GT                 &kp SLASH        &none
+&none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none          &trans    &trans  &kp QUESTION   &kp UNDERSCORE  &kp LT                &kp GT                 &kp EXCL         &none
                       &none      &none      &trans     &trans         &trans    &trans  &trans         &kp LS(ENTER)   &none                 &none
             >;
         };
@@ -513,7 +518,7 @@
 &trans  &trans            &trans     &trans  &trans    &trans                           &trans           &trans          &trans  &trans  &trans           &trans
 &trans  &kp RU_SEMICOLON  &en TILDE  &en AT  &en HASH  &kp RU_NUMERO                    &en AMPERSAND    &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
 &trans  &lay_en           &trans     &trans  &trans    &en DOLLAR                       &trans           &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
-&trans  &trans            &trans     &trans  &trans    &trans         &trans    &trans  &kp RU_QUESTION  &kp RU_EXCL     &en LT  &en GT  &kp RU_SLASH     &trans
+&trans  &trans            &trans     &trans  &trans    &trans         &trans    &trans  &kp RU_QUESTION  &trans          &en LT  &en GT  &kp RU_EXCL      &trans
                           &trans     &trans  &trans    &trans         &trans    &trans  &trans           &trans          &trans  &trans
             >;
         };
