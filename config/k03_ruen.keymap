@@ -600,7 +600,7 @@
 &none        &none      &none          &none      &none      &none                            &none         &none         &none      &none          &none          &none
 &kp LS(TAB)  &kp LS(Q)  &kp LS(W)      &kp LS(E)  &kp LS(R)  &kp LS(T)                        &kp LC(HOME)  &kp LA(LEFT)  &kp PG_UP  &kp LA(RIGHT)  &none          &none
 &none        &kp LS(A)  &kp LS(S)      &kp LS(D)  &kp LS(F)  &kp LS(G)                        &key_repeat   &kp HOME      &kp PG_DN  &kp END        &kp LS(LG(S))  &none
-&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)      &trans    &trans  &kp LC(END)   &none         &none      &none          &none          &none
+&none        &kp LS(Z)  &kp LS(X)      &kp LS(C)  &kp LS(V)  &kp LS(B)      &trans    &trans  &kp LC(END)   &sk LGUI      &sk LCTRL  &sk LALT       &sk LSHFT      &none
                         &kp LS(GRAVE)  &none      &trans     &ext_nav_mo_l  &trans    &trans  &sl 10        &trans        &none      &none
             >;
 
