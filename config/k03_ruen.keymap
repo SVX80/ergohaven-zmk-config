@@ -95,7 +95,7 @@
         };
 
         cmb_utils {
-            bindings = <&nav_mo_l 2>;
+            bindings = <&mo 10>;
             key-positions = <54 55>;
             timeout-ms = <100>;
             slow-release;
