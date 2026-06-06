@@ -487,7 +487,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <275>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             label = "KP_KTGL";
         };
 
