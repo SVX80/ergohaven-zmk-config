@@ -10,49 +10,25 @@
 
         cmb_ru_io {
             bindings = <&kp RU_CYRILLIC_IO>;
-            key-positions = <15 14>;
+            key-positions = <15 16>;
             layers = <1>;
         };
 
         cmb_ru_hs {
             bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
             layers = <1>;
         };
 
         cmb_ru_c_io {
             bindings = <&kp LS(RU_CYRILLIC_IO)>;
-            key-positions = <15 14>;
+            key-positions = <15 16>;
             layers = <9>;
         };
 
         cmb_ru_c_hs {
             bindings = <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
-            key-positions = <20 21>;
-            layers = <8>;
-        };
-
-        cmb_ru_io_e {
-            bindings = <&kp RU_CYRILLIC_IO>;
-            key-positions = <32 15>;
-            layers = <1>;
-        };
-
-        cmb_ru_hs_e {
-            bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
-            key-positions = <45 27>;
-            layers = <1>;
-        };
-
-        cmb_ru_c_io_e {
-            bindings = <&kp LS(RU_CYRILLIC_IO)>;
-            key-positions = <32 15>;
-            layers = <9>;
-        };
-
-        cmb_ru_c_hs_e {
-            bindings = <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
-            key-positions = <45 27>;
+            key-positions = <20 19>;
             layers = <8>;
         };
 
@@ -513,8 +489,9 @@
             bindings = <&ext_nav_mo_l>, <&on>;
 
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <235>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
         };
     };
 
