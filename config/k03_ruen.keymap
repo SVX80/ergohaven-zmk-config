@@ -483,6 +483,15 @@
             tapping-term-ms = <175>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
         };
+
+        ca_up_down: ca_up_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CA_UP_DOWN";
+            bindings = <&kp LC(LA(DOWN))>, <&kp LA(LC(UP))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
     };
 
     keymap {
@@ -521,11 +530,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans             &trans                &trans             &trans             &trans             &trans                           &trans        &trans        &trans     &trans         &trans             &trans
-&trans             &none                 &sel_off_kp LC(E)  &kp LALT           &none              &none                            &kp LC(HOME)  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &none              &none
-&nav_mo_a 0 LSHFT  &kp_ktgl LSHFT LSHFT  &sel_off_kp LC(S)  &sel_off_kp LC(D)  &find_nxt          &none                            &nav_bksp     &kp LEFT      &kp DOWN   &kp RIGHT      &kp END            &kp DELETE
-&trans             &sel_off_kp LC(Z)     &sel_off_kp LC(X)  &sel_off_kp LC(C)  &sel_off_kp LC(V)  &none          &trans    &trans  &kp LC(END)   &kp HOME      &kp PG_DN  &kp PG_UP      &sel_off_kp LC(Y)  &trans
-                                         &none              &none              &trans             &nv_off_rel 2  &trans    &trans  &kp SPACE     &trans        &none      &none
+&trans             &trans             &trans             &trans                &trans             &trans                           &trans        &trans        &trans     &trans         &trans             &trans
+&trans             &none              &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none              &none                            &kp LC(HOME)  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &none              &none
+&nav_mo_a 0 LSHFT  &none              &sel_off_kp LC(S)  &sel_off_kp LC(D)     &find_nxt          &none                            &nav_bksp     &kp LEFT      &kp DOWN   &kp RIGHT      &kp END            &kp DELETE
+&trans             &sel_off_kp LC(Z)  &sel_off_kp LC(X)  &sel_off_kp LC(C)     &sel_off_kp LC(V)  &none          &trans    &trans  &kp LC(END)   &kp HOME      &kp PG_DN  &kp PG_UP      &sel_off_kp LC(Y)  &trans
+                                      &none              &none                 &trans             &nv_off_rel 2  &trans    &trans  &kp SPACE     &trans        &none      &none
             >;
         };
 
@@ -597,11 +606,11 @@
 
         r-up {
             bindings = <
-&none        &none      &none      &none      &none      &none                        &none    &none           &none              &none            &none          &none
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)                    &kp F11  &kp F12         &kp F13            &kp F14          &kp F15        &none
-&none        &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)                    &kp F16  &kp LA(LEFT)    &none              &kp LA(RIGHT)    &kp LS(LG(S))  &none
-&none        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)  &trans    &trans  &none    &kp SCROLLLOCK  &kp K_APPLICATION  &kp PRINTSCREEN  &layer_ru      &none
-                        &none      &none      &trans     &mo 10     &trans    &trans  &trans   &trans          &none              &none
+&none        &none      &none      &none      &none      &none                        &none           &none              &none              &none              &none            &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)                    &kp F11         &kp F12            &kp F13            &kp F14            &kp F15          &none
+&none        &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)                    &kp F16         &kp LA(LEFT)       &ca_up_down        &kp LA(RIGHT)      &kp PRINTSCREEN  &none
+&none        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)  &trans    &trans  &kp SCROLLLOCK  &kp K_APPLICATION  &kp LS(LC(PG_DN))  &kp LS(LC(PG_UP))  &layer_ru        &none
+                        &none      &none      &trans     &mo 10     &trans    &trans  &trans          &trans             &none              &none
             >;
 
             label = "r-up";
