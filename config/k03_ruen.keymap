@@ -496,7 +496,7 @@
         nav_tab: nav_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_TAB";
-            bindings = <&sel_off_kp TAB>, <&kp TAB>;
+            bindings = <&kp TAB>, <&sel_off_kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -506,7 +506,7 @@
         nav_stab: nav_stab {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_STAB";
-            bindings = <&sel_off_kp LS(TAB)>, <&kp LS(TAB)>;
+            bindings = <&kp LS(TAB)>, <&sel_off_kp LS(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
