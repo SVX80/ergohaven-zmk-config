@@ -525,7 +525,7 @@
 
         nav_off_ltk: nav_off_ltk {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&nvoff_mo>, <&key>;
+            bindings = <&nvoff_mo>, <&nav_space>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
@@ -537,6 +537,16 @@
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_ENTER";
             bindings = <&kp ENTER>, <&sel_off_kp ENTER>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        nav_space: nav_space {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NAV_SPACE";
+            bindings = <&kp SPACE>, <&sel_off_kp SPACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
