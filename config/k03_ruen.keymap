@@ -172,7 +172,7 @@
                 <&off 2 &macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER &kt_off LSHFT>;
 
             label = "NVOFF_MO";
             wait-ms = <0>;
