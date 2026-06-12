@@ -364,19 +364,19 @@
             flavor = "hold-preferred";
         };
 
-        sl_bslh_e: sl_bslh_e {
+        sl_bksl_e: sl_bksl_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "SL_BSLH_E";
+            label = "SL_BKSL_E";
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        sl_bslh_r: sl_bslh_r {
+        sl_bksl_r: sl_bksl_r {
             compatible = "zmk,behavior-mod-morph";
-            label = "SL_BSLH_R";
-            bindings = <&kp RU_SLASH>, <&kp RU_BACKSLASH>;
+            label = "SL_BKSL_R";
+            bindings = <&sl_ctrl>, <&kp RU_BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -675,6 +675,16 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        sl_ctrl: sl_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SL_CTRL";
+            bindings = <&kp RU_SLASH>, <&kp RU_DOT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     keymap {
@@ -686,7 +696,7 @@
 &kp ESC         &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT  &key_repeat                               &none             &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
 &kp TAB         &kp Q     &kp W          &kp E       &kp R     &kp T                                     &kp Y             &kp U      &kp I         &kp O         &kp P       &lr_bkt
 &nav_mo_on 0 2  &kp A     &kp S          &kp D       &kp F     &kp G                                     &kp H             &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
-&layer_en       &kp Z     &kp X          &kp C       &kp V     &kp B         &kp CAPSLOCK    &lay_ru     &kp N             &kp M      &kp COMMA     &kp DOT       &sl_bslh_e  &layer_ru
+&layer_en       &kp Z     &kp X          &kp C       &kp V     &kp B         &kp CAPSLOCK    &lay_ru     &kp N             &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
                           &kp LS(LC(M))  &kp C_MUTE  &kp ESC   &ltk 3 SPACE  &mo_sl 7 7      &mo_sl 9 9  &nav_ltk 5 SPACE  &kp ENTER  &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
@@ -705,7 +715,7 @@
 &trans  &trans                   &trans                &trans              &trans              &trans                                 &trans              &trans                     &trans               &trans                 &trans               &trans
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                     &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                     &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &lay_en  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &sl_bslh_r           &trans
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &lay_en  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &sl_bksl_r           &trans
                                  &trans                &trans              &trans              &trans              &trans    &trans   &trans              &trans                     &trans               &trans
             >;
         };
