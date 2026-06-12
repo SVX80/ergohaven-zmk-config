@@ -248,14 +248,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&on 2 &off 9 &off 7>,
-                <&macro_press>,
-                <&kp LSHFT>,
+                <&on 2 &on 11 &off 9 &off 7>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&off 2>,
-                <&macro_release>,
-                <&kp LSHFT>;
+                <&off 2 &off 11>;
 
             label = "EXT_NAV_MO_L";
             wait-ms = <0>;
@@ -686,6 +682,17 @@
             >;
 
             label = "utils";
+        };
+
+        nav-c {
+            display-name = "nav-c";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &trans            &trans         &trans         &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LC(LS(HOME))  &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(RIGHT)  &kp INSERT   &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp BACKSPACE     &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)  &kp LS(END)  &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LC(LS(END))   &kp LS(HOME)      &kp LS(PG_DN)  &kp LS(PG_UP)  &kp LC(Y)    &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans            &kp LS(ENTER)     &none          &none
+            >;
         };
     };
 
