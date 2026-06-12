@@ -575,10 +575,11 @@
         nav_ctrl_z: nav_ctrl_z {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_CTRL_Z";
-            bindings = <&sel_off_kp LC(Z)>, <&sel_off_kp LC(Y)>;
+            bindings = <&kp LC(Z)>, <&sel_off_kp LC(Z)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         nav_ctrl_x: nav_ctrl_x {
@@ -587,7 +588,7 @@
             bindings = <&sel_off_kp LC(X)>, <&sel_off_kp LA(X)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_RSFT)>;
         };
 
@@ -597,7 +598,7 @@
             bindings = <&sel_off_kp LC(C)>, <&sel_off_kp LA(C)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
             keep-mods = <(MOD_RSFT)>;
         };
 
@@ -607,7 +608,7 @@
             bindings = <&sel_off_kp LC(V)>, <&sel_off_kp LA(V)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
             keep-mods = <(MOD_RSFT)>;
         };
 
@@ -642,11 +643,10 @@
         nav_del: nav_del {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_DEL";
-            bindings = <&kp DELETE>, <&sel_off_kp DELETE>;
+            bindings = <&kp DELETE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         nav_ins: nav_ins {
