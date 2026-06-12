@@ -614,7 +614,7 @@
         nav_ctrl_y: nav_ctrl_y {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_CTRL_Y";
-            bindings = <&sel_off_kp LC(Y)>, <&sel_off_kp LC(Y)>;
+            bindings = <&nv_ctrl_y_ext>, <&sel_off_kp LC(Y)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -666,6 +666,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        nv_ctrl_y_ext: nv_ctrl_y_ext {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NV_CTRL_Y_EXT";
+            bindings = <&kp LC(Y)>, <&kp LC(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
