@@ -652,11 +652,10 @@
         nav_ins: nav_ins {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_INS";
-            bindings = <&kp INSERT>, <&sel_off_kp INSERT>;
+            bindings = <&kp INSERT>, <&kp INSERT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         nav_find_nxt: nav_find_nxt {
@@ -810,17 +809,6 @@
             >;
 
             label = "utils";
-        };
-
-        nav-c {
-            display-name = "nav-c";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &trans            &trans         &trans         &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LC(LS(HOME))  &kp LC(LS(LEFT))  &kp LS(UP)     &kp LC(RIGHT)  &kp INSERT   &none
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp BACKSPACE     &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)  &kp LS(END)  &kp DELETE
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LC(LS(END))   &kp LS(HOME)      &kp LS(PG_DN)  &kp LS(PG_UP)  &kp LC(Y)    &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans            &kp LS(ENTER)     &none          &none
-            >;
         };
     };
 
