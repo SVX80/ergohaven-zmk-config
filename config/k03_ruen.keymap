@@ -723,7 +723,7 @@
             display-name = "act_sym";
             bindings = <
 &trans  &trans     &trans     &trans     &trans     &trans                    &trans         &trans          &trans                &trans                 &trans           &trans
-&none   &none      &kp LC(E)  &none      &none      &none                     &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
+&none   &none      &kp CAPS   &lay_ru    &lay_en    &none                     &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
 &none   &kp ESC    &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
 &none   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
                    &none      &none      &trans     &trans  &trans    &trans  &trans         &trans          &kp C_PREV            &kp C_NEXT
@@ -733,11 +733,11 @@
         act-sym-ru {
             display-name = "act-sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans          &trans  &trans  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &en AMPERSAND  &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RU_EXCL    &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans          &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans         &trans          &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &lay_en  &trans  &trans                    &en AMPERSAND  &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans         &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans  &kp RU_EXCL    &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
+                &trans  &trans   &trans  &trans  &trans    &trans  &trans         &trans          &trans  &trans
             >;
         };
 
@@ -768,7 +768,7 @@
             bindings = <
 &bootloader   &none         &kp F23       &none         &kp F24       &none                           &trans      &trans     &trans     &trans     &trans         &trans
 &none         &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &kp F11     &kp F12    &kp F13    &kp F14    &kp F15        &kp F16
-&layer_en     &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp HASH    &kp TILDE  &kp CARET  &kp AT     &kp SEMICOLON  &ru RU_NUMERO
+&none         &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp HASH    &kp TILDE  &kp CARET  &kp AT     &kp SEMICOLON  &ru RU_NUMERO
 &out OUT_USB  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &kp DOLLAR  &sk LALT   &sk RCTRL  &sk RSHFT  &sk RGUI       &none
                             &none         &none         &trans        &trans        &trans    &trans  &trans      &trans     &none      &none
             >;
@@ -788,10 +788,10 @@
         fn-utils {
             display-name = "fn-utils";
             bindings = <
-&trans  &trans    &trans     &trans     &trans    &trans                       &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3       &bt BT_SEL 4     &bt BT_CLR
-&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                       &none         &kp LA(LC(PG_UP))  &kp LA(LC(UP))    &kp LA(LC(PG_DN))  &kp PAUSE_BREAK  &none
-&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                      &key_repeat   &kp LA(LEFT)       &kp LA(LC(DOWN))  &kp LA(RIGHT)      &none            &layer_ru
-&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP  &trans    &trans  &none         &none              &kp PRINTSCREEN   &kp K_CALCULATOR   &kp SCROLLLOCK   &out OUT_BLE
+&trans  &trans    &trans     &trans     &trans    &trans                       &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3         &bt BT_SEL 4     &bt BT_CLR
+&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                       &none         &kp LA(LC(PG_UP))  &kp LA(LC(UP))    &kp LA(LC(PG_DN))    &kp PAUSE_BREAK  &none
+&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                      &key_repeat   &kp LA(LEFT)       &kp LA(LC(DOWN))  &kp LA(RIGHT)        &none            &none
+&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP  &trans    &trans  &none         &none              &kp PRINTSCREEN   &kp C_AL_CALCULATOR  &kp SCROLLLOCK   &out OUT_BLE
                   &none      &none      &trans    &trans     &trans    &trans  &trans        &trans             &none             &none
             >;
         };
@@ -810,8 +810,8 @@
             then-layer = <4>;
         };
 
-        desk-fn-ru {
-            if-layers = <1 7>;
+        desk-fn {
+            if-layers = <7 1>;
             then-layer = <8>;
         };
     };
