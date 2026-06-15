@@ -722,22 +722,22 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                    &trans         &trans          &trans                &trans                 &trans           &trans
-&none   &none      &kp CAPS   &lay_ru    &lay_en    &none                     &kp AMPERSAND  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp PIPE
-&none   &kp ESC    &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS       &kp MINUS       &kp ASTERISK          &kp EQUAL              &kp COLON        &kp DOUBLE_QUOTES
-&none   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp EXCL       &kp UNDERSCORE  &kp LT                &kp GT                 &kp QUESTION     &none
-                   &none      &none      &trans     &trans  &trans    &trans  &trans         &trans          &kp C_PREV            &kp C_NEXT
+&trans  &trans     &trans     &trans     &trans     &trans                    &trans         &trans           &trans                &trans                 &trans          &trans
+&none   &none      &kp CAPS   &lay_ru    &lay_en    &none                     &kp AMPERSAND  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&none   &kp ESC    &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS       &kp MINUS        &kp UNDERSCORE        &kp EQUAL              &kp COLON       &kp DOUBLE_QUOTES
+&none   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp PIPE       &kp EXCLAMATION  &kp LT                &kp GT                 &kp QUESTION    &none
+                   &none      &none      &trans     &trans  &trans    &trans  &trans         &trans           &kp C_PREV            &kp C_NEXT
             >;
         };
 
         act-sym-ru {
             display-name = "act-sym";
             bindings = <
-&trans  &trans  &trans  &trans   &trans  &trans                    &trans         &trans          &trans  &trans  &trans           &trans
-&trans  &trans  &trans  &lay_en  &trans  &trans                    &en AMPERSAND  &en LEFT_BRACE  &trans  &trans  &en RIGHT_BRACE  &en PIPE
-&trans  &trans  &trans  &trans   &trans  &trans                    &trans         &trans          &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
-&trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans  &kp RU_EXCL    &trans          &en LT  &en GT  &kp RU_QUESTION  &trans
-                &trans  &trans   &trans  &trans  &trans    &trans  &trans         &trans          &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans         &trans       &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &lay_en  &trans  &trans                    &en AMPERSAND  &trans       &trans  &trans  &en LEFT_BRACE   &en RIGHT_BRACE
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans         &trans       &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans  &en PIPE       &kp RU_EXCL  &en LT  &en GT  &kp RU_QUESTION  &trans
+                &trans  &trans   &trans  &trans  &trans    &trans  &trans         &trans       &trans  &trans
             >;
         };
 
