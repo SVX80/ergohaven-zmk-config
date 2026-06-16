@@ -54,7 +54,7 @@
             bindings = <&nav_mo 2>;
             key-positions = <53 56>;
             slow-release;
-            timeout-ms = <125>;
+            timeout-ms = <175>;
         };
     };
 
