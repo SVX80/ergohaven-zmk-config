@@ -49,6 +49,13 @@
             key-positions = <14 21>;
             layers = <0 1>;
         };
+
+        cmb_nav {
+            bindings = <&nav_mo 2>;
+            key-positions = <53 56>;
+            slow-release;
+            timeout-ms = <125>;
+        };
     };
 
     macros {
