@@ -330,7 +330,7 @@
             label = "SEL_OFF_CMD_F15";
         };
 
-        fn-ut-mo: fn-ut-mo {
+        fn_ut_mo: fn_ut_mo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -339,7 +339,7 @@
                 <&macro_wait_time 0>,
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
 
-            label = "FN-UT-MO";
+            label = "FN_UT_MO";
             wait-ms = <0>;
             tap-ms = <0>;
         };
