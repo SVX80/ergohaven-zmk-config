@@ -51,7 +51,7 @@
         };
 
         cmb_nav {
-            bindings = <&nav_mo 2>;
+            bindings = <&nvoff_mo 2>;
             key-positions = <53 56>;
             slow-release;
             timeout-ms = <175>;
@@ -680,6 +680,28 @@
             mods = <(MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
             keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
+
+        nv_ca_pup: nv_ca_pup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NV_CA_PUP";
+            bindings =
+                <&sel_off_kp LA(LC(PAGE_UP))>,
+                <&sel_off_kp LA(LC(PAGE_UP))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        nv_ca_pdn: nv_ca_pdn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NV_CA_PDN";
+            bindings =
+                <&sel_off_kp LA(LC(PAGE_DOWN))>,
+                <&sel_off_kp LA(LC(PAGE_DOWN))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -719,9 +741,9 @@
             display-name = "nav";
             bindings = <
 &trans             &trans       &trans             &trans                &trans         &trans                           &trans                &trans        &trans     &trans         &trans      &trans
-&nav_tab           &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none          &none                            &kp LC(HOME)          &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &nav_ins    &none
+&nav_tab           &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none          &none                            &nv_ca_pup            &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &nav_ins    &none
 &nav_mo_a 0 LSHFT  &nav_esc     &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt  &none                            &nav_bksp             &kp LEFT      &kp DOWN   &kp RIGHT      &nav_enter  &nav_del
-&trans             &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v    &none          &trans    &trans  &kp LC(END)           &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &trans
+&trans             &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v    &none          &trans    &trans  &nv_ca_pdn            &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &trans
                                 &none              &none                 &trans         &nv_off_rel 2  &trans    &trans  &nav_off_ltk 5 SPACE  &trans        &none      &none
             >;
         };
@@ -752,9 +774,9 @@
             display-name = "num_nav";
             bindings = <
 &trans          &trans     &trans            &trans             &trans   &trans                         &trans         &trans        &trans     &trans         &trans      &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &kp LC(HOME)   &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &kp INSERT  &none
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &kp INSERT  &none
 &kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp BACKSPACE  &kp LEFT      &kp DOWN   &kp RIGHT      &kp ENTER   &kp DELETE
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &kp LC(END)    &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &none
+&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &none
                            &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans         &trans        &none      &none
             >;
         };
@@ -795,11 +817,11 @@
         fn-utils {
             display-name = "fn-utils";
             bindings = <
-&trans  &trans    &trans     &trans     &trans    &trans                       &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4     &bt BT_CLR
-&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                       &none         &kp LA(LC(PG_UP))    &kp LA(LC(UP))     &kp LA(LC(PG_DN))  &kp PAUSE_BREAK  &none
-&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                      &key_repeat   &kp LA(LEFT)         &kp LA(LC(DOWN))   &kp LA(RIGHT)      &kp LC(ENTER)    &kp PRINTSCREEN
-&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP  &trans    &trans  &none         &kp C_AL_CALCULATOR  &kp LA(LC(PG_DN))  &kp LA(LC(PG_UP))  &kp SCROLLLOCK   &out OUT_BLE
-                  &none      &none      &trans    &trans     &trans    &trans  &trans        &trans               &none              &none
+&trans  &trans    &trans     &trans     &trans    &trans                       &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2      &bt BT_SEL 3   &bt BT_SEL 4     &bt BT_CLR
+&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                       &none         &kp HOME             &kp LA(LC(UP))    &kp END        &kp PAUSE_BREAK  &none
+&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                      &key_repeat   &kp LA(LEFT)         &kp LA(LC(DOWN))  &kp LA(RIGHT)  &kp LC(ENTER)    &kp PRINTSCREEN
+&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP  &trans    &trans  &none         &kp C_AL_CALCULATOR  &kp LC(HOME)      &kp LC(END)    &kp SCROLLLOCK   &out OUT_BLE
+                  &none      &none      &trans    &mo 9      &trans    &trans  &trans        &trans               &none             &none
             >;
         };
     };
