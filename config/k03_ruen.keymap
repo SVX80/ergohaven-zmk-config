@@ -239,11 +239,11 @@
             tap-ms = <0>;
         };
 
-        ext_nav_mo_l: ext_nav_mo_l {
+        nav_sel_mo_l: ext_nav_mo_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&on 2 &off 9 &off 7>,
+                <&on 2>,
                 <&macro_press>,
                 <&kp RSHFT>,
                 <&macro_pause_for_release>,
@@ -502,10 +502,10 @@
             mods = <(MOD_LSFT)>;
         };
 
-        nav_mo_on: nav_mo_on {
+        nav_sel_mo: nav_sel_mo {
             compatible = "zmk,behavior-hold-tap";
-            label = "NAV_MO_ON";
-            bindings = <&ext_nav_mo_l>, <&on>;
+            label = "NAV_SEL_MO";
+            bindings = <&nav_sel_mo_l>, <&nav_sel_on>;
 
             #binding-cells = <2>;
             flavor = "balanced";
@@ -516,7 +516,7 @@
         nav_mo_a: nav_mo_a {
             compatible = "zmk,behavior-hold-tap";
             label = "NAV_MO_A";
-            bindings = <&ext_nav_mo_l>, <&kt_off>;
+            bindings = <&nav_sel_mo_l>, <&kt_off>;
 
             #binding-cells = <2>;
             flavor = "balanced";
@@ -699,11 +699,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC            &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT            &key_repeat                               &none             &kp LALT            &kp RCTRL     &kp RSHFT     &kp RGUI    &none
-&kp TAB            &kp Q     &kp W          &kp E       &kp R               &kp T                                     &kp Y             &kp U               &kp I         &kp O         &kp P       &lr_bkt
-&nav_sel_on LSHFT  &kp A     &kp S          &kp D       &kp F               &kp G                                     &kp H             &kp J               &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
-&layer_en          &kp Z     &kp X          &kp C       &kp V               &kp B         &kp CAPSLOCK    &none       &kp N             &kp M               &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
-                             &kp LS(LC(M))  &kp C_MUTE  &kp_sk LSHFT LSHFT  &ltk 3 SPACE  &mo_sl 7 7      &mo_sl 9 9  &nav_ltk 5 SPACE  &kp_sk RSHFT RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
+&kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT            &key_repeat                               &none             &kp LALT            &kp RCTRL     &kp RSHFT     &kp RGUI    &none
+&kp TAB              &kp Q     &kp W          &kp E       &kp R               &kp T                                     &kp Y             &kp U               &kp I         &kp O         &kp P       &lr_bkt
+&nav_sel_mo 0 LSHFT  &kp A     &kp S          &kp D       &kp F               &kp G                                     &kp H             &kp J               &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
+&layer_en            &kp Z     &kp X          &kp C       &kp V               &kp B         &kp CAPSLOCK    &none       &kp N             &kp M               &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
+                               &kp LS(LC(M))  &kp C_MUTE  &kp_sk LSHFT LSHFT  &ltk 3 SPACE  &mo_sl 7 7      &mo_sl 9 9  &nav_ltk 5 SPACE  &kp_sk RSHFT RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
             sensor-bindings =
@@ -729,11 +729,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans            &trans       &trans             &trans                &trans         &trans                          &trans      &trans        &trans     &trans         &trans      &trans
-&nav_tab          &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none          &none                           &nv_ca_pup  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &nav_ins    &none
-&kt_off_on LSHFT  &nav_esc     &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt  &none                           &nav_bksp   &kp LEFT      &kp DOWN   &kp RIGHT      &nav_enter  &nav_del
-&trans            &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v    &none         &trans    &off 2  &nv_ca_pdn  &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &trans
-                               &none              &none                 &trans         &nv_off_mo 3  &trans    &trans  &trans      &trans        &none      &none
+&trans    &trans       &trans             &trans                &trans         &trans                          &trans      &trans        &trans     &trans         &trans      &trans
+&nav_tab  &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none          &none                           &nv_ca_pup  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &nav_ins    &none
+&trans    &nav_esc     &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt  &none                           &nav_bksp   &kp LEFT      &kp DOWN   &kp RIGHT      &nav_enter  &nav_del
+&trans    &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v    &none         &trans    &off 2  &nv_ca_pdn  &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &trans
+                       &none              &none                 &trans         &nv_off_mo 3  &trans    &trans  &trans      &trans        &none      &none
             >;
         };
 
