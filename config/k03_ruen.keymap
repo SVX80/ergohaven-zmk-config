@@ -358,6 +358,13 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        kt_off_on: kt_off_on {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kt_off MACRO_PLACEHOLDER &macro_param_1to1 &kt_on MACRO_PLACEHOLDER>;
+            label = "KT_OFF_ON";
+        };
     };
 
     behaviors {
@@ -722,11 +729,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans        &trans       &trans             &trans                &trans         &trans                          &trans      &trans        &trans     &trans         &trans      &trans
-&nav_tab      &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none          &none                           &nv_ca_pup  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &nav_ins    &none
-&kt_on LSHFT  &nav_esc     &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt  &none                           &nav_bksp   &kp LEFT      &kp DOWN   &kp RIGHT      &nav_enter  &nav_del
-&trans        &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v    &none         &trans    &off 2  &nv_ca_pdn  &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &trans
-                           &none              &none                 &trans         &nv_off_mo 3  &trans    &trans  &trans      &trans        &none      &none
+&trans            &trans       &trans             &trans                &trans         &trans                          &trans      &trans        &trans     &trans         &trans      &trans
+&nav_tab          &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none          &none                           &nv_ca_pup  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &nav_ins    &none
+&kt_off_on LSHFT  &nav_esc     &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt  &none                           &nav_bksp   &kp LEFT      &kp DOWN   &kp RIGHT      &nav_enter  &nav_del
+&trans            &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v    &none         &trans    &off 2  &nv_ca_pdn  &kp HOME      &kp PG_DN  &kp PG_UP      &kp END     &trans
+                               &none              &none                 &trans         &nv_off_mo 3  &trans    &trans  &trans      &trans        &none      &none
             >;
         };
 
@@ -752,8 +759,8 @@
             >;
         };
 
-        num-nav-en {
-            display-name = "num_nav";
+        num-utils-en {
+            display-name = "num_utils";
             bindings = <
 &trans          &trans     &trans            &trans             &trans   &trans                         &trans          &trans             &trans            &trans             &trans     &trans
 &kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none           &kp LA(LC(PG_UP))  &kp LA(LC(UP))    &kp LA(LC(PG_DN))  &none      &none
@@ -763,8 +770,8 @@
             >;
         };
 
-        num-nav-ru {
-            display-name = "num-nav";
+        num-utils-ru {
+            display-name = "num-utils";
             bindings = <
 &trans          &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans  &trans  &trans
 &en GRAVE       &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans  &trans  &trans
@@ -796,8 +803,8 @@
             >;
         };
 
-        fn-utils {
-            display-name = "fn-utils";
+        fn-nav {
+            display-name = "fn-nav";
             bindings = <
 &trans  &trans    &trans     &trans     &trans    &trans                             &bt BT_SEL 0         &bt BT_SEL 1        &bt BT_SEL 2     &bt BT_SEL 3         &bt BT_SEL 4   &bt BT_CLR
 &none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                             &none                &nv_on_kp LC(LEFT)  &nv_on_kp UP     &nv_on_kp LC(RIGHT)  &kp INSERT     &none
@@ -811,7 +818,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        num-nav {
+        num-utils {
             if-layers = <5 1>;
             then-layer = <6>;
         };
