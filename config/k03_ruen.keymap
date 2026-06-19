@@ -742,6 +742,26 @@
             flavor = "hold-preferred";
             label = "NVOFF_LTK";
         };
+
+        nav_cs_z: nav_cs_z {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NAV_CS_Z";
+            bindings = <&kp LC(LS(Z))>, <&sel_off_kp LC(LS(Z))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        b_tab: b_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "B_TAB";
+            bindings = <&kp TAB>, <&nvoff_kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -751,7 +771,7 @@
             display-name = "En";
             bindings = <
 &kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                          &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
-&kp TAB              &kp Q     &kp W          &kp E       &kp R      &kp T                                &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
+&b_tab               &kp Q     &kp W          &kp E       &kp R      &kp T                                &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
 &nav_sel_mo 0 LSHFT  &kp A     &kp S          &kp D       &kp F      &kp G                                &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
 &layer_en            &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &on 2  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
                                &kp LS(LC(M))  &kp C_MUTE  &kp LSHFT  &ltk 3 SPACE  &sl 7           &sl 9  &ltk 5 SPACE  &kp RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
@@ -781,21 +801,21 @@
             display-name = "nav";
             bindings = <
 &trans    &trans       &trans             &trans                &trans           &trans                                            &trans              &trans           &trans     &trans         &trans      &trans
-&nav_tab  &none        &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none            &none                                             &nv_off             &kp LC(LEFT)     &kp UP     &kp LC(RIGHT)  &none       &none
+&nav_tab  &nav_cs_z    &sel_off_kp LC(E)  &kp_ktgl LSHFT LSHFT  &none            &none                                             &nv_off             &kp LC(LEFT)     &kp UP     &kp LC(RIGHT)  &none       &none
 &trans    &nav_esc     &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt    &none                                             &nav_bksp           &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &nav_del
 &trans    &nav_ctrl_z  &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v      &none               &trans          &nv_off       &nav_ins            &kp HOME         &kp PG_DN  &kp PG_UP      &kp END     &trans
-                       &none              &none                 &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nv_off_sl 7    &nv_off_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp RSHFT  &none      &none
+                       &none              &none                 &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nv_off_sl 7    &nv_off_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp LSHFT  &none      &none
             >;
         };
 
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                    &trans           &trans         &trans                &trans                 &trans        &trans
-&none   &none      &kp CAPS   &lay_ru    &lay_en    &none                     &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
-&none   &kp ESC    &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
-&none   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
-                   &none      &none      &trans     &trans  &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
+&trans  &trans         &trans     &trans     &trans     &trans                    &trans           &trans         &trans                &trans                 &trans        &trans
+&none   &kp LC(LS(Z))  &kp CAPS   &lay_ru    &lay_en    &none                     &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none   &kp ESC        &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
+&none   &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
+                       &none      &none      &trans     &trans  &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
             >;
         };
 
@@ -814,9 +834,9 @@
             display-name = "num_utils";
             bindings = <
 &trans          &trans     &trans            &trans             &trans   &trans                         &trans          &trans             &trans            &trans             &trans     &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none           &kp LA(LC(PG_UP))  &kp LA(LC(UP))    &kp LA(LC(PG_DN))  &none      &kp PAUSE_BREAK
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &kp LC(HOME)    &kp LA(LC(PG_UP))  &kp LA(LC(UP))    &kp LA(LC(PG_DN))  &none      &kp PAUSE_BREAK
 &kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp SCROLLLOCK  &kp LA(LEFT)       &kp LA(LC(DOWN))  &kp LA(RIGHT)      &kp ENTER  &kp PSCRN
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none           &none              &key_repeat       &none              &none      &none
+&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &kp LC(END)     &none              &key_repeat       &none              &none      &none
                            &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans          &trans             &none             &none
             >;
         };
