@@ -750,11 +750,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT            &key_repeat                               &none             &kp LALT            &kp RCTRL     &kp RSHFT     &kp RGUI    &none
-&kp TAB              &kp Q     &kp W          &kp E       &kp R               &kp T                                     &kp Y             &kp U               &kp I         &kp O         &kp P       &lr_bkt
-&nav_sel_mo 0 LSHFT  &kp A     &kp S          &kp D       &kp F               &kp G                                     &kp H             &kp J               &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
-&layer_en            &kp Z     &kp X          &kp C       &kp V               &kp B         &kp CAPSLOCK    &on 2       &kp N             &kp M               &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
-                               &kp LS(LC(M))  &kp C_MUTE  &kp_sk LSHFT LSHFT  &ltk 3 SPACE  &mo_sl 7 7      &mo_sl 9 9  &nav_ltk 5 SPACE  &kp_sk RSHFT RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
+&kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                          &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
+&kp TAB              &kp Q     &kp W          &kp E       &kp R      &kp T                                &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
+&nav_sel_mo 0 LSHFT  &kp A     &kp S          &kp D       &kp F      &kp G                                &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
+&layer_en            &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &on 2  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
+                               &kp LS(LC(M))  &kp C_MUTE  &kp LSHFT  &ltk 3 SPACE  &sl 7           &sl 9  &ltk 5 SPACE  &kp RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
             sensor-bindings =
