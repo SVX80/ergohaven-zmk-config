@@ -488,7 +488,7 @@
             bindings = <&kp BACKSPACE>, <&sel_off_kp BACKSPACE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         nvsel_mo_l: nvsel_mo_l {
@@ -502,35 +502,14 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
         };
 
-        nav_mo_a: nav_mo_a {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NAV_MO_A";
-            bindings = <&nvsel_mo>, <&kt_off>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 56 57 58 59 43 55>;
-        };
-
         nav_esc: nav_esc {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_ESC";
             bindings = <&kp ESC>, <&sel_off_kp ESC>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-        };
-
-        nav_off_ltk: nav_off_ltk {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&nvoff_mo>, <&nav_space>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-            label = "NAV_OFF_LTK";
         };
 
         nav_enter: nav_enter {
@@ -539,17 +518,7 @@
             bindings = <&kp ENTER>, <&sel_off_kp ENTER>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-        };
-
-        nav_space: nav_space {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NAV_SPACE";
-            bindings = <&kp SPACE>, <&sel_off_kp SPACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
@@ -559,7 +528,7 @@
             bindings = <&kp LC(Z)>, <&sel_off_kp LC(Z)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
 
@@ -599,7 +568,7 @@
             bindings = <&kp LC(D)>, <&sel_off_kp LC(D)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
 
@@ -609,7 +578,7 @@
             bindings = <&sel_off_kp LC(S)>, <&sel_off_kp LC(S)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         nav_del: nav_del {
@@ -636,7 +605,7 @@
             bindings = <&find_nxt>, <&sel_off_cmd_f15 F>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         sl_mod: sl_mod {
@@ -647,28 +616,6 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
             keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
-        };
-
-        nv_ca_pup: nv_ca_pup {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NV_CA_PUP";
-            bindings =
-                <&sel_off_kp LA(LC(PAGE_UP))>,
-                <&sel_off_kp LA(LC(PAGE_UP))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        nv_ca_pdn: nv_ca_pdn {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NV_CA_PDN";
-            bindings =
-                <&sel_off_kp LA(LC(PAGE_DOWN))>,
-                <&sel_off_kp LA(LC(PAGE_DOWN))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
         };
 
         nvoff_ltk: nvoff_ltk {
@@ -687,7 +634,7 @@
             bindings = <&kp LC(LS(Z))>, <&sel_off_kp LC(LS(Z))>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
     };
@@ -729,8 +676,8 @@
             display-name = "nav";
             bindings = <
 &trans    &nvoff_kp LGUI  &nvoff_kp LSHFT    &nvoff_kp LCTRL        &nvoff_kp LALT   &trans                                          &trans              &nvoff_kp LALT   &nvoff_kp RCTRL  &nvoff_kp RSHFT  &nvoff_kp RGUI  &trans
-&nav_tab  &nav_cs_z       &sel_off_kp LC(E)  &kp_kttgl RSHFT RSHFT  &none            &none                                           &nav_del            &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &none           &none
-&trans    &nav_esc        &nav_ctrl_s        &nav_ctrl_d            &nav_find_nxt    &none                                           &nav_bksp           &kp LEFT         &kp DOWN         &kp RIGHT        &nav_enter      &none
+&nav_tab  &nav_cs_z       &sel_off_kp LC(E)  &kp_kttgl RSHFT RSHFT  &none            &none                                           &none               &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &nv_off         &none
+&trans    &nav_esc        &nav_ctrl_s        &nav_ctrl_d            &nav_find_nxt    &none                                           &nav_bksp           &kp LEFT         &kp DOWN         &kp RIGHT        &nav_enter      &nav_del
 &trans    &nav_ctrl_z     &nav_ctrl_x        &nav_ctrl_c            &nav_ctrl_v      &none               &trans         &nv_off      &nav_ins            &kp HOME         &kp PG_DN        &kp PG_UP        &kp END         &trans
                           &none              &none                  &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp LSHFT  &none            &none
             >;
@@ -806,8 +753,8 @@
             display-name = "fn-nav";
             bindings = <
 &trans  &trans    &trans     &trans     &trans    &trans                              &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3        &bt BT_SEL 4   &bt BT_CLR
-&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &kp DELETE     &nvon_kp LC(LEFT)  &nvon_kp UP     &nvon_kp LC(RIGHT)  &none          &none
-&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN   &nvon_kp RIGHT      &kp LC(ENTER)  &none
+&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &none          &nvon_kp LC(LEFT)  &nvon_kp UP     &nvon_kp LC(RIGHT)  &none          &none
+&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN   &nvon_kp RIGHT      &kp LC(ENTER)  &kp DELETE
 &none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP         &trans    &trans  &kp INS        &nvon_kp HOME      &nvon_kp PG_DN  &nvon_kp PG_UP      &nvon_kp END   &out OUT_BLE
                   &none      &none      &trans    &fnnv_nvsel_mo 2  &trans    &trans  &trans         &trans             &none           &none
             >;
