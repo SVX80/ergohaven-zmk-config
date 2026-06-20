@@ -708,10 +708,10 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&trans          &trans     &trans            &trans             &trans   &trans                         &trans         &trans                  &trans            &trans                  &trans           &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &nvon_kp LA(LC(PG_UP))  &kp LA(LC(UP))    &nvon_kp LA(LC(PG_DN))  &kp SCROLLLOCK   &kp PAUSE_BREAK
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp BACKSPACE  &kp LA(LEFT)            &kp LA(LC(DOWN))  &kp LA(RIGHT)           &kp ENTER        &kp DELETE
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &nvon_kp LC(HOME)       &key_repeat       &nvon_kp LC(END)        &kp PRINTSCREEN  &none
+&trans          &trans     &trans            &trans             &trans   &trans                         &trans         &trans                  &trans            &trans                  &trans            &trans
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &nvon_kp LA(LC(PG_UP))  &kp LA(LC(UP))    &nvon_kp LA(LC(PG_DN))  &kp SCROLLLOCK    &kp PAUSE_BREAK
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp BACKSPACE  &kp LA(LEFT)            &kp LA(LC(DOWN))  &kp LA(RIGHT)           &kp ENTER         &kp DELETE
+&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &nvon_kp LC(HOME)       &key_repeat       &kp PRINTSCREEN         &nvon_kp LC(END)  &none
                            &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans         &trans                  &none             &none
             >;
         };
