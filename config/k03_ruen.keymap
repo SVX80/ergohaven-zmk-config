@@ -51,7 +51,7 @@
         };
 
         cmb_nav {
-            bindings = <&nvoff_mo 2>;
+            bindings = <&mo_nv_off 2>;
             key-positions = <53 56>;
             slow-release;
             timeout-ms = <175>;
@@ -163,6 +163,36 @@
             tap-ms = <30>;
         };
 
+        kp_on_off: kp_on_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &kt_off MACRO_PLACEHOLDER &macro_param_1to1 &kt_on MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
+                <&macro_press>,
+                <&macro_param_1to1 &kt_off MACRO_PLACEHOLDER>;
+
+            label = "KP_ON_OFF";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        sel_off_kp: sel_off_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&kt_off RSHFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "SEL_OFF_KP";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
         sel_off_cmd_f15: sel_off_cmd_f15 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -182,17 +212,12 @@
             label = "SEL_OFF_CMD_F15";
         };
 
-        kp_on_off: kp_on_off {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &kt_off MACRO_PLACEHOLDER &macro_param_1to1 &kt_on MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_wait_time 0>,
-                <&macro_press>,
-                <&macro_param_1to1 &kt_off MACRO_PLACEHOLDER>;
+        nv_off: nv_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&off 2 &kt_off LSHFT>;
 
-            label = "KP_ON_OFF";
+            label = "NV_OFF";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -245,83 +270,23 @@
             tap-ms = <0>;
         };
 
-        nav_mo: nav_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_wait_time 0>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER>;
-
-            label = "NAV_MO";
-            wait-ms = <0>;
-        };
-
-        nav_sel_mo_l: ext_nav_mo_l {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kt_off RSHFT &on 2>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_pause_for_release>,
-                <&macro_wait_time 0>,
-                <&off 2>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
-            label = "EXT_NAV_MO_L";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        sel_off_kp: sel_off_kp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&kt_off RSHFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_wait_time 0>,
-                <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "SEL_OFF_KP";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        nv_off_mo: nv_off_mo {
+        mo_nv_off: mo_nv_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
+                <&on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
                 <&macro_press>,
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER &off 2 &kt_off RSHFT>;
 
-            label = "NV_OFF_MO";
+            label = "NVOFF_MO";
             wait-ms = <0>;
             tap-ms = <0>;
         };
 
-        fnut_sel_nav: fnut_sel_nav {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&off 9 &macro_param_1to1 &on MACRO_PLACEHOLDER &kt_on RSHFT>,
-                <&macro_pause_for_release>,
-                <&macro_wait_time 0>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER &kt_off RSHFT>;
-
-            label = "FNUT_SEL_NAV";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        nv_on_kp: nv_on_kp {
+        nvon_kp: nvon_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -336,24 +301,46 @@
             tap-ms = <0>;
         };
 
-        nav_sel_on: nav_sel_on {
+        nvsel_on: nvsel_on {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
                 <&macro_param_1to1 &kt_off MACRO_PLACEHOLDER &macro_param_1to1 &kt_on MACRO_PLACEHOLDER &on 2>;
 
-            label = "NAV_SEL_ON";
+            label = "NVSEL_ON";
             wait-ms = <0>;
             tap-ms = <0>;
         };
 
-        nv_off: nv_off {
+        nvsel_mo: nvsel_mo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&off 2 &kt_off LSHFT>;
+            bindings =
+                <&kt_off RSHFT &on 2>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
+                <&off 2>,
+                <&macro_release>,
+                <&kp LSHFT>;
 
-            label = "NV_OFF";
+            label = "NVSEL_MO";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        fnnv_nvsel_mo: fnnv_nvsel_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&off 9 &macro_param_1to1 &on MACRO_PLACEHOLDER &kt_on RSHFT>,
+                <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER &kt_off RSHFT>;
+
+            label = "FNNV_NVSEL_MO";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -378,80 +365,11 @@
             toggle-mode = "off";
         };
 
-        ltk: ltk {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&key>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-        };
-
-        sl_bksl_e: sl_bksl_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SL_BKSL_E";
-            bindings = <&kp SLASH>, <&kp BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        sl_bksl_r: sl_bksl_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SL_BKSL_R";
-            bindings = <&sl_mod>, <&kp RU_BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mo_sl: mo_sl {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            label = "MO_SL";
-        };
-
-        find_nxt: find_nxt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FIND_NXT";
-            bindings = <&cmd_f15 F>, <&cmd_f15 LS(F)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        nav_ltk: nav_ltk {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&nav_mo>, <&key>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-            label = "NAV_LTK";
-        };
-
-        lr_bkt: lr_bkt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LR_BKT";
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        kp_sk: kp_sk {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <275>;
-            flavor = "hold-preferred";
-            label = "KP_SK";
-            hold-while-undecided;
-            hold-while-undecided-linger;
+        kt_on: kt_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KT_ON";
+            #binding-cells = <1>;
+            toggle-mode = "on";
         };
 
         kt_off: kt_off {
@@ -478,11 +396,70 @@
             label = "KP_KTGL";
         };
 
-        kt_on: kt_on {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KT_ON";
-            #binding-cells = <1>;
-            toggle-mode = "on";
+        ltk: ltk {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+        };
+
+        kp_sk: kp_sk {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <275>;
+            flavor = "hold-preferred";
+            label = "KP_SK";
+            hold-while-undecided;
+            hold-while-undecided-linger;
+        };
+
+        mo_sl: mo_sl {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            label = "MO_SL";
+        };
+
+        lr_bkt: lr_bkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LR_BKT";
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sl_bksl_e: sl_bksl_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SL_BKSL_E";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sl_bksl_r: sl_bksl_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SL_BKSL_R";
+            bindings = <&sl_mod>, <&kp RU_BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        find_nxt: find_nxt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FIND_NXT";
+            bindings = <&cmd_f15 F>, <&cmd_f15 LS(F)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
 
         nav_bksp: nav_bksp {
@@ -494,10 +471,10 @@
             mods = <(MOD_LSFT)>;
         };
 
-        nav_sel_mo: nav_sel_mo {
+        nvsel_mo_l: nvsel_mo_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "NAV_SEL_MO";
-            bindings = <&nav_sel_mo_l>, <&nav_sel_on>;
+            label = "NVSEL_MO_L";
+            bindings = <&nvsel_mo>, <&nvsel_on>;
 
             #binding-cells = <2>;
             flavor = "balanced";
@@ -508,7 +485,7 @@
         nav_mo_a: nav_mo_a {
             compatible = "zmk,behavior-hold-tap";
             label = "NAV_MO_A";
-            bindings = <&nav_sel_mo_l>, <&kt_off>;
+            bindings = <&nvsel_mo>, <&kt_off>;
 
             #binding-cells = <2>;
             flavor = "balanced";
@@ -707,10 +684,10 @@
         b_tab: b_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "B_TAB";
-            bindings = <&kp TAB>, <&nv_on_kp TAB>;
+            bindings = <&kp TAB>, <&nvon_kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
         };
     };
@@ -723,7 +700,7 @@
             bindings = <
 &kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                          &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
 &b_tab               &kp Q     &kp W          &kp E       &kp R      &kp T                                &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
-&nav_sel_mo 0 RSHFT  &kp A     &kp S          &kp D       &kp F      &kp G                                &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
+&nvsel_mo_l 0 RSHFT  &kp A     &kp S          &kp D       &kp F      &kp G                                &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
 &layer_en            &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &none  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
                                &kp LS(LC(M))  &kp C_MUTE  &kp LSHFT  &ltk 3 SPACE  &sl 7           &sl 9  &ltk 5 SPACE  &kp RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
             >;
@@ -752,8 +729,8 @@
             display-name = "nav";
             bindings = <
 &trans    &nvoff_kp LGUI  &nvoff_kp LSHFT    &nvoff_kp LCTRL       &nvoff_kp LALT   &trans                                          &trans              &nvoff_kp LALT   &nvoff_kp RCTRL  &nvoff_kp RSHFT  &nvoff_kp RGUI  &trans
-&nav_tab  &nav_cs_z       &sel_off_kp LC(E)  &kp_ktgl RSHFT RSHFT  &none            &none                                           &nv_off             &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &none           &none
-&trans    &nav_esc        &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt    &none                                           &nav_bksp           &kp LEFT         &kp DOWN         &kp RIGHT        &nav_enter      &nav_del
+&nav_tab  &nav_cs_z       &sel_off_kp LC(E)  &kp_ktgl RSHFT RSHFT  &none            &none                                           &nav_del            &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &none           &none
+&trans    &nav_esc        &nav_ctrl_s        &nav_ctrl_d           &nav_find_nxt    &none                                           &nav_bksp           &kp LEFT         &kp DOWN         &kp RIGHT        &nav_enter      &none
 &trans    &nav_ctrl_z     &nav_ctrl_x        &nav_ctrl_c           &nav_ctrl_v      &none               &trans         &nv_off      &nav_ins            &kp HOME         &kp PG_DN        &kp PG_UP        &kp END         &trans
                           &none              &none                 &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp LSHFT  &none            &none
             >;
@@ -762,11 +739,11 @@
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&trans  &trans               &trans     &trans     &trans     &trans                    &trans           &trans         &trans                &trans                 &trans        &trans
-&none   &nv_on_kp LC(LS(Z))  &kp CAPS   &lay_ru    &lay_en    &none                     &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
-&none   &kp ESC              &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
-&none   &nv_on_kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
-                             &none      &none      &trans     &trans  &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
+&trans  &trans              &trans     &trans     &trans     &trans                    &trans           &trans         &trans                &trans                 &trans        &trans
+&none   &nvon_kp LC(LS(Z))  &kp CAPS   &lay_ru    &lay_en    &none                     &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none   &kp ESC             &kp LC(S)  &kp LC(D)  &find_nxt  &none                     &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
+&none   &nvon_kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
+                            &none      &none      &trans     &trans  &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
             >;
         };
 
@@ -784,11 +761,11 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&trans          &trans     &trans            &trans             &trans   &trans                         &trans              &trans                   &trans            &trans                   &trans     &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &nv_on_kp LC(HOME)  &nv_on_kp LA(LC(PG_UP))  &kp LA(LC(UP))    &nv_on_kp LA(LC(PG_DN))  &none      &kp PAUSE_BREAK
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp SCROLLLOCK      &kp LA(LEFT)             &kp LA(LC(DOWN))  &kp LA(RIGHT)            &kp ENTER  &kp PSCRN
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &nv_on_kp LC(END)   &none                    &key_repeat       &none                    &none      &none
-                           &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans              &trans                   &none             &none
+&trans          &trans     &trans            &trans             &trans   &trans                         &trans             &trans                  &trans            &trans                  &trans     &trans
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &nvon_kp LC(HOME)  &nvon_kp LA(LC(PG_UP))  &kp LA(LC(UP))    &nvon_kp LA(LC(PG_DN))  &none      &kp PAUSE_BREAK
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp SCROLLLOCK     &kp LA(LEFT)            &kp LA(LC(DOWN))  &kp LA(RIGHT)           &kp ENTER  &kp PSCRN
+&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &nvon_kp LC(END)   &none                   &key_repeat       &none                   &none      &none
+                           &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans             &trans                  &none             &none
             >;
         };
 
@@ -828,11 +805,11 @@
         fn-nav {
             display-name = "fn-nav";
             bindings = <
-&trans  &trans    &trans     &trans     &trans    &trans                             &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2     &bt BT_SEL 3         &bt BT_SEL 4   &bt BT_CLR
-&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                             &none         &nv_on_kp LC(LEFT)  &nv_on_kp UP     &nv_on_kp LC(RIGHT)  &none          &none
-&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                            &on 2         &nv_on_kp LEFT      &nv_on_kp DOWN   &nv_on_kp RIGHT      &kp LC(ENTER)  &none
-&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP        &trans    &trans  &kp INS       &nv_on_kp HOME      &nv_on_kp PG_DN  &nv_on_kp PG_UP      &nv_on_kp END  &out OUT_BLE
-                  &none      &none      &trans    &fnut_sel_nav 2  &trans    &trans  &trans        &trans              &none            &none
+&trans  &trans    &trans     &trans     &trans    &trans                              &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3        &bt BT_SEL 4   &bt BT_CLR
+&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &kp DELETE     &nvon_kp LC(LEFT)  &nvon_kp UP     &nvon_kp LC(RIGHT)  &none          &none
+&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN   &nvon_kp RIGHT      &kp LC(ENTER)  &none
+&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP         &trans    &trans  &kp INS        &nvon_kp HOME      &nvon_kp PG_DN  &nvon_kp PG_UP      &nvon_kp END   &out OUT_BLE
+                  &none      &none      &trans    &fnnv_nvsel_mo 2  &trans    &trans  &trans         &trans             &none           &none
             >;
         };
     };
