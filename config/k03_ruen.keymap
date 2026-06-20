@@ -638,22 +638,24 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        nav_home: nav_home {
+        nav_left: nav_left {
             compatible = "zmk,behavior-mod-morph";
-            label = "NAV_HOME";
-            bindings = <&kp HOME>, <&kp LC(HOME)>;
+            label = "NAV_LEFT";
+            bindings = <&kp LEFT>, <&kp LA(LEFT)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_RCTL)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        nav_end: nav_end {
+        nav_right: nav_right {
             compatible = "zmk,behavior-mod-morph";
-            label = "NAV_END";
-            bindings = <&kp END>, <&kp LC(END)>;
+            label = "NAV_RIGHT";
+            bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_RCTL)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -693,11 +695,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &nvoff_kp LGUI  &nvoff_kp LSHFT        &nvoff_kp LCTRL    &nvoff_kp LALT   &trans                                          &trans              &nvoff_kp LALT   &nvoff_kp RCTRL  &nvoff_kp RSHFT  &nvoff_kp RGUI  &trans
-&nav_tab  &nav_cs_z       &kp_kttgl RSHFT RSHFT  &sel_off_kp LC(E)  &kp LALT         &none                                           &none               &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &nv_off         &none
-&trans    &nav_esc        &nav_ctrl_s            &nav_ctrl_d        &nav_find_nxt    &none                                           &nav_bksp           &kp LEFT         &kp DOWN         &kp RIGHT        &nav_enter      &nav_del
-&trans    &nav_ctrl_z     &nav_ctrl_x            &nav_ctrl_c        &nav_ctrl_v      &none               &trans         &nv_off      &nav_ins            &nav_home        &kp PG_DN        &kp PG_UP        &nav_end        &trans
-                          &none                  &none              &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp LSHFT  &none            &none
+&trans    &nvoff_kp LGUI  &nvoff_kp LSHFT        &nvoff_kp LCTRL  &nvoff_kp LALT   &trans                                          &trans              &nvoff_kp LALT   &nvoff_kp RCTRL  &nvoff_kp RSHFT  &nvoff_kp RGUI  &trans
+&nav_tab  &nav_cs_z       &kp_kttgl RSHFT RSHFT  &kp LC(E)        &kp RCTRL        &none                                           &none               &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &nv_off         &none
+&trans    &nav_esc        &nav_ctrl_s            &nav_ctrl_d      &nav_find_nxt    &none                                           &nav_bksp           &nav_left        &kp DOWN         &nav_right       &nav_enter      &nav_del
+&trans    &nav_ctrl_z     &nav_ctrl_x            &nav_ctrl_c      &nav_ctrl_v      &none               &trans         &nv_off      &nav_ins            &kp HOME         &kp PG_DN        &kp PG_UP        &kp END         &trans
+                          &none                  &none            &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp LSHFT  &none            &none
             >;
         };
 
