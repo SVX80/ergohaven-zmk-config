@@ -681,14 +681,14 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        b_tab: b_tab {
+        base_tab: base_tab {
             compatible = "zmk,behavior-mod-morph";
-            label = "B_TAB";
-            bindings = <&kp TAB>, <&nvon_kp TAB>;
+            label = "BASE_TAB";
+            bindings = <&kp TAB>, <&nvon_kp RS(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
     };
 
@@ -699,7 +699,7 @@
             display-name = "En";
             bindings = <
 &kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                          &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
-&b_tab               &kp Q     &kp W          &kp E       &kp R      &kp T                                &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
+&base_tab            &kp Q     &kp W          &kp E       &kp R      &kp T                                &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
 &nvsel_mo_l 0 RSHFT  &kp A     &kp S          &kp D       &kp F      &kp G                                &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
 &layer_en            &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &none  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
                                &kp LS(LC(M))  &kp C_MUTE  &kp LSHFT  &ltk 3 SPACE  &sl 7           &sl 9  &ltk 5 SPACE  &kp RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
