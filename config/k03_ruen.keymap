@@ -707,7 +707,7 @@
             display-name = "act_sym";
             bindings = <
 &trans  &trans              &trans          &trans          &trans     &trans                    &trans           &trans         &trans                &trans                 &trans        &trans
-&none   &nvon_kp LC(LS(Z))  &kp CAPS        &nvon_kp LC(E)  &lay_en    &none                     &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none   &nvon_kp LC(LS(Z))  &kp CAPS        &nvon_kp LC(E)  &none      &none                     &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
 &none   &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                     &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
 &none   &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &none   &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
                             &none           &none           &trans     &trans  &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
@@ -729,9 +729,9 @@
             display-name = "num_utils";
             bindings = <
 &trans          &trans     &trans            &trans             &trans   &trans                         &trans         &trans             &trans             &trans             &trans            &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &kp LA(LC(PG_UP))  &kp LA(LC(UP))     &kp LA(LC(PG_UP))  &kp SCROLLLOCK    &kp PAUSE_BREAK
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &kp LA(LC(PG_UP))  &kp LA(LC(UP))     &kp LA(LC(PG_DN))  &kp SCROLLLOCK    &kp PAUSE_BREAK
 &kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp BACKSPACE  &lay_ru            &kp LA(LC(DOWN))   &key_repeat        &kp ENTER         &kp DELETE
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &none              &nvon_kp LC(HOME)  &kp PRINTSCREEN    &nvon_kp LC(END)  &none
+&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &lay_en            &nvon_kp LC(HOME)  &kp PRINTSCREEN    &nvon_kp LC(END)  &none
                            &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans         &trans             &none              &none
             >;
         };
