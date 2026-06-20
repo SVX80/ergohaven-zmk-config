@@ -708,11 +708,11 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&trans          &trans     &trans            &trans             &trans   &trans                         &trans             &trans                  &trans            &trans                  &trans     &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &nvon_kp LC(HOME)  &nvon_kp LA(LC(PG_UP))  &kp LA(LC(UP))    &nvon_kp LA(LC(PG_DN))  &none      &kp PAUSE_BREAK
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp SCROLLLOCK     &kp LA(LEFT)            &kp LA(LC(DOWN))  &kp LA(RIGHT)           &kp ENTER  &kp PSCRN
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &nvon_kp LC(END)   &none                   &key_repeat       &none                   &none      &none
-                           &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans             &trans                  &none             &none
+&trans          &trans     &trans            &trans             &trans   &trans                         &trans         &trans                  &trans            &trans                  &trans           &trans
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &nvon_kp LA(LC(PG_UP))  &kp LA(LC(UP))    &nvon_kp LA(LC(PG_DN))  &kp SCROLLLOCK   &kp PAUSE_BREAK
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp BACKSPACE  &kp LA(LEFT)            &kp LA(LC(DOWN))  &kp LA(RIGHT)           &kp ENTER        &kp DELETE
+&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &nvon_kp LC(HOME)       &key_repeat       &nvon_kp LC(END)        &kp PRINTSCREEN  &none
+                           &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans         &trans                  &none             &none
             >;
         };
 
@@ -752,11 +752,11 @@
         fn-nav {
             display-name = "fn-nav";
             bindings = <
-&trans  &trans    &trans     &trans     &trans    &trans                              &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3        &bt BT_SEL 4   &bt BT_CLR
-&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &none          &nvon_kp LC(LEFT)  &nvon_kp UP     &nvon_kp LC(RIGHT)  &none          &none
-&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN   &nvon_kp RIGHT      &kp LC(ENTER)  &kp DELETE
-&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP         &trans    &trans  &kp INS        &nvon_kp HOME      &nvon_kp PG_DN  &nvon_kp PG_UP      &nvon_kp END   &out OUT_BLE
-                  &none      &none      &trans    &fnnv_nvsel_mo 2  &trans    &trans  &trans         &trans             &none           &none
+&trans  &trans    &trans     &trans     &trans    &trans                              &bt BT_SEL 0        &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3        &bt BT_SEL 4   &bt BT_CLR
+&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &none               &nvon_kp LC(LEFT)  &nvon_kp UP     &nvon_kp LC(RIGHT)  &none          &none
+&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &nvon_kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN   &nvon_kp RIGHT      &kp LC(ENTER)  &nvon_kp DELETE
+&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP         &trans    &trans  &kp INS             &nvon_kp HOME      &nvon_kp PG_DN  &nvon_kp PG_UP      &nvon_kp END   &out OUT_BLE
+                  &none      &none      &trans    &fnnv_nvsel_mo 2  &trans    &trans  &trans              &trans             &none           &none
             >;
         };
     };
