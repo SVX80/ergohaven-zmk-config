@@ -587,7 +587,7 @@
             bindings = <&kp DELETE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         nav_ins: nav_ins {
