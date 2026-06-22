@@ -491,10 +491,10 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        nvsel_mo_l: nvsel_mo_l {
+        nv_nvsel_l: nv_nvsel_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "NVSEL_MO_L";
-            bindings = <&nvsel_mo>, <&nvsel_on>;
+            label = "NV_NVSEL_L";
+            bindings = <&nvsel_mo>, <&on>;
 
             #binding-cells = <2>;
             flavor = "balanced";
@@ -587,7 +587,7 @@
             bindings = <&kp DELETE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         nav_ins: nav_ins {
@@ -666,11 +666,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC              &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                            &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
-&kp TAB              &kp Q     &kp W          &kp E       &kp R      &kp T                                  &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
-&nvsel_mo_l 0 RSHFT  &kp A     &kp S          &kp D       &kp F      &kp G                                  &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
-&layer_en            &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &lay_ru  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
-                               &kp LS(LC(M))  &kp C_MUTE  &kp LSHFT  &ltk 3 SPACE  &sl 7           &sl 9    &ltk 5 SPACE  &kp RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
+&kp ESC          &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                            &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
+&kp TAB          &kp Q     &kp W          &kp E       &kp R      &kp T                                  &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
+&nv_nvsel_l 0 2  &kp A     &kp S          &kp D       &kp F      &kp G                                  &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
+&layer_en        &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &lay_ru  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
+                           &kp LS(LC(M))  &kp C_MUTE  &kp LSHFT  &ltk 3 SPACE  &sl 7           &sl 9    &ltk 5 SPACE  &kp RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
             sensor-bindings =
