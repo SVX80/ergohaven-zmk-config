@@ -708,7 +708,7 @@
             display-name = "act_sym";
             bindings = <
 &trans  &trans              &trans          &trans          &trans     &trans                        &trans           &trans         &trans                &trans                 &trans        &trans
-&none   &nvon_kp LC(LS(Z))  &kp CAPS        &nvon_kp LC(E)  &lay_ru    &kp INSERT                    &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none   &nvon_kp LC(LS(Z))  &kp CAPS        &nvon_kp LC(E)  &lay_en    &kp INSERT                    &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
 &none   &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                         &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
 &none   &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &none       &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
                             &none           &none           &trans     &trans      &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
@@ -730,9 +730,9 @@
             display-name = "num_utils";
             bindings = <
 &trans          &trans     &trans            &trans             &trans   &trans                         &trans         &trans                  &trans             &trans                  &trans            &trans
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &nvon_kp LA(LC(PG_UP))  &kp LA(LC(UP))     &nvon_kp LA(LC(PG_DN))  &kp SCROLLLOCK    &kp PAUSE_BREAK
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none          &lay_ru                 &kp LA(LC(UP))     &kp PRINTSCREEN         &kp SCROLLLOCK    &kp PAUSE_BREAK
 &kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp BACKSPACE  &lay_ru                 &kp LA(LC(DOWN))   &key_repeat             &kp ENTER         &kp DELETE
-&none           &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &lay_en                 &nvon_kp LC(HOME)  &kp PRINTSCREEN         &nvon_kp LC(END)  &none
+&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none          &nvon_kp LA(LC(PG_UP))  &nvon_kp LC(HOME)  &nvon_kp LA(LC(PG_DN))  &nvon_kp LC(END)  &none
                            &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans         &trans                  &none              &none
             >;
         };
@@ -743,7 +743,7 @@
 &trans          &trans        &trans            &trans             &trans      &trans                            &trans  &trans   &trans  &trans  &trans  &trans
 &en GRAVE       &trans        &trans            &trans             &trans      &trans                            &trans  &trans   &trans  &trans  &trans  &trans
 &en APOSTROPHE  &trans        &trans            &trans             &trans      &trans                            &trans  &lay_en  &trans  &trans  &trans  &trans
-&trans          &kp RU_COMMA  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DOT  &kp RU_PERCENT  &trans    &trans  &trans  &trans   &trans  &trans  &trans  &trans
+&kp RU_NUMERO   &kp RU_COMMA  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DOT  &kp RU_PERCENT  &trans    &trans  &trans  &trans   &trans  &trans  &trans  &trans
                               &trans            &trans             &trans      &trans          &trans    &trans  &trans  &trans   &trans  &trans
             >;
         };
@@ -751,10 +751,10 @@
         desk-fn-en {
             display-name = "desk_fn";
             bindings = <
-&bootloader          &none         &kp F23       &none         &kp F24       &none                           &trans      &trans     &trans          &trans           &trans         &trans
-&none                &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &kp F11     &kp F12    &kp F13         &kp F14          &kp F15        &kp F16
-&kp C_AL_CALCULATOR  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp HASH    &kp TILDE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SEMICOLON  &ru RU_NUMERO
-&out OUT_USB         &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &kp DOLLAR  &sk LALT   &sk RCTRL       &sk RSHFT        &sk RGUI       &none
+&bootloader          &none         &kp F23       &none         &kp F24       &none                           &trans      &trans     &trans          &trans           &trans     &trans
+&none                &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &kp F11     &kp F12    &kp F13         &kp F14          &kp F15    &kp F16
+&kp C_AL_CALCULATOR  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp HASH    &kp TILDE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ENTER  &kp SEMICOLON
+&out OUT_USB         &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &kp DOLLAR  &sk LALT   &sk RCTRL       &sk RSHFT        &sk RGUI   &none
                                    &none         &none         &trans        &trans        &trans    &trans  &trans      &trans     &none           &none
             >;
         };
@@ -762,10 +762,10 @@
         desk-fn-ru {
             display-name = "desk-fn";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &en HASH    &en TILDE  &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_SEMICOLON  &kp RU_NUMERO
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en DOLLAR  &trans     &trans          &trans           &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &en HASH    &en TILDE  &en LEFT_BRACE  &en RIGHT_BRACE  &trans  &kp RU_SEMICOLON
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en DOLLAR  &trans     &trans          &trans           &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans          &trans
             >;
         };
