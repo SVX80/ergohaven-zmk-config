@@ -709,7 +709,7 @@
             bindings = <
 &trans  &trans              &trans          &trans          &trans     &trans                        &trans           &trans         &trans                &trans                 &trans        &trans
 &none   &nvon_kp LC(LS(Z))  &kp CAPS        &nvon_kp LC(E)  &lay_en    &kp INSERT                    &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
-&none   &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                         &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
+&none   &kp ESC             &kp LC(S)       &kp LC(D)       &on 2      &none                         &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
 &none   &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &none       &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
                             &none           &none           &trans     &trans      &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
             >;
@@ -773,11 +773,11 @@
         fn-nav {
             display-name = "fn-nav";
             bindings = <
-&trans  &trans    &trans     &trans     &trans    &trans                              &bt BT_SEL 0        &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3        &bt BT_SEL 4    &bt BT_CLR
-&none   &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &nvon_kp PG_UP      &nvon_kp LC(LEFT)  &nvon_kp UP    &nvon_kp LC(RIGHT)  &nvon_kp LSHFT  &nvon_kp LS(DELETE)
-&none   &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &nvon_kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN  &nvon_kp RIGHT      &nvon_kp ENTER  &nvon_kp DELETE
-&none   &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp K_APP         &trans    &trans  &nvon_kp PG_DN      &nvon_kp LA(LEFT)  &nvon_kp HOME  &nvon_kp LA(RIGHT)  &nvon_kp END    &out OUT_BLE
-                  &none      &none      &trans    &fnnv_nvsel_mo 2  &trans    &trans  &trans              &trans             &none          &none
+&trans     &trans    &trans     &trans     &trans    &trans                              &bt BT_SEL 0        &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3        &bt BT_SEL 4    &bt BT_CLR
+&none      &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                              &nvon_kp PG_UP      &nvon_kp LC(LEFT)  &nvon_kp UP    &nvon_kp LC(RIGHT)  &nvon_kp LSHFT  &nvon_kp LS(DELETE)
+&none      &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                             &nvon_kp BACKSPACE  &nvon_kp LEFT      &nvon_kp DOWN  &nvon_kp RIGHT      &nvon_kp ENTER  &nvon_kp DELETE
+&kp K_APP  &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp ESC           &trans    &trans  &nvon_kp PG_DN      &nvon_kp LA(LEFT)  &nvon_kp HOME  &nvon_kp LA(RIGHT)  &nvon_kp END    &out OUT_BLE
+                     &none      &none      &trans    &fnnv_nvsel_mo 2  &trans    &trans  &trans              &trans             &none          &none
             >;
         };
     };
