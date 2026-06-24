@@ -485,10 +485,11 @@
         nav_bksp: nav_bksp {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_BKSP";
-            bindings = <&kp BACKSPACE>, <&sel_off_kp BACKSPACE>;
+            bindings = <&nv_bksp>, <&sel_off_kp BACKSPACE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
         nv_nvsel_l: nv_nvsel_l {
@@ -584,10 +585,11 @@
         nav_del: nav_del {
             compatible = "zmk,behavior-mod-morph";
             label = "NAV_DEL";
-            bindings = <&kp DELETE>, <&sel_off_kp DELETE>;
+            bindings = <&nv_del>, <&sel_off_kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
         nav_ins: nav_ins {
@@ -657,6 +659,26 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        nv_bksp: nv_bksp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NV_BKSP";
+            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RCTL|MOD_LCTL|MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
+        };
+
+        nv_del: nv_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NV_DEL";
+            bindings = <&kp DELETE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
     };
 
