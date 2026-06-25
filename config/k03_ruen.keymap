@@ -529,10 +529,10 @@
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
-        nv_nvsel_l: nv_nvsel_l {
+        nvsel_nvoff: nvsel_nvoff {
             compatible = "zmk,behavior-hold-tap";
-            label = "NV_NVSEL_L";
-            bindings = <&nvsel_mo>, <&on>;
+            label = "NVSEL_NVOFF";
+            bindings = <&nvsel_mo>, <&nv_off>;
 
             #binding-cells = <2>;
             flavor = "balanced";
@@ -760,7 +760,7 @@
             bindings = <
 &kp ESC    &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT            &key_repeat                              &none         &kp LALT            &kp RCTRL     &kp RSHFT     &kp RGUI    &none
 &kp TAB    &kp Q     &kp W          &kp E       &kp R               &kp T                                    &kp Y         &kp U               &kp I         &kp O         &kp P       &lr_bkt
-&none      &kp A     &kp S          &kp D       &kp F               &kp G                                    &kp H         &kp J               &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
+&nvsel_mo  &kp A     &kp S          &kp D       &kp F               &kp G                                    &kp H         &kp J               &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
 &layer_en  &kp Z     &kp X          &kp C       &kp V               &kp B         &kp CAPSLOCK    &kp ENTER  &kp N         &kp M               &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
                      &kp LS(LC(M))  &kp C_MUTE  &kp_sk LSHFT LSHFT  &ltk 3 SPACE  &sl 7           &sl 9      &ltk 5 SPACE  &kp_sk RSHFT RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
             >;
@@ -788,11 +788,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &nvoff_kp LGUI  &nvoff_kp LSHFT        &nvoff_kp LCTRL  &nvoff_kp LALT            &trans                                          &trans              &nvoff_kp LALT            &nvoff_kp RCTRL  &nvoff_kp RSHFT  &nvoff_kp RGUI  &trans
-&nav_tab  &nav_cs_z       &kp_kttgl RSHFT RSHFT  &kp LC(E)        &kp RCTRL                 &kp INSERT                                      &kp PG_UP           &kp LC(LEFT)              &kp UP           &kp LC(RIGHT)    &kp LSHFT       &sel_off_kp LS(DELETE)
-&nv_off   &nav_esc        &nav_ctrl_s            &nav_ctrl_d      &nav_find_nxt             &none                                           &nav_bksp           &kp LEFT                  &kp DOWN         &kp RIGHT        &nav_enter      &nav_del
-&trans    &nav_ctrl_z     &nav_ctrl_x            &nav_ctrl_c      &nav_ctrl_v               &none               &trans         &trans       &kp PG_DN           &kp LA(LEFT)              &kp HOME         &kp LA(RIGHT)    &kp END         &trans
-                          &trans                 &trans           &nvoff_kp_sk LSHFT LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp_sk RSHFT RSHFT  &trans           &trans
+&trans            &nvoff_kp LGUI  &nvoff_kp LSHFT        &nvoff_kp LCTRL  &nvoff_kp LALT            &trans                                          &trans              &nvoff_kp LALT            &nvoff_kp RCTRL  &nvoff_kp RSHFT  &nvoff_kp RGUI  &trans
+&nav_tab          &nav_cs_z       &kp_kttgl RSHFT RSHFT  &kp LC(E)        &kp RCTRL                 &kp INSERT                                      &kp PG_UP           &kp LC(LEFT)              &kp UP           &kp LC(RIGHT)    &kp LSHFT       &sel_off_kp LS(DELETE)
+&nvsel_nvoff 0 0  &nav_esc        &nav_ctrl_s            &nav_ctrl_d      &nav_find_nxt             &none                                           &nav_bksp           &kp LEFT                  &kp DOWN         &kp RIGHT        &nav_enter      &nav_del
+&trans            &nav_ctrl_z     &nav_ctrl_x            &nav_ctrl_c      &nav_ctrl_v               &none               &trans         &trans       &kp PG_DN           &kp LA(LEFT)              &kp HOME         &kp LA(RIGHT)    &kp END         &trans
+                                  &trans                 &trans           &nvoff_kp_sk LSHFT LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_kp_sk RSHFT RSHFT  &trans           &trans
             >;
         };
 
