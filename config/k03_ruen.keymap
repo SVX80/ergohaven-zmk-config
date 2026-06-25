@@ -419,7 +419,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&sl 10 &macro_param_1to1 &sk MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &sk MACRO_PLACEHOLDER &sl 10>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER &sl 10>;
