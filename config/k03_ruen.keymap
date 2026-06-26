@@ -869,11 +869,11 @@
         desk-fn-en {
             display-name = "desk_fn";
             bindings = <
-&bootloader     &none         &kp F23       &none         &kp F24       &none                           &trans      &trans     &trans          &trans           &trans     &trans
-&none           &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                     &kp F11     &kp F12    &kp F13         &kp F14          &kp F15    &kp F16
-&slof_nvsel_mo  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                    &kp HASH    &kp TILDE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ENTER  &kp SEMICOLON
-&out OUT_USB    &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans  &kp DOLLAR  &sk LALT   &sk RCTRL       &sk RSHFT        &sk RGUI   &none
-                              &none         &none         &trans        &trans        &trans    &trans  &kp SPACE   &trans     &none           &none
+&bootloader     &none         &kp F23       &none         &kp F24       &none                                      &trans      &trans     &trans          &trans           &trans     &trans
+&none           &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5                                &kp F11     &kp F12    &kp F13         &kp F14          &kp F15    &kp F16
+&slof_nvsel_mo  &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10                               &kp HASH    &kp TILDE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ENTER  &kp SEMICOLON
+&out OUT_USB    &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &trans    &trans             &kp DOLLAR  &sk LALT   &sk RCTRL       &sk RSHFT        &sk RGUI   &none
+                              &none         &none         &trans        &trans        &trans    &nvon_kp K_CANCEL  &kp SPACE   &trans     &none           &none
             >;
         };
 
@@ -891,11 +891,11 @@
         fn-nav {
             display-name = "fn-nav";
             bindings = <
-&trans               &trans    &trans     &trans     &trans    &trans                               &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
-&kp C_AL_CALCULATOR  &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                               &kp LS(PG_UP)  &kp LC(LS(LEFT))  &kp LS(UP)    &kp LC(LS(RIGHT))  &none         &kp LS(DELETE)
-&slof_nvsel_mo       &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                              &kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &fn_enter     &kp DELETE
-&kp K_APP            &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &nvon_kp K_CANCEL  &trans    &trans  &kp LS(PG_DN)  &kp LA(LS(LEFT))  &kp LS(HOME)  &kp LA(LS(RIGHT))  &kp LS(END)   &out OUT_BLE
-                               &none      &none      &trans    &slof_nv_mo 2      &trans    &trans  &trans         &trans            &none         &none
+&trans               &trans    &trans     &trans     &trans    &trans                                      &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
+&kp C_AL_CALCULATOR  &kp F1    &kp F2     &kp F3     &kp F4    &kp F5                                      &kp LS(PG_UP)  &kp LC(LS(LEFT))  &kp LS(UP)    &kp LC(LS(RIGHT))  &none         &kp LS(DELETE)
+&slof_nvsel_mo       &kp F6    &kp F7     &kp F8     &kp F9    &kp F10                                     &kp BACKSPACE  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &fn_enter     &kp DELETE
+&kp K_APP            &sk LGUI  &sk LSHFT  &sk LCTRL  &sk LALT  &kp ESC        &trans               &trans  &kp LS(PG_DN)  &kp LA(LS(LEFT))  &kp LS(HOME)  &kp LA(LS(RIGHT))  &kp LS(END)   &out OUT_BLE
+                               &none      &none      &trans    &slof_nv_mo 2  &nvon_kp K_CANCEL    &trans  &trans         &trans            &none         &none
             >;
         };
     };
