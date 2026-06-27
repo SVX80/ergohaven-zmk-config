@@ -776,6 +776,42 @@
             hold-while-undecided;
             hold-while-undecided-linger;
         };
+
+        lshft_sk: lshft_sk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LSHFT_SK";
+            bindings = <&sk LSHFT>, <&kp K_CANCEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        rshft_sk: rshft_sk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RSHFT_SK";
+            bindings = <&sk RSHFT>, <&kp K_CANCEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        caps_ru: caps_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CAPS_RU";
+            bindings = <&kp CAPSLOCK>, <&lay_ru>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        caps_en: caps_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CAPS_EN";
+            bindings = <&kp CAPSLOCK>, <&lay_en>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -786,9 +822,9 @@
             bindings = <
 &kp ESC    &kp LGUI  &kp LSHFT      &kp LCTRL   &kp LALT   &key_repeat                              &none         &kp LALT   &kp RCTRL     &kp RSHFT     &kp RGUI    &none
 &kp TAB    &kp Q     &kp W          &kp E       &kp R      &kp T                                    &kp Y         &kp U      &kp I         &kp O         &kp P       &lr_bkt
-&nvsel_mo  &kp A     &kp S          &kp D       &kp F      &kp G                                    &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
+&caps_ru   &kp A     &kp S          &kp D       &kp F      &kp G                                    &kp H         &kp J      &kp K         &kp L         &kp SEMI    &kp APOSTROPHE
 &layer_en  &kp Z     &kp X          &kp C       &kp V      &kp B         &kp CAPSLOCK    &kp ENTER  &kp N         &kp M      &kp COMMA     &kp DOT       &sl_bksl_e  &layer_ru
-                     &kp LS(LC(M))  &kp C_MUTE  &sk LSHFT  &ltk 3 SPACE  &sl 7           &sl 9      &ltk 5 SPACE  &sk RSHFT  &kp C_VOL_DN  &kp C_VOL_UP
+                     &kp LS(LC(M))  &kp C_MUTE  &lshft_sk  &ltk 3 SPACE  &sl 7           &sl 8      &ltk 5 SPACE  &rshft_sk  &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
             sensor-bindings =
@@ -803,11 +839,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &trans                   &trans                &trans              &trans              &trans                                &trans              &trans                     &trans               &trans                 &trans               &trans
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
-&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &sl_bksl_r           &trans
-                                 &trans                &trans              &trans              &trans              &trans    &trans  &trans              &trans                     &trans               &trans
+&trans    &trans                   &trans                &trans              &trans              &trans                                &trans              &trans                     &trans               &trans                 &trans               &trans
+&trans    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&caps_en  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&trans    &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans    &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &sl_bksl_r           &trans
+                                   &trans                &trans              &trans              &trans              &trans    &trans  &trans              &trans                     &trans               &trans
             >;
         };
 
@@ -818,7 +854,7 @@
 &nav_tab          &nav_cs_z       &kp_kttgl RSHFT RSHFT  &kp LC(E)        &kp RCTRL        &kp INSERT                                      &kp PG_UP           &kp LC(LEFT)     &kp UP           &kp LC(RIGHT)    &kp LSHFT       &sel_off_kp LS(DELETE)
 &nvsel_nvoff 0 0  &nav_esc        &nav_ctrl_s            &nav_ctrl_d      &nav_find_nxt    &none                                           &nav_bksp           &kp LEFT         &kp DOWN         &kp RIGHT        &nav_enter      &nav_del
 &trans            &nav_ctrl_z     &nav_ctrl_x            &nav_ctrl_c      &nav_ctrl_v      &none               &trans         &trans       &kp PG_DN           &kp LA(LEFT)     &kp HOME         &kp LA(RIGHT)    &kp END         &trans
-                                  &trans                 &trans           &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 9  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans           &trans
+                                  &trans                 &trans           &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans           &trans
             >;
         };
 
@@ -849,8 +885,8 @@
             bindings = <
 &trans          &trans     &trans            &trans             &trans   &trans                         &trans  &trans                  &trans             &trans                  &trans            &trans
 &kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none   &none                   &kp LA(LC(UP))     &kp PRINTSCREEN         &kp SCROLLLOCK    &kp PAUSE_BREAK
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &none   &lay_ru                 &kp LA(LC(DOWN))   &key_repeat             &kp ENTER         &none
-&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none   &nvon_kp LA(LC(PG_UP))  &nvon_kp LC(HOME)  &nvon_kp LA(LC(PG_DN))  &nvon_kp LC(END)  &none
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &none   &nvon_kp LA(LC(PG_UP))  &kp LA(LC(DOWN))   &nvon_kp LA(LC(PG_DN))  &kp ENTER         &none
+&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none   &none                   &nvon_kp LC(HOME)  &none                   &nvon_kp LC(END)  &none
                            &none             &kp C_PP           &trans   &trans       &trans    &trans  &trans  &trans                  &none              &none
             >;
         };
@@ -866,36 +902,36 @@
             >;
         };
 
-        desk-fn-en {
-            display-name = "desk_fn";
+        desk-sel {
+            display-name = "desk.sel";
             bindings = <
-&bootloader     &none        &kp F23      &none        &kp F24       &none                                      &trans      &trans        &trans          &trans           &trans        &trans
-&none           &cmd_f15 F1  &cmd_f15 F2  &cmd_f15 F3  &cmd_f15 F4   &cmd_f15 F5                                &kp F11     &kp F12       &kp F13         &kp F14          &kp F15       &kp F16
-&slof_nvsel_mo  &cmd_f15 F6  &cmd_f15 F7  &cmd_f15 F8  &cmd_f15 F9   &cmd_f15 F10                               &kp HASH    &kp TILDE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ENTER     &kp SEMICOLON
-&out OUT_USB    &sk LGUI     &sk LSHFT    &sk LCTRL    &sk LEFT_ALT  &kp K_CANCEL  &trans    &trans             &kp DOLLAR  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL     &kp K_CANCEL  &none
-                             &none        &none        &trans        &trans        &trans    &nvon_kp K_CANCEL  &kp SPACE   &trans        &none           &none
+&bootloader     &none        &kp F23      &none        &kp F24       &none                                      &trans         &trans            &trans        &trans             &trans       &trans
+&none           &cmd_f15 F1  &cmd_f15 F2  &cmd_f15 F3  &cmd_f15 F4   &cmd_f15 F5                                &kp F11        &kp F12           &kp F13       &kp F14            &kp F15      &kp F16
+&slof_nvsel_mo  &cmd_f15 F6  &cmd_f15 F7  &cmd_f15 F8  &cmd_f15 F9   &cmd_f15 F10                               &kp BACKSPACE  &kp LS(LEFT)      &key_repeat   &kp LS(RIGHT)      &kp ENTER    &kp DELETE
+&out OUT_USB    &sk LGUI     &sk LSHFT    &sk LCTRL    &sk LEFT_ALT  &kp K_CANCEL  &trans    &trans             &kp K_CANCEL   &kp LS(LA(LEFT))  &kp LS(HOME)  &kp LS(LA(RIGHT))  &kp LS(END)  &none
+                             &none        &none        &trans        &trans        &trans    &nvon_kp K_CANCEL  &kp SPACE      &trans            &none         &none
             >;
         };
 
-        desk-fn-ru {
-            display-name = "desk-fn";
+        sym-desk-en {
+            display-name = "sym_desk";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &en HASH    &en TILDE  &en LEFT_BRACE  &en RIGHT_BRACE  &trans  &kp RU_SEMICOLON
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en DOLLAR  &trans     &trans          &trans           &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans          &trans
+&trans         &trans     &trans          &trans           &trans    &trans                                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&none          &kp F1     &kp F2          &kp F3           &kp F4    &kp F5                                      &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &none
+&kp SEMICOLON  &kp F6     &kp F7          &kp F8           &kp F9    &kp F10                                     &cmd_f15 F16  &cmd_f15 F17  &cmd_f15 F18  &cmd_f15 F19  &cmd_f15 F20  &none
+&none          &kp TILDE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH  &kp DOLLAR     &trans               &trans  &kp K_CANCEL  &sk LEFT_ALT  &sk RCTRL     &sk RSHFT     &sk RGUI      &out OUT_BLE
+                          &none           &none            &trans    &slof_nv_mo 2  &nvon_kp K_CANCEL    &trans  &trans        &trans        &none         &none
             >;
         };
 
-        fn-nav {
-            display-name = "fn.nav";
+        sym-desk-ru {
+            display-name = "sym-desk";
             bindings = <
-&trans          &trans   &trans        &trans               &trans     &trans                                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none           &kp F1   &kp F2        &kp F3               &kp F4     &kp F5                                      &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &none
-&slof_nvsel_mo  &kp F6   &kp F7        &kp F8               &kp F9     &kp F10                                     &cmd_f15 F16  &cmd_f15 F17  &cmd_f15 F18  &cmd_f15 F19  &cmd_f15 F20  &none
-&none           &kp ESC  &kp K_CANCEL  &kp C_AL_CALCULATOR  &kp K_APP  &kp K_CANCEL   &trans               &trans  &kp K_CANCEL  &sk LEFT_ALT  &sk RCTRL     &sk RSHFT     &sk RGUI      &out OUT_BLE
-                         &none         &none                &trans     &slof_nv_mo 2  &nvon_kp K_CANCEL    &trans  &trans        &trans        &none         &none
+&trans            &trans     &trans          &trans           &trans    &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans     &trans          &trans           &trans    &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp RU_SEMICOLON  &trans     &trans          &trans           &trans    &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &en TILDE  &en LEFT_BRACE  &en RIGHT_BRACE  &en HASH  &en DOLLAR  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans          &trans           &trans    &trans      &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
@@ -913,9 +949,9 @@
             then-layer = <4>;
         };
 
-        desk-fn {
-            if-layers = <7 1>;
-            then-layer = <8>;
+        sym-desk {
+            if-layers = <8 1>;
+            then-layer = <9>;
         };
     };
 };
