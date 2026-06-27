@@ -820,7 +820,7 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC       &cmd_f15 F1  &cmd_f15 F2    &cmd_f15 F3  &cmd_f15 F4  &cmd_f15 F5                              &cmd_f15 F6   &cmd_f15 F7  &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &none
+&kp ESC       &cmd_f15 F1  &cmd_f15 F2    &cmd_f15 F3  &cmd_f15 F4  &cmd_f15 F5                              &cmd_f15 F6   &cmd_f15 F7  &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp BACKSPACE
 &kp TAB       &kp Q        &kp W          &kp E        &kp R        &kp T                                    &kp Y         &kp U        &kp I         &kp O         &kp P         &lr_bkt
 &kp CAPSLOCK  &kp A        &kp S          &kp D        &kp F        &kp G                                    &kp H         &kp J        &kp K         &kp L         &kp SEMI      &kp APOSTROPHE
 &layer_en     &kp Z        &kp X          &kp C        &kp V        &kp B         &kp CAPSLOCK    &kp ENTER  &kp N         &kp M        &kp COMMA     &kp DOT       &sl_bksl_e    &layer_ru
@@ -850,22 +850,22 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans     &trans         &trans      &trans
-&nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp LC(E)    &kp RCTRL        &kp INSERT                                      &kp PG_UP           &kp LA(LEFT)     &kp UP     &kp LA(RIGHT)  &kp LSHFT   &sel_off_kp LS(DELETE)
-&trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &kp END
-&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &none               &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &nav_bksp  &kp LC(RIGHT)  &nav_del    &trans
-                       &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans     &trans
+&trans              &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans     &trans         &trans      &trans
+&nav_tab            &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp LC(E)    &kp RCTRL        &kp INSERT                                      &kp PG_UP           &kp LA(LEFT)     &kp UP     &kp LA(RIGHT)  &kp LSHFT   &sel_off_kp LS(DELETE)
+&nvoff_kp CAPSLOCK  &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &kp END
+&trans              &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &none               &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &nav_bksp  &kp LC(RIGHT)  &nav_del    &trans
+                                 &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans     &trans
             >;
         };
 
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&trans  &trans              &trans          &trans          &trans     &trans                        &cmd_f15 F16     &cmd_f15 F17   &cmd_f15 F18          &cmd_f15 F19           &cmd_f15 F20  &trans
-&none   &nvon_kp LC(LS(Z))  &lay_ru         &nvon_kp LC(E)  &none      &kp INSERT                    &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
-&none   &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                         &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
-&none   &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &none       &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
-                            &none           &none           &trans     &trans      &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
+&none  &none               &none           &none           &none      &none                         &cmd_f15 F16     &cmd_f15 F17   &cmd_f15 F18          &cmd_f15 F19           &cmd_f15 F20  &none
+&none  &nvon_kp LC(LS(Z))  &lay_ru         &nvon_kp LC(E)  &none      &kp INSERT                    &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none  &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                         &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
+&none  &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &none       &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
+                           &none           &none           &trans     &trans      &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
             >;
         };
 
@@ -883,7 +883,7 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&trans          &cmd_f15 F11  &cmd_f15 F12      &cmd_f15 F13       &cmd_f15 F14  &cmd_f15 F15                    &trans               &trans                  &trans            &trans                  &trans          &trans
+&none           &cmd_f15 F11  &cmd_f15 F12      &cmd_f15 F13       &cmd_f15 F14  &cmd_f15 F15                    &none                &none                   &none             &none                   &none           &none
 &kp GRAVE       &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none                &nvon_kp LC(HOME)       &kp LA(LC(UP))    &nvon_kp LC(END)        &kp SCROLLLOCK  &none
 &kp APOSTROPHE  &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp LC(PRINTSCREEN)  &nvon_kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &nvon_kp LA(LC(PG_DN))  &kp ENTER       &kp PAUSE_BREAK
 &ru RU_NUMERO   &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT       &kp PERCENT   &trans    &trans  &none                &none                   &kp BACKSPACE     &none                   &kp DELETE      &none
@@ -905,22 +905,22 @@
         mod-fn-sel {
             display-name = "mod.fn.sel";
             bindings = <
-&bootloader   &none         &kp F23       &none         &kp F24       &none                                      &trans        &trans            &trans         &trans             &trans      &trans
-&none         &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                               &kp F11       &kp F12           &kp F13        &kp F14            &kp F15     &kp F16
-&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                               &kp LS(HOME)  &kp LS(LEFT)      &key_repeat    &kp LS(RIGHT)      &kp ENTER   &kp LS(END)
-&out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &trans    &trans             &kp K_CANCEL  &kp LS(LC(LEFT))  &kp BACKSPACE  &kp LS(LC(RIGHT))  &kp DELETE  &none
-                            &none         &none         &trans        &trans        &trans    &nvon_kp K_CANCEL  &kp SPACE     &trans            &none          &none
+&bootloader   &kp K_CANCEL  &kp F23       &kp K_CANCEL  &kp F24       &kp K_CANCEL                                     &kp K_CANCEL  &kp K_CANCEL      &kp K_CANCEL   &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                     &kp F11       &kp F12           &kp F13        &kp F14            &kp F15       &kp F16
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                                     &kp LS(HOME)  &kp LS(LEFT)      &key_repeat    &kp LS(RIGHT)      &kp ENTER     &kp LS(END)
+&out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL       &kp K_CANCEL  &kp LS(LC(LEFT))  &kp BACKSPACE  &kp LS(LC(RIGHT))  &kp DELETE    &kp K_CANCEL
+                            &kp K_CANCEL  &kp K_CANCEL  &trans        &trans        &trans          &nvon_kp K_CANCEL  &kp SPACE     &trans            &kp K_CANCEL   &kp K_CANCEL
             >;
         };
 
         fn-sym-mod-en {
             display-name = "fn_sym_mod";
             bindings = <
-&trans         &trans     &trans          &trans           &trans    &trans                                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none          &kp F1     &kp F2          &kp F3           &kp F4    &kp F5                                      &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &none
-&kp SEMICOLON  &kp F6     &kp F7          &kp F8           &kp F9    &kp F10                                     &kp K_CANCEL  &sk LALT      &sk RCTRL     &kp RSHFT     &kp RGUI      &none
-&none          &kp TILDE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH  &kp DOLLAR     &trans               &trans  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
-                          &none           &none            &trans    &slof_nv_mo 2  &nvon_kp K_CANCEL    &trans  &trans        &trans        &none         &none
+&kp K_CANCEL   &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL     &kp K_CANCEL  &kp K_CANCEL                                      &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL   &kp F1        &kp F2          &kp F3           &kp F4        &kp F5                                            &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
+&kp SEMICOLON  &kp F6        &kp F7          &kp F8           &kp F9        &kp F10                                           &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &kp RSHFT     &kp RGUI      &kp K_CANCEL
+&kp K_CANCEL   &kp TILDE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH      &kp DOLLAR     &kp K_CANCEL         &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
+                             &kp K_CANCEL    &kp K_CANCEL     &trans        &slof_nv_mo 2  &nvon_kp K_CANCEL    &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
