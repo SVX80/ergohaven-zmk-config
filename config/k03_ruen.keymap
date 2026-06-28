@@ -4,6 +4,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&sk { release-after-ms = <500>; };
+
+&sl { release-after-ms = <500>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -905,22 +909,22 @@
         mod-fn-sel {
             display-name = "mod.fn.sel";
             bindings = <
-&bootloader   &kp K_CANCEL  &kp F23       &kp K_CANCEL  &kp F24       &kp K_CANCEL                                     &kp K_CANCEL  &kp K_CANCEL      &kp K_CANCEL   &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                     &kp F11       &kp F12           &kp F13        &kp F14            &kp F15       &kp F16
-&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                                     &kp LS(HOME)  &kp LS(LEFT)      &key_repeat    &kp LS(RIGHT)      &kp ENTER     &kp LS(END)
-&out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL       &kp K_CANCEL  &kp LS(LC(LEFT))  &kp BACKSPACE  &kp LS(LC(RIGHT))  &kp DELETE    &kp K_CANCEL
-                            &kp K_CANCEL  &kp K_CANCEL  &trans        &trans        &trans          &nvon_kp K_CANCEL  &kp SPACE     &trans            &kp K_CANCEL   &kp K_CANCEL
+&bootloader   &kp K_CANCEL  &kp F23       &kp K_CANCEL  &kp F24       &kp K_CANCEL                                &kp K_CANCEL  &kp K_CANCEL      &kp K_CANCEL   &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &kp F11       &kp F12           &kp F13        &kp F14            &kp F15       &kp F16
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                                &kp LS(HOME)  &kp LS(LEFT)      &key_repeat    &kp LS(RIGHT)      &kp ENTER     &kp LS(END)
+&out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL  &kp K_CANCEL  &kp LS(LC(LEFT))  &kp BACKSPACE  &kp LS(LC(RIGHT))  &kp DELETE    &kp K_CANCEL
+                            &kp K_CANCEL  &kp K_CANCEL  &trans        &trans        &trans          &slof_nvon 2  &kp SPACE     &trans            &kp K_CANCEL   &kp K_CANCEL
             >;
         };
 
         fn-sym-mod-en {
             display-name = "fn_sym_mod";
             bindings = <
-&kp K_CANCEL   &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL     &kp K_CANCEL  &kp K_CANCEL                                      &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp K_CANCEL   &kp F1        &kp F2          &kp F3           &kp F4        &kp F5                                            &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
-&kp SEMICOLON  &kp F6        &kp F7          &kp F8           &kp F9        &kp F10                                           &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &sk RSHFT     &sk RGUI      &kp K_CANCEL
-&kp K_CANCEL   &kp TILDE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH      &kp DOLLAR     &kp K_CANCEL         &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
-                             &kp K_CANCEL    &kp K_CANCEL     &trans        &slof_nv_mo 2  &nvon_kp K_CANCEL    &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL   &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL     &kp K_CANCEL  &kp K_CANCEL                                 &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL   &kp F1        &kp F2          &kp F3           &kp F4        &kp F5                                       &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
+&kp SEMICOLON  &kp F6        &kp F7          &kp F8           &kp F9        &kp F10                                      &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &kp RSHFT     &kp RGUI      &kp K_CANCEL
+&kp K_CANCEL   &kp TILDE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH      &kp DOLLAR     &kp K_CANCEL    &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
+                             &kp K_CANCEL    &kp K_CANCEL     &trans        &slof_nv_mo 2  &slof_nvon 2    &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
