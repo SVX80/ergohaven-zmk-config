@@ -212,7 +212,7 @@
         nv_off: nv_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&off 2 &kt_off LSHFT>;
+            bindings = <&macro_press>, <&off 2 &kt_off RSHFT>;
 
             label = "NV_OFF";
             wait-ms = <0>;
