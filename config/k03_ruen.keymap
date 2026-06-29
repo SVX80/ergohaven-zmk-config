@@ -854,33 +854,33 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans              &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans     &trans         &trans      &trans
-&nav_tab            &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp LC(E)    &kp RCTRL        &kp INSERT                                      &kp PG_UP           &kp LA(LEFT)     &kp UP     &kp LA(RIGHT)  &kp LSHFT   &sel_off_kp LS(DELETE)
-&nvoff_kp CAPSLOCK  &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &kp END
-&trans              &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &none               &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &nav_bksp  &kp LC(RIGHT)  &nav_del    &trans
-                                 &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans     &trans
+&trans                &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans     &trans         &trans      &trans
+&nav_tab              &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &nv_off          &none                                           &kp PG_UP           &kp LA(LEFT)     &kp UP     &kp LA(RIGHT)  &kp LSHFT   &sel_off_kp LS(DELETE)
+&sel_off_kp CAPSLOCK  &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &kp END
+&trans                &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &kp INS             &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &nav_bksp  &kp LC(RIGHT)  &nav_del    &trans
+                                   &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans     &trans
             >;
         };
 
         act-sym-en {
             display-name = "act_sym";
             bindings = <
-&none  &none               &none           &none           &none      &none                         &cmd_f15 F16     &cmd_f15 F17   &cmd_f15 F18          &cmd_f15 F19           &cmd_f15 F20  &none
-&none  &nvon_kp LC(LS(Z))  &lay_ru         &nvon_kp LC(E)  &none      &kp INSERT                    &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
-&none  &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                         &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
-&none  &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &none       &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
-                           &none           &none           &trans     &trans      &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
+&none  &none               &none           &none           &none      &none                      &cmd_f15 F16     &cmd_f15 F17   &cmd_f15 F18          &cmd_f15 F19           &cmd_f15 F20  &none
+&none  &nvon_kp LC(LS(Z))  &none           &lay_ru         &none      &none                      &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none  &kp ESC             &kp LC(S)       &kp LC(D)       &find_nxt  &none                      &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
+&none  &nvon_kp LC(Z)      &nvon_kp LC(X)  &nvon_kp LC(C)  &kp LC(V)  &kp INS  &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
+                           &none           &none           &trans     &trans   &trans    &trans  &trans           &trans         &kp C_PREV            &kp C_NEXT
             >;
         };
 
         act-sym-ru {
             display-name = "act-sym";
             bindings = <
-&trans  &trans  &trans   &trans  &trans  &trans                    &trans       &trans         &trans  &trans  &trans           &trans
-&trans  &trans  &lay_en  &trans  &trans  &trans                    &kp RU_EXCL  &trans         &trans  &trans  &en CARET        &en PIPE
-&trans  &trans  &trans   &trans  &trans  &trans                    &trans       &trans         &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
-&trans  &trans  &trans   &trans  &trans  &trans  &trans    &trans  &en AT       &en AMPERSAND  &en LT  &en GT  &kp RU_QUESTION  &trans
-                &trans   &trans  &trans  &trans  &trans    &trans  &trans       &trans         &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans       &trans         &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &lay_en  &trans  &trans                    &kp RU_EXCL  &trans         &trans  &trans  &en CARET        &en PIPE
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans       &trans         &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans  &en AT       &en AMPERSAND  &en LT  &en GT  &kp RU_QUESTION  &trans
+                &trans  &trans   &trans  &trans  &trans    &trans  &trans       &trans         &trans  &trans
             >;
         };
 
