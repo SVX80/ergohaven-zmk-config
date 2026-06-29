@@ -816,6 +816,26 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        nvoff_ltk_l: nvoff_ltk_l {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&nvoff_mo>, <&nv_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+            label = "NVOFF_LTK_L";
+        };
+
+        nvoff_ltk_r: nvoff_ltk_r {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&nvoff_mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+            label = "NVOFF_LTK_R";
+        };
     };
 
     keymap {
@@ -854,11 +874,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans                &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans     &trans         &trans      &trans
-&nav_tab              &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &nv_off          &none                                           &kp PG_UP           &kp LA(LEFT)     &kp UP     &kp LA(RIGHT)  &kp LSHFT   &sel_off_kp LS(DELETE)
-&sel_off_kp CAPSLOCK  &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &kp END
-&trans                &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &kp INS             &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &nav_bksp  &kp LC(RIGHT)  &nav_del    &trans
-                                   &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans     &trans
+&trans                &trans       &trans                 &trans       &trans           &trans                                        &trans                &trans           &trans     &trans         &trans      &trans
+&nav_tab              &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none            &none                                         &kp PG_UP             &kp LA(LEFT)     &kp UP     &kp LA(RIGHT)  &kp LSHFT   &sel_off_kp LS(DELETE)
+&sel_off_kp CAPSLOCK  &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                         &kp HOME              &kp LEFT         &kp DOWN   &kp RIGHT      &nav_enter  &kp END
+&trans                &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &kp INS           &trans         &trans       &kp PG_DN             &kp LC(LEFT)     &nav_bksp  &kp LC(RIGHT)  &nav_del    &trans
+                                   &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk_l 3 0  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk_r 5 SPACE  &nvoff_sk RSHFT  &trans     &trans
             >;
         };
 
