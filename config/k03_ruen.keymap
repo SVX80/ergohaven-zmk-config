@@ -294,7 +294,7 @@
                 <&macro_press>,
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER &off 2 &kt_off RSHFT>;
 
-            label = "NVOFF_MO";
+            label = "MO_NV_OFF";
             wait-ms = <0>;
             tap-ms = <0>;
         };
