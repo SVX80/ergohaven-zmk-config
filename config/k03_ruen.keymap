@@ -844,11 +844,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC       &cmd_f15 F1  &cmd_f15 F2    &cmd_f15 F3  &cmd_f15 F4  &cmd_f15 F5                              &cmd_f15 F6   &cmd_f15 F7  &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp BACKSPACE
-&kp TAB       &kp Q        &kp W          &kp E        &kp R        &kp T                                    &kp Y         &kp U        &kp I         &kp O         &kp P         &lr_bkt
-&kp CAPSLOCK  &kp A        &kp S          &kp D        &kp F        &kp G                                    &kp H         &kp J        &kp K         &kp L         &kp SEMI      &kp APOSTROPHE
-&layer_en     &kp Z        &kp X          &kp C        &kp V        &kp B         &kp CAPSLOCK    &kp ENTER  &kp N         &kp M        &kp COMMA     &kp DOT       &sl_bksl_e    &layer_ru
-                           &kp LS(LC(M))  &kp C_MUTE   &lshft_sk    &ltk 3 SPACE  &sl 7           &sl 8      &ltk 5 SPACE  &rshft_sk    &kp C_VOL_DN  &kp C_VOL_UP
+&kt_flip RSHFT  &nv_off  &nvon_kp RCTRL  &kp_kttgl RSHFT RSHFT  &nvoff_ltk_l 3 0  &nvoff_mo 3                              &cmd_f15 F6   &cmd_f15 F7  &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp BACKSPACE
+&kp TAB         &kp Q    &kp W           &kp E                  &kp R             &kp T                                    &kp Y         &kp U        &kp I         &kp O         &kp P         &lr_bkt
+&kp CAPSLOCK    &kp A    &kp S           &kp D                  &kp F             &kp G                                    &kp H         &kp J        &kp K         &kp L         &kp SEMI      &kp APOSTROPHE
+&layer_en       &kp Z    &kp X           &kp C                  &kp V             &kp B         &kp CAPSLOCK    &kp ENTER  &kp N         &kp M        &kp COMMA     &kp DOT       &sl_bksl_e    &layer_ru
+                         &kp LS(LC(M))   &kp C_MUTE             &lshft_sk         &ltk 3 SPACE  &sl 7           &sl 8      &ltk 5 SPACE  &rshft_sk    &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
             sensor-bindings =
