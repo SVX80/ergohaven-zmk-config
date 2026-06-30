@@ -922,7 +922,7 @@
             display-name = "num_utils";
             bindings = <
 &none           &cmd_f15 F11  &cmd_f15 F12      &cmd_f15 F13       &cmd_f15 F14  &cmd_f15 F15                    &none              &none                   &none             &none                   &none           &none
-&kp GRAVE       &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &nvon_kp LC(HOME)  &none                   &kp LA(LC(UP))    &lay_ru                 &kp SCROLLLOCK  &none
+&kp GRAVE       &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &nvon_kp LC(HOME)  &lay_en                 &kp LA(LC(UP))    &lay_ru                 &kp SCROLLLOCK  &none
 &kp APOSTROPHE  &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp PRINTSCREEN    &nvon_kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &nvon_kp LA(LC(PG_DN))  &kp ENTER       &kp PAUSE_BREAK
 &ru RU_NUMERO   &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT       &kp PERCENT   &trans    &trans  &nvon_kp LC(END)   &none                   &kp BACKSPACE     &none                   &kp DELETE      &none
                               &none             &kp C_PP           &lshft_sk     &ltk 3 SPACE  &sl 7     &trans  &trans             &trans                  &none             &none
@@ -956,7 +956,7 @@
             bindings = <
 &kp K_CANCEL   &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL     &kp K_CANCEL  &kp K_CANCEL                                 &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &kp K_CANCEL   &kp F1        &kp F2          &kp F3           &kp F4        &kp F5                                       &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
-&kp SEMICOLON  &kp F6        &kp F7          &kp F8           &kp F9        &kp F10                                      &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &kp RSHFT     &kp RGUI      &kp K_CANCEL
+&kp SEMICOLON  &kp F6        &kp F7          &kp F8           &kp F9        &kp F10                                      &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &sk RSHFT     &sk RGUI      &kp K_CANCEL
 &kp K_CANCEL   &kp TILDE     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH      &kp DOLLAR     &kp K_CANCEL    &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
                              &kp K_CANCEL    &kp K_CANCEL     &trans        &slof_nv_mo 2  &slof_nvon 2    &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
