@@ -258,11 +258,9 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap &kt_off RSHFT>,
-                <&macro_tap &off 2>,
-                <&macro_tap &macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&macro_tap &macro_param_1to1 &off MACRO_PLACEHOLDER>;
+                <&macro_tap &macro_param_1to1 &on MACRO_PLACEHOLDER>;
 
             label = "NVOFF_MO";
             wait-ms = <0>;
