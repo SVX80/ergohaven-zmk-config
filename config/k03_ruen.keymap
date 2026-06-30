@@ -4,10 +4,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&sk { release-after-ms = <500>; };
-
-&sl { release-after-ms = <500>; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -843,6 +839,7 @@
             bindings = <&kp>;
             #binding-cells = <1>;
             release-after-ms = <500>;
+            ignore-modifiers;
         };
 
         sl_e: sl_e {
@@ -851,6 +848,7 @@
             bindings = <&mo>;
             #binding-cells = <1>;
             release-after-ms = <500>;
+            quick-release;
         };
     };
 
