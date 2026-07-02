@@ -283,11 +283,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
-                <&macro_press>,
+                <&macro_tap_time 0>,
+                <&macro_tap>,
                 <&macro_param_1to1 &off MACRO_PLACEHOLDER &off 2 &kt_off RSHFT>;
 
             label = "MO_NV_OFF";
@@ -406,6 +407,37 @@
             label = "SLOF_NVSEL_MO";
             wait-ms = <0>;
             tap-ms = <0>;
+        };
+
+        mo_nv: mo_nv {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER &on 11>,
+                <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
+                <&macro_tap_time 0>,
+                <&macro_tap>,
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER &kt_off RSHFT &off 2 &off 11>;
+
+            label = "MO_NV";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        on_nv: kp_nv {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&off 11 &macro_param_1to1 &on MACRO_PLACEHOLDER>;
+            label = "KP_NV";
+        };
+
+        trans_nv: trans_nv {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&off 11 &trans>;
+            label = "TRANS_NV";
         };
     };
 
@@ -860,6 +892,16 @@
             mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
+
+        ltk_nv: ltk_nv {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo_nv>, <&key>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+            label = "LTK_NV";
+        };
     };
 
     keymap {
@@ -868,11 +910,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC      &cmd_f15 F1  &cmd_f15 F2    &cmd_f15 F3  &cmd_f15 F4  &cmd_f15 F5                              &cmd_f15 F6   &cmd_f15 F7  &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp BACKSPACE
-&kp TAB      &kp Q        &kp W          &kp E        &kp R        &kp T                                    &kp Y         &kp U        &kp I         &kp O         &kp P         &lr_bkt
-&nvoff_mo 9  &kp A        &kp S          &kp D        &kp F        &kp G                                    &kp H         &kp J        &kp K         &kp L         &kp SEMI      &kp APOSTROPHE
-&layer_en    &kp Z        &kp X          &kp C        &kp V        &kp B         &kp CAPSLOCK    &kp ENTER  &kp N         &kp M        &kp COMMA     &kp DOT       &sl_bksl_e    &layer_ru
-                          &kp LA(LS(M))  &kp C_MUTE   &lshft_sk    &ltk 3 SPACE  &sl_e 7         &sl_e 8    &ltk 5 SPACE  &rshft_sk    &kp C_VOL_DN  &kp C_VOL_UP
+&kp ESC      &cmd_f15 F1  &cmd_f15 F2    &cmd_f15 F3  &cmd_f15 F4  &cmd_f15 F5                                 &cmd_f15 F6   &cmd_f15 F7  &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp BACKSPACE
+&kp TAB      &kp Q        &kp W          &kp E        &kp R        &kp T                                       &kp Y         &kp U        &kp I         &kp O         &kp P         &lr_bkt
+&nvoff_mo 9  &kp A        &kp S          &kp D        &kp F        &kp G                                       &kp H         &kp J        &kp K         &kp L         &kp SEMI      &kp APOSTROPHE
+&layer_en    &kp Z        &kp X          &kp C        &kp V        &kp B            &kp CAPSLOCK    &kp ENTER  &kp N         &kp M        &kp COMMA     &kp DOT       &sl_bksl_e    &layer_ru
+                          &kp LA(LS(M))  &kp C_MUTE   &lshft_sk    &ltk_nv 3 SPACE  &sl_e 7         &sl_e 8    &ltk 5 SPACE  &rshft_sk    &kp C_VOL_DN  &kp C_VOL_UP
             >;
 
             sensor-bindings =
@@ -991,6 +1033,17 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH    &trans     &trans          &trans           &trans            &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans          &trans
+            >;
+        };
+
+        act-sym-nv {
+            display-name = "act-sym-nv";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv  &trans_nv
+                &trans  &trans  &trans  &trans  &trans    &trans_nv  &on_nv 2   &trans_nv  &trans_nv  &trans_nv
             >;
         };
     };
