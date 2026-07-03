@@ -1003,7 +1003,7 @@
             bindings = <
 &bootloader   &kp K_CANCEL  &kp F23       &kp K_CANCEL  &kp F24       &kp K_CANCEL                                &kp K_CANCEL  &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL
 &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &kp F11       &kp F12            &kp F13       &kp F14            &kp F15       &kp F16
-&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                                &kp K_CANCEL  &kp LA(LC(PG_UP))  &key_repeat   &kp LA(LC(PG_DN))  &kp ENTER     &kp K_CANCEL
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                                &key_repeat   &kp LA(LC(PG_UP))  &kp CAPSLOCK  &kp LA(LC(PG_DN))  &kp ENTER     &kp K_CANCEL
 &out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL  &kp K_CANCEL  &sk LALT           &sk RCTRL     &sk RSHFT          &sk RGUI      &kp K_CANCEL
                             &kp K_CANCEL  &kp K_CANCEL  &trans        &trans        &trans          &slof_nvon 2  &kp SPACE     &trans             &kp K_CANCEL  &kp K_CANCEL
             >;
@@ -1025,7 +1025,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans            &trans          &trans             &trans         &trans
 &none   &none   &none   &none   &none   &none                     &kp DOLLAR     &kp TILDE         &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp SEMICOLON  &kp LS(DELETE)
-&none   &none   &none   &none   &none   &none                     &kp BACKSPACE  &kp LS(LEFT)      &kp CAPSLOCK    &kp LS(RIGHT)      &kp ENTER      &kp DELETE
+&none   &none   &none   &none   &none   &none                     &kp BACKSPACE  &kp LS(LEFT)      &lay_ru         &kp LS(RIGHT)      &kp ENTER      &kp DELETE
 &trans  &none   &none   &none   &none   &none   &trans    &trans  &kp HASH       &kp LC(LS(LEFT))  &kp LS(HOME)    &kp LC(LS(RIGHT))  &kp LS(END)    &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans            &trans          &trans
             >;
@@ -1036,7 +1036,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &en DOLLAR  &en TILDE  &en LEFT_BRACE  &en RIGHT_BRACE  &kp RU_SEMICOLON  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans          &trans           &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &lay_en         &trans           &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH    &trans     &trans          &trans           &trans            &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans          &trans
             >;
