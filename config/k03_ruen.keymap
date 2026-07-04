@@ -20,18 +20,6 @@
             layers = <1>;
         };
 
-        cmb_lay_en {
-            bindings = <&lay_en>;
-            key-positions = <15 20>;
-            layers = <1>;
-        };
-
-        cmb_lay_ru {
-            bindings = <&lay_ru>;
-            key-positions = <15 20>;
-            layers = <0>;
-        };
-
         cmb_dot_ru {
             bindings = <&kp RU_DOT>;
             key-positions = <46 47>;
@@ -42,12 +30,6 @@
             bindings = <&kp DOT>;
             key-positions = <46 47>;
             layers = <0>;
-        };
-
-        caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <14 21>;
-            layers = <0 1>;
         };
     };
 
@@ -517,16 +499,6 @@
             label = "MO_SL";
         };
 
-        tab: tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TAB";
-            bindings = <&kp TAB>, <&nvon_kp RS(TAB)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-        };
-
         lr_bkt: lr_bkt {
             compatible = "zmk,behavior-mod-morph";
             label = "LR_BKT";
@@ -732,26 +704,6 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        nav_left: nav_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NAV_LEFT";
-            bindings = <&kp LEFT>, <&kp LA(LEFT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        nav_right: nav_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NAV_RIGHT";
-            bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         nv_bksp: nv_bksp {
             compatible = "zmk,behavior-mod-morph";
             label = "NV_BKSP";
@@ -770,16 +722,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-        };
-
-        fn_enter: fn_enter {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FN_ENTER";
-            bindings = <&kp LS(ENTER)>, <&kp ENTER>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
-            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
         slof_mo_on: slof_mo_on {
@@ -823,44 +765,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        caps_ru: caps_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CAPS_RU";
-            bindings = <&kp CAPSLOCK>, <&lay_ru>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        caps_en: caps_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CAPS_EN";
-            bindings = <&kp CAPSLOCK>, <&lay_en>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        nvoff_ltk_l: nvoff_ltk_l {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&nvoff_mo>, <&nv_off>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-            label = "NVOFF_LTK_L";
-        };
-
-        nvoff_ltk_r: nvoff_ltk_r {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&nvoff_mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <235>;
-            flavor = "hold-preferred";
-            label = "NVOFF_LTK_R";
-        };
-
         sk_e: sk_e {
             compatible = "zmk,behavior-sticky-key";
             label = "SK_E";
@@ -897,15 +801,6 @@
             tapping-term-ms = <235>;
             flavor = "hold-preferred";
             label = "LTK_NV";
-        };
-
-        sl_nv: sl_nv {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SL_NV";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <250>;
-            quick-release;
         };
     };
 
@@ -948,7 +843,7 @@
 &trans    &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans        &trans         &trans         &trans
 &nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none            &none                                           &kp PG_UP           &nav_bksp        &kp UP        &nav_del       &kp LSHFT      &nav_shdel
 &trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN      &kp RIGHT      &nav_enter     &kp END
-&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &kp INS             &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)  &kp LC(RIGHT)  &kp LA(RIGHT)  &trans
+&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &nav_ins            &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)  &kp LC(RIGHT)  &kp LA(RIGHT)  &trans
                        &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans        &trans
             >;
         };
