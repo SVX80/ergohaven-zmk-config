@@ -414,8 +414,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&macro_param_1to1 &on MACRO_PLACEHOLDER &sl_nv 11>,
-                <&macro_press>,
+                <&macro_param_1to1 &on MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
                 <&macro_tap_time 0>,
@@ -979,44 +978,44 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&none           &cmd_f15 F11  &cmd_f15 F12      &cmd_f15 F13       &cmd_f15 F14  &cmd_f15 F15                    &none            &none              &none             &none              &none           &none
-&kp GRAVE       &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &kp LC(HOME)     &lay_en            &kp LA(LC(UP))    &lay_ru            &kp SCROLLLOCK  &none
-&kp APOSTROPHE  &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp PRINTSCREEN  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PG_DN))  &kp ENTER       &kp PAUSE_BREAK
-&ru RU_NUMERO   &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT       &kp PERCENT   &trans    &trans  &kp LC(END)      &none              &kp BACKSPACE     &none              &kp DELETE      &none
-                              &none             &kp C_PP           &lshft_sk     &ltk 3 SPACE  &sl 7     &trans  &trans           &trans             &none             &none
+&none           &cmd_f15 F11  &cmd_f15 F12      &cmd_f15 F13       &cmd_f15 F14  &cmd_f15 F15                    &none         &none     &none             &none      &none            &none
+&kp GRAVE       &kp N1        &kp N2            &kp N3             &kp N4        &kp N5                          &none         &none     &kp LA(LC(UP))    &none      &kp SCROLLLOCK   &none
+&kp APOSTROPHE  &kp N6        &kp N7            &kp N8             &kp N9        &kp N0                          &kp LC(HOME)  &kp LEFT  &kp LA(LC(DOWN))  &kp RIGHT  &none            &kp LC(END)
+&ru RU_NUMERO   &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT       &kp PERCENT   &trans    &trans  &none         &lay_en   &kp PRINTSCREEN   &lay_ru    &kp PAUSE_BREAK  &none
+                              &none             &kp C_PP           &lshft_sk     &ltk 3 SPACE  &sl 7     &trans  &trans        &trans    &none             &none
             >;
         };
 
         num-utils-ru {
             display-name = "num-utils";
             bindings = <
-&trans          &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans   &trans  &trans
-&en GRAVE       &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &lay_en  &trans  &trans
-&en APOSTROPHE  &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans   &trans  &trans
-&kp RU_NUMERO   &kp RU_COMMA  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DOT  &kp RU_PERCENT  &trans    &trans  &trans  &trans  &trans  &trans   &trans  &trans
+&trans          &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&en GRAVE       &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&en APOSTROPHE  &trans        &trans            &trans             &trans      &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&kp RU_NUMERO   &kp RU_COMMA  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DOT  &kp RU_PERCENT  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                               &trans            &trans             &trans      &trans          &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        mod-fn-sel {
-            display-name = "mod.fn.sel";
+        mod-fn {
+            display-name = "mod.fn";
             bindings = <
 &bootloader   &kp K_CANCEL  &kp F23       &kp K_CANCEL  &kp F24       &kp K_CANCEL                                &kp K_CANCEL  &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL
 &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &kp F11       &kp F12            &kp F13       &kp F14            &kp F15       &kp F16
 &kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL                                &key_repeat   &kp LA(LC(PG_UP))  &kp CAPSLOCK  &kp LA(LC(PG_DN))  &kp ENTER     &kp K_CANCEL
-&out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL  &kp K_CANCEL  &sk LALT           &sk RCTRL     &sk RSHFT          &sk RGUI      &kp K_CANCEL
-                            &kp K_CANCEL  &kp K_CANCEL  &trans        &trans        &trans          &slof_nvon 2  &kp SPACE     &trans             &kp K_CANCEL  &kp K_CANCEL
+&out OUT_USB  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL    &kp K_CANCEL  &kp K_APP     &sk LALT           &sk RCTRL     &sk RSHFT          &sk RGUI      &kp K_CANCEL
+                            &kp K_CANCEL  &kp K_CANCEL  &trans        &trans        &trans          &trans        &kp SPACE     &trans             &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
         fn-mod {
             display-name = "fn.mod";
             bindings = <
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                 &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp K_CANCEL  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                       &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
-&kp ESC       &kp F6        &kp F7        &kp F8        &kp F9        &kp F10                                      &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &sk RSHFT     &sk RGUI      &kp K_CANCEL
-&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_CANCEL   &kp K_CANCEL    &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
-                            &kp K_CANCEL  &kp K_CANCEL  &trans        &slof_nv_mo 2  &slof_nvon 2    &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                     &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                           &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
+&kp ESC       &kp F6        &kp F7        &kp F8        &kp F9        &kp F10                                          &nvon_kp K_CANCEL   &sk LALT      &sk RCTRL     &sk RSHFT     &sk RGUI      &kp K_CANCEL
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp C_AL_CALC      &kp K_CANCEL    &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
+                            &kp K_CANCEL  &kp K_CANCEL  &trans        &nvon_kp K_CANCEL  &trans          &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
@@ -1039,17 +1038,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans  &lay_en     &trans  &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH   &trans  &en DOLLAR  &trans  &kp RU_SEMICOLON  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans      &trans
-            >;
-        };
-
-        act-sym-nv {
-            display-name = "act-sym-nv";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &on_nv 2  &trans  &trans  &trans
             >;
         };
     };
