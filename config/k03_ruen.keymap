@@ -805,7 +805,7 @@
 
         slof_nv_ltk: slof_nv_ltk {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&slof_nv_mo>, <&on>;
+            bindings = <&slof_nv_mo>, <&slof_nvon>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
