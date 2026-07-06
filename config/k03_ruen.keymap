@@ -818,11 +818,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3     &kp F4                                      &kp F5        &kp F6     &kp F7             &kp F8        &kp LA(LS(M))  &kp BACKSPACE
-&kp TAB      &kp Q         &kp W         &kp E             &kp R      &kp T                                       &kp Y         &kp U      &kp I              &kp O         &kp P          &lr_bkt
-&nvoff_mo 8  &kp A         &kp S         &kp D             &kp F      &kp G                                       &kp H         &kp J      &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
-&kp LGUI     &kp Z         &kp X         &kp C             &kp V      &kp B            &layer_en       &kp ENTER  &kp N         &kp M      &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
-                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &ltk_nv 3 SPACE  &mo_nv_off 2    &mo 7      &ltk 5 SPACE  &kp RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
+&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3     &kp F4                                   &kp F5        &kp F6     &kp F7             &kp F8        &kp LA(LS(M))  &kp BACKSPACE
+&kp TAB      &kp Q         &kp W         &kp E             &kp R      &kp T                                    &kp Y         &kp U      &kp I              &kp O         &kp P          &lr_bkt
+&nvoff_mo 8  &kp A         &kp S         &kp D             &kp F      &kp G                                    &kp H         &kp J      &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
+&kp LGUI     &kp Z         &kp X         &kp C             &kp V      &kp B         &layer_en       &kp ENTER  &kp N         &kp M      &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
+                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &ltk 3 SPACE  &mo_nv_off 2    &mo 7      &ltk 5 SPACE  &kp RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
             >;
 
             sensor-bindings =
@@ -860,8 +860,8 @@
             display-name = "act_sym";
             bindings = <
 &none  &none          &none      &none      &none      &none                      &kp F13          &kp F14        &kp F15               &kp F16                &none         &none
-&none  &kp LC(LS(Z))  &kp LSHFT  &kp RCTRL  &none      &none                      &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON     &kp PIPE
-&none  &kp ESC        &kp LC(S)  &kp LC(D)  &find_nxt  &none                      &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &on_nv 2      &kp DOUBLE_QUOTES
+&none  &kp LC(LS(Z))  &kp LSHFT  &kp RCTRL  &none      &none                      &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none  &kp ESC        &kp LC(S)  &kp LC(D)  &find_nxt  &none                      &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
 &none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp INS  &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
                       &trans     &trans     &trans     &trans   &trans    &sl 7   &ltk 5 SPACE     &rshft_sk      &trans                &trans
             >;
@@ -871,8 +871,8 @@
             display-name = "act-sym";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans       &trans         &trans  &trans  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp RU_EXCL  &trans         &trans  &trans  &kp RU_COLON     &en PIPE
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans       &trans         &trans  &trans  &trans           &kp RU_DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp RU_EXCL  &trans         &trans  &trans  &en CARET        &en PIPE
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans       &trans         &trans  &trans  &kp RU_COLON     &kp RU_DOUBLE_QUOTES
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en AT       &en AMPERSAND  &en LT  &en GT  &kp RU_QUESTION  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans         &trans  &trans
             >;
@@ -914,22 +914,22 @@
         sym-sel-en {
             display-name = "sym_sel";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp C_PREV        &kp C_PP    &kp C_NEXT         &trans          &trans
-&none   &none   &none   &none   &none   &none                     &kp TILDE     &kp BACKSPACE     &kp CARET   &kp DELETE         &kp LEFT_BRACE  &kp RIGHT_BRACE
-&none   &none   &none   &none   &none   &none                     &kp LS(HOME)  &kp LS(LEFT)      &lay_ru     &kp LS(RIGHT)      &kp LS(ENTER)   &kp LS(END)
-&trans  &none   &none   &none   &none   &none   &trans    &trans  &kp HASH      &kp LC(LS(LEFT))  &kp DOLLAR  &kp LC(LS(RIGHT))  &kp SEMICOLON   &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans            &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp C_PREV        &kp C_PP          &kp C_NEXT         &trans          &trans
+&none   &none   &none   &none   &none   &none                     &kp DOLLAR    &kp BACKSPACE     &kp TILDE         &kp DELETE         &kp LEFT_BRACE  &kp RIGHT_BRACE
+&none   &none   &none   &none   &none   &none                     &kp LS(HOME)  &kp LS(LEFT)      &lay_ru           &kp LS(RIGHT)      &kp LS(ENTER)   &kp LS(END)
+&trans  &none   &none   &none   &none   &none   &trans    &trans  &kp HASH      &kp LC(LS(LEFT))  &kp LA(LS(LEFT))  &kp LC(LS(RIGHT))  &kp SEMICOLON   &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans            &trans            &trans
             >;
         };
 
         sym-sel-ru {
             display-name = "sym-sel";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans  &trans      &trans  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &en TILDE  &trans  &en CARET   &trans  &en LEFT_BRACE    &en RIGHT_BRACE
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans  &lay_en     &trans  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH   &trans  &en DOLLAR  &trans  &kp RU_SEMICOLON  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans     &trans  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &en DOLLAR  &trans  &en TILDE  &trans  &en LEFT_BRACE    &en RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &lay_en    &trans  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH    &trans  &trans     &trans  &kp RU_SEMICOLON  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans     &trans
             >;
         };
     };
