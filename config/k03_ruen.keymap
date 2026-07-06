@@ -881,11 +881,11 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&none           &none      &kp F9            &kp F10            &kp F11  &kp F12                        &none         &none     &none             &none      &none            &none
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none         &none     &kp LA(LC(UP))    &none      &kp SCROLLLOCK   &none
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp LC(HOME)  &kp LEFT  &kp LA(LC(DOWN))  &kp RIGHT  &none            &kp LC(END)
-&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none         &lay_en   &kp PRINTSCREEN   &lay_ru    &kp PAUSE_BREAK  &none
-                           &trans            &trans             &trans   &trans       &trans    &trans  &trans        &trans    &trans            &trans
+&none           &none      &kp F9            &kp F10            &kp F11  &kp F12                        &none         &none              &none             &none                  &none            &none
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none         &none              &kp LA(LC(UP))    &none                  &kp SCROLLLOCK   &none
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp LC(HOME)  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &none            &kp LC(END)
+&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none         &lay_en            &kp PRINTSCREEN   &lay_ru                &kp PAUSE_BREAK  &none
+                           &trans            &trans             &trans   &trans       &trans    &trans  &trans        &trans             &trans            &trans
             >;
         };
 
