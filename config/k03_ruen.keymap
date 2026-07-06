@@ -820,11 +820,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3     &kp F4                                   &kp F5        &kp F6     &kp F7             &kp F8        &none       &kp BACKSPACE
-&kp TAB      &kp Q         &kp W         &kp E             &kp R      &kp T                                    &kp Y         &kp U      &kp I              &kp O         &kp P       &lr_bkt
-&nvoff_mo 9  &kp A         &kp S         &kp D             &kp F      &kp G                                    &kp H         &kp J      &kp K              &kp L         &kp SEMI    &kp APOSTROPHE
-&kp LGUI     &kp Z         &kp X         &kp C             &kp V      &kp B            &layer_en    &kp ENTER  &kp N         &kp M      &kp COMMA          &kp DOT       &sl_bksl_e  &kp RGUI
-                           &kp LEFT_ALT  &kp LEFT_CONTROL  &lshft_sk  &ltk_nv 3 SPACE  &sl_e 7      &sl_e 8    &ltk 5 SPACE  &rshft_sk  &kp RIGHT_CONTROL  &kp LEFT_ALT
+&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3     &kp F4                                      &kp F5        &kp F6     &kp F7             &kp F8        &none       &kp BACKSPACE
+&kp TAB      &kp Q         &kp W         &kp E             &kp R      &kp T                                       &kp Y         &kp U      &kp I              &kp O         &kp P       &lr_bkt
+&nvoff_mo 9  &kp A         &kp S         &kp D             &kp F      &kp G                                       &kp H         &kp J      &kp K              &kp L         &kp SEMI    &kp APOSTROPHE
+&kp LGUI     &kp Z         &kp X         &kp C             &kp V      &kp B            &layer_en       &kp ENTER  &kp N         &kp M      &kp COMMA          &kp DOT       &sl_bksl_e  &kp RGUI
+                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &ltk_nv 3 SPACE  &mo_nv_off 2    &sl_e 8    &ltk 5 SPACE  &kp RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
             >;
 
             sensor-bindings =
@@ -850,11 +850,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &trans       &trans                 &trans       &trans           &trans                                          &trans              &trans           &trans        &trans         &trans         &trans
-&nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none            &none                                           &kp PG_UP           &nav_bksp        &kp UP        &nav_del       &kp LSHFT      &nav_shdel
-&trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                           &kp HOME            &kp LEFT         &kp DOWN      &kp RIGHT      &nav_enter     &kp END
-&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &nav_ins            &trans         &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)  &kp LC(RIGHT)  &kp LA(RIGHT)  &trans
-                       &trans                 &trans       &nvoff_sk LSHFT  &nvoff_ltk 3 SPACE  &nvoff_sl 7    &nvoff_sl 8  &nvoff_ltk 5 SPACE  &nvoff_sk RSHFT  &trans        &trans
+&trans    &trans       &trans                 &trans       &trans         &trans                      &trans     &trans        &trans        &trans         &trans         &trans
+&nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none          &none                       &kp PG_UP  &nav_bksp     &kp UP        &nav_del       &kp LSHFT      &nav_shdel
+&trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt  &none                       &kp HOME   &kp LEFT      &kp DOWN      &kp RIGHT      &nav_enter     &kp END
+&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v    &nav_ins  &trans    &trans  &kp PG_DN  &kp LC(LEFT)  &kp LA(LEFT)  &kp LC(RIGHT)  &kp LA(RIGHT)  &trans
+                       &trans                 &trans       &trans         &trans    &trans    &trans  &trans     &trans        &trans        &trans
             >;
         };
 
@@ -916,11 +916,11 @@
         fn-mod {
             display-name = "fn.mod";
             bindings = <
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                    &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                    &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
-&kp ESC       &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                    &nvon_kp K_CANCEL   &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
-&kp K_APP     &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp C_AL_CALC     &kp K_CANCEL    &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
-                            &kp K_CANCEL  &kp K_CANCEL  &trans        &slof_nv_ltk 2 2  &trans          &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &kp K_CANCEL        &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp ESC       &kp K_CANCEL  &kp CAPSLOCK  &kp K_CANCEL  &kp K_CANCEL                                &nvon_kp K_CANCEL   &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_APP     &kp K_CANCEL    &kp K_CANCEL  &nvoff_kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &out OUT_BLE
+                            &kp K_CANCEL  &kp K_CANCEL  &trans        &nvsel_mo     &trans          &trans        &trans              &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
