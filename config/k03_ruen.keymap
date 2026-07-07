@@ -310,7 +310,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&on 2 &kt_on RSHFT>,
+                <&on 2 &off 7 &kt_on RSHFT>,
                 <&macro_pause_for_release>,
                 <&macro_wait_time 0>,
                 <&macro_press>,
@@ -414,6 +414,25 @@
                 <&kp K_CANCEL &off 3 &macro_param_1to1 &on MACRO_PLACEHOLDER>;
 
             label = "KP_NV";
+        };
+
+        sl_nv_off: sl_nv_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &sl_e MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_wait_time 0>,
+                <&macro_tap_time 0>,
+                <&macro_release>,
+                <&macro_param_1to1 &sl_e MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kt_off RSHFT>;
+
+            label = "SL_NV_OFF";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
@@ -768,7 +787,7 @@
             label = "SK_E";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <500>;
+            release-after-ms = <100>;
             ignore-modifiers;
         };
 
@@ -777,7 +796,7 @@
             label = "SL_E";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <500>;
+            release-after-ms = <100>;
             quick-release;
         };
 
@@ -818,11 +837,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3     &kp F4                                   &kp F5        &kp F6     &kp F7             &kp F8        &kp LA(LS(M))  &kp BACKSPACE
-&kp TAB      &kp Q         &kp W         &kp E             &kp R      &kp T                                    &kp Y         &kp U      &kp I              &kp O         &kp P          &lr_bkt
-&nvoff_mo 8  &kp A         &kp S         &kp D             &kp F      &kp G                                    &kp H         &kp J      &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
-&kp LGUI     &kp Z         &kp X         &kp C             &kp V      &kp B         &layer_en       &kp ENTER  &kp N         &kp M      &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
-                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &ltk 3 SPACE  &mo_nv_off 2    &mo 7      &ltk 5 SPACE  &kp RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
+&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3       &kp F4                                   &kp F5        &kp F6       &kp F7             &kp F8        &kp LA(LS(M))  &kp BACKSPACE
+&kp TAB      &kp Q         &kp W         &kp E             &kp R        &kp T                                    &kp Y         &kp U        &kp I              &kp O         &kp P          &lr_bkt
+&nvoff_mo 8  &kp A         &kp S         &kp D             &kp F        &kp G                                    &kp H         &kp J        &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
+&kp LGUI     &kp Z         &kp X         &kp C             &kp V        &kp B         &layer_en       &kp ENTER  &kp N         &kp M        &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
+                           &kp LEFT_ALT  &kp LEFT_CONTROL  &sk_e LSHFT  &ltk 3 SPACE  &sl_nv_off 2    &sl 7      &ltk 5 SPACE  &sk_e RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
             >;
 
             sensor-bindings =
@@ -863,7 +882,7 @@
 &none  &kp LC(LS(Z))  &kp LSHFT  &kp RCTRL  &none      &none                      &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
 &none  &kp ESC        &kp LC(S)  &kp LC(D)  &find_nxt  &none                      &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
 &none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp INS  &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
-                      &trans     &trans     &trans     &trans   &trans    &sl 7   &ltk 5 SPACE     &rshft_sk      &trans                &trans
+                      &trans     &trans     &trans     &trans   &trans    &trans  &trans           &trans         &trans                &trans
             >;
         };
 
@@ -881,11 +900,11 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&none           &none      &kp F9            &kp F10            &kp F11  &kp F12                        &none         &none              &none             &none                  &none            &none
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none         &none              &kp LA(LC(UP))    &none                  &kp SCROLLLOCK   &none
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp LC(HOME)  &kp LA(LC(PG_UP))  &kp LA(LC(DOWN))  &kp LA(LC(PAGE_DOWN))  &none            &kp LC(END)
-&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none         &lay_en            &kp PRINTSCREEN   &lay_ru                &kp PAUSE_BREAK  &none
-                           &trans            &trans             &trans   &trans       &trans    &trans  &trans        &trans             &trans            &trans
+&none           &none      &kp F9            &kp F10            &kp F11  &kp F12                        &none   &none         &none             &none    &none            &none
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none   &kp LC(HOME)  &kp LA(LC(UP))    &none    &kp SCROLLLOCK   &none
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &none   &lay_en       &kp LA(LC(DOWN))  &lay_ru  &kp ENTER        &none
+&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none   &kp LC(END)   &kp PRINTSCREEN   &none    &kp PAUSE_BREAK  &none
+                           &trans            &trans             &trans   &trans       &trans    &trans  &trans  &trans        &trans            &trans
             >;
         };
 
@@ -903,11 +922,11 @@
         mod-desk {
             display-name = "mod.desk";
             bindings = <
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL                                &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5   &kp K_CANCEL
-&kp K_CANCEL  &kp ESC       &kp K_CANCEL  &kp CAPSLOCK  &kp K_CANCEL  &kp K_CANCEL                                &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp K_CANCEL
-&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL     &sk LALT      &kp K_APP     &kp K_CANCEL    &kp K_CANCEL  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &out OUT_BLE
-                            &kp K_CANCEL  &kp K_CANCEL  &trans        &nvsel_mo     &trans          &trans        &trans        &trans        &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL      &kp K_CANCEL       &kp K_CANCEL                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp LA(LC(UP))    &kp LA(LC(PG_UP))  &kp K_CANCEL                                &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5   &kp K_CANCEL
+&kp K_CANCEL  &kp ESC       &kp CAPS      &kp LA(LC(DOWN))  &kp LA(LC(PG_DN))  &kp K_CANCEL                                &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp K_CANCEL
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL         &sk LALT           &kp K_APP     &kp K_CANCEL    &kp K_CANCEL  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &out OUT_BLE
+                            &kp K_CANCEL  &kp K_CANCEL      &trans             &nvsel_mo     &trans          &trans        &trans        &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
