@@ -841,7 +841,7 @@
 &kp TAB      &kp Q         &kp W         &kp E             &kp R        &kp T                                    &kp Y         &kp U        &kp I              &kp O         &kp P          &lr_bkt
 &nvoff_mo 8  &kp A         &kp S         &kp D             &kp F        &kp G                                    &kp H         &kp J        &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
 &kp LGUI     &kp Z         &kp X         &kp C             &kp V        &kp B         &layer_en       &kp ENTER  &kp N         &kp M        &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
-                           &kp LEFT_ALT  &kp LEFT_CONTROL  &sk_e LSHFT  &ltk 3 SPACE  &sl_nv_off 2    &sl 7      &ltk 5 SPACE  &sk_e RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
+                           &kp LEFT_ALT  &kp LEFT_CONTROL  &sk_e LSHFT  &ltk 3 SPACE  &sl_nv_off 2    &sl_e 7    &ltk 5 SPACE  &sk_e RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
             >;
 
             sensor-bindings =
