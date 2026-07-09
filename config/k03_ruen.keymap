@@ -703,7 +703,7 @@
 
         nvoff_ltk: nvoff_ltk {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&nvoff_mo>, <&kp>;
+            bindings = <&nvoff_mo>, <&nvoff_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
