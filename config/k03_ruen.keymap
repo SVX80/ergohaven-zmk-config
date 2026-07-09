@@ -399,7 +399,7 @@
                 <&macro_wait_time 0>,
                 <&macro_tap_time 0>,
                 <&macro_tap>,
-                <&macro_param_1to1 &off MACRO_PLACEHOLDER &kt_off RSHFT &off 2>;
+                <&macro_param_1to1 &off MACRO_PLACEHOLDER &kt_off RSHFT>;
 
             label = "MO_NV";
             wait-ms = <0>;
@@ -812,7 +812,7 @@
 
         ltk_nv: ltk_nv {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo_nv>, <&key>;
+            bindings = <&mo_nv>, <&on>;
 
             #binding-cells = <2>;
             tapping-term-ms = <235>;
@@ -829,6 +829,16 @@
             flavor = "hold-preferred";
             label = "SLOF_NV_LTK";
         };
+
+        nvoff_ht: nvoff_ht {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&nvoff_mo>, <&on>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <235>;
+            flavor = "hold-preferred";
+            label = "NVOFF_HT";
+        };
     };
 
     keymap {
@@ -837,11 +847,11 @@
         en {
             display-name = "En";
             bindings = <
-&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3       &kp F4                                   &kp F5        &kp F6       &kp F7             &kp F8        &kp LA(LS(M))  &kp BACKSPACE
-&kp TAB      &kp Q         &kp W         &kp E             &kp R        &kp T                                    &kp Y         &kp U        &kp I              &kp O         &kp P          &lr_bkt
-&nvoff_mo 8  &kp A         &kp S         &kp D             &kp F        &kp G                                    &kp H         &kp J        &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
-&kp LGUI     &kp Z         &kp X         &kp C             &kp V        &kp B         &layer_en       &kp ENTER  &kp N         &kp M        &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
-                           &kp LEFT_ALT  &kp LEFT_CONTROL  &sk_e LSHFT  &ltk 3 SPACE  &sl_nv_off 2    &sl_e 7    &ltk 5 SPACE  &sk_e RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
+&kp ESC      &kp CAPSLOCK  &kp F1        &kp F2            &kp F3     &kp F4                                  &kp F5        &kp F6     &kp F7             &kp F8        &kp LA(LS(M))  &kp BACKSPACE
+&kp TAB      &kp Q         &kp W         &kp E             &kp R      &kp T                                   &kp Y         &kp U      &kp I              &kp O         &kp P          &lr_bkt
+&nvoff_mo 8  &kp A         &kp S         &kp D             &kp F      &kp G                                   &kp H         &kp J      &kp K              &kp L         &kp SEMI       &kp APOSTROPHE
+&kp LGUI     &kp Z         &kp X         &kp C             &kp V      &kp B         &layer_en      &kp ENTER  &kp N         &kp M      &kp COMMA          &kp DOT       &sl_bksl_e     &kp RGUI
+                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &ltk 3 SPACE  &ltk_nv 2 2    &mo 7      &ltk 5 SPACE  &kp RSHFT  &kp RIGHT_CONTROL  &kp LEFT_ALT
             >;
 
             sensor-bindings =
@@ -867,11 +877,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &trans       &trans                 &trans       &trans         &trans                      &trans     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP   &trans         &trans
-&nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none          &none                       &kp PG_UP  &nav_bksp     &kp UP        &nav_del       &kp LSHFT      &nav_shdel
-&trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt  &none                       &kp HOME   &kp LEFT      &kp DOWN      &kp RIGHT      &nav_enter     &kp END
-&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v    &nav_ins  &trans    &trans  &kp PG_DN  &kp LC(LEFT)  &kp LA(LEFT)  &kp LC(RIGHT)  &kp LA(RIGHT)  &trans
-                       &trans                 &trans       &trans         &trans    &trans    &trans  &trans     &trans        &trans        &trans
+&trans    &trans       &trans                 &trans       &trans           &trans                                            &trans              &kp C_VOL_DN     &kp C_MUTE    &kp C_VOL_UP   &trans         &trans
+&nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none            &none                                             &kp PG_UP           &nav_bksp        &kp UP        &kp LSHFT      &nav_del       &nav_shdel
+&trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                             &kp HOME            &kp LEFT         &kp DOWN      &kp RIGHT      &nav_enter     &kp END
+&trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &nav_ins            &trans           &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(RIGHT)  &trans
+                       &trans                 &trans       &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_ht 2 2    &nvoff_mo 7  &nvoff_ltk 5 SPACE  &nvoff_kp RSHFT  &trans        &trans
             >;
         };
 
@@ -933,10 +943,10 @@
         sym-sel-en {
             display-name = "sym_sel";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp C_PREV        &kp C_PP          &kp C_NEXT         &trans          &trans
-&none   &none   &none   &none   &none   &none                     &kp DOLLAR    &kp BACKSPACE     &kp TILDE         &kp DELETE         &kp LEFT_BRACE  &kp RIGHT_BRACE
-&none   &none   &none   &none   &none   &none                     &kp LS(HOME)  &kp LS(LEFT)      &lay_ru           &kp LS(RIGHT)      &kp LS(ENTER)   &kp LS(END)
-&trans  &none   &none   &none   &none   &none   &trans    &trans  &kp HASH      &kp LC(LS(LEFT))  &kp LA(LS(LEFT))  &kp LC(LS(RIGHT))  &kp SEMICOLON   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp C_PREV        &kp C_PP          &kp C_NEXT         &trans         &trans
+&none   &none   &none   &none   &none   &none                     &kp DOLLAR    &kp BACKSPACE     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DELETE     &kp TILDE
+&none   &none   &none   &none   &none   &none                     &kp LS(HOME)  &kp LS(LEFT)      &lay_ru           &kp LS(RIGHT)      &kp LS(ENTER)  &kp LS(END)
+&trans  &none   &none   &none   &none   &none   &trans    &trans  &kp HASH      &kp LC(LS(LEFT))  &kp LA(LS(LEFT))  &kp LA(LS(RIGHT))  &kp SEMICOLON  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans            &trans            &trans
             >;
         };
@@ -944,11 +954,11 @@
         sym-sel-ru {
             display-name = "sym-sel";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans     &trans  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &en DOLLAR  &trans  &en TILDE  &trans  &en LEFT_BRACE    &en RIGHT_BRACE
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &lay_en    &trans  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH    &trans  &trans     &trans  &kp RU_SEMICOLON  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &trans          &trans           &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &en DOLLAR  &trans  &en LEFT_BRACE  &en RIGHT_BRACE  &trans            &kp TILDE
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans  &lay_en         &trans           &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &en HASH    &trans  &trans          &trans           &kp RU_SEMICOLON  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans          &trans
             >;
         };
     };
