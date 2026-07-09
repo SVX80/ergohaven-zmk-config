@@ -877,7 +877,7 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &trans       &trans                 &trans       &trans           &trans                                            &trans              &kp C_VOL_DN     &kp C_MUTE    &kp C_VOL_UP   &trans         &trans
+&trans    &trans       &trans                 &trans       &trans           &trans                                            &trans              &trans           &trans        &trans         &trans         &trans
 &nav_tab  &nav_cs_z    &kp_kttgl RSHFT RSHFT  &kp RCTRL    &none            &none                                             &kp PG_UP           &nav_bksp        &kp UP        &kp LSHFT      &nav_del       &nav_shdel
 &trans    &nav_esc     &nav_ctrl_s            &nav_ctrl_d  &nav_find_nxt    &none                                             &kp HOME            &kp LEFT         &kp DOWN      &kp RIGHT      &nav_enter     &kp END
 &trans    &nav_ctrl_z  &nav_ctrl_x            &nav_ctrl_c  &nav_ctrl_v      &nav_ins            &trans           &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(RIGHT)  &trans
@@ -932,7 +932,7 @@
         mod-desk {
             display-name = "mod.desk";
             bindings = <
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL       &kp K_CANCEL  &kp K_CANCEL                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL  &kp K_CANCEL  &kp C_PREV    &kp C_PP           &kp C_NEXT    &kp K_CANCEL                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp LA(LC(PG_UP))  &kp K_CANCEL  &kp K_CANCEL                                 &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5   &kp K_CANCEL
 &kp K_CANCEL  &kp ESC       &kp CAPS      &kp LA(LC(PG_DN))  &kp K_CANCEL  &kp LA(LS(M))                                &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp K_CANCEL
 &kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL          &sk LALT      &kp K_APP      &kp K_CANCEL    &kp K_CANCEL  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &out OUT_BLE
@@ -943,7 +943,7 @@
         sym-sel-en {
             display-name = "sym_sel";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp C_PREV        &kp C_PP          &kp C_NEXT         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP       &trans         &trans
 &none   &none   &none   &none   &none   &none                     &kp DOLLAR    &kp BACKSPACE     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DELETE     &kp TILDE
 &none   &none   &none   &none   &none   &none                     &kp LS(HOME)  &kp LS(LEFT)      &lay_ru           &kp LS(RIGHT)      &kp LS(ENTER)  &kp LS(END)
 &trans  &none   &none   &none   &none   &none   &trans    &trans  &kp HASH      &kp LC(LS(LEFT))  &kp LA(LS(LEFT))  &kp LA(LS(RIGHT))  &kp SEMICOLON  &trans
