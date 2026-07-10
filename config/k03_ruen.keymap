@@ -910,11 +910,11 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&none           &none      &kp F11           &kp F12            &kp F13  &none                          &none   &none         &none            &none      &none            &none
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none   &kp LC(HOME)  &lay_ru          &none      &kp SCROLLLOCK   &none
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &none   &kp LC(J)     &lay_en          &kp LC(L)  &kp ENTER        &none
-&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none   &kp LC(END)   &kp PRINTSCREEN  &none      &kp PAUSE_BREAK  &none
-                           &trans            &trans             &trans   &trans       &trans    &trans  &trans  &trans        &trans           &trans
+&none           &none      &kp F11           &kp F12            &kp F13  &none                          &none            &none         &none              &none        &none            &none
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none            &kp LC(HOME)  &kp RIGHT_CONTROL  &kp RSHFT    &kp SCROLLLOCK   &none
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &kp PRINTSCREEN  &lay_en       &lay_ru            &kp LC(L)    &kp ENTER        &none
+&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none            &kp LC(END)   &kp LG(LS(S))      &kp LC(DOT)  &kp PAUSE_BREAK  &none
+                           &trans            &trans             &trans   &trans       &trans    &trans  &trans           &trans        &trans             &trans
             >;
         };
 
