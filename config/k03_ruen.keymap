@@ -878,7 +878,7 @@
             display-name = "nav";
             bindings = <
 &trans          &nvoff_kp F1  &nvoff_kp F2           &nvoff_kp F3            &nvoff_kp F4     &nvoff_kp F5                                      &nvoff_kp F6        &nvoff_kp F7     &nvoff_kp F8             &nvoff_kp F9        &nvoff_kp F10  &trans
-&nav_tab        &nav_cs_z     &kp_kttgl RSHFT RSHFT  &kp RCTRL               &none            &none                                             &kp PG_UP           &nav_bksp        &kp UP                   &kp LSHFT           &nav_del       &nav_shdel
+&nav_tab        &nav_cs_z     &kp_kttgl RSHFT RSHFT  &kp RCTRL               &kp LC(R)        &none                                             &kp PG_UP           &nav_bksp        &kp UP                   &kp LSHFT           &nav_del       &nav_shdel
 &trans          &nav_esc      &nav_ctrl_s            &nav_ctrl_d             &nav_find_nxt    &none                                             &kp HOME            &kp LEFT         &kp DOWN                 &kp RIGHT           &nav_enter     &kp END
 &nvoff_kp LGUI  &nav_ctrl_z   &nav_ctrl_x            &nav_ctrl_c             &nav_ctrl_v      &nav_ins            &trans           &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)             &kp LA(RIGHT)       &kp LC(RIGHT)  &nvoff_kp RGUI
                               &nvoff_kp LEFT_ALT     &nvoff_kp LEFT_CONTROL  &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_ht 2 2    &nvoff_mo 7  &nvoff_ltk 5 SPACE  &nvoff_kp RSHFT  &nvoff_kp RIGHT_CONTROL  &nvoff_kp LEFT_ALT
@@ -889,7 +889,7 @@
             display-name = "act_sym";
             bindings = <
 &none  &none          &none      &none      &none      &none                      &none            &kp F14        &kp F15               &kp F16                &none         &none
-&none  &kp LC(LS(Z))  &kp LSHFT  &kp RCTRL  &none      &none                      &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
+&none  &kp LC(LS(Z))  &kp LSHFT  &kp RCTRL  &kp LC(R)  &none                      &kp EXCLAMATION  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &kp PIPE
 &none  &kp ESC        &kp LC(S)  &kp LC(D)  &find_nxt  &none                      &kp PLUS         &kp MINUS      &kp UNDERSCORE        &kp EQUAL              &kp COLON     &kp DOUBLE_QUOTES
 &none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp INS  &trans    &trans  &kp AT           &kp AMPERSAND  &kp LT                &kp GT                 &kp QUESTION  &none
                       &trans     &trans     &trans     &trans   &trans    &trans  &trans           &trans         &trans                &trans
@@ -910,11 +910,11 @@
         num-utils-en {
             display-name = "num_utils";
             bindings = <
-&none           &none      &kp F11           &kp F12            &kp F13  &none                          &none   &none         &none             &none    &none            &none
-&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none   &kp LC(HOME)  &kp LA(LC(UP))    &none    &kp SCROLLLOCK   &none
-&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &none   &lay_en       &kp LA(LC(DOWN))  &lay_ru  &kp ENTER        &none
-&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none   &kp LC(END)   &kp PRINTSCREEN   &none    &kp PAUSE_BREAK  &none
-                           &trans            &trans             &trans   &trans       &trans    &trans  &trans  &trans        &trans            &trans
+&none           &none      &kp F11           &kp F12            &kp F13  &none                          &none   &none         &none            &none      &none            &none
+&kp GRAVE       &kp N1     &kp N2            &kp N3             &kp N4   &kp N5                         &none   &kp LC(HOME)  &lay_ru          &none      &kp SCROLLLOCK   &none
+&kp APOSTROPHE  &kp N6     &kp N7            &kp N8             &kp N9   &kp N0                         &none   &kp LC(J)     &lay_en          &kp LC(L)  &kp ENTER        &none
+&ru RU_NUMERO   &kp COMMA  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT  &kp PERCENT  &trans    &trans  &none   &kp LC(END)   &kp PRINTSCREEN  &none      &kp PAUSE_BREAK  &none
+                           &trans            &trans             &trans   &trans       &trans    &trans  &trans  &trans        &trans           &trans
             >;
         };
 
@@ -932,11 +932,11 @@
         mod-desk {
             display-name = "mod.desk";
             bindings = <
-&kp K_CANCEL  &kp K_CANCEL  &kp C_PREV    &kp C_PP           &kp C_NEXT    &kp K_CANCEL                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp LA(LC(PG_UP))  &kp K_CANCEL  &kp K_CANCEL                                 &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5   &kp K_CANCEL
-&kp K_CANCEL  &kp ESC       &kp CAPS      &kp LA(LC(PG_DN))  &kp K_CANCEL  &kp LA(LS(M))                                &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp K_CANCEL
-&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL          &sk LALT      &kp K_APP      &kp K_CANCEL    &kp K_CANCEL  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &out OUT_BLE
-                            &kp K_CANCEL  &kp K_CANCEL       &trans        &nvsel_mo      &trans          &trans        &trans        &trans        &kp K_CANCEL  &kp K_CANCEL
+&kp K_CANCEL  &kp K_CANCEL  &kp C_PREV    &kp C_PP          &kp C_NEXT         &kp K_CANCEL                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp K_CANCEL  &kp K_CANCEL  &kp K_CANCEL  &kp LA(LC(UP))    &kp LA(LC(PG_UP))  &kp K_CANCEL                                 &cmd_f15 F1   &cmd_f15 F2   &cmd_f15 F3   &cmd_f15 F4   &cmd_f15 F5   &kp K_CANCEL
+&kp K_CANCEL  &kp ESC       &kp CAPS      &kp LA(LC(DOWN))  &kp LA(LC(PG_DN))  &kp LA(LS(M))                                &cmd_f15 F6   &cmd_f15 F7   &cmd_f15 F8   &cmd_f15 F9   &cmd_f15 F10  &kp K_CANCEL
+&kp K_CANCEL  &sk LGUI      &sk LSHFT     &sk LCTRL         &sk LALT           &kp K_APP      &kp K_CANCEL    &kp K_CANCEL  &cmd_f15 F11  &cmd_f15 F12  &cmd_f15 F13  &cmd_f15 F14  &cmd_f15 F15  &out OUT_BLE
+                            &kp K_CANCEL  &kp K_CANCEL      &trans             &trans         &trans          &trans        &trans        &trans        &kp K_CANCEL  &kp K_CANCEL
             >;
         };
 
