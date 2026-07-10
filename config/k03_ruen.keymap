@@ -877,11 +877,11 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans    &nvoff_kp F1  &nvoff_kp F2           &nvoff_kp F3  &nvoff_kp F4     &nvoff_kp F5                                      &nvoff_kp F6        &nvoff_kp F7     &nvoff_kp F8  &nvoff_kp F9   &nvoff_kp F10  &trans
-&nav_tab  &nav_cs_z     &kp_kttgl RSHFT RSHFT  &kp RCTRL     &none            &none                                             &kp PG_UP           &nav_bksp        &kp UP        &kp LSHFT      &nav_del       &nav_shdel
-&trans    &nav_esc      &nav_ctrl_s            &nav_ctrl_d   &nav_find_nxt    &none                                             &kp HOME            &kp LEFT         &kp DOWN      &kp RIGHT      &nav_enter     &kp END
-&trans    &nav_ctrl_z   &nav_ctrl_x            &nav_ctrl_c   &nav_ctrl_v      &nav_ins            &trans           &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(RIGHT)  &trans
-                        &trans                 &trans        &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_ht 2 2    &nvoff_mo 7  &nvoff_ltk 5 SPACE  &nvoff_kp RSHFT  &trans        &trans
+&trans          &nvoff_kp F1  &nvoff_kp F2           &nvoff_kp F3            &nvoff_kp F4     &nvoff_kp F5                                      &nvoff_kp F6        &nvoff_kp F7     &nvoff_kp F8             &nvoff_kp F9        &nvoff_kp F10  &trans
+&nav_tab        &nav_cs_z     &kp_kttgl RSHFT RSHFT  &kp RCTRL               &none            &none                                             &kp PG_UP           &nav_bksp        &kp UP                   &kp LSHFT           &nav_del       &nav_shdel
+&trans          &nav_esc      &nav_ctrl_s            &nav_ctrl_d             &nav_find_nxt    &none                                             &kp HOME            &kp LEFT         &kp DOWN                 &kp RIGHT           &nav_enter     &kp END
+&nvoff_kp LGUI  &nav_ctrl_z   &nav_ctrl_x            &nav_ctrl_c             &nav_ctrl_v      &nav_ins            &trans           &trans       &kp PG_DN           &kp LC(LEFT)     &kp LA(LEFT)             &kp LA(RIGHT)       &kp LC(RIGHT)  &nvoff_kp RGUI
+                              &nvoff_kp LEFT_ALT     &nvoff_kp LEFT_CONTROL  &nvoff_kp LSHFT  &nvoff_ltk 3 SPACE  &nvoff_ht 2 2    &nvoff_mo 7  &nvoff_ltk 5 SPACE  &nvoff_kp RSHFT  &nvoff_kp RIGHT_CONTROL  &nvoff_kp LEFT_ALT
             >;
         };
 
